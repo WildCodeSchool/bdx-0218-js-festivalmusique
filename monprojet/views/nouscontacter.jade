@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  p #{titleContact}
+  p je modifie le texte en jade dans le dossier monprojet/views/nouscontacter.jade 
+  form(name="add-estimation", method="get" action="mon-url")
+    div.input
+      span.label Title
+      input(type="text", name="username" value ="Bob")
+    div.actions
+      input(type="submit", value="Valider")
