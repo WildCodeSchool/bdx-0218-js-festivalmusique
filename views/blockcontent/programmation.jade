@@ -1,209 +1,167 @@
 extends ../layout.jade
 
 block content
-  html
-  head
-    meta(charset='utf-8')
-    title Programmation
-    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm', crossorigin='anonymous')
-  body
-    // Titre
-    .container
-      h1 Programmation
-    // Filtres
-    .container
-      .row
-        .col-sm-3
-          // Tous les artistes
-          button(type='button') Tous les artistes
-        .col-sm-3
-          // Filtres des jours
-          .btn-group.btn-group-toggle(data-toggle='buttons')
-            label.btn.btn-secondary.active
-              input#option1(type='radio', name='options', autocomplete='off')
-              |  Vendredi
-            label.btn.btn-secondary
-              input#option2(type='radio', name='options', autocomplete='off')
-              |  Samedi
-            label.btn.btn-secondary
-              input#option3(type='radio', name='options', autocomplete='off')
-              |  Dimanche
-        .col-sm-3
-          // Filtres  des styles
-          select(id='Trier par jour')
-            option(value='valeur1') Vendredi
-            option(value='valeur2') Samedi
-            option(value='valeur3') Dimanche
-    // Liste des artistes
-    .container
-      // ligne 1
-      .row
-        .col-sm-3
-          .artiste
-            img(src='http://via.placeholder.com/200x200')
-            h2 Nom de l'artiste
-            p 00/00/0000 - 20h00
-        .col-sm-3
-          .artiste
-            img(src='http://via.placeholder.com/200x200')
-            h2 Nom de l'artiste
-            p 00/00/0000 - 20h00
-        .col-sm-3
-          .artiste
-            img(src='http://via.placeholder.com/200x200')
-            h2 Nom de l'artiste
-            p 00/00/0000 - 20h00
-      // ligne 2
-      .row
-        .col-sm-3
-          .artiste
-            img(src='http://via.placeholder.com/200x200')
-            h2 Nom de l'artiste
-            p 00/00/0000 - 20h00
-        .col-sm-3
-          .artiste
-            img(src='http://via.placeholder.com/200x200')
-            h2 Nom de l'artiste
-            p 00/00/0000 - 20h00
-        .col-sm-3
-          .artiste
-            img(src='http://via.placeholder.com/200x200')
-            h2 Nom de l'artiste
-            p 00/00/0000 - 20h00
-      // ligne 3
-      .row
-        .col-sm-3
-          .artiste
-            img(src='http://via.placeholder.com/200x200')
-            h2 Nom de l'artiste
-            p 00/00/0000 - 20h00
-        .col-sm-3
-          .artiste
-            img(src='http://via.placeholder.com/200x200')
-            h2 Nom de l'artiste
-            p 00/00/0000 - 20h00
-        .col-sm-3
-          .artiste
-            img(src='http://via.placeholder.com/200x200')
-            h2 Nom de l'artiste
-            p 00/00/0000 - 20h00
-      // ligne 4
-      .row
-        .col-sm-3
-          .artiste
-            img(src='http://via.placeholder.com/200x200')
-            h2 Nom de l'artiste
-            p 00/00/0000 - 20h00
-        .col-sm-3
-          .artiste
-            img(src='http://via.placeholder.com/200x200')
-            h2 Nom de l'artiste
-            p 00/00/0000 - 20h00
-        .col-sm-3
-          .artiste
-            img(src='http://via.placeholder.com/200x200')
-            h2 Nom de l'artiste
-            p 00/00/0000 - 20h00
-      // ligne 5
-      .row
-        .col-sm-3
-          .artiste
-            img(src='http://via.placeholder.com/200x200')
-            h2 Nom de l'artiste
-            p 00/00/0000 - 20h00
-        .col-sm-3
-          .artiste
-            img(src='http://via.placeholder.com/200x200')
-            h2 Nom de l'artiste
-            p 00/00/0000 - 20h00
-        .col-sm-3
-          .artiste
-            img(src='http://via.placeholder.com/200x200')
-            h2 Nom de l'artiste
-            p 00/00/0000 - 20h00
-      // ligne 6
-      .row
-        .col-sm-3
-          .artiste
-            img(src='http://via.placeholder.com/200x200')
-            h2 Nom de l'artiste
-            p 00/00/0000 - 20h00
-        .col-sm-3
-          .artiste
-            img(src='http://via.placeholder.com/200x200')
-            h2 Nom de l'artiste
-            p 00/00/0000 - 20h00
-        .col-sm-3
-          .artiste
-            img(src='http://via.placeholder.com/200x200')
-            h2 Nom de l'artiste
-            p 00/00/0000 - 20h00
-      // ligne 7
-      .row
-        .col-sm-3
-          .artiste
-            img(src='http://via.placeholder.com/200x200')
-            h2 Nom de l'artiste
-            p 00/00/0000 - 20h00
-        .col-sm-3
-          .artiste
-            img(src='http://via.placeholder.com/200x200')
-            h2 Nom de l'artiste
-            p 00/00/0000 - 20h00
-        .col-sm-3
-          .artiste
-            img(src='http://via.placeholder.com/200x200')
-            h2 Nom de l'artiste
-            p 00/00/0000 - 20h00
-      .row
-        .col-sm-3
-          .artiste
-            img(src='http://via.placeholder.com/200x200')
-            h2 Nom de l'artiste
-            p 00/00/0000 - 20h00
-        // ligne 8
-        .col-sm-3
-          .artiste
-            img(src='http://via.placeholder.com/200x200')
-            h2 Nom de l'artiste
-            p 00/00/0000 - 20h00
-        .col-sm-3
-          .artiste
-            img(src='http://via.placeholder.com/200x200')
-            h2 Nom de l'artiste
-            p 00/00/0000 - 20h00
-      // ligne 9
-      .row
-        .col-sm-3
-          .artiste
-            img(src='http://via.placeholder.com/200x200')
-            h2 Nom de l'artiste
-            p 00/00/0000 - 20h00
-        .col-sm-3
-          .artiste
-            img(src='http://via.placeholder.com/200x200')
-            h2 Nom de l'artiste
-            p 00/00/0000 - 20h00
-        .col-sm-3
-          .artiste
-            img(src='http://via.placeholder.com/200x200')
-            h2 Nom de l'artiste
-            p 00/00/0000 - 20h00
-      // ligne 10
-      .row
-        .col-sm-3
-          .artiste
-            img(src='http://via.placeholder.com/200x200')
-            h2 Nom de l'artiste
-            p 00/00/0000 - 20h00
-        .col-sm-3
-          .artiste
-            img(src='http://via.placeholder.com/200x200')
-            h2 Nom de l'artiste
-            p 00/00/0000 - 20h00
-        .col-sm-3
-          .artiste
-            img(src='http://via.placeholder.com/200x200')
-            h2 Nom de l'artiste
-            p 00/00/0000 - 20h00
-    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+  // Titre
+  .container
+    h1 Programmation
+  // Filtres
+  .container
+    .row
+      .col-sm-3
+        // Tous les artistes
+        button.active(type='button', onclick="filterSelection('all')") Tous les artistes
+      .col-sm-3
+        // Filtres des jours
+        .btn-group(role='group', aria-label='Basic example')
+          button.btn.btn-secondary(type='button') Vendredi
+          button.btn.btn-secondary(type='button') Samedi
+          button.btn.btn-secondary(type='button') Dimanche
+      .col-sm-3
+        // Filtres  des styles
+        select(id='Trier par jour')
+          option(value='valeur1') Style de musique
+          option(value='valeur2') Métal
+          option(value='valeur3') Punk hardcore
+          option(value='valeur4') Classique
+  // Liste des artistes
+  .container
+    // ligne 1
+    .row
+      .col-sm-3
+        img(src='http://via.placeholder.com/200x200')
+        h2 Nom de l'artiste
+        p 00/00/0000 - 20h00
+      .col-sm-3y
+        img(src='http://via.placeholder.com/200x200')
+        h2 Nom de l'artiste
+        p 00/00/0000 - 20h00
+      .col-sm-3
+        img(src='http://via.placeholder.com/200x200')
+        h2 Nom de l'artiste
+        p 00/00/0000 - 20h00
+    // ligne 2
+    .row
+      .col-sm-3
+        img(src='http://via.placeholder.com/200x200')
+        h2 Nom de l'artiste
+        p 00/00/0000 - 20h00
+      .col-sm-3y
+        img(src='http://via.placeholder.com/200x200')
+        h2 Nom de l'artiste
+        p 00/00/0000 - 20h00
+      .col-sm-3
+        img(src='http://via.placeholder.com/200x200')
+        h2 Nom de l'artiste
+        p 00/00/0000 - 20h00
+    // ligne 3
+    .row
+      .col-sm-3
+        img(src='http://via.placeholder.com/200x200')
+        h2 Nom de l'artiste
+        p 00/00/0000 - 20h00
+      .col-sm-3y
+        img(src='http://via.placeholder.com/200x200')
+        h2 Nom de l'artiste
+        p 00/00/0000 - 20h00
+      .col-sm-3
+        img(src='http://via.placeholder.com/200x200')
+        h2 Nom de l'artiste
+        p 00/00/0000 - 20h00
+    // ligne 4
+    .row
+      .col-sm-3
+        img(src='http://via.placeholder.com/200x200')
+        h2 Nom de l'artiste
+        p 00/00/0000 - 20h00
+      .col-sm-3y
+        img(src='http://via.placeholder.com/200x200')
+        h2 Nom de l'artiste
+        p 00/00/0000 - 20h00
+      .col-sm-3
+        img(src='http://via.placeholder.com/200x200')
+        h2 Nom de l'artiste
+        p 00/00/0000 - 20h00
+    // ligne 5
+    .row
+      .col-sm-3
+        img(src='http://via.placeholder.com/200x200')
+        h2 Nom de l'artiste
+        p 00/00/0000 - 20h00
+      .col-sm-3y
+        img(src='http://via.placeholder.com/200x200')
+        h2 Nom de l'artiste
+        p 00/00/0000 - 20h00
+      .col-sm-3
+        img(src='http://via.placeholder.com/200x200')
+        h2 Nom de l'artiste
+        p 00/00/0000 - 20h00
+    // ligne 6
+    .row
+      .col-sm-3
+        img(src='http://via.placeholder.com/200x200')
+        h2 Nom de l'artiste
+        p 00/00/0000 - 20h00
+      .col-sm-3y
+        img(src='http://via.placeholder.com/200x200')
+        h2 Nom de l'artiste
+        p 00/00/0000 - 20h00
+      .col-sm-3
+        img(src='http://via.placeholder.com/200x200')
+        h2 Nom de l'artiste
+        p 00/00/0000 - 20h00
+    // ligne 7
+    .row
+      .col-sm-3
+        img(src='http://via.placeholder.com/200x200')
+        h2 Nom de l'artiste
+        p 00/00/0000 - 20h00
+      .col-sm-3y
+        img(src='http://via.placeholder.com/200x200')
+        h2 Nom de l'artiste
+        p 00/00/0000 - 20h00
+      .col-sm-3
+        img(src='http://via.placeholder.com/200x200')
+        h2 Nom de l'artiste
+        p 00/00/0000 - 20h00
+    // ligne 8
+    .row
+      .col-sm-3
+        img(src='http://via.placeholder.com/200x200')
+        h2 Nom de l'artiste
+        p 00/00/0000 - 20h00
+      .col-sm-3y
+        img(src='http://via.placeholder.com/200x200')
+        h2 Nom de l'artiste
+        p 00/00/0000 - 20h00
+      .col-sm-3
+        img(src='http://via.placeholder.com/200x200')
+        h2 Nom de l'artiste
+        p 00/00/0000 - 20h00
+    // ligne 9
+    .row
+      .col-sm-3
+        img(src='http://via.placeholder.com/200x200')
+        h2 Nom de l'artiste
+        p 00/00/0000 - 20h00
+      .col-sm-3y
+        img(src='http://via.placeholder.com/200x200')
+        h2 Nom de l'artiste
+        p 00/00/0000 - 20h00
+      .col-sm-3
+        img(src='http://via.placeholder.com/200x200')
+        h2 Nom de l'artiste
+        p 00/00/0000 - 20h00
+    // ligne 10
+    .row
+      .col-sm-3
+        img(src='http://via.placeholder.com/200x200')
+        h2 Nom de l'artiste
+        p 00/00/0000 - 20h00
+      .col-sm-3y
+        img(src='http://via.placeholder.com/200x200')
+        h2 Nom de l'artiste
+        p 00/00/0000 - 20h00
+      .col-sm-3
+        img(src='http://via.placeholder.com/200x200')
+        h2 Nom de l'artiste
+        p 00/00/0000 - 20h00
