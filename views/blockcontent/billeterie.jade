@@ -1,55 +1,53 @@
 extends ../layout.jade
 
 block content
-  html
-  head
-    meta(charset='utf-8')
-    title Billetterie
-  body
-    // Titre
-    .container
-      h1 Billetterie
-    // Billets
-    .container
-      // Billets par jours
-      .row
-        .col-sm-4
-          h2 Vendredi 6 juillet
-          h3 20€
+  // Billets
+  .container
+    // Billets par jours
+    .row
+      .col-sm-4
+        h2 Vendredi 6 juillet
+        h3 20€
+        a(href='https://www.digitick.com/fr/', target='_blank')
           button(type='button')
             | Réserver
             i.fas.fa-ticket-alt
-        .col-sm-4
-          h2 Samedi 7 juillet
-          h3 30€
+      .col-sm-4
+        h2 Samedi 7 juillet
+        h3 30€
+        a(href='https://www.digitick.com/fr/', target='_blank')
           button(type='button')
             | Réserver
             i.fas.fa-ticket-alt
-        .col-sm-4
-          h2 Dimanche 8 juillet
-          h3 30€
+      .col-sm-4
+        h2 Dimanche 8 juillet
+        h3 30€
+        a(href='https://www.digitick.com/fr/', target='_blank')
           button(type='button')
             | Réserver
             i.fas.fa-ticket-alt
-      // Billets pour 2 & 3 jours
-      .row
-        .col-sm-6
-          h2 Pass 2 jours
-          h3 70€
+    // Billets pour 2 & 3 jours
+    .row
+      .col-sm-6
+        h2 Pass 2 jours
+        h3 70€
+        a(href='https://www.digitick.com/fr/', target='_blank')
           button(type='button')
             | Réserver
             i.fas.fa-ticket-alt
-        .col-sm-6
-          h2 Pass 2 jours
-          h3 50€
+      .col-sm-6
+        h2 Pass 2 jours
+        h3 50€
+        a(href='https://www.digitick.com/fr/', target='_blank')
           button(type='button')
             | Réserver
             i.fas.fa-ticket-alt
-      // Billet combiné entrée + hébergement
-      .row
-        .col-sm-4
-          h2 Pass entrée + hébergement
-          h3 150€
+    // Billet combiné entrée + hébergement
+    .row
+      .col-sm-4
+        h2 Pass entrée + hébergement
+        h3 150€
+        a(href='https://www.digitick.com/fr/', target='_blank')
           button(type='button')
             | Réserver
             i.fas.fa-ticket-alt
