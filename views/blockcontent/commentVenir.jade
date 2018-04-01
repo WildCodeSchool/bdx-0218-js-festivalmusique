@@ -5,65 +5,117 @@ block content
     .container
       header.text-center
         h1 Comment venir ?
-        p Nous pensons à demain. Privilégiez le covoiturage et les transports en commun
+        p 20 rue des Grands Mortiers, Saint-Pierre-des-Corps
+        p Nous pensons à demain. Privilégiez le covoiturage et les transports en commun.
       section#Go_festival
         header
           h2 Aller au festival
+        img(src='http://via.placeholder.com/1110x250', alt='')
         .card
-          #headingOne.card-header
+          #headingGare.card-header
             h5.mb-0
-              button.btn.btn-link(data-toggle='collapse', data-target='#collapseOne', aria-expanded='true', aria-controls='collapseOne') Collapsible Group Item #1
-          #collapseOne.collapse.show(aria-labelledby='headingOne', data-parent='#accordion')
+              a.collapsed(href='', title='Depuis la gare de Saint-Pierre-des-Corps', data-toggle='collapse', data-target='#Gare', aria-expanded='false', aria-controls='Gare') Depuis la gare de Saint-Pierre-des-Corps
+                i.fa.fa-plus
+          #Gare.collapse(aria-labelledby='headingGare', data-parent='#accordion')
             .card-body
-              | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              p La gare TGV de Saint-Pierre-des-Corps se situe à seulement 15min à pieds du festival.
+                br
+                | Les trajets sont directs depuis Paris, Bordeaux, Orléans, Blois, Angers, Nantes, Poitiers, Bourges et Lyon.
+                br
+                | Dernières navettes directes depuis la gare de Tours à 21h11, 21h31, 21h51, 22h14 et 22h52 (trajet de 7min).
+                br
+                | Pour plus de renseignements consultez le site de la
+                a(href='https://oui.sncf', title='site oui.sncf', target='_BLANK')  SNCF.
         .card
-          #headingTwo.card-header
+          #headingVoiture.card-header
             h5.mb-0
-              button.btn.btn-link.collapsed(data-toggle='collapse', data-target='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo') Collapsible Group Item #2
-          #collapseTwo.collapse(aria-labelledby='headingTwo', data-parent='#accordion')
+              a.collapsed(href='', title='En voiture / À moto', data-toggle='collapse', data-target='#Voiture', aria-expanded='false', aria-controls='Voiture') En voiture / À moto
+                i.fa.fa-plus
+          #Voiture.collapse(aria-labelledby='headingVoiture', data-parent='#accordion')
             .card-body
-              | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              p Parking vivement conseillé au centre 
+                b Les Atlantes
+                |, à 600m du festival.
+                br
+                | Attention l'accès à la rue des Grands Mortiers est réservé aux piétons et aux véhicules de secours.
+                br
+                | Ne vous garez pas devant les entreprises ou les magasins des environs. Enlèvement à vos frais en cas de stationnement gênant.
         .card
-          #headingThree.card-header
+          #headingVelo.card-header
             h5.mb-0
-              button.btn.btn-link.collapsed(data-toggle='collapse', data-target='#collapseThree', aria-expanded='false', aria-controls='collapseThree') Collapsible Group Item #3
-          #collapseThree.collapse(aria-labelledby='headingThree', data-parent='#accordion')
+              a.collapsed(href='', title='À vélo', data-toggle='collapse', data-target='#Velo', aria-expanded='false', aria-controls='Velo') À vélo
+                i.fa.fa-plus
+          #Velo.collapse(aria-labelledby='headingVelo', data-parent='#accordion')
             .card-body
-              | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      section#Go_campsite
-        header
-          h2 Aller au camping du festival
+              p Un grand parking pour les vélos se situera devant la salle. Seulement 10min depuis la gare de Tours. 
+                br
+                | Attention à votre état d'ébriété.
+                br
+                br 
+                | Pour le trajet sur Google Maps, 
+                a(href='https://goo.gl/maps/FmTQaQXAj1C2', title='Trajet pour vélo sur google map', target='_BLANK') cliquez-ici.
         .card
-          #headingOne.card-header
+          #headingBus.card-header
             h5.mb-0
-              button.btn.btn-link(data-toggle='collapse', data-target='#collapseOne', aria-expanded='true', aria-controls='collapseOne') Collapsible Group Item #1
-          #collapseOne.collapse.show(aria-labelledby='headingOne', data-parent='#accordion')
+              a.collapsed(href='', title='En transport en commun', data-toggle='collapse', data-target='#Bus', aria-expanded='false', aria-controls='Bus') En transport en commun
+                i.fa.fa-plus
+          #Bus.collapse(aria-labelledby='headingBus', data-parent='#accordion')
             .card-body
-              | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              p 
+                b BUS
+                |  - Prendre la ligne 3 ou 4, arrêt au centre commercial Les Atlantes.
+                br
+                | Pour plus de renseignements consultez le site de 
+                a(href='https://www.filbleu.fr/', title='Site filbleu.fr', target='_BLANK') Fil Bleu.
         .card
-          #headingTwo.card-header
+          #headingAutres.card-header
             h5.mb-0
-              button.btn.btn-link.collapsed(data-toggle='collapse', data-target='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo') Collapsible Group Item #2
-          #collapseTwo.collapse(aria-labelledby='headingTwo', data-parent='#accordion')
+              a.collapsed(href='', title='Autres transports', data-toggle='collapse', data-target='#Autres', aria-expanded='false', aria-controls='Autres') Autres transports
+                i.fa.fa-plus
+          #Autres.collapse(aria-labelledby='headingAutres', data-parent='#accordion')
             .card-body
-              | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-        .card
-          #headingThree.card-header
-            h5.mb-0
-              button.btn.btn-link.collapsed(data-toggle='collapse', data-target='#collapseThree', aria-expanded='false', aria-controls='collapseThree') Collapsible Group Item #3
-          #collapseThree.collapse(aria-labelledby='headingThree', data-parent='#accordion')
-            .card-body
-              | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              p 
+                b TAXI
+                |  - Les taxis à Tours sont joignables au 02 47 20 30 40.
+                br
+                br
+                b COVOITURAGE
+                |  - Partagez les frais en proposant vos places en covoiturage sur 
+                a(href='https://www.blablacar.fr/', title='Site blablacar.fr', target='_BLANK') Blablacar.
+                br
+                br
+                b CARS
+                |  - Trajets dès 5€ depuis de nombreuses villes en France.
+                | Consultez le site de 
+                a(href='https://fr.ouibus.com/', title='Site ouibus.com', target='_BLANK') Ouibus
+                |  ou de 
+                a(href='https://www.flixbus.fr/', title='Site flixbus.fr', target='_BLANK') Flixbus
+                |  pour plus d'informations.
       section#Go_reduced_mobility
         header
           h2 Personnes à mobilité réduite
+        img(src='http://via.placeholder.com/1110x250', alt='')
         .card
           #headingThree.card-header
             h5.mb-0
-              button.btn.btn-link.collapsed(data-toggle='collapse', data-target='#collapseThree', aria-expanded='false', aria-controls='collapseThree') Collapsible Group Item #3
+              a.collapsed(href='', title='Un parking réservé pour les personnes à mobilité réduite', data-toggle='collapse', data-target='#collapseThree', aria-expanded='false', aria-controls='collapseThree') Un parking réservé pour les personnes à mobilité réduite
+                i.fa.fa-plus
           #collapseThree.collapse(aria-labelledby='headingThree', data-parent='#accordion')
             .card-body
-              | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      section.map
-        iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d86429.02602561409!2d0.6249002542862776!3d47.39424617016583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47fcd5b34a979a55%3A0x40dc8d705388430!2sTours!5e0!3m2!1sfr!2sfr!4v1522349235271', width='1100', height='450', frameborder='0', style='border:0', allowfullscreen='')
-
+              p 
+                b Les personnes en situation de handicap peuvent stationner leur véhicule sur un parking réservé spécifiquement mis à leur disposition à proximité du festival. 
+                | Son accès est autorisé aux véhicules munis d’un pass délivré par le festival sur envoi de la photocopie de la carte d’invalidité.
+                br
+                | Pour obtenir votre accès parking merci d’envoyer un mail à : accessibilite[@]festizik.fr
+                br
+                | Depuis cet espace, une navette adaptée gratuite assure régulièrement les trajets aller-retour du parking jusqu’à l’entrée du festival.
+                br
+                br
+                b Horaires (sans réservation) :
+                br
+                ul
+                  li Vendredi : de 16h à 3h
+                  li Samedi: de 15h à 3h
+                  li Dimanche : de 15h à 1h30
+      .map
+        iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10806.61096094167!2d0.7126913269883615!3d47.37969573581246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47fcd41193ebe765%3A0xb6e6ef343ddb7376!2sPoint+HAUT%2C+lieu+de+cr%C3%A9ation+urbaine!5e0!3m2!1sfr!2sfr!4v1522588356601', width='1110', height='450', frameborder='0', style='border:0', allowfullscreen='')
