@@ -1,38 +1,54 @@
 extends ../layout.jade
 
 block content
-  p je modifie le texte en jade dans le dossier monprojet/views/billeterie.jade 
+  // Titre
   .container
-    #accordion
-    .card
-      #headingOne.card-header
-        h5.mb-0
-          button.btn.btn-link(data-toggle='collapse', data-target='#collapseOne', aria-expanded='false', aria-controls='collapseOne')
-            | Pass 1 jour : au choix
-      #collapseOne.collapse.show(aria-labelledby='headingOne', data-parent='#accordion')
-        .card-body
-          p pass 1 jour (au choix) illimité dans le parc du festival
-          button.btn.btn-primary(type='button')
-            a.digi(href='https://www.digitick.com/fr') Digitick
-      .card
-        #headingTwo.card-header
-          h5.mb-0
-            button.btn.btn-link.collapsed(data-toggle='collapse', data-target='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
-              | Pass 2 jours : Samedi - Dimanche
-        #collapseTwo.collapse(aria-labelledby='headingTwo', data-parent='#accordion')
-          .card-body
-            p pass 2 jours illimités dans le parc du festival
-            button.btn.btn-primary(type='button')
-              a.digi(href='https://www.digitick.com/fr') Digitick
-      .card
-        #headingThree.card-header
-          h5.mb-0
-            button.btn.btn-link.collapsed(data-toggle='collapse', data-target='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
-              | Pass 3 jours : Vendredi - Samedi - Dimanche
-        #collapseThree.collapse(aria-labelledby='headingThree', data-parent='#accordion')
-          .card-body
-            p pass 3 jours illimités dans le parc du festival
-            button.btn.btn-primary(type='button')
-              a.digi(href='https://www.digitick.com/fr') Digitick
-
-
+    h1 Billetterie
+  // Billets
+  .container
+    // Billets par jours
+    .row
+      .col-sm-4.col-xs-12
+        h2 Vendredi 6 juillet
+        h3 20€
+        a(href='https://www.digitick.com/fr/', target='_blank')
+          button(type='button')
+            | Réserver
+            i.fas.fa-ticket-alt
+      .col-sm-4.col-xs-12
+        h2 Samedi 7 juillet
+        h3 30€
+        a(href='https://www.digitick.com/fr/', target='_blank')
+          button(type='button')
+            | Réserver
+            i.fas.fa-ticket-alt
+      .col-sm-4.col-xs-12
+        h2 Dimanche 8 juillet
+        h3 30€
+        a(href='https://www.digitick.com/fr/', target='_blank')
+          button(type='button')
+            | Réserver
+            i.fas.fa-ticket-alt
+    // Billets pour 2 & 3 jours
+    .row
+      .col-sm-4.col-xs-12
+        h2 Pass 2 jours
+        h3 70€
+        a(href='https://www.digitick.com/fr/', target='_blank')
+          button(type='button')
+            | Réserver
+            i.fas.fa-ticket-alt
+      .col-sm-4.col-xs-12
+        h2 Pass 2 jours
+        h3 50€
+        a(href='https://www.digitick.com/fr/', target='_blank')
+          button(type='button')
+            | Réserver
+            i.fas.fa-ticket-alt
+      .col-sm-4.col-xs-12
+        h2 Pass entrée + hébergement
+        h3 150€
+        a(href='https://www.digitick.com/fr/', target='_blank')
+          button(type='button')
+            | Réserver
+            i.fas.fa-ticket-alt
