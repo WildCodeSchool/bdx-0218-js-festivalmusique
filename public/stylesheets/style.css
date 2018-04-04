@@ -1,6 +1,11 @@
+
 /* CONTAINER */
 .container {
 	/* background: grey; */
+}
+.all {
+	background: grey;
+	height: 2000px;
 }
 
 /* COVER PAGE */
@@ -56,5 +61,6 @@
 
 /* FOOTER */
 footer {
-	background-color: yellow;
+	background-color: black;
+	color: white;
 }
