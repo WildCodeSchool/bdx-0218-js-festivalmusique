@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 
 var Accueil = require('./routes/accueil');
 var Programmation = require('./routes/programmation');
+var Artiste = require('./routes/artiste');
 var Infospratiques = require('./routes/infospratiques');
 var Devenirbenevole = require('./routes/devenirbenevole');
 var Nouscontacter = require('./routes/nouscontacter');
@@ -29,6 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', Accueil);
 app.use('/programmation', Programmation);
+app.use('/artiste', Artiste);
 app.use('/infos-pratiques', Infospratiques);
 app.use('/devenir-benevole', Devenirbenevole);
 app.use('/nous-contacter', Nouscontacter);
