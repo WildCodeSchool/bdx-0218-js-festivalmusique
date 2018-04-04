@@ -1,7 +1,9 @@
-.container {
+.all {
 	background: grey;
+	height: 2000px;
 }
 
 footer {
-	background-color: yellow;
+	background-color: black;
+	color: white;
 }
