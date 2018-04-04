@@ -11,8 +11,9 @@ var Infospratiques = require('./routes/infospratiques');
 var Devenirbenevole = require('./routes/devenirbenevole');
 var Nouscontacter = require('./routes/nouscontacter');
 var Billeterie = require('./routes/billeterie');
+var commentVenir = require('./routes/commentVenir');
+var HebergementRestauration = require('./routes/hebergement-restauration')
 var Accessibilite = require('./routes/accessibilite');
-var HebergementRestauration = require('./routes/hebergement-restauration');
 
 var app = express();
 
@@ -34,8 +35,9 @@ app.use('/infos-pratiques', Infospratiques);
 app.use('/devenir-benevole', Devenirbenevole);
 app.use('/nous-contacter', Nouscontacter);
 app.use('/billeterie', Billeterie);
+app.use('/comment-venir', commentVenir);
+app.use('/hebergement-restauration', HebergementRestauration)
 app.use('/accessibilite', Accessibilite);
-app.use('/hebergement-restauration', HebergementRestauration);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
