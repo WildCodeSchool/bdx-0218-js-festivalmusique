@@ -5,163 +5,138 @@ block content
   .container
     h1 Programmation
   // Filtres
-  .container
+  .container.filters
     .row
-      .col-sm-3.col-xs-12
-        // Tous les artistes
-        button(type='button') Tous les artistes
-      .col-sm-3.col-xs-12
-        // Filtres des jours
-        .btn-group(role='group', aria-label='Basic example')
-          button.btn.btn-secondary(type='button') Vendredi
-          button.btn.btn-secondary(type='button') Samedi
-          button.btn.btn-secondary(type='button') Dimanche
-      .col-sm-3.col-xs-12
-        // Filtres  des styles
-        select(id='Trier par jour')
-          option(value='valeur1') Style de musique
-          option(value='valeur2') Métal
-          option(value='valeur3') Punk hardcore
-          option(value='valeur4') Classique
+      // Tous les artistes
+      .filter-all
+        a(href='#all') Tous les artistes
+      // Filtres des jours
+      .filter-day
+        a(href='#ticket-friday') Vendredi
+        a(href='#ticket-saturday') Samedi
+        a(href='#ticket-sunday') Dimanche
+      // Filtres  des styles
+      .dropdown.filter-style
+        button#dropdownMenuButton.btn.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Style de musique
+        .dropdown-menu(aria-labelledby='dropdownMenuButton')
+          a.dropdown-item(href='#style-rock') Rock
+          a.dropdown-item(href='#style-metal') Metal
+          a.dropdown-item(href='#style-pop') Pop
   // Liste des artistes
-  .container
-    // ligne 1
-    .row
-      .col-sm-4.col-xs-12
-        img.img-fluid(src='http://via.placeholder.com/500x500', alt="Nom de l'artiste")
-        h2 Nom de l'artiste
-        p 00/00/0000 - 20h00
-      .col-sm-4.col-xs-12
-        img.img-fluid(src='http://via.placeholder.com/500x500', alt="Nom de l'artiste")
-        h2 Nom de l'artiste
-        p 00/00/0000 - 20h00
-      .col-sm-4.col-xs-12
-        img.img-fluid(src='http://via.placeholder.com/500x500', alt="Nom de l'artiste")
-        h2 Nom de l'artiste
-        p 00/00/0000 - 20h00
-    // ligne 2
-    .row
-      .col-sm-4.col-xs-12
-        img.img-fluid(src='http://via.placeholder.com/500x500', alt="Nom de l'artiste")
-        h2 Nom de l'artiste
-        p 00/00/0000 - 20h00
-      .col-sm-4.col-xs-12
-        img.img-fluid(src='http://via.placeholder.com/500x500', alt="Nom de l'artiste")
-        h2 Nom de l'artiste
-        p 00/00/0000 - 20h00
-      .col-sm-4.col-xs-12
-        img.img-fluid(src='http://via.placeholder.com/500x500', alt="Nom de l'artiste")
-        h2 Nom de l'artiste
-        p 00/00/0000 - 20h00
-    // ligne 3
-    .row
-      .col-sm-4.col-xs-12
-        img.img-fluid(src='http://via.placeholder.com/500x500', alt="Nom de l'artiste")
-        h2 Nom de l'artiste
-        p 00/00/0000 - 20h00
-      .col-sm-4.col-xs-12
-        img.img-fluid(src='http://via.placeholder.com/500x500', alt="Nom de l'artiste")
-        h2 Nom de l'artiste
-        p 00/00/0000 - 20h00
-      .col-sm-4.col-xs-12
-        img.img-fluid(src='http://via.placeholder.com/500x500', alt="Nom de l'artiste")
-        h2 Nom de l'artiste
-        p 00/00/0000 - 20h00
-    // ligne 4
-    .row
-      .col-sm-4.col-xs-12
-        img.img-fluid(src='http://via.placeholder.com/500x500', alt="Nom de l'artiste")
-        h2 Nom de l'artiste
-        p 00/00/0000 - 20h00
-      .col-sm-4.col-xs-12
-        img.img-fluid(src='http://via.placeholder.com/500x500', alt="Nom de l'artiste")
-        h2 Nom de l'artiste
-        p 00/00/0000 - 20h00
-      .col-sm-4.col-xs-12
-        img.img-fluid(src='http://via.placeholder.com/500x500', alt="Nom de l'artiste")
-        h2 Nom de l'artiste
-        p 00/00/0000 - 20h00
-    // ligne 5
-    .row
-      .col-sm-4.col-xs-12
-        img.img-fluid(src='http://via.placeholder.com/500x500', alt="Nom de l'artiste")
-        h2 Nom de l'artiste
-        p 00/00/0000 - 20h00
-      .col-sm-4.col-xs-12
-        img.img-fluid(src='http://via.placeholder.com/500x500', alt="Nom de l'artiste")
-        h2 Nom de l'artiste
-        p 00/00/0000 - 20h00
-      .col-sm-4.col-xs-12
-        img.img-fluid(src='http://via.placeholder.com/500x500', alt="Nom de l'artiste")
-        h2 Nom de l'artiste
-        p 00/00/0000 - 20h00
-    // ligne 6
-    .row
-      .col-sm-4.col-xs-12
-        img.img-fluid(src='http://via.placeholder.com/500x500', alt="Nom de l'artiste")
-        h2 Nom de l'artiste
-        p 00/00/0000 - 20h00
-      .col-sm-4.col-xs-12
-        img.img-fluid(src='http://via.placeholder.com/500x500', alt="Nom de l'artiste")
-        h2 Nom de l'artiste
-        p 00/00/0000 - 20h00
-      .col-sm-4.col-xs-12
-        img.img-fluid(src='http://via.placeholder.com/500x500', alt="Nom de l'artiste")
-        h2 Nom de l'artiste
-        p 00/00/0000 - 20h00
-    // ligne 7
-    .row
-      .col-sm-4.col-xs-12
-        img.img-fluid(src='http://via.placeholder.com/500x500', alt="Nom de l'artiste")
-        h2 Nom de l'artiste
-        p 00/00/0000 - 20h00
-      .col-sm-4.col-xs-12
-        img.img-fluid(src='http://via.placeholder.com/500x500', alt="Nom de l'artiste")
-        h2 Nom de l'artiste
-        p 00/00/0000 - 20h00
-      .col-sm-4.col-xs-12
-        img.img-fluid(src='http://via.placeholder.com/500x500', alt="Nom de l'artiste")
-        h2 Nom de l'artiste
-        p 00/00/0000 - 20h00
-    // ligne 8
-    .row
-      .col-sm-4.col-xs-12
-        img.img-fluid(src='http://via.placeholder.com/500x500', alt="Nom de l'artiste")
-        h2 Nom de l'artiste
-        p 00/00/0000 - 20h00
-      .col-sm-4.col-xs-12
-        img.img-fluid(src='http://via.placeholder.com/500x500', alt="Nom de l'artiste")
-        h2 Nom de l'artiste
-        p 00/00/0000 - 20h00
-      .col-sm-4.col-xs-12
-        img.img-fluid(src='http://via.placeholder.com/500x500', alt="Nom de l'artiste")
-        h2 Nom de l'artiste
-        p 00/00/0000 - 20h00
-    // ligne 9
-    .row
-      .col-sm-4.col-xs-12
-        img.img-fluid(src='http://via.placeholder.com/500x500', alt="Nom de l'artiste")
-        h2 Nom de l'artiste
-        p 00/00/0000 - 20h00
-      .col-sm-4.col-xs-12
-        img.img-fluid(src='http://via.placeholder.com/500x500', alt="Nom de l'artiste")
-        h2 Nom de l'artiste
-        p 00/00/0000 - 20h00
-      .col-sm-4.col-xs-12
-        img.img-fluid(src='http://via.placeholder.com/500x500', alt="Nom de l'artiste")
-        h2 Nom de l'artiste
-        p 00/00/0000 - 20h00
-    // ligne 10
-    .row
-      .col-sm-4.col-xs-12
-        img.img-fluid(src='http://via.placeholder.com/500x500', alt="Nom de l'artiste")
-        h2 Nom de l'artiste
-        p 00/00/0000 - 20h00
-      .col-sm-4.col-xs-12
-        img.img-fluid(src='http://via.placeholder.com/500x500', alt="Nom de l'artiste")
-        h2 Nom de l'artiste
-        p 00/00/0000 - 20h00
-      .col-sm-4.col-xs-12
-        img.img-fluid(src='http://via.placeholder.com/500x500', alt="Nom de l'artiste")
-        h2 Nom de l'artiste
-        p 00/00/0000 - 20h00
+  .container.gallery
+    a.vignette-artiste.ticket-friday.style-rock(href='#')
+      img.img-fluid(src='http://via.placeholder.com/500x500')
+      h2 Nom de l'artiste
+      p 00/00/0000 - 20h00
+    a.vignette-artiste.ticket-saturday.style-metal(href='#')
+      img.img-fluid(src='http://via.placeholder.com/500x500')
+      h2 Nom de l'artiste
+      p 00/00/0000 - 20h00
+    a.vignette-artiste.ticket-sunday.style-pop(href='#')
+      img.img-fluid(src='http://via.placeholder.com/500x500')
+      h2 Nom de l'artiste
+      p 00/00/0000 - 20h00
+    a.vignette-artiste.ticket-friday.style-rock(href='#')
+      img.img-fluid(src='http://via.placeholder.com/500x500')
+      h2 Nom de l'artiste
+      p 00/00/0000 - 20h00
+    a.vignette-artiste.ticket-saturday.style-metal(href='#')
+      img.img-fluid(src='http://via.placeholder.com/500x500')
+      h2 Nom de l'artiste
+      p 00/00/0000 - 20h00
+    a.vignette-artiste.ticket-sunday.style-pop(href='#')
+      img.img-fluid(src='http://via.placeholder.com/500x500')
+      h2 Nom de l'artiste
+      p 00/00/0000 - 20h00
+    a.vignette-artiste.ticket-friday.style-rock(href='#')
+      img.img-fluid(src='http://via.placeholder.com/500x500')
+      h2 Nom de l'artiste
+      p 00/00/0000 - 20h00
+    a.vignette-artiste.ticket-saturday.style-metal(href='#')
+      img.img-fluid(src='http://via.placeholder.com/500x500')
+      h2 Nom de l'artiste
+      p 00/00/0000 - 20h00
+    a.vignette-artiste.ticket-sunday.style-pop(href='#')
+      img.img-fluid(src='http://via.placeholder.com/500x500')
+      h2 Nom de l'artiste
+      p 00/00/0000 - 20h00
+    a.vignette-artiste.ticket-friday.style-rock(href='#')
+      img.img-fluid(src='http://via.placeholder.com/500x500')
+      h2 Nom de l'artiste
+      p 00/00/0000 - 20h00
+    a.vignette-artiste.ticket-saturday.style-metal(href='#')
+      img.img-fluid(src='http://via.placeholder.com/500x500')
+      h2 Nom de l'artiste
+      p 00/00/0000 - 20h00
+    a.vignette-artiste.ticket-sunday.style-pop(href='#')
+      img.img-fluid(src='http://via.placeholder.com/500x500')
+      h2 Nom de l'artiste
+      p 00/00/0000 - 20h00
+    a.vignette-artiste.ticket-friday.style-rock(href='#')
+      img.img-fluid(src='http://via.placeholder.com/500x500')
+      h2 Nom de l'artiste
+      p 00/00/0000 - 20h00
+    a.vignette-artiste.ticket-saturday.style-metal(href='#')
+      img.img-fluid(src='http://via.placeholder.com/500x500')
+      h2 Nom de l'artiste
+      p 00/00/0000 - 20h00
+    a.vignette-artiste.ticket-sunday.style-pop(href='#')
+      img.img-fluid(src='http://via.placeholder.com/500x500')
+      h2 Nom de l'artiste
+      p 00/00/0000 - 20h00
+    a.vignette-artiste.ticket-friday.style-rock(href='#')
+      img.img-fluid(src='http://via.placeholder.com/500x500')
+      h2 Nom de l'artiste
+      p 00/00/0000 - 20h00
+    a.vignette-artiste.ticket-saturday.style-metal(href='#')
+      img.img-fluid(src='http://via.placeholder.com/500x500')
+      h2 Nom de l'artiste
+      p 00/00/0000 - 20h00
+    a.vignette-artiste.ticket-sunday.style-pop(href='#')
+      img.img-fluid(src='http://via.placeholder.com/500x500')
+      h2 Nom de l'artiste
+      p 00/00/0000 - 20h00
+    a.vignette-artiste.ticket-friday.style-rock(href='#')
+      img.img-fluid(src='http://via.placeholder.com/500x500')
+      h2 Nom de l'artiste
+      p 00/00/0000 - 20h00
+    a.vignette-artiste.ticket-saturday.style-metal(href='#')
+      img.img-fluid(src='http://via.placeholder.com/500x500')
+      h2 Nom de l'artiste
+      p 00/00/0000 - 20h00
+    a.vignette-artiste.ticket-sunday.style-pop(href='#')
+      img.img-fluid(src='http://via.placeholder.com/500x500')
+      h2 Nom de l'artiste
+      p 00/00/0000 - 20h00
+    a.vignette-artiste.ticket-friday.style-rock(href='#')
+      img.img-fluid(src='http://via.placeholder.com/500x500')
+      h2 Nom de l'artiste
+      p 00/00/0000 - 20h00
+    a.vignette-artiste.ticket-saturday.style-metal(href='#')
+      img.img-fluid(src='http://via.placeholder.com/500x500')
+      h2 Nom de l'artiste
+      p 00/00/0000 - 20h00
+    a.vignette-artiste.ticket-sunday.style-pop(href='#')
+      img.img-fluid(src='http://via.placeholder.com/500x500')
+      h2 Nom de l'artiste
+      p 00/00/0000 - 20h00
+  link(rel='stylesheet', type='text/css', href='../../public/stylesheets/style-programmation.css')
+  // Système de filtre par catégories avec animation
+  script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js', integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN', crossorigin='anonymous')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q', crossorigin='anonymous')
+  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl', crossorigin='anonymous')
+  script.
+    $('.filter-all a, .filter-day a, .filter-style a').click(function(e) {
+    e.preventDefault();
+    var a = $(this).attr('href');
+    a = a.substr(1);
+    $('.gallery a').each(function() {
+    if (!$(this).hasClass(a) && a != 'all')
+    $(this).addClass('hide');
+    else
+    $(this).removeClass('hide');
+    });
+    });
+    function handleSelect(elm){
+    window.location = elm.value+".php";
+    }
