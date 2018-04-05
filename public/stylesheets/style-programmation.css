@@ -1,0 +1,113 @@
+body {
+  margin: auto;
+  text-align: center;
+}
+
+/* Apparence des filtres */
+.filters {
+  padding: 0 0 30px 0;
+}
+
+.filter-all, .filter-day, .filters .dropdown, .filters .dropdown-menu {
+  margin: auto;
+  width: 95%;
+  padding: 5px 0 5px 0;
+}
+
+.filter-all a, .filters .dropdown .btn {
+  margin: auto;
+  width: 95%;
+  height: 45px
+}
+
+.filter-day a {
+  width: 31%;
+}
+
+.filters .btn-secondary {
+  color: black;
+  background-color: #eee;
+  border: none;
+}
+
+.filters .btn-secondary:hover {
+  color: white;
+  background-color: gray;
+}
+
+/* Artistes */
+.vignette-artiste {
+  width: 100%;
+  margin: 5px 0 5px 0;
+  display: block;
+  float: left;
+  opacity: 1;
+  background-color: gray;
+  transition: all 0.2s;
+}
+
+/* Fonctionnement des filtres */
+.filter-all a, .filter-day a {
+  padding: 10px 10px;
+  display: inline-block;
+  color: black;
+  background: #eee;
+  text-decoration: none;
+  transition: all 0.2s;
+  border-radius: 5px
+}
+
+.filter-all a:hover, .filter-day a:hover, .filter-style a:hover {
+  color: white;
+  background: gray 
+}
+
+.gallery a {
+  transition: all 0.2s;
+  display: block;
+  color: black;
+  opacity: 1;
+}
+
+.gallery a:hover {
+  color: #404040;
+  text-decoration: none;
+}
+
+.gallery .hide, .gallery .pophide {
+  width: 0%;
+  margin: 0;
+  opacity: 0;
+  transition: all 0.1s;
+}
+
+
+/* Version tablette */
+@media (min-width: 500px) {
+  .filter-all, .filter-day, .filters .dropdown {
+    width: 60%;
+  }
+  .vignette-artiste {
+    width: 48%;
+    margin: 1%;
+  }
+}
+
+/* Version desktop */
+@media (min-width: 1000px) {
+  .filter-all {
+    width: 18%;
+    margin-right: 0;
+  }
+  .filters .dropdown {
+    width: 18%;
+    margin-left: 0;
+  }
+  .filter-day {
+    width: 40%;
+    margin: 0;
+  }
+  .vignette-artiste {
+    width: 31%;
+  }
+}
