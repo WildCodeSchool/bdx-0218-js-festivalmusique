@@ -1,8 +1,65 @@
+
+/* CONTAINER */
+.container {
+	/* background: grey; */
+}
 .all {
 	background: grey;
 	height: 2000px;
 }
 
+/* COVER PAGE */
+.background {
+	background-image: url('../images/c18_homepage_header_night_01_v2.png');
+	background-position: center center;
+	background-size: cover;
+	height: 100vh;
+	width: 100vw;
+}
+
+/* HOME PAGE */
+	
+	/* HOME */
+	.home {
+		background-color: lightskyblue;
+	}
+	/* PROGRAMMATION */
+	.programmation {
+		background-color: lightgreen;
+	}
+	/* PREPARATION */
+	.preparation {
+		background-color: lightpink;
+	}
+	.PREPARATION__cadre {
+		border : 3px solid lightslategray;
+	}
+	/* CARTE-SECTION */
+	.carte-section {
+		background-color: lightcoral;
+	}
+	/* CAROUSSEL */
+	.carousel-festizik{
+/* 		max-height: 40vh;
+ */	}
+	/* SPOTIFY */
+	.spotify {
+		background-color: lightskyblue;
+	}
+	/* NEWSLETTER */
+	.newsletter {
+		background-color: lightseagreen;
+	}
+/* TEXT COLOR */
+.display-3 {
+	color: white;
+}
+
+.lead {
+	color: white;
+}
+
+/* FOOTER */
 footer {
 	background-color: black;
 	color: white;
