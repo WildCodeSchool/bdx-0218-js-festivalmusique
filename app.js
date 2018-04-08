@@ -14,7 +14,6 @@ var Billeterie = require('./routes/billeterie');
 var commentVenir = require('./routes/commentVenir');
 var HebergementRestauration = require('./routes/hebergement-restauration')
 var Accessibilite = require('./routes/accessibilite');
-var StyleGuide = require('./routes/style-guide');
 
 var app = express();
 
@@ -39,7 +38,6 @@ app.use('/billeterie', Billeterie);
 app.use('/comment-venir', commentVenir);
 app.use('/hebergement-restauration', HebergementRestauration)
 app.use('/accessibilite', Accessibilite);
-app.use('/style-guide', StyleGuide);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
