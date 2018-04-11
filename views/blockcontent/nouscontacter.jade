@@ -1,0 +1,42 @@
+extends ../layout.jade
+
+block content
+  .container
+    header
+      h1 Contactez-nous
+      p N'hésitez pas à nous poser des questions.
+      p Nous nous ferons un plaisir de vous répondre rapidement.  
+    .row
+      .col-xs-12.col-md-8
+        form
+          .row
+            .form-group.col-md-6
+              label(for='nom') Nom
+              input.form-control(type='text', name='nom')
+            .form-group.col-md-6
+              label(for='prenom') Prenom
+              input.form-control(type='text', name='prenom')
+          .form-group
+            label(for='mail') Email
+            input.form-control(type='email', name='mail')
+          .form-group
+            label(for='sujet') Sujet
+            input.form-control(type='text', name='sujet')
+          .form-group
+            label(for='message') Message
+            textarea.form-control(aria-label='With textarea', name='message')
+          button.btn.btn-primary.btn-lg(type='submit') Submit
+      .col-xs-12.col-md-4(class='coordonnees')
+        div.icons
+          i.fa.fa-phone.fa-2x
+          p Telephone
+          p xx.xx.xx.xx.xx
+        div.icons
+          i.fa.fa-map-marker.fa-2x
+          p Adresse
+          p somewhere
+        div.icons
+          i.fa.fa-envelope.fa-2x
+          p E-mail
+          p monAdresseMail@blabla.plop
+
