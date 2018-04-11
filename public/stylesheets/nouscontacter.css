@@ -5,11 +5,11 @@ header,
 header {
 	margin: 4% 0;
 }
-}
+
 .input-area {
 	margin-bottom: 2rem;
 }
-button {
+.btn-primary {
 	width: 100%;
 	margin-bottom: 10%;
 }
