@@ -18,6 +18,7 @@ var Accessibilite = require('./routes/accessibilite');
 var DeveloppementDurable = require('./routes/Developpement-durable');
 
 
+
 var app = express();
 
 // view engine setup
@@ -43,6 +44,7 @@ app.use('/comment-venir', commentVenir);
 app.use('/hebergement-restauration', HebergementRestauration)
 app.use('/accessibilite', Accessibilite);
 app.use('/Developpement-durable', DeveloppementDurable);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
