@@ -197,15 +197,6 @@
       .copy--orange {
         color: #ff5e35;
       }
-      .copy--permanent-marker {
-        font-family: 'Permanent Marker', cursive;
-      }
-      .copy--reem-kufi {
-        font-family: 'Reem Kufi', sans-serif;
-      }
-      .copy--roboto {
-        font-family: 'Roboto', sans-serif;
-      }
 
       .background {
         padding: 2rem;
@@ -337,10 +328,7 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper rhoncus ligula eget congue. Vestibulum vel tellus porttitor, laoreet ex ut, pulvinar risus. Donec rhoncus lobortis lacus at dictum. Donec non dolor eget arcu iaculis lacinia. Phasellus non erat lobortis, imperdiet diam non, pellentesque sapien. Sed venenatis justo eu arcu ultrices vestibulum. Aenean sit amet convallis lectus.</p>
 <pre>
 &lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper rhoncus ligula eget congue. Vestibulum vel tellus porttitor, laoreet ex ut, pulvinar risus. Donec rhoncus lobortis lacus at dictum. Donec non dolor eget arcu iaculis lacinia. Phasellus non erat lobortis, imperdiet diam non, pellentesque sapien. Sed venenatis justo eu arcu ultrices vestibulum. Aenean sit amet convallis lectus.&lt;/p>
-</pre>      
-          <header>
-            <h4>Couleurs</h4>
-          </header>
+</pre>        
           <p class="copy--blue-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper rhoncus ligula eget congue.</p>
 <pre>
 &lt;p class="copy--blue-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper rhoncus ligula eget congue.&lt;/p>
@@ -364,22 +352,7 @@
           <p class="copy--orange">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper rhoncus ligula eget congue.</p>
 <pre>
 &lt;p class="copy--orange">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper rhoncus ligula eget congue.&lt;/p>
-</pre>
-          <header>
-            <h4>Polices</h4>
-          </header>
-          <p class="copy--permanent-marker">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper rhoncus ligula eget congue.</p>
-<pre>
-&lt;p class="copy--permanent-marker">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper rhoncus ligula eget congue.&lt;/p>
-</pre>
-          <p class="copy--reem-kufi">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper rhoncus ligula eget congue.</p>
-<pre>
-&lt;p class="copy--reem-kufi">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper rhoncus ligula eget congue.&lt;/p>
-</pre>
-          <p class="copy--roboto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper rhoncus ligula eget congue.</p>
-<pre>
-&lt;p class="copy--roboto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper rhoncus ligula eget congue.&lt;/p>
-</pre>
+</pre> 
         </div>
       </section>
 
@@ -575,8 +548,6 @@
               <a href="https://fontawesome.com/cheatsheet">Font Awesome</a>
             </div>
           </div>
-          <i class="fab fa-facebook fa-lg"></i>
-          <i>Attention, notez que ce qui concerne les marques (Facebook par exemple) doit être appelé avec "fab" et non "fas".</i>
 <pre>
 &lt;i class="fas fa-car fa-xs"&gt;&lt;/i&gt;
 &lt;i class="fas fa-car fa-sm"&gt;&lt;/i&gt;
@@ -586,8 +557,6 @@
 &lt;i class="fas fa-car fa-5x"&gt;&lt;/i&gt;
 &lt;i class="fas fa-car fa-7x"&gt;&lt;/i&gt;
 &lt;i class="fas fa-car fa-10x"&gt;&lt;/i&gt;
-
-&lt;i class="fab fa-facebook"&gt;&lt;/i&gt;
 </pre> 
         </div>
       </section>
