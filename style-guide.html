@@ -2,14 +2,15 @@
 <html lang="en">
   <head>
     <title>Style Guide</title>
-    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Scheherazade:400,700" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Reem+Kufi|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
 
     <style>
       html { font-size: 62.5%; } /* 1rem vaut 10px */
       body { font-size: 1.6rem;
-        color: #333;}
+        color: #333;
+        font-family: 'Roboto', sans-serif;}
       pre{
         padding: 6px;
         border: 1px solid lightgrey;
@@ -22,15 +23,16 @@
         padding: 5rem 0;
       }
       section:nth-child(even) {
-        background-color: #ccc;
+        background-color: #ddd;
       }
       section:nth-child(odd) {
-        background-color: #ddd;
+        background-color: #ccc;
       }
 
       h1, h2, h3, h4, h5, h6 {
         text-transform: uppercase;
         letter-spacing: 0.2em;
+        font-family: 'Reem Kufi', sans-serif;
       }
       h1 {
         font-size: 3.5em;
@@ -126,29 +128,56 @@
 
       .button--blue-light {
         background-color: #19b6e1;
-        color: white;
       }
       .button--blue-medium {
         background-color: #05676e;
-        color: white;
       }
       .button--blue-dark {
         background-color: #060830;
-        color: white;
       }
       .button--purple {
         background-color: #330136;
-        color: white;
       }
       .button--pink {
         background-color: #962e40;
-        color: white;
       }
       .button--orange {
         background-color: #ff5e35;
-        color: white;
       }
 
+      .button-transparent {
+        background-color: transparent;
+        font-weight: bold;
+      }
+
+         .button-transparent--blue-light {
+        color: #19b6e1;
+        border: 2px solid #19b6e1;
+      }
+      .button-transparent--blue-medium {
+        color: #05676e;
+        border: 2px solid #05676e;
+      }
+      .button-transparent--blue-dark {
+        color: #060830;
+        border: 2px solid #060830;
+      }
+      .button-transparent--purple {
+        color: #330136;
+        border: 2px solid #330136;
+      }
+      .button-transparent--pink {
+        color: #962e40;
+        border: 2px solid #962e40;
+      }
+      .button-transparent--orange {
+        color: #ff5e35;
+        border: 2px solid #ff5e35;
+      }
+
+      .button ~ .button {
+        margin-left: 1rem;
+      }
 
       .copy--blue-light {
         color: #19b6e1;
@@ -353,24 +382,23 @@
 <pre>
 &lt;div class="background--blue-light">Mon contenu&lt;/div>
 </pre>     
-
-<div class="background background--blue-medium">Mon contenu</div>
+          <div class="background background--blue-medium">Mon contenu</div>
 <pre>
 &lt;div class="background--blue-medium">Mon contenu&lt;/div>
 </pre>  
-<div class="background background--blue-dark">Mon contenu</div>
+          <div class="background background--blue-dark">Mon contenu</div>
 <pre>
 &lt;div class="background--blue-dark">Mon contenu&lt;/div>
 </pre> 
-<div class="background background--purple">Mon contenu</div>
+          <div class="background background--purple">Mon contenu</div>
 <pre>
 &lt;div class="background--purple">Mon contenu&lt;/div>
 </pre>   
-<div class="background background--pink">Mon contenu</div>
+          <div class="background background--pink">Mon contenu</div>
 <pre>
 &lt;div class="background--pink">Mon contenu&lt;/div>
 </pre> 
-<div class="background background--orange">Mon contenu</div>
+          <div class="background background--orange">Mon contenu</div>
 <pre>
 &lt;div class="background--orange">Mon contenu&lt;/div>
 </pre> 
@@ -395,14 +423,54 @@
 
 &lt;a class="button" href="" title="">Bouton avec lien&lt;/a>
 </pre>        
-
-<div>
-              <button class="button button__blue-light">Bouton</button>
-            </div>
+          <div class="d-flex justify-content-end">
+            <button class="button button--blue-light">Bouton</button>
+            <button class="button button-transparent button-transparent--blue-light">Bouton</button>
           </div>
 <pre>
-&lt;button class="button button__blue-light">Bouton&lt;/button>
+&lt;button class="button button--blue-light">Bouton&lt;/button>
+&lt;button class="button button-transparent--blue-light">Bouton&lt;/button>
+</pre> 
+          <div class="d-flex justify-content-end">
+            <button class="button button--blue-medium">Bouton</button>
+            <button class="button button-transparent button-transparent--blue-medium">Bouton</button>
+          </div>
+<pre>
+&lt;button class="button button--blue-medium">Bouton&lt;/button>
+&lt;button class="button button-transparent button-transparent--blue-medium">Bouton&lt;/button>
 </pre>     
+          <div class="d-flex justify-content-end">
+            <button class="button button--blue-dark">Bouton</button>
+            <button class="button button-transparent button-transparent--blue-dark">Bouton</button>
+          </div>
+<pre>
+&lt;button class="button button--blue-dark">Bouton&lt;/button>
+&lt;button class="button button-transparent button-transparent--blue-dark">Bouton&lt;/button>
+</pre> 
+          <div class="d-flex justify-content-end">
+            <button class="button button--purple">Bouton</button>
+            <button class="button button-transparent button-transparent--purple">Bouton</button>
+          </div>
+<pre>
+&lt;button class="button button--purple">Bouton&lt;/button>
+&lt;button class="button button-transparent button-transparent--purple">Bouton&lt;/button>
+</pre> 
+          <div class="d-flex justify-content-end">
+            <button class="button button--pink">Bouton</button>
+            <button class="button button-transparent button-transparent--pink">Bouton</button>
+          </div>
+<pre>
+&lt;button class="button button--pink">Bouton&lt;/button>
+&lt;button class="button button-transparent button-transparent--pink">Bouton&lt;/button>
+</pre> 
+          <div class="d-flex justify-content-end">
+            <button class="button button--orange">Bouton</button>
+            <button class="button button-transparent button-transparent--orange">Bouton</button>
+          </div>
+<pre>
+&lt;button class="button button--orange">Bouton&lt;/button>
+&lt;button class="button button-transparent button-transparent--orange">Bouton&lt;/button>
+</pre> 
         </div>
       </section>
 
