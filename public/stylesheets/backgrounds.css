@@ -1,4 +1,8 @@
 /* bakcgrounds */
+body {
+ background-color: #fff5c8; 
+}
+
 .background--blue-light {
   background-color: #19b6e1;
   color: white;
