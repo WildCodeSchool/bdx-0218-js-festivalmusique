@@ -1,9 +1,9 @@
 let express = require('express');
 let router = express.Router();
 
-/* GET home page. */
+/* GET artist page. */
 router.get('/', function(req, res) {
-  res.render('blockcontent/commentVenir');
+  res.render('blockcontent/artiste');
 });
 
 module.exports = router;

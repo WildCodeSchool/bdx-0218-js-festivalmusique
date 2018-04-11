@@ -1,11 +1,56 @@
 extends ../layout.jade
 
 block content
-  p je modifie le texte en jade dans le dossier monprojet/views/devenirbenevole.jade 
-  div#collection
-    div.item
-      div.description What a cool item!
-      ul.liste
-        li.pill coucou
-        li.pill bonjour
-        li.pill toto       
+  .container.benevole
+    h1 Devenir bénévole
+    // Présentation
+    .row
+      .col-lg-12.benevole-presentation(<div='')
+        .benevole-image
+          img.img-fluid(src='http://via.placeholder.com/1000x1000')
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        h4 Restauration
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        h4 Hébergement
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    // Formulaire
+    .benevole-form
+      // Picto crayon
+      i.fas.fa-pencil-alt
+      h2 Je m'inscris
+      // Nom et prénom
+      .row.fields
+        .col-xs-12.col-sm-12.col-md-12.col-lg-6
+          .benevole-form-group
+            input.form-control.form-control-lg(type='text', placeholder='Votre prénom')
+          .benevole-form-group
+            input.form-control.form-control-lg(type='text', placeholder='Votre nom')
+        // Email et téléphone
+        .col-xs-12.col-sm-12.col-md-12.col-lg-6
+          .benevole-form-group
+            input#exampleInputEmail1.form-control.form-control-lg(type='email', aria-describedby='emailHelp', placeholder='Votre email')
+          .benevole-form-group
+            input.form-control.form-control-lg(type='text', placeholder='Votre téléphone')
+      div
+        // Choisir jour
+        h3 Je suis disponible
+        .benevole-day
+          label
+            input(type='checkbox', name='', value='')
+            span Vendredi
+          label
+            input(type='checkbox', name='', value='')
+            span Samedi
+          label
+            input(type='checkbox', name='', value='')
+            span Dimanche
+        // Envoyer
+        div
+          button.btn.btn-primary.btn-lg.row(type='button')
+            | Envoyer
+            i.fas.fa-paper-plane
+    // fin de formulaire
+    // fin de container

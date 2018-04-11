@@ -25,9 +25,14 @@ html( lang="fr" )
         link(rel='stylesheet', href='/stylesheets/form.css')
         link(rel='stylesheet', href='/stylesheets/button.css')
 
+        link(rel='stylesheet', href='/stylesheets/style-programmation.css')
+        link(rel='stylesheet', href='/stylesheets/style-artiste.css')
+        link(rel='stylesheet', href='/stylesheets/style-benevole.css')
+        link(rel='stylesheet', href='/stylesheets/nouscontacter.css')
+
     body
         include includes/navbar.jade
         block content
 
+        include includes/newsletter.jade
         include includes/footer.jade
-           
