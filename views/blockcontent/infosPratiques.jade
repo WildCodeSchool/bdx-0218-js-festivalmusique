@@ -1,38 +1,36 @@
 extends ../layout.jade
 
 block content
-    main
-      .container.text-center
+  main
+    .container.text-center
+      header
+        h1 INFOS PRATIQUES
+      section
         header
-          h1 INFOS PRATIQUES
-        section
-          header
-            h2 Retrouvez toutes nos infos
-          .row
-            .col-xs-12.col-md-6
-              a(href='/infos-pratiques/accessibilite', title='')
-                article
-                  img.img-fluid(src='http://via.placeholder.com/350x150', alt='')
-                  header
-                    h3 ACCESSIBILITE
-            .col-xs-12.col-md-6
-              a(href='/infos-pratiques/developpement-durable', title='')
-                article
-                  img.img-fluid(src='http://via.placeholder.com/350x150', alt='')
-                  header
-                    h3 DEVELOPPEMENT DURABLE
-          .row
-            .col-xs-12.col-md-6
-              a(href='/infos-pratiques/hebergement-restauration', title='')
-                article
-                  img.img-fluid(src='http://via.placeholder.com/350x150', alt='')
-                  header
-                    h3 HEBERGEMENT - RESTAURATION
-            .col-xs-12.col-md-6
-              a(href='/infos-pratiques/comment-venir', title='')
-                article
-                  img.img-fluid(src='http://via.placeholder.com/350x150', alt='')
-                  header
-                    h3 COMMENT VENIR
-
-
+          h2 Retrouvez toutes nos infos
+        .row
+          .col-xs-12.col-md-6
+            a(href='', title='')
+              article
+                img.img-fluid(src='images/infos-pratiques/mobilite.jpg', alt='mobilite')
+                header
+                  h3 ACCESSIBILITE
+          .col-xs-12.col-md-6
+            a(href='', title='')
+              article
+                img.img-fluid(src='images/infos-pratiques/ethique.jpg', alt='ethique')
+                header
+                  h3 DEVELOPPEMENT DURABLE
+        .row
+          .col-xs-12.col-md-6
+            a(href='', title='')
+              article
+                img.img-fluid(src='images/infos-pratiques/repos.jpg', alt='repos')
+                header
+                  h3 HEBERGEMENT
+          .col-xs-12.col-md-6
+            a(href='', title='')
+              article
+                img.img-fluid(src='images/infos-pratiques/trajet.jpg', alt='trajet')
+                header
+                  h3 COMMENT VENIR
