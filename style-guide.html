@@ -8,7 +8,8 @@
 
     <style>
       html { font-size: 62.5%; } /* 1rem vaut 10px */
-      body { font-size: 1.6rem;}
+      body { font-size: 1.6rem;
+        color: #333;}
       pre{
         padding: 6px;
         border: 1px solid lightgrey;
@@ -122,6 +123,81 @@
           left: 0;
           background-color: rgba(255, 255, 255, 0.15)
       }
+
+      .button--blue-light {
+        background-color: #19b6e1;
+        color: white;
+      }
+      .button--blue-medium {
+        background-color: #05676e;
+        color: white;
+      }
+      .button--blue-dark {
+        background-color: #060830;
+        color: white;
+      }
+      .button--purple {
+        background-color: #330136;
+        color: white;
+      }
+      .button--pink {
+        background-color: #962e40;
+        color: white;
+      }
+      .button--orange {
+        background-color: #ff5e35;
+        color: white;
+      }
+
+
+      .copy--blue-light {
+        color: #19b6e1;
+      }
+      .copy--blue-medium {
+        color: #05676e;
+      }
+      .copy--blue-dark {
+        color: #060830;
+      }
+      .copy--purple {
+        color: #330136;
+      }
+      .copy--pink {
+        color: #962e40;
+      }
+      .copy--orange {
+        color: #ff5e35;
+      }
+
+      .background {
+        padding: 2rem;
+      }
+      .background--blue-light {
+        background-color: #19b6e1;
+        color: white;
+      }
+      .background--blue-medium {
+        background-color: #05676e;
+        color: white;
+      }
+      .background--blue-dark {
+        background-color: #060830;
+        color: white;
+      }
+      .background--purple {
+        background-color: #330136;
+        color: white;
+      }
+      .background--pink {
+        background-color: #962e40;
+        color: white;
+      }
+      .background--orange {
+        background-color: #ff5e35;
+        color: white;
+      }
+      
+      
     </style>
   </head>
   <body>
@@ -132,6 +208,7 @@
                 <li class="nav-item"><a href="#titles" class="nav-link">Titres</a></li>
                 <li class="nav-item"><a href="#texts" class="nav-link">Textes</a></li>
                 <li class="nav-item"><a href="#links" class="nav-link">Liens</a></li>
+                <li class="nav-item"><a href="#backgrounds" class="nav-link">Fonds</a></li>
                 <li class="nav-item"><a href="#buttons" class="nav-link">Boutons</a></li>
                 <li class="nav-item"><a href="#forms" class="nav-link">Formulaires</a></li>
                 <li class="nav-item"><a href="#icons" class="nav-link">Icônes</a></li>
@@ -223,6 +300,30 @@
 <pre>
 &lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper rhoncus ligula eget congue. Vestibulum vel tellus porttitor, laoreet ex ut, pulvinar risus. Donec rhoncus lobortis lacus at dictum. Donec non dolor eget arcu iaculis lacinia. Phasellus non erat lobortis, imperdiet diam non, pellentesque sapien. Sed venenatis justo eu arcu ultrices vestibulum. Aenean sit amet convallis lectus.&lt;/p>
 </pre>        
+          <p class="copy--blue-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper rhoncus ligula eget congue.</p>
+<pre>
+&lt;p class="copy--blue-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper rhoncus ligula eget congue.&lt;/p>
+</pre>
+          <p class="copy--blue-medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper rhoncus ligula eget congue.</p>
+<pre>
+&lt;p class="copy--blue-medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper rhoncus ligula eget congue.&lt;/p>
+</pre> 
+          <p class="copy--blue-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper rhoncus ligula eget congue.</p>
+<pre>
+&lt;p class="copy--blue-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper rhoncus ligula eget congue.&lt;/p>
+</pre>
+          <p class="copy--purple">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper rhoncus ligula eget congue.</p>
+<pre>
+&lt;p class="copy--purple">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper rhoncus ligula eget congue.&lt;/p>
+</pre>
+          <p class="copy--pink">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper rhoncus ligula eget congue.</p>
+<pre>
+&lt;p class="copy--pink">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper rhoncus ligula eget congue.&lt;/p>
+</pre> 
+          <p class="copy--orange">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper rhoncus ligula eget congue.</p>
+<pre>
+&lt;p class="copy--orange">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper rhoncus ligula eget congue.&lt;/p>
+</pre> 
         </div>
       </section>
 
@@ -242,6 +343,42 @@
       </section>
 
       <!-- boutons -->
+      <section id="backgrounds">
+        <div class="container">
+          <header>
+            <h2>Fonds</h2>
+          </header>
+
+          <div class="background background--blue-light">Mon contenu</div>
+<pre>
+&lt;div class="background--blue-light">Mon contenu&lt;/div>
+</pre>     
+
+<div class="background background--blue-medium">Mon contenu</div>
+<pre>
+&lt;div class="background--blue-medium">Mon contenu&lt;/div>
+</pre>  
+<div class="background background--blue-dark">Mon contenu</div>
+<pre>
+&lt;div class="background--blue-dark">Mon contenu&lt;/div>
+</pre> 
+<div class="background background--purple">Mon contenu</div>
+<pre>
+&lt;div class="background--purple">Mon contenu&lt;/div>
+</pre>   
+<div class="background background--pink">Mon contenu</div>
+<pre>
+&lt;div class="background--pink">Mon contenu&lt;/div>
+</pre> 
+<div class="background background--orange">Mon contenu</div>
+<pre>
+&lt;div class="background--orange">Mon contenu&lt;/div>
+</pre> 
+        </div>
+      </section>
+
+
+      <!-- boutons -->
       <section id="buttons">
         <div class="container">
           <div class="d-flex justify-content-between">
@@ -254,10 +391,18 @@
             </div>
           </div>
 <pre>
-&lt;button>Bouton&lt;/button>
+&lt;button class="button">Bouton&lt;/button>
 
-&lt;a href="" title="">Bouton avec lien&lt;/a>
+&lt;a class="button" href="" title="">Bouton avec lien&lt;/a>
 </pre>        
+
+<div>
+              <button class="button button__blue-light">Bouton</button>
+            </div>
+          </div>
+<pre>
+&lt;button class="button button__blue-light">Bouton&lt;/button>
+</pre>     
         </div>
       </section>
 
