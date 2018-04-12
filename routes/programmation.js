@@ -15,7 +15,6 @@ router.get('/', (req, res, next) => {
   	con.query(select, function (err, rows) {
         if (err) throw err;
         console.log("insert done");
-        console.log(rows);
         res.render('blockcontent/programmation', {tableArtistes: rows});
     });
 })
