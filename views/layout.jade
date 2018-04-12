@@ -14,22 +14,25 @@ html( lang="fr" )
         script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl', crossorigin='anonymous')
 
         //- Font Awesome
-        script(src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous")
+        link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.0.10/css/all.css', integrity='sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg', crossorigin='anonymous')
 
+        //- Fonts Google
         link(href='https://fonts.googleapis.com/css?family=Permanent+Marker|Reem+Kufi|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i', rel='stylesheet')
 
         link(rel='stylesheet', href='/stylesheets/style.css')
         link(rel='stylesheet', href='/stylesheets/main.css')
-        link(rel='stylesheet', href='/stylesheets/backgrounds.css')
-        link(rel='stylesheet', href='/stylesheets/typo.css')
-        link(rel='stylesheet', href='/stylesheets/form.css')
-        link(rel='stylesheet', href='/stylesheets/button.css')
+        link(rel='stylesheet', href='/stylesheets/components/backgrounds.css')
+        link(rel='stylesheet', href='/stylesheets/components/typo.css')
+        link(rel='stylesheet', href='/stylesheets/components/form.css')
+        link(rel='stylesheet', href='/stylesheets/components/button.css')
 
         link(rel='stylesheet', href='/stylesheets/style-programmation.css')
         link(rel='stylesheet', href='/stylesheets/style-artiste.css')
         link(rel='stylesheet', href='/stylesheets/style-benevole.css')
         link(rel='stylesheet', href='/stylesheets/style-nouscontacter.css')
         link(rel='stylesheet', href='/stylesheets/style-accueil.css')
+        link(rel='stylesheet', href='/stylesheets/style-footer.css')
+
 
     body
         include includes/navbar.jade
