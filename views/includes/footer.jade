@@ -1,61 +1,59 @@
 footer
-  .container.py-5
-    .row
-      .col-12.col-md
-        svg.d-block.mb-2(xmlns='http://www.w3.org/2000/svg', width='24', height='24', viewbox='0 0 24 24', fill='none', stroke='currentColor', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
-          circle(cx='12', cy='12', r='10')
-          line(x1='14.31', y1='8', x2='20.05', y2='17.94')
-          line(x1='9.69', y1='8', x2='21.17', y2='8')
-          line(x1='7.38', y1='12', x2='13.12', y2='2.06')
-          line(x1='9.69', y1='16', x2='3.95', y2='6.06')
-          line(x1='14.31', y1='16', x2='2.83', y2='16')
-          line(x1='16.62', y1='12', x2='10.88', y2='21.94')
-        small.d-block.mb-3.text-muted © 2017-2018
-      .col-6.col-md
-        h5 Features
-        ul.list-unstyled.text-small
-          li
-            a.text-muted(href='#') Cool stuff
-          li
-            a.text-muted(href='#') Random feature
-          li
-            a.text-muted(href='#') Team feature
-          li
-            a.text-muted(href='#') Stuff for developers
-          li
-            a.text-muted(href='#') Another one
-          li
-            a.text-muted(href='#') Last time
-      .col-6.col-md
-        h5 Resources
-        ul.list-unstyled.text-small
-          li
-            a.text-muted(href='#') Resource
-          li
-            a.text-muted(href='#') Resource name
-          li
-            a.text-muted(href='#') Another resource
-          li
-            a.text-muted(href='#') Final resource
-      .col-6.col-md
-        h5 Resources
-        ul.list-unstyled.text-small
-          li
-            a.text-muted(href='#') Business
-          li
-            a.text-muted(href='#') Education
-          li
-            a.text-muted(href='#') Government
-          li
-            a.text-muted(href='#') Gaming
-      .col-6.col-md
-        h5 About
-        ul.list-unstyled.text-small
-          li
-            a.text-muted(href='#') Team
-          li
-            a.text-muted(href='#') Locations
-          li
-            a.text-muted(href='#') Privacy
-          li
-            a.text-muted(href='#') Terms
+	.container
+		.row
+			.col-md
+				header
+					h5 Festizik
+				p.text-muted Point HAUT,
+					br
+					| 20 Rue des Grands Mortiers,
+					br
+					| 37700 Saint-Pierre-des-Corps
+			.col-md
+				header
+					h5 Navigation
+				nav
+					ul.list-unstyled
+						li
+							a.text-muted(href='/', title='Accueil') Accueil
+						li
+							a.text-muted(href='/programmation', title='Programmation') Programmation
+						li
+							a.text-muted(href='/infos-pratiques', title='Infos pratiques') Infos pratiques
+						li
+							a.text-muted(href='/devenir-benevole', title='Devenir bénévole') Devenir bénévole
+						li
+							a.text-muted(href='/nous-contacter', title='Contact') Contact
+						li
+							a.text-muted(href='/billetterie', title='Billetterie') Billetterie
+			.col-md
+				header
+					h5 Autres
+				nav
+					ul.list-unstyled
+						li
+							a.text-muted(href='/mentions-legales', title='Mentions légales') Mentions légales
+						li
+							a.text-muted(href='/conditions-generales-de-vente', title='Conditions génrales de vente') CGV
+						li
+							a.text-muted(href='http://hotline.digitick.com/', title='Service après-vente Digitick', target='_blank') SAV Digitick
+			.col-md
+				header
+					h5 Suivez-nous
+				nav
+					ul.list-unstyled#Networks
+						li
+							a.text-muted(href='https://www.facebook.com/', title='', target='_blank')
+								i.fab.fa-facebook-f.fa-2x
+						li
+							a.text-muted(href='https://www.instagram.com/', title='', target='_blank')
+								i.fab.fa-instagram.fa-2x
+						li
+							a.text-muted(href='https://plus.google.com/', title='', target='_blank')
+								i.fab.fa-youtube.fa-2x
+						li
+							a.text-muted(href='https://twitter.com/', title='', target='_blank')
+								i.fab.fa-twitter.fa-2x
+		#Copyright.text-center
+			p.text-muted © Copyright 2018 Team Buldozer - Réalisation : 
+				a(href='https://github.com/WildCodeSchool/bdx-0218-js-festivalmusique', title='Github Festizik', target='_blank') Festizik
