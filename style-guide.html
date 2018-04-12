@@ -144,6 +144,10 @@
       .button--orange {
         background-color: #ff5e35;
       }
+      .button--white {
+        background-color: white;
+        color: grey; /* couleur à personnaliser */
+      }
 
       .button-transparent {
         background-color: transparent;
@@ -173,6 +177,10 @@
       .button-transparent--orange {
         color: #ff5e35;
         border: 2px solid #ff5e35;
+      }
+      .button-transparent--white {
+        color: white;
+        border: 2px solid white;
       }
 
       .button ~ .button {
@@ -470,6 +478,14 @@
 <pre>
 &lt;button class="button button--orange">Bouton&lt;/button>
 &lt;button class="button button-transparent button-transparent--orange">Bouton&lt;/button>
+</pre> 
+          <div class="d-flex justify-content-end">
+            <button class="button button--white">Bouton</button>
+            <button class="button button-transparent button-transparent--white">Bouton</button>
+          </div>
+<pre>
+&lt;button class="button button--white">Bouton&lt;/button>
+&lt;button class="button button-transparent button-transparent--white">Bouton&lt;/button>
 </pre> 
         </div>
       </section>
