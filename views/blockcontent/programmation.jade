@@ -26,9 +26,10 @@ block content
   .container.gallery
     each artiste in tableArtistes
       a.vignette-artiste.ticket-friday.style-rock(href='#')
-        img.img-fluid(src='http://via.placeholder.com/500x500')
+        img.img-fluid(src=artiste.image)
         h2 #{artiste.nom}
         p #{artiste.jour} - #{artiste.heure}
+        
 
   script.
     $('.filter-all a, .filter-day a, .filter-style a').click(function(e) {
