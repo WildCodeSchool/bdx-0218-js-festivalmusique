@@ -1,132 +1,159 @@
 extends ../layout.jade
 
 block content
-  // Titre
-  .container
-    h1 Programmation
   // Filtres
-  .container.filters
+  .programmation-filters
+    header
+      h1.main-title Programmation
     .row
       // Tous les artistes
-      .filter-all
+      .programmation-filter-all
         a(href='#all') Tous les artistes
       // Filtres des jours
-      .filter-day
+      .programmation-filter-day
         a(href='#ticket-friday') Vendredi
         a(href='#ticket-saturday') Samedi
         a(href='#ticket-sunday') Dimanche
       // Filtres  des styles
-      .dropdown.filter-style
+      .dropdown.programmation-filter-style
         button#dropdownMenuButton.btn.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Style de musique
         .dropdown-menu(aria-labelledby='dropdownMenuButton')
           a.dropdown-item(href='#style-rock') Rock
           a.dropdown-item(href='#style-metal') Metal
           a.dropdown-item(href='#style-pop') Pop
   // Liste des artistes
-  .container.gallery
-    a.vignette-artiste.ticket-friday.style-rock(href='#')
+  .programmation-gallery
+    a.programmation-vignette-artiste.ticket-friday.style-rock(href='#')
       img.img-fluid(src='http://via.placeholder.com/500x500')
-      h2 Nom de l'artiste
+      header
+        h2 Nom de l'artiste
       p 00/00/0000 - 20h00
-    a.vignette-artiste.ticket-saturday.style-metal(href='#')
+    a.programmation-vignette-artiste.ticket-saturday.style-metal(href='#')
       img.img-fluid(src='http://via.placeholder.com/500x500')
-      h2 Nom de l'artiste
+      header
+        h2 Nom de l'artiste
       p 00/00/0000 - 20h00
-    a.vignette-artiste.ticket-sunday.style-pop(href='#')
+    a.programmation-vignette-artiste.ticket-sunday.style-pop(href='#')
       img.img-fluid(src='http://via.placeholder.com/500x500')
-      h2 Nom de l'artiste
+      header
+        h2 Nom de l'artiste
       p 00/00/0000 - 20h00
-    a.vignette-artiste.ticket-friday.style-rock(href='#')
+    a.programmation-vignette-artiste.ticket-friday.style-rock(href='#')
       img.img-fluid(src='http://via.placeholder.com/500x500')
-      h2 Nom de l'artiste
+      header
+        h2 Nom de l'artiste
       p 00/00/0000 - 20h00
-    a.vignette-artiste.ticket-saturday.style-metal(href='#')
+    a.programmation-vignette-artiste.ticket-saturday.style-metal(href='#')
       img.img-fluid(src='http://via.placeholder.com/500x500')
-      h2 Nom de l'artiste
+      header
+        h2 Nom de l'artiste
       p 00/00/0000 - 20h00
-    a.vignette-artiste.ticket-sunday.style-pop(href='#')
+    a.programmation-vignette-artiste.ticket-sunday.style-pop(href='#')
       img.img-fluid(src='http://via.placeholder.com/500x500')
-      h2 Nom de l'artiste
+      header
+        h2 Nom de l'artiste
       p 00/00/0000 - 20h00
-    a.vignette-artiste.ticket-friday.style-rock(href='#')
+    a.programmation-vignette-artiste.ticket-friday.style-rock(href='#')
       img.img-fluid(src='http://via.placeholder.com/500x500')
-      h2 Nom de l'artiste
+      header
+        h2 Nom de l'artiste
       p 00/00/0000 - 20h00
-    a.vignette-artiste.ticket-saturday.style-metal(href='#')
+    a.programmation-vignette-artiste.ticket-saturday.style-metal(href='#')
       img.img-fluid(src='http://via.placeholder.com/500x500')
-      h2 Nom de l'artiste
+      header
+        h2 Nom de l'artiste
       p 00/00/0000 - 20h00
-    a.vignette-artiste.ticket-sunday.style-pop(href='#')
+    a.programmation-vignette-artiste.ticket-sunday.style-pop(href='#')
       img.img-fluid(src='http://via.placeholder.com/500x500')
-      h2 Nom de l'artiste
+      header
+        h2 Nom de l'artiste
       p 00/00/0000 - 20h00
-    a.vignette-artiste.ticket-friday.style-rock(href='#')
+    a.programmation-vignette-artiste.ticket-friday.style-rock(href='#')
       img.img-fluid(src='http://via.placeholder.com/500x500')
-      h2 Nom de l'artiste
+      header
+        h2 Nom de l'artiste
       p 00/00/0000 - 20h00
-    a.vignette-artiste.ticket-saturday.style-metal(href='#')
+    a.programmation-vignette-artiste.ticket-saturday.style-metal(href='#')
       img.img-fluid(src='http://via.placeholder.com/500x500')
-      h2 Nom de l'artiste
+      header
+        h2 Nom de l'artiste
       p 00/00/0000 - 20h00
-    a.vignette-artiste.ticket-sunday.style-pop(href='#')
+    a.programmation-vignette-artiste.ticket-sunday.style-pop(href='#')
       img.img-fluid(src='http://via.placeholder.com/500x500')
-      h2 Nom de l'artiste
+      header
+        h2 Nom de l'artiste
       p 00/00/0000 - 20h00
-    a.vignette-artiste.ticket-friday.style-rock(href='#')
+    a.programmation-vignette-artiste.ticket-friday.style-rock(href='#')
       img.img-fluid(src='http://via.placeholder.com/500x500')
-      h2 Nom de l'artiste
+      header
+        h2 Nom de l'artiste
       p 00/00/0000 - 20h00
-    a.vignette-artiste.ticket-saturday.style-metal(href='#')
+    a.programmation-vignette-artiste.ticket-saturday.style-metal(href='#')
       img.img-fluid(src='http://via.placeholder.com/500x500')
-      h2 Nom de l'artiste
+      header
+        h2 Nom de l'artiste
       p 00/00/0000 - 20h00
-    a.vignette-artiste.ticket-sunday.style-pop(href='#')
+    a.programmation-vignette-artiste.ticket-sunday.style-pop(href='#')
       img.img-fluid(src='http://via.placeholder.com/500x500')
-      h2 Nom de l'artiste
+      header
+        h2 Nom de l'artiste
       p 00/00/0000 - 20h00
-    a.vignette-artiste.ticket-friday.style-rock(href='#')
+    a.programmation-vignette-artiste.ticket-friday.style-rock(href='#')
       img.img-fluid(src='http://via.placeholder.com/500x500')
-      h2 Nom de l'artiste
+      header
+        h2 Nom de l'artiste
       p 00/00/0000 - 20h00
-    a.vignette-artiste.ticket-saturday.style-metal(href='#')
+    a.programmation-vignette-artiste.ticket-saturday.style-metal(href='#')
       img.img-fluid(src='http://via.placeholder.com/500x500')
-      h2 Nom de l'artiste
+      header
+        h2 Nom de l'artiste
       p 00/00/0000 - 20h00
-    a.vignette-artiste.ticket-sunday.style-pop(href='#')
+    a.programmation-vignette-artiste.ticket-sunday.style-pop(href='#')
       img.img-fluid(src='http://via.placeholder.com/500x500')
-      h2 Nom de l'artiste
+      header
+        h2 Nom de l'artiste
       p 00/00/0000 - 20h00
-    a.vignette-artiste.ticket-friday.style-rock(href='#')
+    a.programmation-vignette-artiste.ticket-friday.style-rock(href='#')
       img.img-fluid(src='http://via.placeholder.com/500x500')
-      h2 Nom de l'artiste
+      header
+        h2 Nom de l'artiste
       p 00/00/0000 - 20h00
-    a.vignette-artiste.ticket-saturday.style-metal(href='#')
+    a.programmation-vignette-artiste.ticket-saturday.style-metal(href='#')
       img.img-fluid(src='http://via.placeholder.com/500x500')
-      h2 Nom de l'artiste
+      header
+        h2 Nom de l'artiste
       p 00/00/0000 - 20h00
-    a.vignette-artiste.ticket-sunday.style-pop(href='#')
+    a.programmation-vignette-artiste.ticket-sunday.style-pop(href='#')
       img.img-fluid(src='http://via.placeholder.com/500x500')
-      h2 Nom de l'artiste
+      header
+        h2 Nom de l'artiste
       p 00/00/0000 - 20h00
-    a.vignette-artiste.ticket-friday.style-rock(href='#')
+    a.programmation-vignette-artiste.ticket-friday.style-rock(href='#')
       img.img-fluid(src='http://via.placeholder.com/500x500')
-      h2 Nom de l'artiste
+      header
+        h2 Nom de l'artiste
       p 00/00/0000 - 20h00
-    a.vignette-artiste.ticket-saturday.style-metal(href='#')
+    a.programmation-vignette-artiste.ticket-saturday.style-metal(href='#')
       img.img-fluid(src='http://via.placeholder.com/500x500')
-      h2 Nom de l'artiste
+      header
+        h2 Nom de l'artiste
       p 00/00/0000 - 20h00
-    a.vignette-artiste.ticket-sunday.style-pop(href='#')
+    a.programmation-vignette-artiste.ticket-sunday.style-pop(href='#')
       img.img-fluid(src='http://via.placeholder.com/500x500')
-      h2 Nom de l'artiste
+      header
+        h2 Nom de l'artiste
       p 00/00/0000 - 20h00
-  
+  link(rel='stylesheet', type='text/css', href='style-programmation.css')
+  // Système de filtre par catégories avec animation
+  script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js', integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN', crossorigin='anonymous')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q', crossorigin='anonymous')
+  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl', crossorigin='anonymous')
   script.
-    $('.filter-all a, .filter-day a, .filter-style a').click(function(e) {
+    $('.programmation-filter-all a, .programmation-filter-day a, .programmation-filter-style a').click(function(e) {
     e.preventDefault();
     var a = $(this).attr('href');
     a = a.substr(1);
-    $('.gallery a').each(function() {
+    $('.programmation-gallery a').each(function() {
     if (!$(this).hasClass(a) && a != 'all')
     $(this).addClass('hide');
     else

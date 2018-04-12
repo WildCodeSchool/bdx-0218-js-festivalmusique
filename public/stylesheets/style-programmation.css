@@ -4,50 +4,86 @@ body {
 }
 
 /* Apparence des filtres */
-.filters {
+.programmation-filters {
   padding: 0 0 30px 0;
 }
 
-.filter-all, .filter-day, .filters .dropdown, .filters .dropdown-menu {
+.programmation-filter-all, .programmation-filter-day, .programmation-filters .dropdown, .programmation-filters .dropdown-menu {
   margin: auto;
   width: 95%;
   padding: 5px 0 5px 0;
 }
 
-.filter-all a, .filters .dropdown .btn {
+.programmation-filter-all a, .programmation-filters .dropdown .btn {
   margin: auto;
   width: 95%;
   height: 45px
 }
 
-.filter-day a {
+.programmation-filter-day a {
   width: 31%;
 }
 
-.filters .btn-secondary {
+.programmation-filters .btn-secondary {
   color: black;
   background-color: #eee;
   border: none;
 }
 
-.filters .btn-secondary:hover {
+.programmation-filters .btn-secondary:hover {
   color: white;
   background-color: gray;
 }
 
-/* Artistes */
-.vignette-artiste {
-  width: 100%;
-  margin: 5px 0 5px 0;
+/* Galerie */
+.programmation-gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+
+.programmation-gallery a {
+  transition: all 0.2s;
   display: block;
-  float: left;
+  color: black;
+  opacity: 1;
+}
+
+.programmation-gallery a:hover {
+  color: #404040;
+  text-decoration: none;
+}
+
+.programmation-gallery .hide, .programmation-gallery .pophide {
+  width: 0%;
+  margin: 0;
+  opacity: 0;
+  transition: all 0.1s;
+}
+
+/* Artistes */
+.programmation-vignette-artiste {
+  width: 100%;
+  display: flex;
   opacity: 1;
   background-color: gray;
+  margin: 5px 0 5px 0;
   transition: all 0.2s;
 }
 
+.programmation-vignette-artiste h2 {
+  font-size: 2rem;
+  padding: 15px 0 5px 0;
+}
+
+.programmation-vignette-artiste p {
+  font-size: 1.2rem;
+}
+
 /* Fonctionnement des filtres */
-.filter-all a, .filter-day a {
+.programmation-filter-all a, .programmation-filter-day a {
   padding: 10px 10px;
   display: inline-block;
   color: black;
@@ -57,57 +93,39 @@ body {
   border-radius: 5px
 }
 
-.filter-all a:hover, .filter-day a:hover, .filter-style a:hover {
+.programmation-filter-all a:hover, .programmation-filter-day a:hover, .programmation-filter-style a:hover {
   color: white;
-  background: gray 
-}
-
-.gallery a {
-  transition: all 0.2s;
-  display: block;
-  color: black;
-  opacity: 1;
-}
-
-.gallery a:hover {
-  color: #404040;
-  text-decoration: none;
-}
-
-.gallery .hide, .gallery .pophide {
-  width: 0%;
-  margin: 0;
-  opacity: 0;
-  transition: all 0.1s;
+  background: gray
 }
 
 
 /* Version tablette */
-@media (min-width: 500px) {
-  .filter-all, .filter-day, .filters .dropdown {
+@media (min-width: 550px) {
+  .programmation-filter-all, .programmation-filter-day, .programmation-filters .dropdown {
     width: 60%;
   }
-  .vignette-artiste {
-    width: 48%;
-    margin: 1%;
+  .programmation-vignette-artiste {
+    width: 47%;
+    margin: 5px;
   }
 }
 
 /* Version desktop */
 @media (min-width: 1000px) {
-  .filter-all {
+  .programmation-filter-all {
     width: 18%;
     margin-right: 0;
   }
-  .filters .dropdown {
+  .programmation-filters .dropdown {
     width: 18%;
     margin-left: 0;
   }
-  .filter-day {
+  .programmation-filter-day {
     width: 40%;
     margin: 0;
   }
-  .vignette-artiste {
+  .programmation-vignette-artiste {
     width: 31%;
+    margin: 5px;
   }
 }
