@@ -5,7 +5,7 @@ block content
 		section.pt-0.pb-0.home.text-center
 			.background.d-flex.flex-column
 				div.m-auto
-					h1.display-3 Festival Musique
+					h1.display-3.main-title Festival Musique
 					p.lead slogan
 					p.lead du JJ/MM au JJ/MM
 					hr.my-4
@@ -14,8 +14,8 @@ block content
 				.d-flex.flex-column.m-3
 					img.img-fluid(src="../images/programmation.jpg", alt="programmation")
 					.d-flex.justify-content-between.m-3
-						a.btn.btn-primary(href="/programmation" role="button") voir programmation
-						a.btn.btn-primary(href="../images/programmation.jpg" role="button")
+						a.btn.btn-primary.button(href="/programmation" role="button") voir programmation
+						a.btn.btn-primary.button(href="../images/programmation.jpg" role="button")
 							i.fas.fa-external-link-alt
 		section.preparation.pt-3.pb-3
 			.container
@@ -32,43 +32,53 @@ block content
 		section.carte-section.pt-3.pb-3
 			.container
 				.d-flex.align-content-between.flex-wrap
-					.card-deck.mt-3.mb-3.pt-2.pb-2
+					.row
+						.col-lg-3.col-md-4.col-sm-6.mt-3.mb-3.pt-2.pb-2
 							.card
 								img.card-img-top(src="http://via.placeholder.com/287x180", alt="hotel")
 								i.align-self-center.m-3.fas.fa-ticket-alt.fa-3x
 								.card-body
 									h5.card-title.text-center PASS & BILLETS
 									p.card-text.text-justify Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi harum officiis praesentium hic nesciunt iure.
-									a.btn.btn-primary.btn-block.btn-lg(href="/billetterie") bouton
+								.card-footer
+									a.button.btn.btn-primary.btn-block.btn-lg(href="/billetterie") bouton
+						.col-lg-3.col-md-4.col-sm-6.mt-3.mb-3.pt-2.pb-2
 							.card
 								img.card-img-top(src="http://via.placeholder.com/287x180", alt="hotel")
 								i.align-self-center.m-3.fas.fa-bed.fa-3x
 								.card-body
 									h5.card-title.text-center HEBERGEMENT - RESTAURATION
 									p.card-text.text-justify Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi harum officiis praesentium hic nesciunt iure.
-									a.btn.btn-primary.btn-block.btn-lg(href="/infos-pratiques/hebergement-restauration") bouton
+								.card-footer
+									a.btn.btn-primary.btn-block.btn-lg.button(href="/infos-pratiques/hebergement-restauration") bouton
+						.col-lg-3.col-md-4.col-sm-6.mt-3.mb-3.pt-2.pb-2
 							.card
 								img.card-img-top(src="http://via.placeholder.com/287x180", alt="hotel")
 								i.align-self-center.m-3.fas.fa-utensils.fa-3x
 								.card-body
 									h5.card-title.text-center COMMENT VENIR ?
 									p.card-text.text-justify Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi harum officiis praesentium hic nesciunt iure.
-									a.btn.btn-primary.btn-block.btn-lg(href="/infos-pratiques/comment-venir") bouton
+								.card-footer
+									a.btn.btn-primary.btn-block.btn-lg.button(href="/infos-pratiques/comment-venir") bouton
+						.col-lg-3.col-md-4.col-sm-6.mt-3.mb-3.pt-2.pb-2
 							.card
 								img.card-img-top(src="http://via.placeholder.com/287x180", alt="hotel")
 								i.align-self-center.m-3.fas.fa-map.fa-3x
 								.card-body
 									h5.card-title.text-center BENEVOLES
 									p.card-text.text-justify Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi harum officiis praesentium hic nesciunt iure.
-									a.btn.btn-primary.btn-block.btn-lg(href="/devenir-benevole") bouton
+								.card-footer
+									a.btn.btn-primary.btn-block.btn-lg.button(href="/devenir-benevole") bouton
+						.col-lg-3.col-md-4.col-sm-6.mt-3.mb-3.pt-2.pb-2
 							.card
 								img.card-img-top(src="http://via.placeholder.com/287x180", alt="hotel")
 								i.align-self-center.m-3.fas.fa-users.fa-3x
 								.card-body
 									h5.card-title.text-center DEVELOPPEMENT DURABLE
 									p.card-text.text-justify Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi harum officiis praesentium hic nesciunt iure.
-									a.btn.btn-primary.btn-block.btn-lg(href="/infos-pratiques/developpement-durable") bouton
-		section.carousel-festizik
+								.card-footer
+									a.btn.btn-primary.btn-block.btn-lg.button(href="/infos-pratiques/developpement-durable") bouton
+		section.carousel-festizik.pt-0.pb-0
 			#carouselExampleIndicators.carousel.slide(data-ride='carousel')
 				ol.carousel-indicators
 					li.active(data-target='#carouselExampleIndicators', data-slide-to='0')
@@ -76,11 +86,11 @@ block content
 					li(data-target='#carouselExampleIndicators', data-slide-to='2')
 				.carousel-inner
 					.carousel-item.active
-						img.d-block.w-100(src='../images/festizik-caroussel1.jpg', alt='First slide')
+						img.d-block.w-100(src='http://via.placeholder.com/750x350', alt='First slide')
 					.carousel-item
-						img.d-block.w-100(src='../images/festizik-caroussel2.jpg', alt='Second slide')
+						img.d-block.w-100(src='http://via.placeholder.com/750x350', alt='Second slide')
 					.carousel-item
-						img.d-block.w-100(src='../images/festizik-caroussel3.jpg', alt='Third slide')
+						img.d-block.w-100(src='http://via.placeholder.com/750x350', alt='Third slide')
 				a.carousel-control-prev(href='#carouselExampleIndicators', role='button', data-slide='prev')
 					span.carousel-control-prev-icon(aria-hidden='true')
 					span.sr-only Previous
