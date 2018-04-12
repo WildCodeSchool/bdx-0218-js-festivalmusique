@@ -18,7 +18,19 @@ h1.main-title {
 	letter-spacing: 0.1em;
 }
 
+/* fonts */
+.copy--permanent-marker {
+	font-family: 'Permanent Marker', cursive;
+}
+.copy--reem-kufi {
+	font-family: 'Reem Kufi', sans-serif;
+}
+.copy--roboto {
+	font-family: 'Roboto', sans-serif;
+}
 
+
+/* colors */
 .copy--blue-light {
 	color: #19b6e1;
 }
@@ -37,3 +49,4 @@ h1.main-title {
 .copy--orange {
 	color: #ff5e35;
 }
+
