@@ -1,0 +1,33 @@
+/* footer */
+footer {
+	background-color: #333;
+	padding: 4rem 0;
+}
+footer #Copyright {
+	padding-top: 4rem;
+}
+footer #Copyright a {
+	color: white;
+	font-weight: 300;
+}
+footer #Copyright a:hover {
+	color: white;
+}
+
+/* social networks */
+ul#Networks {
+	display: flex;
+	justify-content: space-around;
+}
+ul#Networks a:hover i.fa-facebook-f {
+	color: #3b5998;
+}
+ul#Networks a:hover i.fa-twitter {
+	color: #55acee;
+}
+ul#Networks a:hover i.fa-instagram {
+	color: #bc2a8d;
+}
+ul#Networks a:hover i.fa-youtube {
+	color: #bb0000;
+}

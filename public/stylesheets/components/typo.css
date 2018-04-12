@@ -1,0 +1,52 @@
+/* Typography */
+
+/*font-family: 'Roboto', sans-serif;
+font-family: 'Permanent Marker', cursive;
+font-family: 'Reem Kufi', sans-serif;*/
+
+h1, h2, h3, h4, h5, h6 {
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	font-family: 'Reem Kufi', sans-serif;
+}
+h1 {
+	font-size: 3.5em;
+
+}
+h1.main-title {
+	font-family: 'Permanent Marker', cursive;
+	letter-spacing: 0.1em;
+}
+
+/* fonts */
+.copy--permanent-marker {
+	font-family: 'Permanent Marker', cursive;
+}
+.copy--reem-kufi {
+	font-family: 'Reem Kufi', sans-serif;
+}
+.copy--roboto {
+	font-family: 'Roboto', sans-serif;
+}
+
+
+/* colors */
+.copy--blue-light {
+	color: #19b6e1;
+}
+.copy--blue-medium {
+	color: #05676e;
+}
+.copy--blue-dark {
+	color: #060830;
+}
+.copy--purple {
+	color: #330136;
+}
+.copy--pink {
+	color: #962e40;
+}
+.copy--orange {
+	color: #ff5e35;
+}
+

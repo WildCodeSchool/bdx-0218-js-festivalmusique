@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Style Guide</title>
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Reem+Kufi|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+
+    <style>
+      html { font-size: 62.5%; } /* 1rem vaut 10px */
+      body { font-size: 1.6rem;
+        color: #333;
+        font-family: 'Roboto', sans-serif;}
+      pre{
+        padding: 6px;
+        border: 1px solid lightgrey;
+        overflow: scroll;
+        background: #f7f7f7;
+        font-size: 1.2em;
+        margin-top: 2rem;
+      }
+      section {
+        padding: 5rem 0;
+      }
+      section:nth-child(even) {
+        background-color: #ddd;
+      }
+      section:nth-child(odd) {
+        background-color: #ccc;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        font-family: 'Reem Kufi', sans-serif;
+      }
+      h1 {
+        font-size: 3.5em;
+        
+      }
+      h1.main-title {
+        font-family: 'Permanent Marker', cursive;
+        letter-spacing: 0.1em;
+      }
+      /* form */
+      form {
+            margin: 5rem 0;
+            text-align: right;
+      }
+      form .form-group {
+        text-align: left;
+      }
+      form .form-group input, form .form-group select, form .form-group textarea {
+        -webkit-appearance: none;
+          -moz-appearance: none;
+          padding: 1rem 1.3rem;
+          height: 5rem;
+          -webkit-border-radius: 2px;
+          -moz-border-radius: 2px;
+          -ms-border-radius: 2px;
+          -o-border-radius: 2px;
+          border-radius: 2px;
+          -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+          -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+          -o-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+          border: none;
+          color: #333;
+          font-size: 1.6rem
+      }
+      form .form-group select {
+          background-color: #fff;
+          background-image: url("data:image/svg+xml;utf8,<svg fill='#858585' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+          background-repeat: no-repeat;
+          background-position-x: 99%;
+          background-position-y: 15px;
+      }
+      form .form-group textarea {
+          min-height: 15rem
+      }
+
+      /* button */
+      .button {
+          border: none;
+           padding: 1.3rem 5rem;
+          text-transform: uppercase;
+          -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+          -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+          -o-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+          transition: all 0.3s ease-in-out;
+          -moz-transition: all 0.3s ease-in-out;
+          -webkit-transition: all 0.3s ease-in-out;
+          -o-transition: all 0.3s ease-in-out;
+          position: relative;
+          -webkit-border-radius: 2px;
+          -moz-border-radius: 2px;
+          -ms-border-radius: 2px;
+          -o-border-radius: 2px;
+          border-radius: 2px;
+          overflow: hidden;
+          color: white;
+          cursor: pointer;
+          display: inline-flex;
+      }
+      .button:after {
+          transition: all 0.3s ease-in-out;
+          -moz-transition: all 0.3s ease-in-out;
+          -webkit-transition: all 0.3s ease-in-out;
+          -o-transition: all 0.3s ease-in-out;
+          content: "";
+          z-index: -1;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: -100%;
+          background-color: transparent
+      }
+      .button:hover {
+        text-decoration: none;
+      }
+      .button:hover::after {
+          z-index: 2;
+          left: 0;
+          background-color: rgba(255, 255, 255, 0.15)
+      }
+
+      .button--blue-light {
+        background-color: #19b6e1;
+      }
+      .button--blue-medium {
+        background-color: #05676e;
+      }
+      .button--blue-dark {
+        background-color: #060830;
+      }
+      .button--purple {
+        background-color: #330136;
+      }
+      .button--pink {
+        background-color: #962e40;
+      }
+      .button--orange {
+        background-color: #ff5e35;
+      }
+
+      .button-transparent {
+        background-color: transparent;
+        font-weight: bold;
+      }
+
+         .button-transparent--blue-light {
+        color: #19b6e1;
+        border: 2px solid #19b6e1;
+      }
+      .button-transparent--blue-medium {
+        color: #05676e;
+        border: 2px solid #05676e;
+      }
+      .button-transparent--blue-dark {
+        color: #060830;
+        border: 2px solid #060830;
+      }
+      .button-transparent--purple {
+        color: #330136;
+        border: 2px solid #330136;
+      }
+      .button-transparent--pink {
+        color: #962e40;
+        border: 2px solid #962e40;
+      }
+      .button-transparent--orange {
+        color: #ff5e35;
+        border: 2px solid #ff5e35;
+      }
+
+      .button ~ .button {
+        margin-left: 1rem;
+      }
+
+      .copy--blue-light {
+        color: #19b6e1;
+      }
+      .copy--blue-medium {
+        color: #05676e;
+      }
+      .copy--blue-dark {
+        color: #060830;
+      }
+      .copy--purple {
+        color: #330136;
+      }
+      .copy--pink {
+        color: #962e40;
+      }
+      .copy--orange {
+        color: #ff5e35;
+      }
+
+      .background {
+        padding: 2rem;
+      }
+      .background--blue-light {
+        background-color: #19b6e1;
+        color: white;
+      }
+      .background--blue-medium {
+        background-color: #05676e;
+        color: white;
+      }
+      .background--blue-dark {
+        background-color: #060830;
+        color: white;
+      }
+      .background--purple {
+        background-color: #330136;
+        color: white;
+      }
+      .background--pink {
+        background-color: #962e40;
+        color: white;
+      }
+      .background--orange {
+        background-color: #ff5e35;
+        color: white;
+      }
+      
+      
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark"><a href="#" class="navbar-brand">Style Guide</a>
+        <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
+        <div id="navbarSupportedContent" class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a href="#titles" class="nav-link">Titres</a></li>
+                <li class="nav-item"><a href="#texts" class="nav-link">Textes</a></li>
+                <li class="nav-item"><a href="#links" class="nav-link">Liens</a></li>
+                <li class="nav-item"><a href="#backgrounds" class="nav-link">Fonds</a></li>
+                <li class="nav-item"><a href="#buttons" class="nav-link">Boutons</a></li>
+                <li class="nav-item"><a href="#forms" class="nav-link">Formulaires</a></li>
+                <li class="nav-item"><a href="#icons" class="nav-link">Icônes</a></li>
+                <li class="nav-item"><a href="#lists" class="nav-link">Listes</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main>
+      <header class="text-center">
+        <h1>Style guide</h1>
+      </header>
+
+      <!-- titres -->
+      <section id="titles">
+        <div class="container">
+          <header>
+            <h2>Titres</h2>
+          </header>
+
+          <div class="d-flex flex-sm-column ">
+            <header>
+              <h1 class="main-title">Festizik</h1>
+            </header>
+<pre>
+&lt;header>
+  &lt;h1 class="main-title">Titre H1&lt;/h1>
+&lt;/header>
+</pre>
+            <header>
+              <h1>Titre H1</h1>
+            </header>
+<pre>
+&lt;header>
+  &lt;h1>Titre H1&lt;/h1>
+&lt;/header>
+</pre>        
+            <header>
+              <h2>Titre H2</h2>
+            </header>
+<pre>
+&lt;header>
+  &lt;h2>Titre H2&lt;/h2>
+&lt;/header>
+</pre>  
+            <header>
+              <h3>Titre H3</h3>
+            </header>
+<pre>
+&lt;header>
+  &lt;h3>Titre H3&lt;/h3>
+&lt;/header>
+</pre>  
+            <header>
+              <h4>Titre H4</h4>
+            </header>
+<pre>
+&lt;header>
+  &lt;h4>Titre H4&lt;/h4>
+&lt;/header>
+</pre>        
+            <header>
+              <h5>Titre H5</h5>
+            </header>
+<pre>
+&lt;header>
+  &lt;h5>Titre H5&lt;/h5>
+&lt;/header>
+</pre>  
+            <header>
+              <h6>Titre H6</h6>
+            </header>
+<pre>
+&lt;header>
+  &lt;h6>Titre H6&lt;/h6>
+&lt;/header>
+</pre> 
+          </div>
+        </div>
+      </section>
+
+      <!-- textes -->
+      <section id="texts">
+        <div class="container">
+          <header>
+            <h2>Textes</h2>
+          </header>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper rhoncus ligula eget congue. Vestibulum vel tellus porttitor, laoreet ex ut, pulvinar risus. Donec rhoncus lobortis lacus at dictum. Donec non dolor eget arcu iaculis lacinia. Phasellus non erat lobortis, imperdiet diam non, pellentesque sapien. Sed venenatis justo eu arcu ultrices vestibulum. Aenean sit amet convallis lectus.</p>
+<pre>
+&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper rhoncus ligula eget congue. Vestibulum vel tellus porttitor, laoreet ex ut, pulvinar risus. Donec rhoncus lobortis lacus at dictum. Donec non dolor eget arcu iaculis lacinia. Phasellus non erat lobortis, imperdiet diam non, pellentesque sapien. Sed venenatis justo eu arcu ultrices vestibulum. Aenean sit amet convallis lectus.&lt;/p>
+</pre>        
+          <p class="copy--blue-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper rhoncus ligula eget congue.</p>
+<pre>
+&lt;p class="copy--blue-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper rhoncus ligula eget congue.&lt;/p>
+</pre>
+          <p class="copy--blue-medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper rhoncus ligula eget congue.</p>
+<pre>
+&lt;p class="copy--blue-medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper rhoncus ligula eget congue.&lt;/p>
+</pre> 
+          <p class="copy--blue-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper rhoncus ligula eget congue.</p>
+<pre>
+&lt;p class="copy--blue-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper rhoncus ligula eget congue.&lt;/p>
+</pre>
+          <p class="copy--purple">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper rhoncus ligula eget congue.</p>
+<pre>
+&lt;p class="copy--purple">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper rhoncus ligula eget congue.&lt;/p>
+</pre>
+          <p class="copy--pink">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper rhoncus ligula eget congue.</p>
+<pre>
+&lt;p class="copy--pink">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper rhoncus ligula eget congue.&lt;/p>
+</pre> 
+          <p class="copy--orange">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper rhoncus ligula eget congue.</p>
+<pre>
+&lt;p class="copy--orange">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper rhoncus ligula eget congue.&lt;/p>
+</pre> 
+        </div>
+      </section>
+
+      <!-- liens -->
+      <section id="links">
+        <div class="container">
+          <div class="d-flex justify-content-between">
+            <header>
+              <h2>Liens</h2>
+            </header>
+            <a href="#links" title="">Lien</a>
+          </div>
+<pre>
+&lt;a href="" title="">Lorem ipsum&lt;/a>
+</pre>   
+        </div>     
+      </section>
+
+      <!-- boutons -->
+      <section id="backgrounds">
+        <div class="container">
+          <header>
+            <h2>Fonds</h2>
+          </header>
+
+          <div class="background background--blue-light">Mon contenu</div>
+<pre>
+&lt;div class="background--blue-light">Mon contenu&lt;/div>
+</pre>     
+          <div class="background background--blue-medium">Mon contenu</div>
+<pre>
+&lt;div class="background--blue-medium">Mon contenu&lt;/div>
+</pre>  
+          <div class="background background--blue-dark">Mon contenu</div>
+<pre>
+&lt;div class="background--blue-dark">Mon contenu&lt;/div>
+</pre> 
+          <div class="background background--purple">Mon contenu</div>
+<pre>
+&lt;div class="background--purple">Mon contenu&lt;/div>
+</pre>   
+          <div class="background background--pink">Mon contenu</div>
+<pre>
+&lt;div class="background--pink">Mon contenu&lt;/div>
+</pre> 
+          <div class="background background--orange">Mon contenu</div>
+<pre>
+&lt;div class="background--orange">Mon contenu&lt;/div>
+</pre> 
+        </div>
+      </section>
+
+
+      <!-- boutons -->
+      <section id="buttons">
+        <div class="container">
+          <div class="d-flex justify-content-between">
+            <header>
+              <h2>Boutons</h2>
+            </header>
+            <div>
+              <button class="button">Bouton</button>
+              <a class="button" href="" title="">Bouton avec lien</a>
+            </div>
+          </div>
+<pre>
+&lt;button class="button">Bouton&lt;/button>
+
+&lt;a class="button" href="" title="">Bouton avec lien&lt;/a>
+</pre>        
+          <div class="d-flex justify-content-end">
+            <button class="button button--blue-light">Bouton</button>
+            <button class="button button-transparent button-transparent--blue-light">Bouton</button>
+          </div>
+<pre>
+&lt;button class="button button--blue-light">Bouton&lt;/button>
+&lt;button class="button button-transparent--blue-light">Bouton&lt;/button>
+</pre> 
+          <div class="d-flex justify-content-end">
+            <button class="button button--blue-medium">Bouton</button>
+            <button class="button button-transparent button-transparent--blue-medium">Bouton</button>
+          </div>
+<pre>
+&lt;button class="button button--blue-medium">Bouton&lt;/button>
+&lt;button class="button button-transparent button-transparent--blue-medium">Bouton&lt;/button>
+</pre>     
+          <div class="d-flex justify-content-end">
+            <button class="button button--blue-dark">Bouton</button>
+            <button class="button button-transparent button-transparent--blue-dark">Bouton</button>
+          </div>
+<pre>
+&lt;button class="button button--blue-dark">Bouton&lt;/button>
+&lt;button class="button button-transparent button-transparent--blue-dark">Bouton&lt;/button>
+</pre> 
+          <div class="d-flex justify-content-end">
+            <button class="button button--purple">Bouton</button>
+            <button class="button button-transparent button-transparent--purple">Bouton</button>
+          </div>
+<pre>
+&lt;button class="button button--purple">Bouton&lt;/button>
+&lt;button class="button button-transparent button-transparent--purple">Bouton&lt;/button>
+</pre> 
+          <div class="d-flex justify-content-end">
+            <button class="button button--pink">Bouton</button>
+            <button class="button button-transparent button-transparent--pink">Bouton</button>
+          </div>
+<pre>
+&lt;button class="button button--pink">Bouton&lt;/button>
+&lt;button class="button button-transparent button-transparent--pink">Bouton&lt;/button>
+</pre> 
+          <div class="d-flex justify-content-end">
+            <button class="button button--orange">Bouton</button>
+            <button class="button button-transparent button-transparent--orange">Bouton</button>
+          </div>
+<pre>
+&lt;button class="button button--orange">Bouton&lt;/button>
+&lt;button class="button button-transparent button-transparent--orange">Bouton&lt;/button>
+</pre> 
+        </div>
+      </section>
+
+      <!-- formulaires -->
+      <section id="forms">
+        <div class="container">
+          <header>
+            <h2>Formulaires</h2>
+          </header>
+          <form>
+            <div class="row">
+              <div class="form-group col-md-6">
+                <label for="nom">Nom</label>
+                <input type="text" name="nom" class="form-control"/>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="prenom">Prenom</label>
+                <input type="text" name="prenom" class="form-control"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="mail">Email</label>
+              <input type="email" name="mail" class="form-control"/>
+            </div>
+            <div class="form-group">
+              <label for="sujet">Message</label>
+              <textarea aria-label="With textarea" class="form-control"></textarea>
+            </div>
+            <button type="submit" class="button">Envoyer</button>
+          </form>
+<pre>
+&lt;form>
+  &lt;div class="row">
+    &lt;div class="form-group col-md-6">
+      &lt;label for="nom">Nom&lt;/label>
+      &lt;input type="text" name="nom" class="form-control"/>
+    &lt;/div>
+    &lt;div class="form-group col-md-6">
+      &lt;label for="prenom">Prenom&lt;/label>
+      &lt;input type="text" name="prenom" class="form-control"/>
+    &lt;/div>
+  &lt;/div>
+  &lt;div class="form-group">
+    &lt;label for="mail">E-mail&lt;/label>
+    &lt;input type="email" name="mail" class="form-control"/>
+  &lt;/div>
+  &lt;div class="form-group">
+    &lt;label for="message">Message&lt;/label>
+    &lt;textarea name="message" class="form-control"/>
+  &lt;/div>
+  &lt;button type="submit" class="button">Envoyer&lt;/button>
+&lt;/form>
+</pre>     
+        </div>   
+      </section>
+
+      <!-- icones -->
+      <section id="icons">
+        <div class="container">
+          <div class="d-flex justify-content-between">
+            <header>
+              <h2>Icônes</h2>
+            </header>
+            <div class="d-flex align-items-end">
+              <p>
+                <i class="fas fa-car fa-xs"></i>
+                <i class="fas fa-car fa-sm"></i>
+                <i class="fas fa-car fa-lg"></i>
+                <i class="fas fa-car fa-2x"></i>
+                <i class="fas fa-car fa-3x"></i>
+                <i class="fas fa-car fa-5x"></i>
+                <i class="fas fa-car fa-7x"></i>
+                <i class="fas fa-car fa-10x"></i>
+              </p>
+              <a href="https://fontawesome.com/cheatsheet">Font Awesome</a>
+            </div>
+          </div>
+<pre>
+&lt;i class="fas fa-car fa-xs"&gt;&lt;/i&gt;
+&lt;i class="fas fa-car fa-sm"&gt;&lt;/i&gt;
+&lt;i class="fas fa-car fa-lg"&gt;&lt;/i&gt;
+&lt;i class="fas fa-car fa-2x"&gt;&lt;/i&gt;
+&lt;i class="fas fa-car fa-3x"&gt;&lt;/i&gt;
+&lt;i class="fas fa-car fa-5x"&gt;&lt;/i&gt;
+&lt;i class="fas fa-car fa-7x"&gt;&lt;/i&gt;
+&lt;i class="fas fa-car fa-10x"&gt;&lt;/i&gt;
+</pre> 
+        </div>
+      </section>
+
+      <!-- listes -->
+      <section id="lists">
+        <div class="container">
+          <div class="d-flex justify-content-between">
+            <header>
+              <h2>Listes</h2>
+            </header>
+            <ul>
+              <li>Lorem ipsum</li>
+              <li>Lorem ipsum</li>
+              <li>Lorem ipsum</li>
+              <li>Lorem ipsum</li>
+            </ul>
+          </div>
+<pre>
+&lt;ul>
+  &lt;li>Lorem ipsum&lt;/li>
+  &lt;li>Lorem ipsum&lt;/li>
+  &lt;li>Lorem ipsum&lt;/li>
+  &lt;li>Lorem ipsum&lt;/li>
+&lt;/ul>
+</pre>        
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

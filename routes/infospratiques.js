@@ -22,4 +22,3 @@ router.get('/hebergement-restauration', function(req, res, next) {
 });
 
 module.exports = router;
-

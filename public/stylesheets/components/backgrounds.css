@@ -1,0 +1,29 @@
+/* bakcgrounds */
+body {
+ background-color: #fff5c8; 
+}
+
+.background--blue-light {
+  background-color: #19b6e1;
+  color: white;
+}
+.background--blue-medium {
+  background-color: #05676e;
+  color: white;
+}
+.background--blue-dark {
+  background-color: #060830;
+  color: white;
+}
+.background--purple {
+  background-color: #330136;
+  color: white;
+}
+.background--pink {
+  background-color: #962e40;
+  color: white;
+}
+.background--orange {
+  background-color: #ff5e35;
+  color: white;
+}
