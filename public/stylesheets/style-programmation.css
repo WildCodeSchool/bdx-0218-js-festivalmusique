@@ -17,7 +17,7 @@ body {
   margin: 3px 0 3px 0;
 }
 
-.button {
+.programmation-filter-day .button, .programmation-filter-all .button {
   padding: 1.5rem 0;
   display: inline-block;
 }
