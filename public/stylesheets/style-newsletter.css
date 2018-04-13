@@ -1,0 +1,7 @@
+/* newsletter */
+section#newsletter label {
+	display: none;
+}
+section#newsletter button {
+	color: #05676e;
+}

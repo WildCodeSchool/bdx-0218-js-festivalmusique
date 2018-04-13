@@ -61,12 +61,6 @@
 	background-color: lightskyblue;
 }
 
-/* NEWSLETTER */
-
-.newsletter {
-	background-color: lightseagreen;
-}
-
 /* TEXT COLOR */
 
 .display-3 {
@@ -74,16 +68,5 @@
 }
 
 .lead {
-	color: white;
-}
-
-.btn-newsletter {
-	margin-top: 15px;
-}
-
-/* FOOTER */
-
-footer {
-	background-color: black;
 	color: white;
 }
