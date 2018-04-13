@@ -1,0 +1,107 @@
+/* CONTAINER */
+
+.container {
+	/* background: grey; */
+}
+
+.all {
+	background: grey;
+	height: 2000px;
+}
+
+/* COVER PAGE */
+.background {
+	background-image: url('../images/c18_homepage_header_night_01_v2.png');
+	background-position: center center;
+	background-size: cover;
+	height: 100vh;
+	width: 100vw;
+}
+
+/* HOME PAGE */
+
+/* HOME */
+
+.home {
+	background-color: lightskyblue;
+}
+
+/* PROGRAMMATION */
+
+.programmation {
+	background-color: lightgreen;
+}
+
+/* PREPARATION */
+
+.preparation {
+	background-color: #19b6e1;
+}
+
+.PREPARATION__cadre {
+	border: 3px solid white;
+}
+
+/* CARTE-SECTION */
+
+.carte-section {
+	background-color: #05676e;
+}
+
+/* CAROUSSEL */
+
+.carousel-festizik {
+	/* 		max-height: 40vh;
+ */
+}
+
+/* SPOTIFY */
+
+.spotify {
+	background-color: lightskyblue;
+}
+
+/* TEXT COLOR */
+
+.display-3 {
+	color: white;
+}
+
+.lead {
+	color: white;
+}
+
+
+/* MEDIA QUERIES */
+/* // Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+// Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+	
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+	
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+	.display-3{
+		font-size: 6.5rem;
+		padding-bottom: 2rem;
+	}
+	.shadows-title{
+		text-shadow: 5px 5px 5px black;
+	}
+	.slogan{
+		font-size: 2.5rem;
+		color:white;
+		text-shadow: 2px 2px 2px black;
+	}
+}

@@ -1,0 +1,51 @@
+/* billetterie */
+
+/* card css & card effect */
+main#billetterie .card {
+	padding: 2rem;
+	box-shadow:2px 4px 5px #B3B3B3;
+	border: none;
+	overflow: hidden;
+}
+main#billetterie .card:after {
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background-color: transparent
+}
+main#billetterie .card:hover {
+  text-decoration: none;
+}
+main#billetterie .card:hover::after {
+    z-index: 2;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.15)
+}
+
+/* link hover */
+main#billetterie a:hover {
+	text-decoration: none;
+}
+
+/* text color button */
+main#billetterie .card.background--pink button {
+	color:  #962e40;
+}
+main#billetterie .card.background--purple button {
+	color:  #330136;
+}
+main#billetterie .card.background--blue-dark button {
+	color:  #060830;
+}
+
+main#billetterie .card p {
+	font-size: 2.2rem;
+}

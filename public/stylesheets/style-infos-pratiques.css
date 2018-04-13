@@ -1,0 +1,16 @@
+.infos-pratiques h1 {
+    margin: 0px 0px 55px 0px;
+}
+
+.infos-pratiques h2 {
+    margin: 35px 0px;
+}
+
+.link-infos-pratiques {
+    color : black;
+}
+
+.link-infos-pratiques:hover {
+    color : black;
+    text-decoration: none;
+}

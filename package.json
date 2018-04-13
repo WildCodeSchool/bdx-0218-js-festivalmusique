@@ -13,6 +13,7 @@
     "jade": "~1.11.0",
     "jade-bootstrap": "^1.0.14",
     "morgan": "~1.9.0",
+    "mysql": "^2.15.0",
     "pug": "^2.0.1",
     "serve-favicon": "~2.4.5"
   }

@@ -1,0 +1,36 @@
+/* form */
+form {
+      margin: 5rem 0;
+      text-align: right;
+}
+form .form-group {
+  text-align: left;
+}
+form .form-group input, form .form-group select, form .form-group textarea {
+  -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 1rem 1.3rem;
+    height: 5rem;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    border: none;
+    color: #333;
+    font-size: 1.6rem
+}
+form .form-group select {
+    background-color: #fff;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='#858585' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 99%;
+    background-position-y: 15px;
+}
+form .form-group textarea {
+    min-height: 15rem
+}

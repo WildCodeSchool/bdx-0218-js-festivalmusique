@@ -1,9 +1,22 @@
 let express = require('express');
 let router = express.Router();
+let mysql = require('mysql');
 
-/* GET home page. */
-router.get('/', function(req, res) {
-  res.render('blockcontent/programmation');
+let con = mysql.createConnection({
+ 		host: "127.0.0.1",
+ 		user: "root",
+ 		password: "wildcodeschool2018",
+ 		database: "projet2"
 });
+
+let select = 'SELECT * from artistes';
+
+router.get('/', (req, res, next) => {
+  	con.query(select, function (err, rows) {
+        if (err) throw err;
+        console.log("insert done");
+        res.render('blockcontent/programmation', {tableArtistes: rows});
+    });
+})
 
 module.exports = router;
