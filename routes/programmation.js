@@ -5,7 +5,7 @@ let mysql = require('mysql');
 let con = mysql.createConnection({
  		host: "127.0.0.1",
  		user: "root",
- 		password: "root",
+ 		password: "terrain01",
  		database: "projet2"
 });
 
@@ -20,4 +20,3 @@ router.get('/', (req, res, next) => {
 })
 
 module.exports = router;
-

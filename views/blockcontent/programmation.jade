@@ -1,48 +1,29 @@
 extends ../layout.jade
 
 block content
-  // Titre
-  .container
-    h1 Programmation
   // Filtres
-  .container.filters
-    .row
+  .programmation-filters
+    h1 Programmation
+    .row.filters
       // Tous les artistes
-      .filter-all
-        a(href='#all') Tous les artistes
-      // Filtres des jours
-      .filter-day
-        a(href='#ticket-friday') Vendredi
-        a(href='#ticket-saturday') Samedi
-        a(href='#ticket-sunday') Dimanche
-      // Filtres  des styles
-      .dropdown.filter-style
+      .programmation-filter-all
+        button.button.button--purple Tous les artistes
+      .programmation-filter-day
+        button.button.button--pink Vendredi
+        button.button.button--pink Samedi
+        button.button.button--pink Dimanche
+      .programmation-filter-style
         button#dropdownMenuButton.btn.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Style de musique
         .dropdown-menu(aria-labelledby='dropdownMenuButton')
           a.dropdown-item(href='#style-rock') Rock
           a.dropdown-item(href='#style-metal') Metal
           a.dropdown-item(href='#style-pop') Pop
   // Liste des artistes
-  .container.gallery
+  .container.programmation-gallery
     each artiste in tableArtistes
-      a.vignette-artiste.ticket-friday.style-rock(href='#')
-        img.img-fluid(src=artiste.image)
-        h2 #{artiste.nom}
+      a.programmation-vignette-artiste.ticket-friday.style-rock(href='#')
+        .vignette-artiste
+          img.img-fluid(src=artiste.image)
+        header
+          h2 #{artiste.nom}
         p #{artiste.jour} - #{artiste.heure}
-        
-
-  script.
-    $('.filter-all a, .filter-day a, .filter-style a').click(function(e) {
-    e.preventDefault();
-    var a = $(this).attr('href');
-    a = a.substr(1);
-    $('.gallery a').each(function() {
-    if (!$(this).hasClass(a) && a != 'all')
-    $(this).addClass('hide');
-    else
-    $(this).removeClass('hide');
-    });
-    });
-    function handleSelect(elm){
-    window.location = elm.value+".php";
-    }
