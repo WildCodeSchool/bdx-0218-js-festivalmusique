@@ -61,12 +61,6 @@
 	background-color: lightskyblue;
 }
 
-/* NEWSLETTER */
-
-.newsletter {
-	background-color: lightseagreen;
-}
-
 /* TEXT COLOR */
 
 .display-3 {
@@ -76,6 +70,7 @@
 .lead {
 	color: white;
 }
+<<<<<<< HEAD
 
 .btn-newsletter {
 	margin-top: 15px;
@@ -121,3 +116,17 @@ footer {
 		text-shadow: 2px 2px 2px black;
 	}
 }
+||||||| merged common ancestors
+
+.btn-newsletter {
+	margin-top: 15px;
+}
+
+/* FOOTER */
+
+footer {
+	background-color: black;
+	color: white;
+}
+=======
+>>>>>>> dev-newsletter-bis
