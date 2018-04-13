@@ -35,17 +35,17 @@
 /* PREPARATION */
 
 .preparation {
-	background-color: lightpink;
+	background-color: #19b6e1;
 }
 
 .PREPARATION__cadre {
-	border: 3px solid lightslategray;
+	border: 3px solid white;
 }
 
 /* CARTE-SECTION */
 
 .carte-section {
-	background-color: lightcoral;
+	background-color: #05676e;
 }
 
 /* CAROUSSEL */
