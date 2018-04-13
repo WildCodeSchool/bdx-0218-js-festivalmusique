@@ -9,6 +9,10 @@ body {
 }
 
 /* Filtres */
+#button-filter-all {
+  margin-top: 0;
+}
+
 .programmation-filters, .main-title {
   margin: 0 0 50px 0;
 }
