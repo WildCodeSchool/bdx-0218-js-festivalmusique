@@ -3,111 +3,194 @@ body {
   text-align: center;
 }
 
-/* Apparence des filtres */
-.filters {
-  padding: 0 0 30px 0;
+.programmation-filters h1 {
+  font-size: 3rem;
+  margin: 0 0 50px 0;
 }
 
-.filter-all, .filter-day, .filters .dropdown, .filters .dropdown-menu {
-  margin: auto;
-  width: 95%;
-  padding: 5px 0 5px 0;
+/* Filtres */
+.programmation-filters, .main-title {
+  margin: 50px 0 50px 0;
 }
 
-.filter-all a, .filters .dropdown .btn {
-  margin: auto;
-  width: 95%;
-  height: 45px
+.programmation-filter-all, .programmation-filter-day, .programmation-filter-day button, .programmation-filter-style {
+  margin: 3px 0 3px 0;
 }
 
-.filter-day a {
-  width: 31%;
-}
-
-.filters .btn-secondary {
-  color: black;
-  background-color: #eee;
-  border: none;
-}
-
-.filters .btn-secondary:hover {
-  color: white;
-  background-color: gray;
-}
-
-/* Artistes */
-.vignette-artiste {
-  width: 100%;
-  margin: 5px 0 5px 0;
-  display: block;
-  float: left;
-  opacity: 1;
-  background-color: gray;
-  transition: all 0.2s;
-}
-
-/* Fonctionnement des filtres */
-.filter-all a, .filter-day a {
-  padding: 10px 10px;
+.button {
+  padding: 1.5rem 0;
   display: inline-block;
-  color: black;
-  background: #eee;
-  text-decoration: none;
-  transition: all 0.2s;
-  border-radius: 5px
 }
 
-.filter-all a:hover, .filter-day a:hover, .filter-style a:hover {
+.programmation-filter-all {
+  width: 100%;
+}
+
+.programmation-filter-all .button {
+  width: 70%;
+}
+
+.programmation-filter-day {
+  width: 100%;
+}
+
+.programmation-filter-day button {
+  width: 70%;
+}
+
+.programmation-filter-style {
+  width: 100%;
+}
+
+/* Dropdown */
+.programmation-filter-style #dropdownMenuButton {
   color: white;
-  background: gray 
+  border-radius: 2px;
+  border: none;
+  padding: 1.4rem;
+  width: 70%;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  background-color: #ff7653;
 }
 
-.gallery a {
+.programmation-filter-style .dropdown-menu {
+  width: 75%;
+}
+
+.programmation-filter-style .dropdown-item {
+  font-size: 1.5rem;
+  color: #ff7653;
+}
+
+/* Galerie */
+.programmation-gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+
+.programmation-gallery a {
   transition: all 0.2s;
   display: block;
   color: black;
   opacity: 1;
 }
 
-.gallery a:hover {
+.programmation-gallery a:hover {
   color: #404040;
   text-decoration: none;
 }
 
-.gallery .hide, .gallery .pophide {
+.programmation-gallery .hide, .programmation-gallery .pophide {
   width: 0%;
   margin: 0;
   opacity: 0;
   transition: all 0.1s;
 }
 
+/* Artistes */
+.programmation-vignette-artiste {
+  width: 100%;
+  display: flex;
+  opacity: 1;
+  background-color: white;
+  margin: 10px 5px 10px 5px;
+  transition: all 0.2s;
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.vignette-artiste {
+  height: 55vw;
+  overflow: hidden;
+}
+
+.programmation-vignette-artiste h2 {
+  color: #512754;
+  padding: 15px 0 5px 0;
+}
+
+.programmation-vignette-artiste p {
+  color: #a64d5d;
+}
 
 /* Version tablette */
-@media (min-width: 500px) {
-  .filter-all, .filter-day, .filters .dropdown {
-    width: 60%;
+@media (min-width: 550px) {
+  .programmation-filters h1 {
+    font-size: 4.5rem;
+  }
+  .programmation-filter-all .button {
+    width: 76%;
+  }
+  .programmation-filter-day button {
+    width: 25%;
+    margin: 0 2px 0 2px;
+  }
+  .programmation-filter-categories .button {
+    width: 25%;
+  }
+  .programmation-filter-style #dropdownMenuButton {
+    width: 76%;
+  }
+  .programmation-filter-style .dropdown-menu {
+    width: 79%;
+  }
+  .programmation-vignette-artiste {
+    width: 47%;
   }
   .vignette-artiste {
-    width: 48%;
-    margin: 1%;
+    height: 25vw;
+    overflow: hidden;
   }
 }
 
 /* Version desktop */
 @media (min-width: 1000px) {
-  .filter-all {
-    width: 18%;
-    margin-right: 0;
+  .programmation-filters h1 {
+    font-size: 6rem;
   }
-  .filters .dropdown {
-    width: 18%;
-    margin-left: 0;
+  .filters {
+    padding: 0 10%;
   }
-  .filter-day {
-    width: 40%;
-    margin: 0;
+  .programmation-filter-all {
+    width: 25%;
+  }
+  .programmation-filter-all .button {
+    padding: 1.5rem 0;
+    width: 90%;
+  }
+  .programmation-filter-day button {
+    padding: 1.5rem 0;
+    margin: 0 0 0 5px;
+    width: 32%;
+  }
+  .programmation-filter-day {
+    width: 45%;
+  }
+  .programmation-filter-style {
+    width: 30%;
+  }
+  .programmation-filter-style #dropdownMenuButton {
+    width: 90%;
+  }
+  .programmation-filter-style .dropdown-menu {
+    width: 22%;
+  }
+  .programmation-vignette-artiste {
+    width: 31%;
+    margin: 10px;
   }
   .vignette-artiste {
-    width: 31%;
+    height: 20vw;
+    overflow: hidden;
+  }
+  .vignette-artiste img {
+    height: 100%;
+    object-fit: cover;
   }
 }
