@@ -33,3 +33,11 @@ package-lock.json
 
 # image thumbs
 public/images/Thumbs.db
+
+<<<<<<< HEAD
+# Pb mot de passe
+views/blockcontent/programmation.jade
+=======
+#BDD 
+routes/programmation.js
+>>>>>>> 79dfe6bed45469c98629ec2e6534dac1494b9a37

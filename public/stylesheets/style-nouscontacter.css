@@ -1,10 +1,6 @@
 .contact {
-	background-color: #ddd;
+	background-color: #fff5c8;
 	margin: 0;
-}
-
-.contact-content {
-	padding-top: 4%;
 }
 
 header,
@@ -16,6 +12,9 @@ header,
 	margin-bottom: 2rem;
 }
 
+.coordonnees {
+	margin-top: 60px;
+}
 
 .icons {
 	margin-bottom: 20%;
