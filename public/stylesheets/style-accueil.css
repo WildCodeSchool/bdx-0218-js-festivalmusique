@@ -98,17 +98,23 @@
 	}
 	.slogan{
 		font-size: 3rem;
-		color:white;
-		text-shadow: 2px 2px 2px black;
+		color:rgb(255, 114, 32);
+		text-shadow: 1px 1px 1px black;
 		font-weight: 300;
 	}
 	.date{
 		font-size: 2.5rem;
 		color:white;
-		text-shadow: 2px 2px 2px black;
+		text-shadow: 1px 1px 1px black;
 		font-weight: 300;
 	}
 	.affiche-programmation{
 		margin-top: -10rem;
+		border: 1rem solid white; 
 	}
+
+	.card {
+		border: 1rem solid white;
+	}
+
 }
