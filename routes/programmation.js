@@ -5,7 +5,7 @@ let mysql = require('mysql');
 let con = mysql.createConnection({
  		host: "127.0.0.1",
  		user: "root",
- 		password: "terrain01",
+ 		password: "root",
  		database: "projet2"
 });
 

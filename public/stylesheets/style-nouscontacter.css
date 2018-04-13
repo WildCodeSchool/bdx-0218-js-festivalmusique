@@ -3,10 +3,6 @@
 	margin: 0;
 }
 
-.contact-content {
-	padding-top: 4%;
-}
-
 header,
 .coordonnees {
 	text-align: center;
@@ -22,9 +18,4 @@ header,
 
 .icons {
 	margin-bottom: 20%;
-}
-
-.titleContact {
-	font-size: 4.5em;
-	font-family: 'Reem Kufi', sans-serif;
 }
