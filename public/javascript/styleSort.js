@@ -1,4 +1,3 @@
-const butAllStyle = document.querySelector(".butAllStyle");
 const butRock = document.querySelector(".rock");
 const butMetal = document.querySelector(".metal");
 const butPop = document.querySelector(".pop");
