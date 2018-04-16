@@ -16,9 +16,9 @@ block content
         .programmation-filter-style
           button#dropdownMenuButton.btn.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Style de musique
           .dropdown-menu(aria-labelledby='dropdownMenuButton')
-            a.dropdown-item(href='#style-rock') Rock
-            a.dropdown-item(href='#style-metal') Metal
-            a.dropdown-item(href='#style-pop') Pop
+            button.rock.dropdown-item Rock
+            button.metal.dropdown-item Metal
+            button.pop.dropdown-item Pop
     // Liste des artistes
     .container.programmation-gallery
       each artiste in tableArtistes
@@ -29,4 +29,5 @@ block content
             h2 #{artiste.nom}
           p #{artiste.jour} - #{artiste.heure}
 
-  script(type='text/javascript', src='javascript/ajax.js')
+  script(type='text/javascript', src='javascript/daySort.js')
+  script(type='text/javascript', src='javascript/styleSort.js')

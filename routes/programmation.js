@@ -5,7 +5,7 @@ let mysql = require('mysql');
 let con = mysql.createConnection({
  		host: "127.0.0.1",
  		user: "root",
- 		password: "wildcodeschool2018",
+ 		password: "root",
  		database: "projet2"
 });
 
@@ -19,7 +19,7 @@ router.get('/', (req, res, next) => {
     });
 })
 
-router.get('/api', (req, res, next) => {
+router.get('/apij', (req, res, next) => {
 
     let list1 = `SELECT * from artistes`;
     let list2 = `SELECT * from artistes where jour = '${req.query.jour}';`;
@@ -35,8 +35,24 @@ router.get('/api', (req, res, next) => {
             res.render('blockcontent/_listday', {tableArtistes: rows});
         });
     }
-
 })
 
+router.get('/apis', (req, res, next) => {
+
+    let list1 = `SELECT * from artistes`;
+    let list2 = `SELECT * from artistes where style = '${req.query.style}';`;
+    console.log(req.query.style);
+    if (req.query.jour === "") {
+        con.query(list1, function (err, rows) {
+            if (err) throw err;
+            res.render('blockcontent/_listday', {tableArtistes: rows});
+        });
+    } else {
+        con.query(list2, function (err, rows) {
+            if (err) throw err;
+            res.render('blockcontent/_listday', {tableArtistes: rows});
+        });
+    }
+})
 
 module.exports = router;

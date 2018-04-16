@@ -13,7 +13,7 @@ requestVendredi = (cb) => {
           cb(xhr.responseText);
       }
   };
-  xhr.open("GET", "/programmation/api?jour=vendredi")
+  xhr.open("GET", "/programmation/apij?jour=vendredi")
   xhr.send(null);
 }
 
@@ -25,7 +25,7 @@ requestSamedi = (cb) => {
           cb(xhr.responseText);
       }
   };
-  xhr.open("GET", "/programmation/api?jour=samedi")
+  xhr.open("GET", "/programmation/apij?jour=samedi")
   xhr.send(null);
 }
 
@@ -37,7 +37,7 @@ requestDimanche = (cb) => {
           cb(xhr.responseText);
       }
   };
-  xhr.open("GET", "/programmation/api?jour=dimanche")
+  xhr.open("GET", "/programmation/apij?jour=dimanche")
   xhr.send(null);
 }
 
@@ -49,7 +49,7 @@ requestAll = (cb) => {
           cb(xhr.responseText);
       }
   };
-  xhr.open("GET", "/programmation/api?jour=")
+  xhr.open("GET", "/programmation/apij?jour=")
   xhr.send(null);
 }
 // EVENEMENT onClick
@@ -81,3 +81,5 @@ butAll.addEventListener("click", function(e) {
     	document.querySelector(".programmation-gallery").innerHTML = arg
     });
 });
+
+
