@@ -9,8 +9,12 @@ body {
 }
 
 /* Filtres */
+#button-filter-all {
+  margin-top: 0;
+}
+
 .programmation-filters, .main-title {
-  margin: 50px 0 50px 0;
+  margin: 0 0 50px 0;
 }
 
 .programmation-filter-all, .programmation-filter-day, .programmation-filter-day button, .programmation-filter-style {
@@ -19,6 +23,7 @@ body {
 
 .programmation-filter-day .button, .programmation-filter-all .button {
   padding: 1.5rem 0;
+  margin-top: 0;
   display: inline-block;
 }
 
