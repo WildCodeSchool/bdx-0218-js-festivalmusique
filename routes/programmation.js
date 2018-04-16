@@ -27,4 +27,5 @@ router.get('/', (req, res, next) => {
         res.render('blockcontent/programmation', {tableArtistes: rows});
     });
 })
+
 module.exports = router;
