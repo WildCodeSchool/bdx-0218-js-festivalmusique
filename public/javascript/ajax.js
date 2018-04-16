@@ -1,40 +1,83 @@
-// const butVendredi = document.querySelector(".vendredi");
+const butVendredi = document.querySelector(".vendredi");
+const butSamedi = document.querySelector(".samedi");
+const butDimanche = document.querySelector(".dimanche");
+const butAll = document.querySelector(".butall");
 
-// request = (cb) => {
+// REQUETE AJAX
 
-//     var xhr = getXMLHttpRequest();
+requestVendredi = (cb) => {
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
 
-//     xhr.onreadystatechange = function() {
+      if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
+          cb(xhr.responseText);
+      }
+  };
+  xhr.open("GET", "/programmation/api?jour=vendredi")
+  xhr.send(null);
+}
 
-//         if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
-//             cb(xhr.responseText);
-//         }
-//     };
+requestSamedi = (cb) => {
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
 
-//     // xhr.open("GET", "XMLHttpRequest_getString.php?Nick=" + nick + "&Name=" + name, true);
-//     xhr.open("GET", "../../routes/programmation.js?jour=vendredi")
-//     xhr.send(null);
-// }
+      if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
+          cb(xhr.responseText);
+      }
+  };
+  xhr.open("GET", "/programmation/api?jour=samedi")
+  xhr.send(null);
+}
 
-let express = require('express');
-let router = express.Router();
-let mysql = require('mysql');
+requestDimanche = (cb) => {
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
 
-let con = mysql.createConnection({
- 		host: "127.0.0.1",
- 		user: "root",
- 		password: "root",
- 		database: "projet2"
+      if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
+          cb(xhr.responseText);
+      }
+  };
+  xhr.open("GET", "/programmation/api?jour=dimanche")
+  xhr.send(null);
+}
+
+requestAll = (cb) => {
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+
+      if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
+          cb(xhr.responseText);
+      }
+  };
+  xhr.open("GET", "/programmation/api?jour=")
+  xhr.send(null);
+}
+// EVENEMENT onClick
+
+butVendredi.addEventListener("click", function(e) {
+    e.preventDefault();
+    requestVendredi(function(arg){
+    	document.querySelector(".programmation-gallery").innerHTML = arg
+    });
 });
 
-let listVendredi = 'SELECT * from artistes where jour = vendredi';
-
-router.get('/', (req, res, next) => {
-  	con.query(listVendredi, function (err, rows) {
-        if (err) throw err;
-        console.log("insert done");
-        res.render('blockcontent/programmation', {tableArtistes: rows});
+butSamedi.addEventListener("click", function(e) {
+    e.preventDefault();
+    requestSamedi(function(arg){
+    	document.querySelector(".programmation-gallery").innerHTML = arg
     });
-})
+});
 
-module.exports = router;
+butDimanche.addEventListener("click", function(e) {
+    e.preventDefault();
+    requestDimanche(function(arg){
+    	document.querySelector(".programmation-gallery").innerHTML = arg
+    });
+});
+
+butAll.addEventListener("click", function(e) {
+    e.preventDefault();
+    requestAll(function(arg){
+    	document.querySelector(".programmation-gallery").innerHTML = arg
+    });
+});
