@@ -8,11 +8,11 @@ block content
       .row.filters
         // Tous les artistes
         .programmation-filter-all
-          button#button-filter-all.button.button--purple Tous les artistes
+          button.butall.button.button--purple Tous les artistes
         .programmation-filter-day
-          button.button.button--pink Vendredi
-          button.button.button--pink Samedi
-          button.button.button--pink Dimanche
+          button.vendredi.button.button--pink Vendredi
+          button.samedi.button.button--pink Samedi
+          button.dimanche.button.button--pink Dimanche
         .programmation-filter-style
           button#dropdownMenuButton.btn.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Style de musique
           .dropdown-menu(aria-labelledby='dropdownMenuButton')
@@ -28,3 +28,6 @@ block content
           header
             h2 #{artiste.nom}
           p #{artiste.jour} - #{artiste.heure}
+
+  script(type='text/javascript', src='javascript/ajax.js')
+
