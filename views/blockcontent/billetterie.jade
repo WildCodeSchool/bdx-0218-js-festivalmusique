@@ -1,54 +1,69 @@
 extends ../layout.jade
 
 block content
-  // Titre
-  .container
-    h1 Billetterie
-  // Billets
-  .container
-    // Billets par jours
-    .row
-      .col-sm-4.col-xs-12
-        h2 Vendredi 6 juillet
-        h3 20€
-        a(href='https://www.digitick.com/fr/', target='_blank')
-          button(type='button')
-            | Réserver
-            i.fas.fa-ticket-alt
-      .col-sm-4.col-xs-12
-        h2 Samedi 7 juillet
-        h3 30€
-        a(href='https://www.digitick.com/fr/', target='_blank')
-          button(type='button')
-            | Réserver
-            i.fas.fa-ticket-alt
-      .col-sm-4.col-xs-12
-        h2 Dimanche 8 juillet
-        h3 30€
-        a(href='https://www.digitick.com/fr/', target='_blank')
-          button(type='button')
-            | Réserver
-            i.fas.fa-ticket-alt
-    // Billets pour 2 & 3 jours
-    .row
-      .col-sm-4.col-xs-12
-        h2 Pass 2 jours
-        h3 70€
-        a(href='https://www.digitick.com/fr/', target='_blank')
-          button(type='button')
-            | Réserver
-            i.fas.fa-ticket-alt
-      .col-sm-4.col-xs-12
-        h2 Pass 2 jours
-        h3 50€
-        a(href='https://www.digitick.com/fr/', target='_blank')
-          button(type='button')
-            | Réserver
-            i.fas.fa-ticket-alt
-      .col-sm-4.col-xs-12
-        h2 Pass entrée + hébergement
-        h3 150€
-        a(href='https://www.digitick.com/fr/', target='_blank')
-          button(type='button')
-            | Réserver
-            i.fas.fa-ticket-alt
+	main#billetterie
+		.container
+			// Titre
+			header
+				h1 Billetterie
+				p Le festival est gratuit pour les enfants de moins de 11 ans, sur présentation de la carte d'identité.
+			// Billets
+			section
+				// Billets par jours
+				.row.mb-lg-5
+					.col-sm.mb-5.mb-lg-0
+						a(href='https://www.digitick.com/fr/', title='Acheter mon pass 1 jour pour le vendredi 6 juillet', target='_blank')
+							.card.background--pink
+								header
+									h2 Vendredi 6 juillet
+								p 20€
+								button.align-items-center.justify-content-center.button.button--white
+									i.fas.fa-ticket-alt(data-fa-transform="rotate--30")
+									| &nbsp;&nbsp;&nbsp;Réserver
+					.col-sm.mb-5.mb-lg-0
+						a(href='https://www.digitick.com/fr/', title='Acheter mon pass 1 jour pour le samedi 7 juillet', target='_blank')
+							.card.background--pink
+								header
+									h2 Samedi 7 juillet
+								p 30€
+								button.align-items-center.justify-content-center.button.button--white
+									i.fas.fa-ticket-alt(data-fa-transform="rotate--30")
+									| &nbsp;&nbsp;&nbsp;Réserver
+					.col-sm.mb-5.mb-lg-0
+						a(href='https://www.digitick.com/fr/', title='Acheter mon pass 1 jour pour le dimanche 8 juillet', target='_blank')
+							.card.background--pink
+								header
+									h2 Dimanche 8 juillet
+								p 30€
+								button.align-items-center.justify-content-center.button.button--white
+									i.fas.fa-ticket-alt(data-fa-transform="rotate--30")
+									| &nbsp;&nbsp;&nbsp;Réserver
+				// Billets pour 2 & 3 jours
+				.row
+					.col-sm.mb-5.mb-lg-0
+						a(href='https://www.digitick.com/fr/', title='Acheter mon pass 2 jours', target='_blank')
+							.card.background--purple
+								header
+									h2 Pass 2 jours
+								p 50€
+								button.align-items-center.justify-content-center.button.button--white
+									i.fas.fa-ticket-alt(data-fa-transform="rotate--30")
+									| &nbsp;&nbsp;&nbsp;Réserver
+					.col-sm.mb-5.mb-lg-0
+						a(href='https://www.digitick.com/fr/', title='Acheter mon pass 3 jours', target='_blank')
+							.card.background--purple
+								header
+									h2 Pass 3 jours
+								p 70€
+								button.align-items-center.justify-content-center.button.button--white
+									i.fas.fa-ticket-alt(data-fa-transform="rotate--30")
+									| &nbsp;&nbsp;&nbsp;Réserver
+					.col-sm.mb-5.mb-lg-0
+						a(href='https://www.digitick.com/fr/', title='Acheter mon pass entrée & hébergement', target='_blank')
+							.card.background--blue-dark
+								header
+									h2 Pass hébergement
+								p 10€ / nuit
+								button.align-items-center.justify-content-center.button.button--white
+									i.fas.fa-ticket-alt(data-fa-transform="rotate--30")
+									| &nbsp;&nbsp;&nbsp;Réserver

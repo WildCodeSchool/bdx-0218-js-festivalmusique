@@ -12,6 +12,9 @@ var Infospratiques = require('./routes/infospratiques');
 var Devenirbenevole = require('./routes/devenirbenevole');
 var Nouscontacter = require('./routes/nouscontacter');
 var Billetterie = require('./routes/billetterie');
+var MentionsLegales = require('./routes/mentionsLegales');
+var CGV = require('./routes/cgv');
+var Admin = require('./routes/admin');
 
 
 var app = express();
@@ -35,6 +38,9 @@ app.use('/infos-pratiques', Infospratiques);
 app.use('/devenir-benevole', Devenirbenevole);
 app.use('/nous-contacter', Nouscontacter);
 app.use('/billetterie', Billetterie);
+app.use('/mentions-legales', MentionsLegales);
+app.use('/conditions-generales-de-vente', CGV);
+app.use('/admin', Admin);
 
 
 // catch 404 and forward to error handler
