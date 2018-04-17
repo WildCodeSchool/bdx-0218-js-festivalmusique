@@ -3,14 +3,13 @@ let router = express.Router();
 let mysql = require('mysql');
 
 let con = mysql.createConnection({
- 		host: "127.0.0.1",
- 		user: "root",
- 		password: "root",
- 		database: "projet2"
+ 		host: "sql7.freesqldatabase.com",
+ 		user: "sql7233133",
+ 		password: "r3AcfGXI7U",
+ 		database: "sql7233133"
 });
 
 let select = 'SELECT * from artistes';
-
 
 router.get('/', (req, res, next) => {
   	con.query(select, function (err, rows) {
