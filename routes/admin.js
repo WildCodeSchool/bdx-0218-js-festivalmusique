@@ -13,7 +13,7 @@ let adminID = `select * from admin;`
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('blockcontent/adminLogin');
+  res.render('blockcontentAdmin/adminLogin');
 });
 
 router.post('/', (req, res, next) => {
@@ -25,7 +25,7 @@ router.post('/', (req, res, next) => {
 
 			if ((ident === result[0].id)&&(pwd===result[0].password)) {
 				console.log('les ID sont bons');
-				res.render('blockcontent/adminHP');
+				res.render('blockcontentAdmin/adminHP');
 			} else {
 				console.log('les ID sont foireux');
 				res.redirect('/admin');
