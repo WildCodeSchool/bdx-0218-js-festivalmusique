@@ -5,17 +5,22 @@ block content
     h1 Devenir bénévole
     // Présentation
     .row
-      .col-lg-12.benevole-presentation(<div='')
+    .col-lg-12.benevole-presentation(<div='')
         .benevole-image
-          img.img-fluid(src='http://via.placeholder.com/1000x1000')
+          img.img-fluid(src='https://raw.githubusercontent.com/cyrilBlondeau/wild-project/master/benevole.jpg')
+        h4 Conditions requises
         p
-          | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        h4 Restauration
+          | Avoir 18 ans révolus au moment du festival et être disponible du 5 au 8 juillet 2018 (voire avant et au-delà pour certains postes).
         p
-          | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          | Être bénévole, c’est soutenir et vivre le festival autrement, entouré du public, des artistes, des techniciens et bien sûr des autres bénévoles. C’est participer activement à l’organisation du festival, au bon fonctionnement d’un projet collectif. Motivation, implication et bonne humeur sont les qualités du bénévole.
+        //i.fas.fa-bed
         h4 Hébergement
         p
-          | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          | Les bénévoles sont hébergés gratuitement sur le camping du festival, ils disposent d'un espace qu'il leur est spécialement dédié. Des douches et des sanitaires dédiés sont également à disposition. Ils sont toutefois libres de trouver un autre hébergement à leur frais. La seule obligation est la présence à leur poste aux horaires convenus.
+        //i.fas.fa-utensils
+        h4 Restauration
+        p
+          | Les repas, à savoir un petit déjeuner, un déjeuner et un dîner sont fournis par l'organisation du festival. Deux bouteilles d'eau 1,5 litres par jour sont également distribuées. La consommation d'alcool est strictement interdite pendant les horaires de service. Un bénévole se trouvant en état d'ébriété pendant ses horaires de service sera immédiatement renvoyé.
     // Formulaire
     .benevole-form
       // Picto crayon
@@ -48,9 +53,9 @@ block content
             input(type='checkbox', name='', value='')
             span Dimanche
         // Envoyer
-        div
-          button.btn.btn-primary.btn-lg.row(type='button')
-            | Envoyer
-            i.fas.fa-paper-plane
+        .send
+            button.button.button--purple
+              | Envoyer
+              i.fas.fa-paper-plane
     // fin de formulaire
     // fin de container

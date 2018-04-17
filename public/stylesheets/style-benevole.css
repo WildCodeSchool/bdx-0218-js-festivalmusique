@@ -1,12 +1,27 @@
 .benevole-form {
 	margin: auto;
 	text-align: center;
-	margin: 50px 0 50px 0;
+	margin: 50px 0 100px 0;
 }
 
-.benevole h1, .benevole h2 {
+.benevole h1 {
 	text-align: center;
-	margin: 0 0 20px 0;
+	margin: 30px 0 50px 0;
+}
+
+.benevole h2 {
+	font-size: 3rem;
+	margin: 30px 0 30px 0;
+}
+
+.benevole h3 {
+	font-size: 2rem;
+	margin: 30px 0 30px 0;
+}
+
+.benevole h4 {
+	font-size: 2rem;
+	color: #ff5e35;
 }
 
 .benevole p {
@@ -17,10 +32,81 @@
 	overflow: hidden;
 }
 
+.benevole-presentation h4, .benevole-presentation p{
+	margin: 0 0 30px 0;
+}
+
 .benevole-image{
-	width: 40vw;
+	width: 35vw;
+	height: 35vw;
 	float: left;
+	overflow: hidden;
 	margin: 0 5% 3% 0;
+}
+
+.benevole-image img{
+	width: 100%;
+	height: auto;
+}
+
+/* PICTOS FONT AWESOME */
+.fa-bed, .fa-utensils {
+	color: #ff5e35;
+	font-size:3rem;
+	margin: 10px 0 10px 0;
+}
+
+.fa-pencil-alt {
+	font-size:5rem;
+}
+
+.fa-paper-plane {
+	margin: 4px 0 0 20px;
+}
+
+/* CHECKBOX JOURS */
+.benevole-day label {
+	margin: 5px;
+}
+
+.benevole-day input[type=checkbox] {
+  display: none;
+}
+
+.benevole-day span {
+	background-color: #962e40;
+	border-radius: 4px;
+	font-weight: 700;
+	color: #FFF;
+	text-decoration: none;
+	text-align: center;
+	width: 200px;
+	padding: 15px 0;
+	cursor: pointer;
+	display: block;
+	margin: 0 auto;
+	transition: background-color 150ms ease-in;
+}
+
+.benevole-day span:hover {
+	background-color: #ff5e35;
+}
+
+.benevole-day input[type=checkbox]:checked + span {
+	background: #ff5e35 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAaCAYAAACgoey0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAX9JREFUeNpi+P//PwMNsS4QbwBiLnQ5WlqqAsRP/0PARiBmoYfFkkB8+z8qWALEjLS0mB+IL/3HDibSymJQXB7/jx/UgNSCvU4lwAbEG4DYkwi1WUxUspQZiOcRaSkIWOAKMk0Sg3jaf+IBOIVjMyQWiH8DsR+RljaTYOkBWJ5GNwRk2R+ooh9A7ETA0jwSLL0ATfEYqRpkyVc0xR+A2AyHpdFA/I9IS0F5WhRbAWIEtQQbeAXE6lhC5jeRlj4GYgVsRaYK1HBCmmWgmuyxhAwu8BpaXjNgs/gYkYbcAGIXPCGDDkCOM8eVPkCEFhE+JhX8BGJnfAkTxgC57BOVLAXlihBC2RA9Vf+k0FJQKk8nJv+jCwQi5WNyQAWxpR02wRQS8icy6CKlmMUlUUGipfOQK3lKLAbhdhIKfWZS6258kiAfzCZg6V4gZiOn0UBIAcgn63BYehK50Ke2xQxQH+3FUoqJUtJMIlYhLxAfxVJu09xiWENuMxCrUaNhCBBgAOAVfjALa5TLAAAAAElFTkSuQmCC) no-repeat 7% center;
+	background-size: 15px 13px;
+}
+
+.benevole-day input[type=checkbox]:checked:hover + span {
+	color: rgba(255,255,255,0.5);
+	background: #dd5244 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAS5JREFUeNq8110OgjAMAGBGvIY3VESjt9jPg95PT+LccBIZ7dYOWJPGB+g+Ymg3hLW2QeLkcu/y2pSFdvl0eQevehjI3uXbfkMh96TShFq/xhG6J4faAtxEtSBOQTm4QWpnOBWl4CZT69fuYpiCpnBDrB1xLhrjgoFO8F1oGcFslUv4bV32zFoxmOHJta0XMn65dC0UaiddA8UGiN4axeC1cUkdmWviEls/NwL1FqjPNtNvoimPdC3yRCUTiTXbt0R/oSnw2iiK10BBvBY6w2uiE3xJr8oFtcrvxy/fVcyeVdGx98yotcOxN/znHeMUIhdMOG8c4reagssF43VEoT5O4ZJwvNUUFJtcEE5BMXyGpnanf5yDxjiI+hSJj7YunEBvhbuTCh9tD+jiR4ABAJ0SrJgNr1UAAAAAAElFTkSuQmCC) no-repeat 7% center;
+	background-size: 15px 15px;
+}
+
+/*  FORMULAIRE CONTACT */
+.benevole .form-control-lg {
+	padding: 15px;
+	font-size: 1.5rem;
 }
 
 .benevole-form-group {
@@ -31,53 +117,19 @@
 	margin: 0 0 30px 0;
 }
 
-.benevole-form button {
-	width: 42vw;
-}
-
-.benevole-form .btn-group, .benevole-form button {
-	margin: 10px 0 10px 0;
-}
-
-.fa-pencil-alt {
-	font-size:3rem;
-}
-
-/* Checkbox jours disponibilité */
-.benevole-day input[type=checkbox] {
-  display: none;
-}
-
-.benevole-day span {
-	background-color: #373740;
-	border-radius: 4px;
-	font-weight: 700;
-	color: #FFF;
-	text-decoration: none;
+.send {
+	width: 100%;
 	text-align: center;
-	width: 200px;
-	padding: 12px 0;
-	cursor: pointer;
+	margin: 20px 0 0 0;
+}
+
+.send button {
 	display: block;
-	margin: 0 auto;
-	transition: background-color 150ms ease-in;
+	text-align: center;
+	margin: auto;
 }
 
-.benevole-day span:hover {
-	background-color: #ff5847;
-}
-
-.benevole-day input[type=checkbox]:checked + span {
-	background: #ff5847 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAaCAYAAACgoey0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAX9JREFUeNpi+P//PwMNsS4QbwBiLnQ5WlqqAsRP/0PARiBmoYfFkkB8+z8qWALEjLS0mB+IL/3HDibSymJQXB7/jx/UgNSCvU4lwAbEG4DYkwi1WUxUspQZiOcRaSkIWOAKMk0Sg3jaf+IBOIVjMyQWiH8DsR+RljaTYOkBWJ5GNwRk2R+ooh9A7ETA0jwSLL0ATfEYqRpkyVc0xR+A2AyHpdFA/I9IS0F5WhRbAWIEtQQbeAXE6lhC5jeRlj4GYgVsRaYK1HBCmmWgmuyxhAwu8BpaXjNgs/gYkYbcAGIXPCGDDkCOM8eVPkCEFhE+JhX8BGJnfAkTxgC57BOVLAXlihBC2RA9Vf+k0FJQKk8nJv+jCwQi5WNyQAWxpR02wRQS8icy6CKlmMUlUUGipfOQK3lKLAbhdhIKfWZS6258kiAfzCZg6V4gZiOn0UBIAcgn63BYehK50Ke2xQxQH+3FUoqJUtJMIlYhLxAfxVJu09xiWENuMxCrUaNhCBBgAOAVfjALa5TLAAAAAElFTkSuQmCC) no-repeat 7% center;
-	background-size: 15px 13px;
-}
-
-.benevole-day input[type=checkbox]:checked:hover + span {
-	color: rgba(255,255,255,0.5);
-	background: #dd5244 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAS5JREFUeNq8110OgjAMAGBGvIY3VESjt9jPg95PT+LccBIZ7dYOWJPGB+g+Ymg3hLW2QeLkcu/y2pSFdvl0eQevehjI3uXbfkMh96TShFq/xhG6J4faAtxEtSBOQTm4QWpnOBWl4CZT69fuYpiCpnBDrB1xLhrjgoFO8F1oGcFslUv4bV32zFoxmOHJta0XMn65dC0UaiddA8UGiN4axeC1cUkdmWviEls/NwL1FqjPNtNvoimPdC3yRCUTiTXbt0R/oSnw2iiK10BBvBY6w2uiE3xJr8oFtcrvxy/fVcyeVdGx98yotcOxN/znHeMUIhdMOG8c4reagssF43VEoT5O4ZJwvNUUFJtcEE5BMXyGpnanf5yDxjiI+hSJj7YunEBvhbuTCh9tD+jiR4ABAJ0SrJgNr1UAAAAAAElFTkSuQmCC) no-repeat 7% center;
-	background-size: 15px 15px;
-}
-
+/* MEDIA QUERIES */
 @media (max-width: 990px) {
 	.benevole-image {
 		width: 100%;
@@ -87,8 +139,8 @@
 	.benevole-image img {
 		margin-top: -15%;
 	}
-	.benevole-form button {
-		width: 60vw;
+	.send button {
+		width: 40vw;
 	}
 	.benevole-day span {
 		width: 150px;
