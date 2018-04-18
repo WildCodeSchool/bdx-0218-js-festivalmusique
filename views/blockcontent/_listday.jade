@@ -1,0 +1,7 @@
+each artiste in tableArtistes
+  a.programmation-vignette-artiste.ticket-friday.style-rock(href='#')
+    .vignette-artiste
+      img.img-fluid(src=artiste.image)
+    header
+      h2 #{artiste.nom}
+    p #{artiste.jour} - #{artiste.heure}

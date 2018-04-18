@@ -1,38 +1,34 @@
 extends ../layout.jade
 
 block content
-    main
-      .container.text-center
-        header
-          h1 INFOS PRATIQUES
+  main
+    .container.text-center.infos-pratiques
         section
-          header
-            h2 Retrouvez toutes nos infos
-          .row
-            .col-xs-12.col-md-6
-              a(href='/infos-pratiques/accessibilite', title='')
-                article
-                  img.img-fluid(src='http://via.placeholder.com/350x150', alt='')
-                  header
-                    h3 ACCESSIBILITE
-            .col-xs-12.col-md-6
-              a(href='/infos-pratiques/developpement-durable', title='')
-                article
-                  img.img-fluid(src='http://via.placeholder.com/350x150', alt='')
-                  header
-                    h3 DEVELOPPEMENT DURABLE
-          .row
-            .col-xs-12.col-md-6
-              a(href='/infos-pratiques/hebergement-restauration', title='')
-                article
-                  img.img-fluid(src='http://via.placeholder.com/350x150', alt='')
-                  header
-                    h3 HEBERGEMENT - RESTAURATION
-            .col-xs-12.col-md-6
-              a(href='/infos-pratiques/comment-venir', title='')
-                article
-                  img.img-fluid(src='http://via.placeholder.com/350x150', alt='')
-                  header
-                    h3 COMMENT VENIR
-
-
+            header
+                h1 INFOS PRATIQUES
+            .row
+              .col-xs-12.col-md-6
+                a.link-infos-pratiques(href='/infos-pratiques/accessibilite', title='access')
+                  article
+                    img.img-fluid(src='images/infos-pratiques/mobilite.jpg', alt='mobilite')
+                    header
+                      h2 ACCESSIBILITE
+              .col-xs-12.col-md-6
+                a.link-infos-pratiques(href='/infos-pratiques/developpement-durable', title='ethique')
+                  article
+                    img.img-fluid(src='images/infos-pratiques/ethique.jpg', alt='ethique')
+                    header
+                      h2 DEVELOPPEMENT DURABLE
+            .row
+              .col-xs-12.col-md-6
+                a.link-infos-pratiques(href='/infos-pratiques/hebergement-restauration', title='hebergement-restauration')
+                  article
+                    img.img-fluid(src='images/infos-pratiques/repos.jpg', alt='repos')
+                    header
+                      h2 HEBERGEMENT
+              .col-xs-12.col-md-6
+                a.link-infos-pratiques(href='/infos-pratiques/comment-venir', title='transports')
+                  article
+                    img.img-fluid(src='images/infos-pratiques/Trajet.jpg', alt='trajet')
+                    header
+                      h2 COMMENT VENIR
