@@ -1,16 +1,33 @@
 .benevole-form {
 	margin: auto;
 	text-align: center;
-	margin: 50px 0 50px 0;
+	margin: 50px 0 100px 0;
 }
 
-.benevole h1, .benevole h2 {
+.benevole h1 {
 	text-align: center;
-	margin: 20px 0 20px 0;
+	margin: 30px 0 50px 0;
+}
+
+.benevole h2 {
+	font-size: 3rem;
+	margin: 30px 0 30px 0;
+}
+
+.benevole h3 {
+	font-size: 2rem;
+	margin: 30px 0 30px 0;
+}
+
+.benevole h4 {
+	font-size: 2rem;
+	color: #ff5e35;
+	margin: 0 0 15px 0;
 }
 
 .benevole p {
 	text-align: justify;
+	margin: 0 0 40px 0;
 }
 
 .benevole-presentation {
@@ -18,9 +35,37 @@
 }
 
 .benevole-image{
-	width: 40vw;
+	width: 35vw;
+	height: 35vw;
 	float: left;
-	margin: 0 5% 3% 0;
+	overflow: hidden;
+	margin: 0 5% 2% 0;
+}
+
+.benevole-image img{
+	width: 100%;
+	height: auto;
+}
+
+/* PICTOS FONT AWESOME */
+.fa-bed, .fa-utensils {
+	color: #ff5e35;
+	font-size:3rem;
+	margin: 10px 0 10px 0;
+}
+
+.fa-pencil-alt {
+	font-size:5rem;
+}
+
+.fa-paper-plane {
+	margin: 4px 0 0 20px;
+}
+
+/*  FORMULAIRE CONTACT */
+.benevole .form-control-lg {
+	padding: 15px;
+	font-size: 1.5rem;
 }
 
 .benevole-form-group {
@@ -31,32 +76,25 @@
 	margin: 0 0 30px 0;
 }
 
-.benevole-form button {
-	width: 42vw;
+/* CHECKBOX JOURS */
+.benevole-day label {
+	margin: 5px;
+	width: 20%;
 }
 
-.benevole-form .btn-group, .benevole-form button {
-	margin: 10px 0 10px 0;
-}
-
-.fa-pencil-alt {
-	font-size:3rem;
-}
-
-/* Checkbox jours disponibilité */
 .benevole-day input[type=checkbox] {
   display: none;
 }
 
 .benevole-day span {
-	background-color: #373740;
+	background-color: #962e40;
 	border-radius: 4px;
 	font-weight: 700;
 	color: #FFF;
 	text-decoration: none;
 	text-align: center;
-	width: 200px;
-	padding: 12px 0;
+	width: 100%;
+	padding: 15px 0;
 	cursor: pointer;
 	display: block;
 	margin: 0 auto;
@@ -64,11 +102,11 @@
 }
 
 .benevole-day span:hover {
-	background-color: #ff5847;
+	background-color: #ff5e35;
 }
 
 .benevole-day input[type=checkbox]:checked + span {
-	background: #ff5847 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAaCAYAAACgoey0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAX9JREFUeNpi+P//PwMNsS4QbwBiLnQ5WlqqAsRP/0PARiBmoYfFkkB8+z8qWALEjLS0mB+IL/3HDibSymJQXB7/jx/UgNSCvU4lwAbEG4DYkwi1WUxUspQZiOcRaSkIWOAKMk0Sg3jaf+IBOIVjMyQWiH8DsR+RljaTYOkBWJ5GNwRk2R+ooh9A7ETA0jwSLL0ATfEYqRpkyVc0xR+A2AyHpdFA/I9IS0F5WhRbAWIEtQQbeAXE6lhC5jeRlj4GYgVsRaYK1HBCmmWgmuyxhAwu8BpaXjNgs/gYkYbcAGIXPCGDDkCOM8eVPkCEFhE+JhX8BGJnfAkTxgC57BOVLAXlihBC2RA9Vf+k0FJQKk8nJv+jCwQi5WNyQAWxpR02wRQS8icy6CKlmMUlUUGipfOQK3lKLAbhdhIKfWZS6258kiAfzCZg6V4gZiOn0UBIAcgn63BYehK50Ke2xQxQH+3FUoqJUtJMIlYhLxAfxVJu09xiWENuMxCrUaNhCBBgAOAVfjALa5TLAAAAAElFTkSuQmCC) no-repeat 7% center;
+	background: #ff5e35 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAaCAYAAACgoey0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAX9JREFUeNpi+P//PwMNsS4QbwBiLnQ5WlqqAsRP/0PARiBmoYfFkkB8+z8qWALEjLS0mB+IL/3HDibSymJQXB7/jx/UgNSCvU4lwAbEG4DYkwi1WUxUspQZiOcRaSkIWOAKMk0Sg3jaf+IBOIVjMyQWiH8DsR+RljaTYOkBWJ5GNwRk2R+ooh9A7ETA0jwSLL0ATfEYqRpkyVc0xR+A2AyHpdFA/I9IS0F5WhRbAWIEtQQbeAXE6lhC5jeRlj4GYgVsRaYK1HBCmmWgmuyxhAwu8BpaXjNgs/gYkYbcAGIXPCGDDkCOM8eVPkCEFhE+JhX8BGJnfAkTxgC57BOVLAXlihBC2RA9Vf+k0FJQKk8nJv+jCwQi5WNyQAWxpR02wRQS8icy6CKlmMUlUUGipfOQK3lKLAbhdhIKfWZS6258kiAfzCZg6V4gZiOn0UBIAcgn63BYehK50Ke2xQxQH+3FUoqJUtJMIlYhLxAfxVJu09xiWENuMxCrUaNhCBBgAOAVfjALa5TLAAAAAElFTkSuQmCC) no-repeat 7% center;
 	background-size: 15px 13px;
 }
 
@@ -78,6 +116,19 @@
 	background-size: 15px 15px;
 }
 
+/* BOUTON ENVOI */
+.send {
+	width: 100%;
+	margin: 5px 0 0 0;
+}
+
+.send button {
+	display: block;
+	width: 62%;
+	margin: auto;
+}
+
+/* MEDIA QUERIES */
 @media (max-width: 990px) {
 	.benevole-image {
 		width: 100%;
@@ -87,19 +138,33 @@
 	.benevole-image img {
 		margin-top: -15%;
 	}
-	.benevole-form button {
-		width: 60vw;
+	.benevole-day label {
+		margin: 5px;
+		width: 30%;
 	}
 	.benevole-day span {
-		width: 150px;
+		width: 100%;
+	}
+	.send button {
+		width: 92%;
 	}
 }
 
 @media (max-width: 600px) {
+	.benevole h1 {
+	  font-size: 3rem;
+	}
 	.benevole-presentation img {
 		width: 100%;
 	}
-	.benevole-form button {
-		width: 80vw;
+	.benevole-day label {
+		margin: 5px;
+		width: 95%;
+	}
+	.benevole-day span {
+		width: 100%;
+	}
+	.send button {
+		width: 95%;
 	}
 }

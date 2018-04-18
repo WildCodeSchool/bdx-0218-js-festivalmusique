@@ -1,0 +1,12 @@
+/* main */
+html {
+	font-size: 62.5%; /* 1rem vaut 10px */
+}
+body {
+	font-size: 1.6rem;
+	color: #333;
+	font-family: 'Roboto', sans-serif;
+}
+section {
+	padding: 5rem 0;
+}

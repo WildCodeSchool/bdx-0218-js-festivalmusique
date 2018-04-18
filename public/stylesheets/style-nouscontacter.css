@@ -1,18 +1,21 @@
+.contact {
+	background-color: #fff5c8;
+	margin: 0;
+}
+
 header,
 .coordonnees {
 	text-align: center;
-}
-header {
-	margin: 4% 0;
 }
 
 .input-area {
 	margin-bottom: 2rem;
 }
-.btn-primary {
-	width: 100%;
-	margin-bottom: 10%;
+
+.coordonnees {
+	margin-top: 60px;
 }
+
 .icons {
 	margin-bottom: 20%;
 }
