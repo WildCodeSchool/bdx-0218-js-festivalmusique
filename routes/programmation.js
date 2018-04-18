@@ -22,7 +22,7 @@ router.get('/apij', (req, res, next) => {
 
     let list1 = `SELECT * from artistes`;
     let list2 = `SELECT * from artistes where jour = '${req.query.jour}';`;
-    console.log(req.query.jour);
+    
     if (req.query.jour === "") {
         con.query(list1, function (err, rows) {
             if (err) throw err;
@@ -40,7 +40,7 @@ router.get('/apis', (req, res, next) => {
 
     let list1 = `SELECT * from artistes`;
     let list2 = `SELECT * from artistes where style = '${req.query.style}';`;
-    console.log(req.query.style);
+    
     if (req.query.jour === "") {
         con.query(list1, function (err, rows) {
             if (err) throw err;
