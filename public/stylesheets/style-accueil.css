@@ -15,7 +15,7 @@
 	background-position: center center;
 	background-size: cover;
 	height: 100vh;
-	width: 100vw;
+	width: 100%;
 }
 
 /* HOME PAGE */
@@ -28,25 +28,20 @@
 
 /* PROGRAMMATION */
 
-.programmation {
-	background-color: lightgreen;
-}
+
 
 /* PREPARATION */
 
-.preparation {
-	background-color: lightpink;
-}
+/* .preparation {
+	background-color: #19b6e1;
+} */
 
 .PREPARATION__cadre {
-	border: 3px solid lightslategray;
+	border: 3px solid white;
 }
 
 /* CARTE-SECTION */
 
-.carte-section {
-	background-color: lightcoral;
-}
 
 /* CAROUSSEL */
 
@@ -58,13 +53,7 @@
 /* SPOTIFY */
 
 .spotify {
-	background-color: lightskyblue;
-}
-
-/* NEWSLETTER */
-
-.newsletter {
-	background-color: lightseagreen;
+	background-color: #181818;
 }
 
 /* TEXT COLOR */
@@ -77,13 +66,55 @@
 	color: white;
 }
 
-.btn-newsletter {
-	margin-top: 15px;
+
+/* MEDIA QUERIES */
+/* // Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+// Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+	
 }
 
-/* FOOTER */
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	
+}
 
-footer {
-	background-color: black;
-	color: white;
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+	
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+	.display-3{
+		font-size: 6.5rem;
+	}
+	.main-title-home {
+		margin-bottom: 1rem; 
+	}
+	.shadows-title{
+		text-shadow: 5px 5px 5px black;
+	}
+	.slogan{
+		font-size: 3rem;
+		color:rgb(255, 114, 32);
+		text-shadow: 1px 1px 1px black;
+		font-weight: 300;
+	}
+	.date{
+		font-size: 2.5rem;
+		color:white;
+		text-shadow: 1px 1px 1px black;
+		font-weight: 300;
+	}
+	.affiche-programmation{
+		margin-top: -10rem;
+		border: 1rem solid white; 
+	}
+
+	.card {
+		border: 1rem solid white;
+	}
+
 }

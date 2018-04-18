@@ -18,6 +18,10 @@ h1.main-title {
 	letter-spacing: 0.1em;
 }
 
+p {
+	font-family: 'Roboto', sans-serif;
+}
+
 /* fonts */
 .copy--permanent-marker {
 	font-family: 'Permanent Marker', cursive;
