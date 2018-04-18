@@ -72,17 +72,17 @@
 // No media query since this is the default in Bootstrap
 // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-	
+
 }
 
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-	
+
 }
 
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-	
+
 }
 
 /* // Extra large devices (large desktops, 1200px and up) */
@@ -91,7 +91,7 @@
 		font-size: 6.5rem;
 	}
 	.main-title-home {
-		margin-bottom: 1rem; 
+		margin-bottom: 1rem;
 	}
 	.shadows-title{
 		text-shadow: 5px 5px 5px black;
@@ -110,7 +110,8 @@
 	}
 	.affiche-programmation{
 		margin-top: -10rem;
-		border: 1rem solid white; 
+		border: 1rem solid white;
+		
 	}
 
 	.card {
