@@ -39,3 +39,5 @@ views/blockcontent/programmation.jade
 #BDD 
 routes/programmation.js
 
+# Fichier tmp
+tmp
