@@ -1,0 +1,8 @@
+extends ../layoutAdmin
+
+block content
+	form(method='POST', enctype='multipart/form-data', action='uploaddufichier')
+		label type de fichier accepté jpg | 3mo max.
+		br
+		input(type='file', name='monfichier', value='', accept='.jpg')
+		button envoyer

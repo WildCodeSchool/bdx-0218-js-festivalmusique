@@ -36,4 +36,9 @@ router.post('/', (req, res, next) => {
   });
 });
 
+router.get('/upload', (req, res, next) => {
+	res.render('adminUpload');
+	next();
+})
+
 module.exports = router;
