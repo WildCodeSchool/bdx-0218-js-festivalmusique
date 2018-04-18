@@ -14,26 +14,19 @@ let adminID = `select * from admin;`
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.sendFile(path.join(__dirname, '../views/blockcontentAdmin', 'adminLogin.html'));
+  // res.sendFile(path.join(__dirname, '../views/blockcontentAdmin', 'adminLogin.html'));
+  res.render('blockcontentAdmin/adminHP');
 });
 
-router.post('/', (req, res, next) => {
-	const ident = req.body.ident;
-	const pwd = req.body.password;
-	console.log("ident : ", req.body.ident);
-	console.log("pwd : ", req.body.password);
-	con.query(adminID, function (err, result) {
-
-      if (err) throw err;
-
-			if ((ident === result[0].id)&&(pwd===result[0].password)) {
-				console.log('les ID sont bons');
-				res.render('blockcontentAdmin/adminHP');
-			} else {
-				console.log('les ID sont foireux');
-				res.redirect('/admin');
-			}
-  });
-});
+// router.post('/', (req, res, next) => {
+// 	con.query(adminID, function (err, result) {
+//       if (err) throw err;
+// 			if ((req.body.ident === result[0].id)&&(req.body.password===result[0].password)) {
+// 				res.render('blockcontentAdmin/adminHP');
+// 			} else {
+// 				res.redirect('/admin');
+// 			}
+//   });
+// });
 
 module.exports = router;

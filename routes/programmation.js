@@ -19,7 +19,6 @@ router.get('/', (req, res, next) => {
 })
 
 router.get('/apij', (req, res, next) => {
-
     let list1 = `SELECT * from artistes`;
     let list2 = `SELECT * from artistes where jour = '${req.query.jour}';`;
     console.log(req.query.jour);
@@ -37,7 +36,6 @@ router.get('/apij', (req, res, next) => {
 })
 
 router.get('/apis', (req, res, next) => {
-
     let list1 = `SELECT * from artistes`;
     let list2 = `SELECT * from artistes where style = '${req.query.style}';`;
     console.log(req.query.style);
@@ -54,4 +52,15 @@ router.get('/apis', (req, res, next) => {
     }
 })
 
+router.get('/:id(\\d+)', (req, res, next) => {
+    console.log("valeur de param : ", req.params.name);
+    let nom = req.params.name;
+        let select = `SELECT * from artistes where kartiste = '${req.params.id}'`;
+        con.query(select, function (err, rows) {
+          if (err) throw err;
+          res.render('blockcontent/artiste', {tableArtistes: rows});
+        });
+})
+
 module.exports = router;
+
