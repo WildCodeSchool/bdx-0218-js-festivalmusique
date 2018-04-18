@@ -1,8 +1,12 @@
-extends ../layoutAdmin
+extends ../layoutAdmin.jade
 
 block content
-	form(method='POST', enctype='multipart/form-data', action='uploaddufichier')
-		label type de fichier accepté jpg | 3mo max.
-		br
-		input(type='file', name='monfichier', value='', accept='.jpg')
-		button envoyer
+	section.pt-3.pb-3
+		.container.pl-0.pr-0
+			form(method='POST', enctype='multipart/form-data', action='uploaddufichier')
+				label type de fichier accepté png | 3mo max.
+				br
+				input.form-control(type='file', name='monfichier', value='', accept='.png')
+				button.button.button--orange(type='submit') Envoyer
+
+

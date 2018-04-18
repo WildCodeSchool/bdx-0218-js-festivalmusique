@@ -3,6 +3,11 @@ let router = express.Router();
 let path = require("path");
 let mysql = require('mysql');
 
+// UPLOAD DE FICHIER 
+const multer = require('multer');
+const upload = multer({ dest: 'tmp/' });
+const fs = require('fs');
+
 let con = mysql.createConnection({
  		host: "sql7.freesqldatabase.com",
  		user: "sql7233133",
@@ -37,8 +42,37 @@ router.post('/', (req, res, next) => {
 });
 
 router.get('/upload', (req, res, next) => {
-	res.render('adminUpload');
+	res.render('blockcontentAdmin/adminUpload');
 	next();
-})
+});
+
+
+// ROUTE pour POST
+router.post('/uploaddufichier', upload.single('monfichier'), function (req, res, next) {
+	// traitement du formulaire
+	console.log(req.file.mimetype);
+	console.log(typeof req.file.minetype);
+
+	if (req.file.mimetype === 'image/png' && req.file.size < 3145728) {
+
+		fs.rename(req.file.path, 'public/images/' + req.file.originalname, function (err) {
+			if (err) {
+				res.send('problème durant le déplacement');
+			} else {
+				res.render('blockcontentAdmin/adminUpload');
+			}
+
+		});
+	}
+
+	else if (req.file.mimetype != 'image/png') {
+		res.send(`Ce fichier n'est pas un png`);
+	}
+
+	else {
+		res.send(`Ce fichier est trop gros`);
+	}
+
+});
 
 module.exports = router;
