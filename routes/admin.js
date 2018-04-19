@@ -32,4 +32,13 @@ router.post('/', (req, res, next) => {
   });
 });
 
+
+let select = 'SELECT kartiste, nom from artistes';
+router.get('/artiste', function(req, res, next) {
+	con.query(select, function (err, rows) {
+        if (err) throw err;
+        res.render('blockcontentAdmin/adminArtiste', {tableArtistes: rows});
+    });
+});
+
 module.exports = router;
