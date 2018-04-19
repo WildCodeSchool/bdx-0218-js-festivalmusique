@@ -1,4 +1,97 @@
 extends ../layoutAdmin.jade
 
 block content
-	p page admin1
+	main#admin
+		ul#myTab.nav.nav-tabs(role='tablist')
+			li.nav-item
+				a#add-tab.nav-link.active(data-toggle='tab', href='#add', role='tab', aria-controls='add', aria-selected='true') Ajouter un artiste
+			li.nav-item
+				a#modify-tab.nav-link(data-toggle='tab', href='#modify', role='tab', aria-controls='modify', aria-selected='false') Modifier un artiste
+			li.nav-item
+				a#delete-tab.nav-link(data-toggle='tab', href='#delete', role='tab', aria-controls='delete', aria-selected='false') Supprimer un artiste
+		#myTabContent.tab-content
+			#add.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='add-tab')
+				section
+					header
+						h2 Ajouter un artiste
+					form(method='POST', action='')
+						.form-group
+							label(for='artisteName') Nom de l'artiste
+							input#artisteName.form-control(type='text', name='artisteName', placeholder='Entrez le nom de l\'artiste')
+						.form-group
+							label(for='artisteDescription') Description de l'artiste
+							textarea#artisteDescription.form-control(name='artisteDescription', placeholder='Entrez la description de l\'artiste')
+						.form-group
+							label(for='artisteStyle') Style de l'artiste
+							select#artisteStyle.form-control.form-control-lg(name='artisteStyle', style='height: 5rem;')
+								option Rock
+								option Métal
+								option Pop
+						.form-group
+							label(for='artisteDate') Jour de passage de l'artiste
+							select#artisteDate.form-control.form-control-lg(name='artisteDate', style='height: 5rem;')
+								option Vendredi
+								option Samedi
+								option Dimanche
+						.form-group
+							label(for='artisteHeure') Heure de passage de l'artiste
+							input#artisteHeure.form-control(type='time', name='artisteHeure')
+						.form-group
+							label(for='artisteYoutube') Vidéo de l'artiste
+							input#artisteYoutube.form-control(type='text', name='artisteYoutube', placeholder='Url de la page Youtube')
+							small.form-text.text-muted Seules les vidéos Youtube sont acceptées.
+						.form-group
+							label(for='artisteImage') Image de l'artiste
+							input#artisteImage.form-control(type='file', name='artisteImage')
+						button.button.button--blue-medium(type='submit') Ajouter
+			#modify.tab-pane.fade(role='tabpanel', aria-labelledby='modify-tab')
+				section
+					header
+						h2 Modifier un artiste
+					form(method='POST', action='?_method=PUT')
+						.form-group
+							label(for='artisteName') Nom de l'artiste
+							input#artisteName.form-control(type='text', name='artisteName', placeholder='# {artiste.nom}')
+						.form-group
+							label(for='artisteDescription') Description de l'artiste
+							textarea#artisteDescription.form-control(name='artisteDescription', placeholder='# {artiste.description}')
+						.form-group
+							label(for='artisteStyle') Style de l'artiste
+							select#artisteStyle.form-control.form-control-lg(name='artisteStyle', style='height: 5rem;')
+								option Rock
+								option Métal
+								option Pop
+						.form-group
+							label(for='artisteDate') Jour de passage de l'artiste
+							select#artisteDate.form-control.form-control-lg(name='artisteDate', style='height: 5rem;')
+								option Vendredi
+								option Samedi
+								option Dimanche
+						.form-group
+							label(for='artisteHeure') Heure de passage de l'artiste
+							input#artisteHeure.form-control(type='time', name='artisteHeure')
+						.form-group
+							label(for='artisteYoutube') Vidéo de l'artiste
+							input#artisteYoutube.form-control(type='text', name='artisteYoutube', placeholder='# {artiste.youtube}')
+							small.form-text.text-muted Seules les vidéos Youtube sont acceptées.
+						.form-group
+							label(for='artisteImage') Image de l'artiste
+							img.form-control(src='# {artiste.image}', alt='# {artiste.nom}')
+							input#artisteImage.form-control(type='file', name='artisteImage')
+						button.button.button--blue-medium(type='submit') Modifier
+			#delete.tab-pane.fade(role='tabpanel', aria-labelledby='delete-tab')
+				section
+					header
+						h2 Supprimer un artiste
+					.row
+						.col-md-3
+							img.img-fluid(src='http://via.placeholder.com/300x300', alt='')
+						.col-md-9
+							header
+								h4 # {artiste.nom}
+							p # {artiste.description}
+							p # {artiste.style}
+							p # {artiste.date}
+							p # {artiste.heure}
+				form(method='POST', action='?_method=DELETE')
+					button.button.button--blue-medium(type='submit') Supprimer

@@ -1,0 +1,7 @@
+main#admin {
+	padding: 5rem;
+}
+
+main#admin #delete.tab-pane .row {
+	margin: 5rem 0;
+}
