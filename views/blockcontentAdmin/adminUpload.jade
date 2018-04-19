@@ -3,10 +3,23 @@ extends ../layoutAdmin.jade
 block content
 	section.pt-3.pb-3
 		.container.pl-0.pr-0
+			h2 modifier la bannière d'accueil
+			//- rajouter dans le form action='uploaddufichier'
 			form(method='POST', enctype='multipart/form-data', action='uploaddufichier')
 				label type de fichier accepté png | 3mo max.
 				br
 				input.form-control(type='file', name='monfichier', value='', accept='.png')
-				button.button.button--orange(type='submit') Envoyer
-
+				button.button.button--orange(type='submit') Envoyer <!-- onSubmit=updloadImg() Envoyer -->
+			div #{status}
+			//- div#popup-upload
+			//- div id="popup" #{status}
+			//- script
+			//- 	uploadImg(){
+			//- 		$.post("/mksqjdmkds",(data) => {
+			//- 			$("div").innerHtml = data;
+			//- 			setTimeout(()=>{
+			//- 				$(".containter").appendHtml = "";
+			//- 			},2000)
+			//- 		})
+			//- 	}
 

@@ -41,38 +41,42 @@ router.post('/', (req, res, next) => {
   });
 });
 
+
+// UPLOAD
 router.get('/upload', (req, res, next) => {
 	res.render('blockcontentAdmin/adminUpload');
 	next();
 });
 
-
 // ROUTE pour POST
 router.post('/uploaddufichier', upload.single('monfichier'), function (req, res, next) {
-	// traitement du formulaire
-	console.log(req.file.mimetype);
-	console.log(typeof req.file.minetype);
-
+	// verification du type et de la taille du formulaire
 	if (req.file.mimetype === 'image/png' && req.file.size < 3145728) {
-
-		fs.rename(req.file.path, 'public/images/' + req.file.originalname, function (err) {
+		fs.rename(req.file.path, 'public/images/homepage.png', function (err) {
 			if (err) {
-				res.send('problème durant le déplacement');
-			} else {
-				res.render('blockcontentAdmin/adminUpload');
+				// res.send("problème durant l'enregistrement du fichier");
+				//res.render("blockcontentAdmin/adminUploadFeedback", { status: "problème durant l'enregistrement du fichier"})
+				res.render("blockcontentAdmin/adminUpload", { status: "problème durant l'enregistrement du fichier" })
+			} 
+			else {
+				res.render("blockcontentAdmin/adminUpload", { status: "l'upload a fonctionné"});
 			}
-
 		});
 	}
-
 	else if (req.file.mimetype != 'image/png') {
-		res.send(`Ce fichier n'est pas un png`);
+		res.render("blockcontentAdmin/adminUpload", { status: "erreur, ce fichier n'est pas un png" })
+		
 	}
 
 	else {
-		res.send(`Ce fichier est trop gros`);
+		res.render("blockcontentAdmin/adminUpload", { status: "erreur, ce fichier est trop volumineux" })
 	}
 
 });
+
+// FEEDBACK UPLOAD 
+router.post("adminUploadFeedback", function (req, res, next) {
+	res.render("adminUploadFeedback", { status: "BOB"})
+})
 
 module.exports = router;
