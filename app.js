@@ -13,7 +13,7 @@ var Nouscontacter = require('./routes/nouscontacter');
 var Billetterie = require('./routes/billetterie');
 var MentionsLegales = require('./routes/mentionsLegales');
 var CGV = require('./routes/cgv');
-var Admin = require('./routes/admin');
+var Admin = require('./routesAdmin/admin');
 
 
 var app = express();
