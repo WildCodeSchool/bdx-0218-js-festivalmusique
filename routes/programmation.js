@@ -35,19 +35,11 @@ router.get('/apij', (req, res, next) => {
 })
 
 router.get('/apis', (req, res, next) => {
-    let list1 = `SELECT * from artistes`;
-    let list2 = `SELECT * from artistes where style = '${req.query.style}';`;
-    if (req.query.jour === "") {
-        con.query(list1, function (err, rows) {
-            if (err) throw err;
-            res.render('blockcontent/_listday', {tableArtistes: rows});
-        });
-    } else {
-        con.query(list2, function (err, rows) {
-            if (err) throw err;
-            res.render('blockcontent/_listday', {tableArtistes: rows});
-        });
-    }
+  let listStyle = `SELECT * from artistes where style = '${req.query.style}';`;
+    con.query(listStyle, function (err, rows) {
+        if (err) throw err;
+        res.render('blockcontent/_listday', {tableArtistes: rows});
+    });
 })
 
 router.get('/:id(\\d+)', (req, res, next) => {

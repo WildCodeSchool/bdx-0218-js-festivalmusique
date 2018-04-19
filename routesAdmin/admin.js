@@ -15,7 +15,6 @@ let adminID = `select * from admin;`
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.sendFile(path.join(__dirname, '../views/blockcontentAdmin', 'adminLogin.html'));
-  // res.render('blockcontentAdmin/adminHP');
 });
 
 router.post('/', (req, res, next) => {
