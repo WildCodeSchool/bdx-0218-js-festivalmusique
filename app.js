@@ -4,6 +4,8 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var Session = require('express-session');
+var FileStore = require('session-file-store')(Session);
 
 var Accueil = require('./routes/accueil');
 var Programmation = require('./routes/programmation');
@@ -14,7 +16,6 @@ var Billetterie = require('./routes/billetterie');
 var MentionsLegales = require('./routes/mentionsLegales');
 var CGV = require('./routes/cgv');
 var Admin = require('./routesAdmin/admin');
-
 
 var app = express();
 
@@ -29,6 +30,17 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(Session({
+    store: new FileStore({
+        path: path.join(__dirname, '/tmp'),
+        encrypt: true
+    }),
+    secret: 'Super Secret !',
+    resave: true,
+    saveUninitialized: true,
+    name : 'sessionId'
+}));
 
 app.use('/', Accueil);
 app.use('/programmation', Programmation);
