@@ -10,22 +10,20 @@ let con = mysql.createConnection({
  		database: "sql7233133"
 });
 
-let adminID = `select * from admin;`
+let adminID = `select * from admin;`;
 
-/* GET home page. */
 router.get('/', function(req, res, next) {
   res.sendFile(path.join(__dirname, '../views/blockcontentAdmin', 'adminLogin.html'));
-  // res.render('blockcontentAdmin/adminHP');
 });
 
 router.post('/', (req, res, next) => {
 	con.query(adminID, function (err, result) {
       if (err) throw err;
-			if ((req.body.ident === result[0].id)&&(req.body.password===result[0].password)) {
-				res.render('blockcontentAdmin/adminHP');
-			} else {
-				res.redirect('/admin');
-			}
+	if ((req.body.ident === result[0].id)&&(req.body.password===result[0].password)) {
+		res.render('blockcontentAdmin/adminHP');
+	} else {
+		res.redirect('/admin');
+	}
   });
 });
 
