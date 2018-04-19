@@ -53,7 +53,7 @@ router.get('/apis', (req, res, next) => {
 router.get('/:id(\\d+)', (req, res, next) => {
   let select = `SELECT * from artistes where kartiste = '${req.params.id}'`;
   con.query(select, function (err, rows) {
-    if (err) throw err;
+    if (err) throw err;          
     res.render('blockcontent/artiste', {tableArtistes: rows});
   });
 })
