@@ -23,7 +23,6 @@ router.post('/', (req, res, next) => {
 	  	  con.query(insert, function (err, result) {
 	        if (err) throw err;
     		});
-
 	  	res.redirect('');
 	  }
 });
