@@ -1,9 +1,5 @@
 /* CONTAINER */
 
-.container {
-	/* background: grey; */
-}
-
 .all {
 	background: grey;
 	height: 2000px;
@@ -27,7 +23,9 @@
 }
 
 /* PROGRAMMATION */
-
+.sizeImage{
+	max-width: 50vw;
+}
 
 
 /* PREPARATION */
