@@ -41,13 +41,18 @@ router.get('/artiste', function(req, res, next) {
     });
 });
 
+// sélection de l'artiste dans la liste des artistes - les données de l'artiste en question sont envoyées dans le formulaire de modification/suppression
 router.get('/api/artiste/:id', function(req, res, next) {
 	let selectArtiste = `SELECT * from artistes where kartiste = '${req.params.id}';`;
 	con.query(selectArtiste, function (err, row) {
         if (err) throw err;
-        console.log(row);
         res.render('includesAdmin/_formArtiste', {artiste: row[0]});
     });
 });
+
+// router.post('/artiste', function(req, res, next) {
+// 	console.log(req.body.artisteName);
+
+// });
 
 module.exports = router;

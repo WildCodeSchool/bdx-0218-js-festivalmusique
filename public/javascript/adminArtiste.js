@@ -6,12 +6,12 @@ $( document ).ready(function() {
 	});
 
 	$('#modify', $form).on("click", function() {
-		$form.attr("action", "/users?_method=PUT");
+		$form.attr("action", "/admin/artiste?_method=PUT");
 		$form.submit();
 	});
 
 	$('#delete', $form).on("click", function() {
-		$form.attr("action", "/users?_method=DELETE");
+		$form.attr("action", "/admin/artiste?_method=DELETE");
 		$form.submit();
 	});
 });

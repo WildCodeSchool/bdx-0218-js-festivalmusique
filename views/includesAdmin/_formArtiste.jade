@@ -9,28 +9,36 @@ form#formArtiste(method='POST', action='/admin/artiste')
 		input#artisteName.form-control(type='text', name='artisteName', placeholder='Entrez le nom de l\'artiste', value=(artiste ? artiste.nom : ""))
 	.form-group
 		label(for='artisteDescription') Description de l'artiste
-		textarea#artisteDescription.form-control(name='artisteDescription', placeholder='Entrez la description de l\'artiste', value=(artiste ? artiste.description : ""))
+		if artiste
+			textarea#artisteDescription.form-control(name='artisteDescription') #{artiste.description}
+		else
+			textarea#artisteDescription.form-control(name='artisteDescription', placeholder='Entrez la description de l\'artiste')
 	.form-group
 		label(for='artisteStyle') Style de l'artiste
 		select#artisteStyle.form-control.form-control-lg(name='artisteStyle', style='height: 5rem;', value=(artiste ? artiste.style : ""))
-			option Rock
-			option Métal
-			option Pop
+			option(value='rock', selected=(artiste && artiste.style === 'rock' ? '' : false)) Rock
+			option(value='metal', selected=(artiste && artiste.style === 'metal' ? '' : false)) Métal
+			option(value='pop', selected=(artiste && artiste.style === 'pop' ? '' : false)) Pop
 	.form-group
 		label(for='artisteDate') Jour de passage de l'artiste
 		select#artisteDate.form-control.form-control-lg(name='artisteDate', style='height: 5rem;')
-			option(value='vendredi') Vendredi
-			option(value='samedi') Samedi
-			option(value='dimanche') Dimanche
+			option(value='vendredi', selected=(artiste && artiste.jour === 'vendredi' ? '' : false)) Vendredi
+			option(value='samedi', selected=(artiste && artiste.jour === 'samedi' ? '' : false)) Samedi
+			option(value='dimanche', selected=(artiste && artiste.jour === 'dimanche' ? '' : false)) Dimanche
 	.form-group
 		label(for='artisteHeure') Heure de passage de l'artiste
-		input#artisteHeure.form-control(type='time', name='artisteHeure')
+		input#artisteHeure.form-control(type='time', name='artisteHeure', value=(artiste ? artiste.heure : ""))
 	.form-group
 		label(for='artisteYoutube') Vidéo de l'artiste
-		input#artisteYoutube.form-control(type='text', name='artisteYoutube', placeholder='Url de la page Youtube')
+		if artiste
+			.embed-responsive.embed-responsive-16by9
+				iframe.embed-responsive-item(width='100%', height='100%', src='https://www.youtube.com/embed/' + artiste.video + '?rel=0', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
+		input#artisteYoutube.form-control(type='text', name='artisteYoutube', placeholder='Url de la page Youtube', value=(artiste ? 'https://www.youtube.com/watch?v=' + artiste.video : ""))
 		small.form-text.text-muted Seules les vidéos Youtube sont acceptées.
 	.form-group
 		label(for='artisteImage') Image de l'artiste
+		if artiste
+			img.img-fluid(src=(artiste.image) alt=(artiste.nom))
 		input#artisteImage.form-control(type='file', name='artisteImage')
 	if artiste
 		#modify.button.button--blue-medium Modifier
