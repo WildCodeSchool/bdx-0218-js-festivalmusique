@@ -37,7 +37,6 @@ router.post('/', (req, res, next) => {
   });
 });
 
-<<<<<<< HEAD
 
 // UPLOAD
 router.get('/upload', (req, res, next) => {
@@ -76,8 +75,6 @@ router.post("adminUploadFeedback", function (req, res, next) {
 	res.render("adminUploadFeedback", { status: "BOB"})
 })
 
-||||||| merged common ancestors
-=======
 
 router.get('/artiste', function(req, res, next) {
 	let selectArtistes = 'SELECT kartiste, nom from artistes';
@@ -96,5 +93,4 @@ router.get('/api/artiste/:id', function(req, res, next) {
     });
 });
 
->>>>>>> develop
 module.exports = router;
