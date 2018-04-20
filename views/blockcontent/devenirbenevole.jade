@@ -24,38 +24,39 @@ block content
         p
           | Les repas, à savoir un petit déjeuner, un déjeuner et un dîner vous seront fournis par les organisateurs. Deux bouteilles d'eau 1,5 litres vous seront également distribuées quotidiennement.
     // Formulaire
-    .benevole-form
-      // Picto crayon
-      i.fas.fa-pencil-alt
-      h2 Je m'inscris
-      // Nom et prénom
-      .row.fields
-        .col-xs-12.col-sm-12.col-md-12.col-lg-6
-          .benevole-form-group
-            input.form-control.form-control-lg(type='text', placeholder='Votre prénom')
-          .benevole-form-group
-            input.form-control.form-control-lg(type='text', placeholder='Votre nom')
-        // Email et téléphone
-        .col-xs-12.col-sm-12.col-md-12.col-lg-6
-          .benevole-form-group
-            input#exampleInputEmail1.form-control.form-control-lg(type='email', aria-describedby='emailHelp', placeholder='Votre email')
-          .benevole-form-group
-            input.form-control.form-control-lg(type='text', placeholder='Votre téléphone')
-      div
-        // Choisir jour
-        h3 Je suis disponible
-        .benevole-day
-          label
-            input(type='checkbox', name='', value='')
-            span Vendredi
-          label
-            input(type='checkbox', name='', value='')
-            span Samedi
-          label
-            input(type='checkbox', name='', value='')
-            span Dimanche
-        // Envoyer
-        .send
+    form(action='/devenir-benevole', method='post')
+      .benevole-form
+        // Picto crayon
+        i.fas.fa-pencil-alt
+        h2 Je m'inscris
+        // Nom et prénom
+        .row.fields
+          .col-xs-12.col-sm-12.col-md-12.col-lg-6
+            .benevole-form-group
+              input.form-control.form-control-lg(type='text', placeholder='Votre prénom', name='prenom')
+            .benevole-form-group
+              input.form-control.form-control-lg(type='text', placeholder='Votre nom', name='nom')
+          // Email et téléphone
+          .col-xs-12.col-sm-12.col-md-12.col-lg-6
+            .benevole-form-group
+              input#exampleInputEmail1.form-control.form-control-lg(type='email', aria-describedby='emailHelp', placeholder='Votre email', name='mail')
+            .benevole-form-group
+              input.form-control.form-control-lg(type='text', placeholder='Votre téléphone')
+        div
+          // Choisir jour
+          h3 Je suis disponible
+          .benevole-day
+            label
+              input(type='checkbox', name='', value='')
+              span Vendredi
+            label
+              input(type='checkbox', name='', value='')
+              span Samedi
+            label
+              input(type='checkbox', name='', value='')
+              span Dimanche
+          // Envoyer
+          .send
             button.button.button--purple
               | Envoyer
               i.fas.fa-paper-plane
