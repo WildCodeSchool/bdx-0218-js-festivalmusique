@@ -3,101 +3,6 @@ body {
   text-align: center;
 }
 
-<<<<<<< HEAD
-/* Apparence des filtres */
-.programmation-filters {
-  padding: 0 0 30px 0;
-}
-
-.programmation-filter-all, .programmation-filter-day, .programmation-filters .dropdown, .programmation-filters .dropdown-menu {
-  margin: auto;
-  width: 95%;
-  padding: 5px 0 5px 0;
-}
-
-.programmation-filter-all a, .programmation-filters .dropdown .btn {
-  margin: auto;
-  width: 95%;
-  height: 45px
-}
-
-.programmation-filter-day a {
-  width: 31%;
-}
-
-.programmation-filters .btn-secondary {
-  color: black;
-  background-color: #eee;
-  border: none;
-}
-
-.programmation-filters .btn-secondary:hover {
-  color: white;
-  background-color: gray;
-}
-
-/* Galerie */
-.programmation-gallery {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-content: flex-start;
-}
-
-.programmation-gallery a {
-  transition: all 0.2s;
-  display: block;
-  color: black;
-  opacity: 1;
-}
-
-.programmation-gallery a:hover {
-  color: #404040;
-  text-decoration: none;
-}
-
-.programmation-gallery .hide, .programmation-gallery .pophide {
-  width: 0%;
-  margin: 0;
-  opacity: 0;
-  transition: all 0.1s;
-}
-
-/* Artistes */
-.programmation-vignette-artiste {
-  width: 100%;
-  display: flex;
-  opacity: 1;
-  background-color: gray;
-  margin: 5px 0 5px 0;
-  transition: all 0.2s;
-}
-
-.programmation-vignette-artiste h2 {
-  font-size: 2rem;
-  padding: 15px 0 5px 0;
-}
-
-.programmation-vignette-artiste p {
-  font-size: 1.2rem;
-}
-
-/* Fonctionnement des filtres */
-.programmation-filter-all a, .programmation-filter-day a {
-  padding: 10px 10px;
-  display: inline-block;
-  color: black;
-  background: #eee;
-  text-decoration: none;
-  transition: all 0.2s;
-  border-radius: 5px
-}
-
-.programmation-filter-all a:hover, .programmation-filter-day a:hover, .programmation-filter-style a:hover {
-  color: white;
-  background: gray
-=======
 .programmation-filters h1 {
   font-size: 3rem;
   margin: 0 0 50px 0;
@@ -189,7 +94,6 @@ body {
   margin: 0;
   opacity: 0;
   transition: all 0.1s;
->>>>>>> 00693721a034b87a79d1846cfb0b37a9c3ffd3b4
 }
 
 /* Artistes */
@@ -222,14 +126,6 @@ body {
 
 /* Version tablette */
 @media (min-width: 550px) {
-<<<<<<< HEAD
-  .programmation-filter-all, .programmation-filter-day, .programmation-filters .dropdown {
-    width: 60%;
-  }
-  .programmation-vignette-artiste {
-    width: 47%;
-    margin: 5px;
-=======
   .programmation-filters h1 {
     font-size: 4.5rem;
   }
@@ -255,30 +151,11 @@ body {
   .vignette-artiste {
     height: 25vw;
     overflow: hidden;
->>>>>>> 00693721a034b87a79d1846cfb0b37a9c3ffd3b4
   }
 }
 
 /* Version desktop */
 @media (min-width: 1000px) {
-<<<<<<< HEAD
-  .programmation-filter-all {
-    width: 18%;
-    margin-right: 0;
-  }
-  .programmation-filters .dropdown {
-    width: 18%;
-    margin-left: 0;
-  }
-  .programmation-filter-day {
-    width: 40%;
-    margin: 0;
-  }
-  .programmation-vignette-artiste {
-    width: 31%;
-    margin: 5px;
-  }
-=======
   .programmation-filters h1 {
     font-size: 6rem;
   }
@@ -321,5 +198,4 @@ body {
     height: 100%;
     object-fit: cover;
   }
->>>>>>> 00693721a034b87a79d1846cfb0b37a9c3ffd3b4
 }
