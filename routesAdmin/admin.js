@@ -31,20 +31,18 @@ router.post('/', (req, res, next) => {
 		if ((req.body.ident === result[0].id)&&(req.body.password===result[0].password)) {
 			req.session.login = "admin";
 			res.render('blockcontentAdmin/adminHP');
-
 		} else {
 			res.redirect('/admin');
 		}
   });
 });
 
-router.get('/toto', (req, res, next) => {
+router.get('/:key', (req, res, next) => {
 	if (req.session.login != "admin") {
 		res.send('error log session admin');
 	} else {
-		res.render('blockcontentAdmin/toto');
+		res.render(`blockcontentAdmin/${req.params.key}`);
 	}
 })
-
 
 module.exports = router;
