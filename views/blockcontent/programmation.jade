@@ -1,33 +1,35 @@
 extends ../layout.jade
 
 block content
-  .pt-5.pb-5
-    // Filtres
-    .programmation-filters
-      h1.text-center Programmation
-      .row.filters
-        // Tous les artistes
-        .programmation-filter-all
-          button.butall.button.button--purple Tous les artistes
-        .programmation-filter-day
-          button.vendredi.button.button--pink Vendredi
-          button.samedi.button.button--pink Samedi
-          button.dimanche.button.button--pink Dimanche
-        .programmation-filter-style
-          button#dropdownMenuButton.btn.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Style de musique
-          .dropdown-menu(aria-labelledby='dropdownMenuButton')
-            button.rock.dropdown-item Rock
-            button.metal.dropdown-item Metal
-            button.pop.dropdown-item Pop
-    // Liste des artistes
-    .container.programmation-gallery
-      each artiste in tableArtistes
-        a.programmation-vignette-artiste.ticket-friday.style-rock(href='#')
-          .vignette-artiste
-            img.img-fluid(src=artiste.image)
-          header
-            h2 #{artiste.nom}
-          p #{artiste.jour} - #{artiste.heure}
+	main
+		.container
+			header
+				h1.text-center Programmation
+			// Filtres
+			section.programmation-filters
+				.row.filters
+					// Tous les artistes
+					.programmation-filter-all
+						button.butall.button.button--purple Tous les artistes
+					.programmation-filter-day
+						button.vendredi.button.button--pink Vendredi
+						button.samedi.button.button--pink Samedi
+						button.dimanche.button.button--pink Dimanche
+					.programmation-filter-style
+						button#dropdownMenuButton.btn.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Style de musique
+						.dropdown-menu(aria-labelledby='dropdownMenuButton')
+							button.rock.dropdown-item Rock
+							button.metal.dropdown-item Metal
+							button.pop.dropdown-item Pop
+			// Liste des artistes
+			section.programmation-gallery
+				each artiste in tableArtistes
+					a.programmation-vignette-artiste.ticket-friday.style-rock(href='#')
+						.vignette-artiste
+							img.img-fluid(src=artiste.image)
+						header
+							h2 #{artiste.nom}
+						p #{artiste.jour} - #{artiste.heure}
 
   script(type='text/javascript', src='javascript/daySort.js')
   script(type='text/javascript', src='javascript/styleSort.js')
