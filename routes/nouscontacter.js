@@ -19,10 +19,6 @@ router.post('/', (req, res, next) => {
 	  /*let insert = `INSERT INTO contact (nom, prenom, mail, sujet, message) VALUES ('${req.body.nom}', '${req.body.prenom}', '${req.body.mail}', '${req.body.sujet}', '${req.body.message}');`;
 
 	  if ((req.body.nom === "")||(req.body.prenom === "")||(req.body.mail === "")||(req.body.sujet === "")||(req.body.message === "")) {
-<<<<<<< HEAD
-	  	console.log("empty fields");
-=======
->>>>>>> 73469c67723006313960f808d0cb1635aee87f90
 	  	res.redirect('');
 	  } else {
 	  	  con.query(insert, function (err, result) {
