@@ -15,3 +15,9 @@ $( document ).ready(function() {
 		$form.submit();
 	});
 });
+
+const getArtiste = (id) => {
+	$.get( "/admin/api/artiste/" + id, function( data ) {
+		 $( ".test" ).html(data);
+	});
+}

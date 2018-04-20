@@ -1,0 +1,39 @@
+header
+	if artiste
+		h2 Modifier ou supprimer l'artiste #{artiste.nom}
+	else
+		h2 Ajouter un artiste
+form#formArtiste(method='POST', action='/admin/artiste')
+	.form-group
+		label(for='artisteName') Nom de l'artiste
+		input#artisteName.form-control(type='text', name='artisteName', placeholder='Entrez le nom de l\'artiste', value=(artiste ? artiste.nom : ""))
+	.form-group
+		label(for='artisteDescription') Description de l'artiste
+		textarea#artisteDescription.form-control(name='artisteDescription', placeholder='Entrez la description de l\'artiste', value=(artiste ? artiste.description : ""))
+	.form-group
+		label(for='artisteStyle') Style de l'artiste
+		select#artisteStyle.form-control.form-control-lg(name='artisteStyle', style='height: 5rem;', value=(artiste ? artiste.style : ""))
+			option Rock
+			option Métal
+			option Pop
+	.form-group
+		label(for='artisteDate') Jour de passage de l'artiste
+		select#artisteDate.form-control.form-control-lg(name='artisteDate', style='height: 5rem;')
+			option(value='vendredi') Vendredi
+			option(value='samedi') Samedi
+			option(value='dimanche') Dimanche
+	.form-group
+		label(for='artisteHeure') Heure de passage de l'artiste
+		input#artisteHeure.form-control(type='time', name='artisteHeure')
+	.form-group
+		label(for='artisteYoutube') Vidéo de l'artiste
+		input#artisteYoutube.form-control(type='text', name='artisteYoutube', placeholder='Url de la page Youtube')
+		small.form-text.text-muted Seules les vidéos Youtube sont acceptées.
+	.form-group
+		label(for='artisteImage') Image de l'artiste
+		input#artisteImage.form-control(type='file', name='artisteImage')
+	if artiste
+		#modify.button.button--blue-medium Modifier
+		#delete.button.button--blue-dark Supprimer
+	else
+		#add.button.button--blue-medium Ajouter	
