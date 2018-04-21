@@ -1,0 +1,16 @@
+extends ../layoutAdmin.jade
+
+block content
+	main#admin
+		.row
+			.col
+				each artiste in tableArtistes
+					.artiste.d-flex.justify-content-start.align-items-center
+						header
+							h3 #{artiste.nom}
+						button.btn.btn-primary(onClick="getArtiste(#{artiste.kartiste})") Modifier
+						button.btn.btn-primary(onClick="getArtiste(#{artiste.kartiste})") Supprimer
+			.col-8
+				section.test
+					include ../includesAdmin/_formArtiste.jade
+	script(src='../javascript/adminArtiste.js')
