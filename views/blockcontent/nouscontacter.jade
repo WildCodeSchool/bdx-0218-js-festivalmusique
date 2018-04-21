@@ -1,44 +1,44 @@
 extends ../layout.jade
 
 block content
-  .contact
-    .container.contact-content
-      header
-        h1 Contactez nous
-        p N'hésitez pas à nous poser des questions.
-        p Nous nous ferons un plaisir de vous répondre rapidement.  
-      .row
-        .col-xs-12.col-md-8
-          form(action='/nous-contacter', method='post')
-            .row
-              .form-group.col-md-6
-                label(for='nom') Nom
-                input.form-control(type='text', name='nom')
-              .form-group.col-md-6
-                label(for='prenom') Prenom
-                input.form-control(type='text', name='prenom')
-            .form-group
-              label(for='mail') Email
-              input.form-control(type='email', name='mail')
-            .form-group
-              label(for='sujet') Sujet
-              input.form-control(type='text', name='sujet')
-            .form-group
-              label(for='message') Message
-              textarea.form-control(aria-label='With textarea', name='message')
-            button.button.button--orange.send(type='submit') Envoyer
-        .col-xs-12.col-md-4(class='coordonnees')
-          div.icons
-            i.fas.fa-phone.fa-2x.copy--pink
-            p Telephone
-            p T. + 33 (0)2 51 98 79 40
-            p F.+ 33 (0)2 51 98 79 23
-          div.icons
-            i.fas.fa-map-marker-alt.fa-2x.copy--pink
-            p Adresse
-            p 20 Rue des Grands Mortiers
-            p 37700 Saint-Pierre-des-Corps
-          div.icons
-            i.fas.fa-envelope.fa-2x.copy--pink
-            p E-mail
-            p contact@festizik.fr
+	.contact
+		.container.contact-content
+			header
+				h1 Contactez nous
+				p N'hésitez pas à nous poser des questions.
+				p Nous nous ferons un plaisir de vous répondre rapidement.  
+			.row
+				.col-xs-12.col-md-8
+					form(action='/nous-contacter', method='post')
+						.row
+							.form-group.col-md-6
+								label(for='nom') Nom
+								input.form-control(type='text', name='nom')
+							.form-group.col-md-6
+								label(for='prenom') Prenom
+								input.form-control(type='text', name='prenom')
+						.form-group
+							label(for='mail') Email
+							input.form-control(type='email', name='mail')
+						.form-group
+							label(for='sujet') Sujet
+							input.form-control(type='text', name='sujet')
+						.form-group
+							label(for='message') Message
+							textarea.form-control(aria-label='With textarea', name='message')
+						button.button.button--orange(type='submit') Envoyer
+				.col-xs-12.col-md-4(class='coordonnees')
+					div.icons
+						i.fas.fa-phone.fa-2x.copy--pink
+						p Telephone
+						p T. + 33 (0)2 51 98 79 40
+						p F.+ 33 (0)2 51 98 79 23
+					div.icons
+						i.fas.fa-map-marker-alt.fa-2x.copy--pink
+						p Adresse
+						p 20 Rue des Grands Mortiers
+						p 37700 Saint-Pierre-des-Corps
+					div.icons
+						i.fas.fa-envelope.fa-2x.copy--pink
+						p E-mail
+						p contact@festizik.fr
