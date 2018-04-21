@@ -32,7 +32,7 @@ router.post('/', (req, res, next) => {
   });
 });
 
-
+//affichage de la liste des artistes 
 router.get('/artiste', function(req, res, next) {
 	let selectArtistes = 'SELECT kartiste, nom from artistes';
 	con.query(selectArtistes, function (err, rows) {
@@ -50,9 +50,22 @@ router.get('/api/artiste/:id', function(req, res, next) {
     });
 });
 
-// router.post('/artiste', function(req, res, next) {
-// 	console.log(req.body.artisteName);
+// ajouter un artiste
+router.post('/artiste', function(req, res, next) {
+	const nom = req.body.artisteName;
+	const jour = req.body.artisteDate;
+	const heure = req.body.artisteHeure;
+	const style = req.body.artisteStyle;
+	const image = req.body.artisteImage;
+	const videoYoutube = req.body.artisteYoutube;
+	const video = videoYoutube.substr(videoYoutube.length - 11, 11);
+	const description = req.body.artisteDescription;
 
-// });
+	let insertArtiste = `INSERT INTO artistes (nom, jour, heure, style, image, video, description) VALUES ('${nom}', '${jour}', '${heure}', '${style}', '${image}', '${video}', '${description}');`
+	con.query(insertArtiste, function (err, row) {
+        if (err) throw err;
+        res.render('includesAdmin/_formArtiste', {status: 'Artiste ajouté avec succès'});
+    });
+});
 
 module.exports = router;

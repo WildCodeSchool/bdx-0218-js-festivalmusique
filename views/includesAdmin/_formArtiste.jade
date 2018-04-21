@@ -1,3 +1,4 @@
+p.status #{status}
 header
 	if artiste
 		h2 Modifier ou supprimer l'artiste #{artiste.nom}
@@ -41,7 +42,7 @@ form#formArtiste(method='POST', action='/admin/artiste')
 			img.img-fluid(src=(artiste.image) alt=(artiste.nom))
 		input#artisteImage.form-control(type='file', name='artisteImage')
 	if artiste
-		#modify.button.button--blue-medium Modifier
-		#delete.button.button--blue-dark Supprimer
+		#modify.button.button--blue-medium(onClick="putArtiste(#{artiste.kartiste})") Modifier
+		#delete.button.button--blue-dark(onClick="deleteArtiste(#{artiste.kartiste})") Supprimer
 	else
 		#add.button.button--blue-medium Ajouter	
