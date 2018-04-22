@@ -38,43 +38,32 @@ router.post('/', (req, res, next) => {
 });
 
 
-// UPLOAD
-router.get('/upload', (req, res, next) => {
-	res.render('blockcontentAdmin/adminUpload');
+// UPLOAD DE FICHIER
+router.get('/homePage', (req, res, next) => {
+	res.render('blockcontentAdmin/adminHomePage');
 	next();
 });
 
-// ROUTE pour POST
-router.post('/uploaddufichier', upload.single('monfichier'), function (req, res, next) {
+// POST 
+router.post('/api/banner', upload.single('banner'), function (req, res, next) {
 	// verification du type et de la taille du formulaire
 	if (req.file.mimetype === 'image/png' && req.file.size < 3145728) {
-		fs.rename(req.file.path, 'public/images/homepage.png', function (err) {
+		fs.rename(req.file.path, 'public/images/homepage.png', function (err) {	
 			if (err) {
-				// res.send("problème durant l'enregistrement du fichier");
-				//res.render("blockcontentAdmin/adminUploadFeedback", { status: "problème durant l'enregistrement du fichier"})
-				res.render('blockcontentAdmin/adminUpload', { status: "problème durant l'enregistrement du fichier" })
+				res.render('blockcontentAdmin/adminFeedback', { alertType: `alert-danger`, status: "Problème durant le téléchargement du fichier" })
 			} 
 			else {
-				res.render('blockcontentAdmin/adminUpload', { status: "l'upload a fonctionné"});
+				res.render('blockcontentAdmin/adminFeedback', { alertType: `alert-success`, status: "Le téléchargement a fonctionné avec succès"});
 			}
 		});
 	}
 	else if (req.file.mimetype != 'image/png') {
-		res.render('blockcontentAdmin/adminUpload', { status: "erreur ! ce fichier n'est pas un png" })
-		
+		res.render('blockcontentAdmin/adminFeedback', { alertType: `alert-danger`, status: "Erreur ! Ce fichier n'est pas un png." })	
 	}
-
 	else {
-		res.render('blockcontentAdmin/adminUpload', { status: "erreur ! ce fichier est trop volumineux" })
+		res.render('blockcontentAdmin/adminFeedback', { alertType: `alert-danger`, status: "Erreur ! Ce fichier est trop volumineux." })
 	}
-
 });
-
-// FEEDBACK UPLOAD 
-router.post("uploaddufichierTEST", function (req, res, next) {
-	res.send("adminUploadFeedback", { status: "BOB"})
-})
-
 
 //affichage de la liste des artistes 
 router.get('/artiste', function(req, res, next) {
