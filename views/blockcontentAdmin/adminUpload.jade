@@ -10,7 +10,25 @@ block content
 				br
 				input.form-control(type='file', name='monfichier', value='', accept='.png')
 				button.button.button--orange(type='submit') Envoyer <!-- onSubmit=updloadImg() Envoyer -->
+			//- div(onclick='test()') c'est ici qu'il faut click
+			//- br
+			//- #popup-upload
+			//- br
 			div #{status}
+			//- br
+			//- #popup-uploadTEST
+			//- br
+			//- form#monFormulaireTEST(action='')
+			//- 	| First name:
+			//- 	input(type='text', name='FirstName', value='Mickey')
+			//- 	br
+			//- 	|   Last name:
+			//- 	input(type='text', name='LastName', value='Mouse')
+			//- 	br
+			//- 	button#BTN Serialize form values
+			//- br
+			//- script(type="text/javascript", src="/javascript/popup.js")
+
 			//- div#popup-upload
 			//- div id="popup" #{status}
 			//- script

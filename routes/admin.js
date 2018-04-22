@@ -52,27 +52,27 @@ router.post('/uploaddufichier', upload.single('monfichier'), function (req, res,
 			if (err) {
 				// res.send("problème durant l'enregistrement du fichier");
 				//res.render("blockcontentAdmin/adminUploadFeedback", { status: "problème durant l'enregistrement du fichier"})
-				res.render("blockcontentAdmin/adminUpload", { status: "problème durant l'enregistrement du fichier" })
+				res.render('blockcontentAdmin/adminUpload', { status: "problème durant l'enregistrement du fichier" })
 			} 
 			else {
-				res.render("blockcontentAdmin/adminUpload", { status: "l'upload a fonctionné"});
+				res.render('blockcontentAdmin/adminUpload', { status: "l'upload a fonctionné"});
 			}
 		});
 	}
 	else if (req.file.mimetype != 'image/png') {
-		res.render("blockcontentAdmin/adminUpload", { status: "erreur, ce fichier n'est pas un png" })
+		res.render('blockcontentAdmin/adminUpload', { status: "erreur ! ce fichier n'est pas un png" })
 		
 	}
 
 	else {
-		res.render("blockcontentAdmin/adminUpload", { status: "erreur, ce fichier est trop volumineux" })
+		res.render('blockcontentAdmin/adminUpload', { status: "erreur ! ce fichier est trop volumineux" })
 	}
 
 });
 
 // FEEDBACK UPLOAD 
-router.post("adminUploadFeedback", function (req, res, next) {
-	res.render("adminUploadFeedback", { status: "BOB"})
+router.post("uploaddufichierTEST", function (req, res, next) {
+	res.send("adminUploadFeedback", { status: "BOB"})
 })
 
 
@@ -111,5 +111,7 @@ router.post('/artiste', function(req, res, next) {
         res.render('includesAdmin/_formArtiste', {status: 'Artiste ajouté avec succès'});
     });
 });
+
+
 
 module.exports = router;
