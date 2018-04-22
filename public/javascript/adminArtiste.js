@@ -19,15 +19,15 @@ $( document ).ready(function() {
 		});
 	});
 
-	$('#modify', $form).on("click", function() {
-		$form.attr("action", "/admin/artiste?_method=PUT");
-		//$form.submit();
-	});
+	// $('#modify', $form).on("click", function() {
+	// 	$form.attr("action", "/admin/artiste?_method=PUT");
+	// 	//$form.submit();
+	// });
 
-	$('#delete', $form).on("click", function() {
-		$form.attr("action", "/admin/artiste?_method=DELETE");
-		$form.submit();
-	});
+	// $('#delete', $form).on("click", function() {
+	// 	$form.attr("action", "/admin/artiste?_method=DELETE");
+	// 	//$form.submit();
+	// });
 });
 
 // ajax sélection de l'artiste dans la liste des artistes - les données de l'artiste en question sont envoyées dans le formulaire de modification/suppression
@@ -36,6 +36,7 @@ const getArtiste = (id) => {
 		 $( ".test" ).html(data);
 	});
 }
+// modification artiste
 const putArtiste = (id) => {
 	$.ajax({
 		type: "PUT",
@@ -48,6 +49,22 @@ const putArtiste = (id) => {
 		error: function () {
 			$('.status').addClass('alert alert-danger');
 			$('.status').text('La modification de l\'artiste n\'a pas fonctionné');
+		}
+	});
+}
+// supression artiste
+const deleteArtiste = (id) => {
+	$.ajax({
+		type: "POST",
+		url: '/admin/teste/artiste/' + id,
+		success: function (data) {
+			$( ".test" ).html(data);
+			$('.status').addClass('alert alert-success');
+			$('.status').text('Artiste supprimé avec succès');
+		},
+		error: function () {
+			$('.status').addClass('alert alert-danger');
+			$('.status').text('La suppression de l\'artiste n\'a pas fonctionné');
 		}
 	});
 }

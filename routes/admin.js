@@ -69,7 +69,7 @@ router.post('/api/artiste', function(req, res, next) {
 });
 
 
-router.put('/test/artiste/:id', function(req, res, next) {
+router.post('/test/artiste/:id', function(req, res, next) {
 	const id = req.params.id;
 	const nom = req.body.artisteName;
 	const jour = req.body.artisteDate;
@@ -80,12 +80,20 @@ router.put('/test/artiste/:id', function(req, res, next) {
 	const video = videoYoutube.substr(videoYoutube.length - 11, 11);
 	const description = req.body.artisteDescription;
 
-	let insertArtiste = `UPDATE artistes SET nom='${nom}', jour='${jour}', heure='${heure}', style='${style}', image='${image}', video='${video}', description='${description}' WHERE kartiste = '${id}';`
-	con.query(insertArtiste, function (err, row) {
+	let updateArtiste = `UPDATE artistes SET nom='${nom}', jour='${jour}', heure='${heure}', style='${style}', image='${image}', video='${video}', description='${description}' WHERE kartiste = '${id}';`
+	con.query(updateArtiste, function (err, row) {
         if (err) throw err;
         res.render('includesAdmin/_formArtiste');
     });
 });
 
+router.post('/teste/artiste/:id', function(req, res, next) {
+	const id = req.params.id;
+	let deleteArtiste = `DELETE FROM artistes WHERE kartiste = '${id}';`
+	con.query(deleteArtiste, function (err, row) {
+        if (err) throw err;
+        res.render('includesAdmin/_formArtiste');
+    });
+});
 
 module.exports = router;
