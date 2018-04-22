@@ -37,7 +37,6 @@ router.post('/', (req, res, next) => {
   });
 });
 
-<<<<<<< HEAD
 
 // UPLOAD
 router.get('/upload', (req, res, next) => {
@@ -77,11 +76,7 @@ router.post("adminUploadFeedback", function (req, res, next) {
 })
 
 
-||||||| merged common ancestors
-
-=======
 //affichage de la liste des artistes 
->>>>>>> dev-admin-artiste-3
 router.get('/artiste', function(req, res, next) {
 	let selectArtistes = 'SELECT kartiste, nom from artistes';
 	con.query(selectArtistes, function (err, rows) {
