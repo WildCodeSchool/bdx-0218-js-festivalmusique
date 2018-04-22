@@ -57,8 +57,8 @@ router.post('/api/artiste', function(req, res, next) {
 	const heure = req.body.artisteHeure;
 	const style = req.body.artisteStyle;
 	const image = req.body.artisteImage;
-	const video = req.body.artisteYoutube;
-	//const video = videoYoutube.substr(videoYoutube.length - 11, 11);
+	const videoYoutube = req.body.artisteYoutube;
+	const video = videoYoutube.substr(videoYoutube.length - 11, 11);
 	const description = req.body.artisteDescription;
 
 	let insertArtiste = `INSERT INTO artistes (nom, jour, heure, style, image, video, description) VALUES ('${nom}', '${jour}', '${heure}', '${style}', '${image}', '${video}', '${description}');`
