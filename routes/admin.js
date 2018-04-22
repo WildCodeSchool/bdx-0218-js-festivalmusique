@@ -51,7 +51,26 @@ router.get('/api/artiste/:id', function(req, res, next) {
 });
 
 // ajouter un artiste
-router.post('/artiste', function(req, res, next) {
+router.post('/api/artiste', function(req, res, next) {
+	const nom = req.body.artisteName;
+	const jour = req.body.artisteDate;
+	const heure = req.body.artisteHeure;
+	const style = req.body.artisteStyle;
+	const image = req.body.artisteImage;
+	const video = req.body.artisteYoutube;
+	//const video = videoYoutube.substr(videoYoutube.length - 11, 11);
+	const description = req.body.artisteDescription;
+
+	let insertArtiste = `INSERT INTO artistes (nom, jour, heure, style, image, video, description) VALUES ('${nom}', '${jour}', '${heure}', '${style}', '${image}', '${video}', '${description}');`
+	con.query(insertArtiste, function (err, row) {
+        if (err) throw err;
+        res.render('includesAdmin/_formArtiste');
+    });
+});
+
+
+router.put('/test/artiste/:id', function(req, res, next) {
+	const id = req.params.id;
 	const nom = req.body.artisteName;
 	const jour = req.body.artisteDate;
 	const heure = req.body.artisteHeure;
@@ -61,11 +80,12 @@ router.post('/artiste', function(req, res, next) {
 	const video = videoYoutube.substr(videoYoutube.length - 11, 11);
 	const description = req.body.artisteDescription;
 
-	let insertArtiste = `INSERT INTO artistes (nom, jour, heure, style, image, video, description) VALUES ('${nom}', '${jour}', '${heure}', '${style}', '${image}', '${video}', '${description}');`
+	let insertArtiste = `UPDATE artistes SET nom='${nom}', jour='${jour}', heure='${heure}', style='${style}', image='${image}', video='${video}', description='${description}' WHERE kartiste = '${id}';`
 	con.query(insertArtiste, function (err, row) {
         if (err) throw err;
-        res.render('includesAdmin/_formArtiste', {status: 'Artiste ajouté avec succès'});
+        res.render('includesAdmin/_formArtiste');
     });
 });
+
 
 module.exports = router;
