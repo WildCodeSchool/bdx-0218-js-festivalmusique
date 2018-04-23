@@ -53,5 +53,4 @@ router.get('/api/artiste/:id', function(req, res, next) {
     });
 });
 
-
 module.exports = router;
