@@ -35,13 +35,13 @@ router.post('/', (req, res, next) => {
 });
 
 // garder la session active
-router.get('/:key', (req, res, next) => {
-	if (req.session.login != "admin") {
-		res.send('error log session admin');
-	} else {
-		res.render(`blockcontentAdmin/${req.params.key}`);
-	}
-})
+// router.get('/:key', (req, res, next) => {
+// 	if (req.session.login != "admin") {
+// 		res.send('error log session admin');
+// 	} else {
+// 		res.render(`blockcontentAdmin/${req.params.key}`);
+// 	}
+// })
 
 // UPLOAD DE FICHIER
 router.get('/homePage', (req, res, next) => {
