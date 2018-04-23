@@ -32,7 +32,7 @@ router.post('/', (req, res, next) => {
   });
 });
 
-//affichage de la liste des artistes 
+// affichage de la liste des artistes
 router.get('/artiste', function(req, res, next) {
 	let selectArtistes = 'SELECT kartiste, nom from artistes';
 	con.query(selectArtistes, function (err, rows) {
@@ -68,8 +68,7 @@ router.post('/api/artiste', function(req, res, next) {
     });
 });
 
-
-router.post('/test/artiste/:id', function(req, res, next) {
+router.put('/api/artiste/:id', function(req, res, next) {
 	const id = req.params.id;
 	const nom = req.body.artisteName;
 	const jour = req.body.artisteDate;
@@ -87,7 +86,7 @@ router.post('/test/artiste/:id', function(req, res, next) {
     });
 });
 
-router.post('/teste/artiste/:id', function(req, res, next) {
+router.post('/api/artiste/:id', function(req, res, next) {
 	const id = req.params.id;
 	let deleteArtiste = `DELETE FROM artistes WHERE kartiste = '${id}';`
 	con.query(deleteArtiste, function (err, row) {

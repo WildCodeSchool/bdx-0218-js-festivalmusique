@@ -31,12 +31,18 @@ form#formArtiste(method='POST', action='/admin/artiste')
 		input#artisteHeure.form-control(type='time', name='artisteHeure', value=(artiste ? artiste.heure : ""))
 	.form-group
 		label(for='artisteYoutube') Vidéo de l'artiste
-		
+		if artiste
+			.embed-responsive.embed-responsive-16by9
+				iframe.embed-responsive-item(width='100%', height='100%', src='https://www.youtube.com/embed/' + artiste.video + '?rel=0', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
 		input#artisteYoutube.form-control(type='text', name='artisteYoutube', placeholder='Url de la page Youtube', value=(artiste ? 'https://www.youtube.com/watch?v=' + artiste.video : ""))
 		small.form-text.text-muted Seules les vidéos Youtube sont acceptées.
-	
+	.form-group
+		label(for='artisteImage') Image de l'artiste
+		if artiste
+			img.img-fluid(src=(artiste.image) alt=(artiste.nom))
+		//input#artisteImage.form-control(type='file', name='artisteImage')
 	if artiste
-		#modify.button.button--blue-medium(onClick="putArtiste(#{artiste.kartiste})") Modifier
-		#delete.button.button--blue-dark(onClick="deleteArtiste(#{artiste.kartiste})") Supprimer
+		button.button.button--blue-medium(onClick="putArtiste(#{artiste.kartiste})") Modifier
+		button.button.button--blue-dark(onClick="deleteArtiste(#{artiste.kartiste})") Supprimer
 	else
-		#add.button.button--blue-medium Ajouter	
+		button.button.button--blue-medium(onClick="postArtiste()") Ajouter
