@@ -15,28 +15,31 @@ let con = mysql.createConnection({
  		database: "sql7233133"
 });
 
-let adminID = `select * from admin;`
+let adminID = `select * from admin;`;
 
-/* GET home page. */
 router.get('/', function(req, res, next) {
   res.sendFile(path.join(__dirname, '../views/blockcontentAdmin', 'adminLogin.html'));
 });
 
 router.post('/', (req, res, next) => {
-	const ident = req.body.ident;
-	const pwd = req.body.password;
 	con.query(adminID, function (err, result) {
-
-      if (err) throw err;
-
-			if ((ident === result[0].id)&&(pwd===result[0].password)) {
-				res.render('blockcontentAdmin/adminHP');
-			} else {
-				res.redirect('/admin');
-			}
+    if (err) throw err;
+		if ((req.body.ident === result[0].id)&&(req.body.password===result[0].password)) {
+			req.session.login = "admin";
+			res.render('blockcontentAdmin/adminHP');
+		} else {
+			res.redirect('/admin');
+		}
   });
 });
 
+router.get('/:key', (req, res, next) => {
+	if (req.session.login != "admin") {
+		res.send('error log session admin');
+	} else {
+		res.render(`blockcontentAdmin/${req.params.key}`);
+	}
+})
 
 // UPLOAD DE FICHIER
 router.get('/homePage', (req, res, next) => {
