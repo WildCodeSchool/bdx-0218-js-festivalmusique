@@ -1,3 +1,7 @@
+.artiste p {
+	text-align: left;
+}
+
 .video iframe, .playlist iframe {
 	width: 100%;
 }
