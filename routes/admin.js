@@ -68,6 +68,7 @@ router.post('/api/artiste', function(req, res, next) {
     });
 });
 
+// modification artiste
 router.put('/api/artiste/:id', function(req, res, next) {
 	const id = req.params.id;
 	const nom = req.body.artisteName;
@@ -86,6 +87,7 @@ router.put('/api/artiste/:id', function(req, res, next) {
     });
 });
 
+// supression artiste
 router.post('/api/artiste/:id', function(req, res, next) {
 	const id = req.params.id;
 	let deleteArtiste = `DELETE FROM artistes WHERE kartiste = '${id}';`
