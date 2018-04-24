@@ -5,12 +5,12 @@ block content
 		.row
 			.col
 				each artiste in tableArtistes
-					.artiste.d-flex.justify-content-start.align-items-center
+					.artiste.d-flex.justify-content-start.align-items-center(data-artiste-id=artiste.kartiste)
 						header
 							h3 #{artiste.nom}
-						button.btn.btn-primary(onClick="getArtiste(#{artiste.kartiste})") Modifier
-						button.btn.btn-primary(onClick="getArtiste(#{artiste.kartiste})") Supprimer
+						button.btn.btn-primary.admin-upd-artiste Modifier
+						button.btn.btn-primary.admin-del-artiste Supprimer
 			.col-8
-				section.test
+				section.form
 					include ../includesAdmin/_formArtiste.jade
 	script(src='../javascript/adminArtiste.js')
