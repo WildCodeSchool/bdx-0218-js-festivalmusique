@@ -83,6 +83,10 @@ router.get('/api/artiste/:id', function(req, res, next) {
     });
 });
 
+//retour du formulaire 'ajouter un artiste'
+router.get('/add/artiste/', function(req, res, next) {
+  res.render('includesAdmin/_formArtiste');
+});
 // ajouter un artiste
 router.post('/api/artiste', function(req, res, next) {
 	const nom = req.body.artisteName;
@@ -113,9 +117,9 @@ router.put('/api/artiste/:id', function(req, res, next) {
 	const description = req.body.artisteDescription;
 	let updateArtiste = `UPDATE artistes SET nom="${nom}", jour="${jour}", heure="${heure}", style="${style}", image="${image}", video="${video}", description="${description}" WHERE kartiste = "${id}";`
 	con.query(updateArtiste, function (err, row) {
-        if (err) throw err;
-        res.render('includesAdmin/_formArtiste');
-    });
+    if (err) throw err;
+    res.render('includesAdmin/_formArtiste');
+  });
 });
 
 // supression artiste
@@ -124,7 +128,7 @@ router.post('/api/artiste/:id', function(req, res, next) {
 	let deleteArtiste = `DELETE FROM artistes WHERE kartiste = '${id}';`
 	con.query(deleteArtiste, function (err, row) {
         if (err) throw err;
-        res.render('includesAdmin/_formArtiste');
+        res.render('');
     });
 });
 

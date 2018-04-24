@@ -5,13 +5,18 @@ block content
 		.row
 			.col
 				table
+					tr
+						td
+							button.btn-nav-admin-in.btn.button--orange.admin-add-artiste Ajouter un artiste
+							br
+							br
 					each artiste in tableArtistes
 						tr.artiste(data-artiste-id=artiste.kartiste)
 							td #{artiste.nom}
 							td
-								button.btn.btn-primary.admin-upd-artiste Modifier
+								button.btn-nav-admin-in.btn.button--orange.admin-upd-artiste Modifier
 							td
-								button.btn.btn-primary.admin-del-artiste Supprimer
+								button.btn-nav-admin-in.btn.button--orange.admin-del-artiste Supprimer
 			.col-8
 				section.form
 					include ../includesAdmin/_formArtiste.jade
