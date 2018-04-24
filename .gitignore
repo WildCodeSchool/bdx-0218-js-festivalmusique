@@ -34,3 +34,5 @@ package-lock.json
 
 # image thumbs sous windows
 public/images/Thumbs.db
+
+festizik.sql

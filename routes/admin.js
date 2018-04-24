@@ -50,4 +50,12 @@ router.get('/api/artiste/:id', function(req, res, next) {
     });
 });
 
+/*router.get('/abonnes', function(req, res) {
+  let selectAbonnes = `SELECT mail FROM subscribers`;
+  con.query(selectAbonnes, function(req, res) {
+    if (err) throw err;
+    res.render('blockcontentAdmin/adminAbonnes', );
+  });
+});*/
+
 module.exports = router;
