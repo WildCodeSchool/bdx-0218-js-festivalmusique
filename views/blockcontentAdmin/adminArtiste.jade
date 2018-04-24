@@ -4,12 +4,14 @@ block content
 	main#admin
 		.row
 			.col
-				each artiste in tableArtistes
-					.artiste.d-flex.justify-content-start.align-items-center(data-artiste-id=artiste.kartiste)
-						header
-							h3 #{artiste.nom}
-						button.btn.btn-primary.admin-upd-artiste Modifier
-						button.btn.btn-primary.admin-del-artiste Supprimer
+				table
+					each artiste in tableArtistes
+						tr.artiste(data-artiste-id=artiste.kartiste)
+							td #{artiste.nom}
+							td
+								button.btn.btn-primary.admin-upd-artiste Modifier
+							td
+								button.btn.btn-primary.admin-del-artiste Supprimer
 			.col-8
 				section.form
 					include ../includesAdmin/_formArtiste.jade

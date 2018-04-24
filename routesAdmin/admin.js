@@ -52,12 +52,6 @@ router.get('/:key', (req, res, next) => {
 	}
 })
 
-// UPLOAD DE FICHIER
-// router.get('/homePage', (req, res, next) => {
-// 	res.render('blockcontentAdmin/adminHomePage');
-// 	next();
-// });
-
 // POST
 router.post('/api/banner', upload.single('banner'), function (req, res, next) {
 	// verification du type et de la taille du formulaire
@@ -79,14 +73,6 @@ router.post('/api/banner', upload.single('banner'), function (req, res, next) {
 	}
 });
 
-// affichage de la liste des artistes
-// router.get('/artiste', function(req, res, next) {
-// 	let selectArtistes = 'SELECT kartiste, nom from artistes';
-// 	con.query(selectArtistes, function (err, rows) {
-//         if (err) throw err;
-//         res.render('blockcontentAdmin/adminArtiste', {tableArtistes: rows});
-//     });
-// });
 
 // sélection de l'artiste dans la liste des artistes - les données de l'artiste en question sont envoyées dans le formulaire de modification/suppression
 router.get('/api/artiste/:id', function(req, res, next) {
