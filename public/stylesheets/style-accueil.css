@@ -32,6 +32,9 @@ main#home .button:hover {
 .sizeImage{
 	max-width: 50vw;
 }
+.sizeImage img {
+	width: 100%;
+}
 
 
 /* PREPARATION */
