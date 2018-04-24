@@ -3,8 +3,6 @@ const butMetal = document.querySelector(".metal");
 const butPop = document.querySelector(".pop");
 const butRap = document.querySelector(".rap");
 
-// SELECTION DES BOUTONS
-
 requestRock = (cb) => {
   var xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function() {
@@ -58,21 +56,28 @@ requestRap = (cb) => {
 butRock.addEventListener("click", function(e) {
     e.preventDefault();
     requestRock(function(arg){
-    	document.querySelector(".programmation-gallery").innerHTML = arg
+    	document.querySelector(".programmation-gallery").innerHTML = arg;
     });
 });
 
 butMetal.addEventListener("click", function(e) {
     e.preventDefault();
     requestMetal(function(arg){
-    	document.querySelector(".programmation-gallery").innerHTML = arg
+    	document.querySelector(".programmation-gallery").innerHTML = arg;
     });
 });
 
 butPop.addEventListener("click", function(e) {
     e.preventDefault();
     requestPop(function(arg){
-    	document.querySelector(".programmation-gallery").innerHTML = arg
+    	document.querySelector(".programmation-gallery").innerHTML = arg;
+    });
+});
+
+butRap.addEventListener("click", function(e) {
+    e.preventDefault();
+    requestRap(function(arg){
+      document.querySelector(".programmation-gallery").innerHTML = arg;
     });
 });
 
