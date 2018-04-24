@@ -1,0 +1,9 @@
+.DIVadminAccueil, .DIVadminProg {
+	text-align: left;
+	margin-left: 30px;
+}
+.AadminAccueil, .AadminProg {
+	text-align: center;
+	color: white;
+}
+

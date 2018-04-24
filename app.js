@@ -4,18 +4,18 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var Session = require('express-session');
+var FileStore = require('session-file-store')(Session);
 
 var Accueil = require('./routes/accueil');
 var Programmation = require('./routes/programmation');
-var Artiste = require('./routes/artiste');
 var Infospratiques = require('./routes/infospratiques');
 var Devenirbenevole = require('./routes/devenirbenevole');
 var Nouscontacter = require('./routes/nouscontacter');
 var Billetterie = require('./routes/billetterie');
 var MentionsLegales = require('./routes/mentionsLegales');
 var CGV = require('./routes/cgv');
-var Admin = require('./routes/admin');
-
+var Admin = require('./routesAdmin/admin');
 
 var app = express();
 
@@ -31,9 +31,19 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(Session({
+    store: new FileStore({
+        path: path.join(__dirname, '/tmp'),
+        encrypt: true
+    }),
+    secret: 'Super Secret !',
+    resave: true,
+    saveUninitialized: true,
+    name : 'sessionId'
+}));
+
 app.use('/', Accueil);
 app.use('/programmation', Programmation);
-app.use('/artiste', Artiste);
 app.use('/infos-pratiques', Infospratiques);
 app.use('/devenir-benevole', Devenirbenevole);
 app.use('/nous-contacter', Nouscontacter);

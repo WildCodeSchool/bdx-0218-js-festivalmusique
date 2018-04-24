@@ -90,7 +90,6 @@ body {
   margin: 0;
   opacity: 0;
   transition: all 0.1s;
->>>>>>> 00693721a034b87a79d1846cfb0b37a9c3ffd3b4
 }
 
 /* Artistes */
@@ -123,14 +122,6 @@ body {
 
 /* Version tablette */
 @media (min-width: 550px) {
-<<<<<<< HEAD
-  .programmation-filter-all, .programmation-filter-day, .programmation-filters .dropdown {
-    width: 60%;
-  }
-  .programmation-vignette-artiste {
-    width: 47%;
-    margin: 5px;
-=======
   .programmation-filters h1 {
     font-size: 4.5rem;
   }
@@ -156,30 +147,11 @@ body {
   .vignette-artiste {
     height: 25vw;
     overflow: hidden;
->>>>>>> 00693721a034b87a79d1846cfb0b37a9c3ffd3b4
   }
 }
 
 /* Version desktop */
 @media (min-width: 1000px) {
-<<<<<<< HEAD
-  .programmation-filter-all {
-    width: 18%;
-    margin-right: 0;
-  }
-  .programmation-filters .dropdown {
-    width: 18%;
-    margin-left: 0;
-  }
-  .programmation-filter-day {
-    width: 40%;
-    margin: 0;
-  }
-  .programmation-vignette-artiste {
-    width: 31%;
-    margin: 5px;
-  }
-=======
   .programmation-filters h1 {
     font-size: 6rem;
   }
@@ -222,5 +194,4 @@ body {
     height: 100%;
     object-fit: cover;
   }
->>>>>>> 00693721a034b87a79d1846cfb0b37a9c3ffd3b4
 }
