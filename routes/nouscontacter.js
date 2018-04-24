@@ -18,21 +18,12 @@ router.post('/', (req, res, next) => {
 
 	  /*let insert = `INSERT INTO contact (nom, prenom, mail, sujet, message) VALUES ('${req.body.nom}', '${req.body.prenom}', '${req.body.mail}', '${req.body.sujet}', '${req.body.message}');`;
 
-<<<<<<< HEAD
 	  if ((req.body.nom === "")||(req.body.prenom === "")||(req.body.mail === "")||(req.body.sujet === "")||(req.body.message === "")) {
-<<<<<<< HEAD
-	  	console.log("empty fields");
-=======
->>>>>>> nodemailer
-=======
-	  if ((req.body.nom === "")||(req.body.prenom === "")||(req.body.mail === "")||(req.body.sujet === "")||(req.body.message === "")) {	
->>>>>>> 58255439863b36ecb0f2a1ed02ce45ca46f23c16
 	  	res.redirect('');
 	  } else {
 	  	  con.query(insert, function (err, result) {
 	        if (err) throw err;
     		});
-
 	  	res.redirect('');
 	  }*/
 
