@@ -13,10 +13,6 @@ body {
   margin-top: 0;
 }
 
-.programmation-filters, .main-title {
-  margin: 0 0 50px 0;
-}
-
 .programmation-filter-all, .programmation-filter-day, .programmation-filter-day button, .programmation-filter-style {
   margin: 3px 0 3px 0;
 }
@@ -160,7 +156,7 @@ body {
     font-size: 6rem;
   }
   .filters {
-    padding: 0 10%;
+    padding: 0 2%;
   }
   .programmation-filter-all {
     width: 25%;
