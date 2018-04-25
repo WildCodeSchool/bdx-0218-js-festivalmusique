@@ -1,0 +1,20 @@
+aside {
+	padding: 5rem;
+	margin-left: 0;
+}
+.aside {
+	padding: 0;
+}
+.btn-nav-admin {
+	color: white;
+	margin-bottom: 10px;
+	padding: 1rem 2rem;
+	width: 200px;
+	display: block;
+}
+.btn-nav-admin-in {
+	color: white;
+}
+.btn-nav-admin:hover {
+	color: white;
+}
