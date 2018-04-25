@@ -134,10 +134,8 @@ router.put('/api/artiste/:id', function(req, res, next) {
 // supression artiste
 router.post('/api/artiste/:id', function(req, res, next) {
 	const id = req.params.id;
-	console.log("id : ", id);
 	let deleteArtiste = `DELETE FROM artistes WHERE kartiste = '${id}';`
 	con.query(deleteArtiste, function (err, row) {
-				console.log("row : ", row)
         if (err) throw err;
         res.render('includesAdmin/_formArtiste');
     });
