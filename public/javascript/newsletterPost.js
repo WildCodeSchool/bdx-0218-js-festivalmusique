@@ -14,10 +14,13 @@ requestNews = (cb) => {
 }
 
 butNews.addEventListener("click", function(e) {
+	const inputContent = document.querySelector("#input-newsletter").value;
 	if ((inputContent.match(/^[\w\-\+]+(\.[\w\-]+)*@[\w\-]+(\.[\w\-]+)*\.[\w\-]{2,4}$/))) {
 		e.preventDefault();
   	requestNews(function(arg) {
   		const pAlert = document.querySelector("#alert-newsletter");
+			const inputSuccess = document.querySelector("#input-newsletter");
+			inputSuccess.value = "";
   	  pAlert.style.display = "block";
   		pAlert.className = "alert alert-success";
   		pAlert.innerHTML =  "reception réussie !";
@@ -31,6 +34,3 @@ butNews.addEventListener("click", function(e) {
 			setTimeout(() => {pAlert.style.display = "none"},2000);
 	}
 });
-
-
-
