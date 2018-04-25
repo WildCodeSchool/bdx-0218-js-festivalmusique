@@ -1,11 +1,21 @@
+main#comment-venir .card {
+  border: none;
+  box-shadow: 3px 4px 10px -2px rgba(153,153,153,1);
+}
+main#comment-venir .card-header {
+  padding: 1.5rem
+}
 main#comment-venir h5 {
   text-align: left;
 }
 
 main#comment-venir h5 a {
   display: block;
+  color: white
 }
-
+main#comment-venir h5 a:hover {
+  text-decoration: none;
+}
 
 main#comment-venir .title.collapsed::after {
     font-family: 'Font Awesome 5 Free';
@@ -19,4 +29,8 @@ main#comment-venir .title::after {
     content: "\f077";
     font-weight: 900;
     float: right;
+}
+
+main#comment-venir li {
+  list-style: none;
 }
