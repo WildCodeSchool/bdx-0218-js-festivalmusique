@@ -1,14 +1,22 @@
-main#comment-venir {
-
+main#comment-venir h5 {
+  text-align: left;
 }
-.icon.collapsed::after {
-    font-family: 'Font Awesome 5 Free Solid';
+
+main#comment-venir h5 a {
+  display: block;
+}
+
+
+main#comment-venir .title.collapsed::after {
+    font-family: 'Font Awesome 5 Free';
     content: "\f078";
+    font-weight: 900;
     float: right;
 
 }
-.icon::after {
+main#comment-venir .title::after {
     font-family: 'Font Awesome 5 Free';
     content: "\f077";
+    font-weight: 900;
     float: right;
 }
