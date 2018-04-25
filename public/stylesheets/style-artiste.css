@@ -1,3 +1,7 @@
+.artiste p {
+	text-align: left;
+}
+
 .video iframe, .playlist iframe {
 	width: 100%;
 }
@@ -7,3 +11,11 @@
 		height: 65vw;
 		overflow: hidden;
 	}
+
+.presentation, .video {
+	margin-bottom: 15px;
+}
+
+.description {
+	text-align: justify; 
+}

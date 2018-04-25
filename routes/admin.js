@@ -45,7 +45,6 @@ router.get('/api/artiste/:id', function(req, res, next) {
 	let selectArtiste = `SELECT * from artistes where kartiste = '${req.params.id}';`;
 	con.query(selectArtiste, function (err, row) {
         if (err) throw err;
-        console.log(row);
         res.render('includesAdmin/_formArtiste', {artiste: row[0]});
     });
 });

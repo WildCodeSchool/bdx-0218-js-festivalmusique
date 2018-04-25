@@ -52,34 +52,43 @@ requestAll = (cb) => {
   xhr.open("GET", "/programmation/apij?jour=")
   xhr.send(null);
 }
+
 // EVENEMENT onClick
 
 butVendredi.addEventListener("click", function(e) {
     e.preventDefault();
     requestVendredi(function(arg){
-    	document.querySelector(".programmation-gallery").innerHTML = arg
+    	document.querySelector(".programmation-gallery").innerHTML = arg;
     });
 });
 
 butSamedi.addEventListener("click", function(e) {
     e.preventDefault();
     requestSamedi(function(arg){
-    	document.querySelector(".programmation-gallery").innerHTML = arg
+    	document.querySelector(".programmation-gallery").innerHTML = arg;
     });
 });
 
 butDimanche.addEventListener("click", function(e) {
     e.preventDefault();
     requestDimanche(function(arg){
-    	document.querySelector(".programmation-gallery").innerHTML = arg
+    	document.querySelector(".programmation-gallery").innerHTML = arg;
     });
 });
 
 butAll.addEventListener("click", function(e) {
     e.preventDefault();
     requestAll(function(arg){
-    	document.querySelector(".programmation-gallery").innerHTML = arg
+    	document.querySelector(".programmation-gallery").innerHTML = arg;
     });
 });
+
+
+
+
+
+
+
+
 
 

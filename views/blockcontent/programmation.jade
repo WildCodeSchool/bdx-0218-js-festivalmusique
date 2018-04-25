@@ -21,15 +21,15 @@ block content
 							button.rock.dropdown-item Rock
 							button.metal.dropdown-item Metal
 							button.pop.dropdown-item Pop
+							button.rap.dropdown-item Rap
 			// Liste des artistes
 			section.programmation-gallery
 				each artiste in tableArtistes
-					a.programmation-vignette-artiste.ticket-friday.style-rock(href='#')
+					a.programmation-vignette-artiste.ticket-friday.style-rock(href='/programmation/#{artiste.kartiste}')
 						.vignette-artiste
 							img.img-fluid(src=artiste.image)
 						header
 							h2 #{artiste.nom}
-						p #{artiste.jour} - #{artiste.heure}
-
+							p #{artiste.jour} - #{artiste.heure}
 	script(type='text/javascript', src='javascript/daySort.js')
 	script(type='text/javascript', src='javascript/styleSort.js')

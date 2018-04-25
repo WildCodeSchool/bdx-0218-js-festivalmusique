@@ -1,21 +1,21 @@
 extends ../layout.jade
 
 block content
-	main
+	main#home
 		section.pt-0.pb-0.home.text-center
 			.background.d-flex.flex-column
 				div.m-auto
 					h1.display-3.main-title.main-title-home.shadows-title Festival Musique
-					p.slogan POSITIVE MIND x POSITIVE LIFE x POSITIVE MIND
+					p.slogan POSITIVE MIND x POSITIVE LIFE x POSITIVE VIBES
 					p.date du 03/07 au 06/07
 					hr.my-4
 		section.programmation.pt-3.pb-3
-			.container
+			.container.sizeImage
 				.d-flex.flex-column.m-3
-					img.affiche-programmation.img-fluid(src="../images/programmation.jpg", alt="programmation")
+					img.affiche-programmation.img-fluid(src="../images/prog.jpg", alt="programmation")
 					.d-flex.justify-content-between.m-0
 						a.button.button--pink(href="/programmation" role="button") voir la programmation
-						a.button.button--pink(href="../images/programmation.jpg" role="button")
+						a.button.button--pink(href="../images/prog.jpg" role="button" data-fancybox="gallery")
 							i.fas.fa-external-link-alt
 		section.background--orange.preparation.pt-5.pb-5
 			.container
@@ -35,45 +35,52 @@ block content
 					.row
 						.card-deck
 							.card
-								img.card-img-top(src="http://via.placeholder.com/287x180", alt="hotel")
 								i.align-self-center.m-3.fas.fa-ticket-alt.fa-3x
 								.card-body
 									h5.card-title.text-center PASS & BILLETS
-									p.card-text.text-justify Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste aliquid deserunt vitae repellendus, illo aut nihil, modi vel culpa animi corrupti, molestiae ullam. Distinctio, sunt! Quos suscipit pariatur magnam atque.
+									br
+									p.card-text Envie de vivre une expérience festival totale ?
+										br
+										| Cliquez ici pour acheter directement votre billet sur notre billetterie officielle en ligne, qui assure un paiement sécurisé, un service après vente et propose même une assurance annulation.
 								.card-footer
-									a.button.button--pink(href="/billetterie") bouton
+									a.button.button--pink(href="/billetterie") En savoir plus
 							.card
-								img.card-img-top(src="http://via.placeholder.com/287x180", alt="hotel")
 								i.align-self-center.m-3.fas.fa-bed.fa-3x
 								.card-body
 									h5.card-title.text-center HEBERGEMENT - RESTAURATION
-									p.card-text.text-justify Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste aliquid deserunt vitae repellendus, illo aut nihil, modi vel culpa animi corrupti, molestiae ullam. Distinctio, sunt! Quos suscipit pariatur magnam atque.
+									br
+									p.card-text Un tour d’horizon de toutes les possibilités d’hébergement durant le festival en fonction de vos envies, votre budget.
+										br
+										| En solo, à deux ou en communauté, découvrez toutes les possibilités d’hébergement disponibles à proximité du festival.
 								.card-footer
-									a.button.button--pink(href="/infos-pratiques/hebergement-restauration") bouton
+									a.button.button--pink(href="/infos-pratiques/hebergement-restauration") En savoir plus
 							.card
-								img.card-img-top(src="http://via.placeholder.com/287x180", alt="hotel")
 								i.align-self-center.m-3.fas.fa-utensils.fa-3x
 								.card-body
 									h5.card-title.text-center COMMENT VENIR ?
-									p.card-text.text-justify Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste aliquid deserunt vitae repellendus, illo aut nihil, modi vel culpa animi corrupti, molestiae ullam. Distinctio, sunt! Quos suscipit pariatur magnam atque.
+									br
+									p.card-text La SNCF, Fil Bleu et Rémi, partenaires de Festizik, facilitent votre venue au festival.
+										br
+										| Les navettes Bus et TER sont gratuites entre la gare de Saint-Pierre des corps, le site du festival et le camping.
 								.card-footer
-									a.button.button--pink(href="/infos-pratiques/comment-venir") bouton
+									a.button.button--pink(href="/infos-pratiques/comment-venir") En savoir plus
 							.card
-								img.card-img-top(src="http://via.placeholder.com/287x180", alt="hotel")
 								i.align-self-center.m-3.fas.fa-map.fa-3x
 								.card-body
 									h5.card-title.text-center BENEVOLES
-									p.card-text.text-justify Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste aliquid deserunt vitae repellendus, illo aut nihil, modi vel culpa animi corrupti, molestiae ullam. Distinctio, sunt! Quos suscipit pariatur magnam atque.
+									br
+									p.card-text Depuis la création du festival, les bénévoles de Festizik mettent tout leur cœur dans cette aventure.
+									| Être bénévole, c’est rejoindre une équipe de 1000 personnes pour participer à l’organisation du festival et vivre cette aventure collective de l’intérieur.
 								.card-footer
-									a.button.button--pink(href="/devenir-benevole") bouton
+									a.button.button--pink(href="/devenir-benevole") En savoir plus
 							.card
-								img.card-img-top(src="http://via.placeholder.com/287x180", alt="hotel")
 								i.align-self-center.m-3.fas.fa-users.fa-3x
 								.card-body
 									h5.card-title.text-center DEVELOPPEMENT DURABLE
-									p.card-text.text-justify Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste aliquid deserunt vitae repellendus, illo aut nihil, modi vel culpa animi corrupti, molestiae ullam. Distinctio, sunt! Quos suscipit pariatur magnam atque.
+									br
+									p.card-text Effectuez des éco-gestes pendant le festival, faites tamponner votre carte d’éco-festivalier, gagnez des points et débloquez l’accès à l’une des trois loteries mises en jeu !
 								.card-footer
-									a.button.button--pink(href="/infos-pratiques/developpement-durable") bouton
+									a.button.button--pink(href="/infos-pratiques/developpement-durable") En savoir plus
 		section.carousel-festizik.pt-0.pb-0
 			#carouselExampleIndicators.carousel.slide(data-ride='carousel')
 				ol.carousel-indicators
@@ -82,19 +89,18 @@ block content
 					li(data-target='#carouselExampleIndicators', data-slide-to='2')
 				.carousel-inner
 					.carousel-item.active
-						img.d-block.w-100(src='../images/image1.jpg', alt='First slide')
+						img.d-block.w-100(src='../images/accueil/image1.jpg', alt='First slide')
 					.carousel-item
-						img.d-block.w-100(src='../images/image2.jpg', alt='Second slide')
+						img.d-block.w-100(src='../images/accueil/image2.jpg', alt='Second slide')
 					.carousel-item
-						img.d-block.w-100(src='../images/image3.jpg', alt='Third slide')
+						img.d-block.w-100(src='../images/accueil/image3.jpg', alt='Third slide')
 				a.carousel-control-prev(href='#carouselExampleIndicators', role='button', data-slide='prev')
 					span.carousel-control-prev-icon(aria-hidden='true')
 					span.sr-only Previous
 				a.carousel-control-next(href='#carouselExampleIndicators', role='button', data-slide='next')
 					span.carousel-control-next-icon(aria-hidden='true')
 					span.sr-only Next
-		section.spotify.pt-3.pb-3
-			.container-fluid.pl-0.pr-0
-				.d-flex
 
-					iframe.m-auto(src='https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DWSlw12ofHcMM', width='100%', height='380', frameborder='0', allowtransparency='true', allow='encrypted-media')
+		section.spotify
+			.container
+				iframe(src='https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DWSlw12ofHcMM', width='100%', height='380', frameborder='0', allowtransparency='true', allow='encrypted-media')
