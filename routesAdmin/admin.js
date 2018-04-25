@@ -47,8 +47,15 @@ router.get('/:key', (req, res, next) => {
 				con.query(selectArtistes, function (err, rows) {
         		if (err) throw err;
         		res.render('blockcontentAdmin/adminArtiste', {tableArtistes: rows});
-    		});			
-		}
+    		});
+		} else if (req.params.key === 'abonnes') {
+      console.log("coucou");
+      let selectAbonnes = 'SELECT mail from subscribers';
+      con.query(selectAbonnes, function (err, rows) {
+            if (err) throw err;
+            res.render('blockcontentAdmin/adminAbonnes', {tableAbonnes: rows});
+        });
+    }
 	}
 })
 
@@ -132,15 +139,6 @@ router.post('/api/artiste/:id', function(req, res, next) {
 				console.log("row : ", row)
         if (err) throw err;
         res.render('includesAdmin/_formArtiste');
-    });
-});
-
-// affichage de la liste des abonnés
-router.get('/abonnes', function(req, res, next) {
-  let selectAbonnes = 'SELECT mail from subscribers';
-	con.query(selectAbonnes, function (err, rows) {
-        if (err) throw err;
-        res.render('blockcontentAdmin/adminAbonnes', {tableAbonnes: rows});
     });
 });
 
