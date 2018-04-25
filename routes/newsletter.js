@@ -11,9 +11,7 @@ let con = mysql.createConnection({
 
 // ajouter un abonné
 router.post('/api', function(req, res, next) {
-	console.log("je suis dans le router");
 	const mail = req.query.email;
-	console.log("mail : ", mail);
 	let insertAbonne = `INSERT INTO subscribers (mail) VALUES ('${mail}');`
 	con.query(insertAbonne, function (err, row) {
         if (err) throw err;
