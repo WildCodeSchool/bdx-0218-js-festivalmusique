@@ -1,38 +1,75 @@
 let form = document.forms.namedItem("uploadBanner");
+let formPoster = document.forms.namedItem("uploadPoster");
+let formCaroussel = document.forms.namedItem("uploadCaroussel");
 
 form.addEventListener('submit', function (event) {
-
 	let $feedback = $("#popup");
-
-	// objet pour transmettre un input de type file
 	let	dataForm = new FormData(form);
-
-	// Utilisateur de XMLHttpRequest
 	let request = new XMLHttpRequest();
-
 	// response du serveur 
 	request.onreadystatechange = function () {
 		if (request.readyState == 4 && (request.status == 200 || request.status == 0)) {
-			// Pour faire apparaitre mon popup
 			$feedback.html(request.response);
-			// Pour faire disparaitre mon popup
 			setTimeout(() => {
 				$feedback.html("");
 			}, 2000);
 		}
 	};
-
-	// requête asynchrone du formulaire
 	request.open("POST", "/admin/api/banner", true);
 	request.onload = function (oEvent) {
-		// Feedback si la requète n'est pas envoyé
 		if (request.status != 200) {
 			$feedback.innerHTML = "Erreur " + request.status + " lors de la tentative d’envoi du fichier.<br \/>";
 		}
 	};
-	
-	// envoie des données du formulaire dans un objet
-	request.send(dataForm);
 
+	request.send(dataForm);
+	event.preventDefault();
+}, false);
+
+
+
+formPoster.addEventListener('submit', function (event) {
+	let $feedback = $("#popupPoster");
+	let dataForm = new FormData(formPoster);
+	let request = new XMLHttpRequest();
+	request.onreadystatechange = function () {
+		if (request.readyState == 4 && (request.status == 200 || request.status == 0)) {
+			$feedback.html(request.response);
+			setTimeout(() => {
+				$feedback.html("");
+			}, 2000);
+		}
+	};
+	request.open("POST", "/admin/api/poster", true);
+	request.onload = function (oEvent) {
+		if (request.status != 200) {
+			$feedback.innerHTML = "Erreur " + request.status + " lors de la tentative d’envoi du fichier.<br \/>";
+		}
+	};
+	request.send(dataForm);
+	event.preventDefault();
+}, false);
+
+
+
+formCaroussel.addEventListener('submit', function (event) {
+	let $feedback = $("#popupCaroussel");
+	let dataForm = new FormData(formCaroussel);
+	let request = new XMLHttpRequest();
+	request.onreadystatechange = function () {
+		if (request.readyState == 4 && (request.status == 200 || request.status == 0)) {
+			$feedback.html(request.response);
+			setTimeout(() => {
+				$feedback.html("");
+			}, 3000);
+		}
+	};
+	request.open("POST", "/admin/api/caroussel", true);
+	request.onload = function (oEvent) {
+		if (request.status != 200) {
+			$feedback.innerHTML = "Erreur " + request.status + " lors de la tentative d’envoi du fichier.<br \/>";
+		}
+	};
+	request.send(dataForm);
 	event.preventDefault();
 }, false);
