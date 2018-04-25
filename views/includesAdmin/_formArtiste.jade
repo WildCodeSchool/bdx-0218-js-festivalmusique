@@ -42,6 +42,6 @@ form#formArtiste
 			img.img-fluid(src=(artiste.image) alt=(artiste.nom))
 		input#artisteImage.form-control(type='text', name='artisteImage', placeholder='Url de l\'image', value=(artiste ? artiste.image : ""))
 	if artiste
-		button.button.button--blue-medium.admin-form-update(type="button", data-artiste-id=artiste.kartiste) Modifier
+		button.button.button--orange.admin-form-update(type="button", data-artiste-id=artiste.kartiste) Modifier
 	else
-		button.button.button--blue-medium.admin-form-add(type="button") Ajouter
+		button.button.button--orange.admin-form-add(type="button") Ajouter
