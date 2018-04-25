@@ -10,7 +10,6 @@ let con = mysql.createConnection({
  		database: "sql7233133"
 });
 
-/* GET home page. */
 router.get('/', function(req, res) {
   res.render('blockcontent/devenirbenevole');
 });
@@ -30,8 +29,8 @@ router.post('/', (req, res, next) => {
   smtpTransport.sendMail({
     from: `${req.body.mail}`, // Expediteur
     to: "zikfesti2018@gmail.com", // Destinataires
-    subject: `Demande de benevolat : ${req.body.sujet}`, // Sujet
-    html:   `NOM : ${req.body.name} / PRENOM : ${req.body.prenom} / TELEPHONE : ${req.body.phone} / MAIL : ${req.body.mail}`
+    subject: `Demande de benevolat`, // Sujet
+    html:   `NOM : ${req.body.nom} <br> PRENOM : ${req.body.prenom} <br> TELEPHONE : ${req.body.telephone} <br> MAIL : ${req.body.mail}`
     }, (error, response) => {
         if(error){
             res.render(error);
@@ -39,8 +38,6 @@ router.post('/', (req, res, next) => {
             res.render('blockcontent/devenirbenevole', {status: "DEMANDE DE BENEVOLAT ENVOYEE"});
         }
     });
-  });
-  res.render('blockcontent/devenirbenevole');
-})
+});
 
 module.exports = router;
