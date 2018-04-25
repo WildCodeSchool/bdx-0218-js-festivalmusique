@@ -171,9 +171,7 @@ router.post('/api/caroussel', upload.array('imageCaroussel', 3), function (req, 
 	req.files.map( (picture, index) => {
 		let numberImage = 1
 		numberImage += index
-		if (picture.mimetype === 'image/jpeg' && picture.size < 1048576) {
-			console.log(`public/images/accueil/image${numberImage}.jpeg`);
-			
+		if (picture.mimetype === 'image/jpeg' && picture.size < 1048576) {			
 			fs.rename(picture.path, `public/images/accueil/image${numberImage}.jpg`, function (err) {
 				if (err) {
 					feedbackCaroussel.push(`L'image numéro ${numberImage} n'a pas pu être uploadé suite à une erreur interne.`)
@@ -190,13 +188,9 @@ router.post('/api/caroussel', upload.array('imageCaroussel', 3), function (req, 
 		else {
 			feedbackCaroussel.push(`L'image numéro ${numberImage} n'a pas pu être uploadé car l'image était trop volumineuse.`)
 		}
-		
-		
 	})	
 
-	setTimeout(() => {
-		feedbackCaroussel.map(resultat => console.log(resultat))
-		
+	setTimeout(() => {		
 		if (success === feedbackCaroussel.length){
 			res.render('blockcontentAdmin/adminMultipleFeedback', { alertType: `alert-success`, status: feedbackCaroussel })
 		}
