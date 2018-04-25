@@ -40,7 +40,7 @@ router.post('/', (req, res, next) => {
         }
     });
   });
-  res.render('blockcontent/devenirbenevole')
+  res.render('blockcontent/devenirbenevole');
 })
 
 module.exports = router;
