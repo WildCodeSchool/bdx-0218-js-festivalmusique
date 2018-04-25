@@ -133,4 +133,13 @@ router.post('/api/artiste/:id', function(req, res, next) {
     });
 });
 
+// affichage de la liste des abonnés
+router.get('/abonnes', function(req, res, next) {
+  let selectAbonnes = 'SELECT mail from subscribers';
+	con.query(selectAbonnes, function (err, rows) {
+        if (err) throw err;
+        res.render('blockcontentAdmin/adminAbonnes', {tableAbonnes: rows});
+    });
+});
+
 module.exports = router;
