@@ -3,8 +3,6 @@ const butMetal = document.querySelector(".metal");
 const butPop = document.querySelector(".pop");
 const butRap = document.querySelector(".rap");
 
-//request
-
 requestRock = (cb) => {
   var xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function() {
@@ -80,5 +78,12 @@ butRap.addEventListener("click", function(e) {
     e.preventDefault();
     requestRap(function(arg){
       document.querySelector(".programmation-gallery").innerHTML = arg;
+    });
+});
+
+butRap.addEventListener("click", function(e) {
+    e.preventDefault();
+    requestRap(function(arg){
+    	document.querySelector(".programmation-gallery").innerHTML = arg
     });
 });

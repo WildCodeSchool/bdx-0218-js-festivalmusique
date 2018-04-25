@@ -16,17 +16,6 @@ router.get('/', function(req, res) {
 
 router.post('/', (req, res, next) => {
 
-	  /*let insert = `INSERT INTO contact (nom, prenom, mail, sujet, message) VALUES ('${req.body.nom}', '${req.body.prenom}', '${req.body.mail}', '${req.body.sujet}', '${req.body.message}');`;
-
-	  if ((req.body.nom === "")||(req.body.prenom === "")||(req.body.mail === "")||(req.body.sujet === "")||(req.body.message === "")) {
-	  	res.redirect('');
-	  } else {
-	  	  con.query(insert, function (err, result) {
-	        if (err) throw err;
-    		});
-	  	res.redirect('');
-	  }*/
-
   // Création de la méthode de transport de l'email
   const smtpTransport = nodemailer.createTransport({
       service: "Gmail",
