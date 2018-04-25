@@ -17,22 +17,22 @@ block content
 				#popup
 				header
 					h2 Modifier l'affiche de la programmation du festival
-				form#uploadPoster.mt-3.mb-3(method='POST', enctype='multipart/form-data', action='/admin/api/poster' name='uploadPoster')
+				form#uploadPoster.text-center(method='POST', enctype='multipart/form-data', action='/admin/api/poster' name='uploadPoster')
 					label Type de fichier accepté jpg | 1mo max.
 					br
 					input(id='inputPoster' type='file', name='poster', value='', accept='.jpg')
 					br
-					button.button.button--orange(type='submit') Envoyer <!-- onSubmit=updloadImg() Envoyer -->
+					button.button.button--pink(type='submit') Envoyer <!-- onSubmit=updloadImg() Envoyer -->
 				br
 				#popupPoster
 				header
 					h2 Modifier les image du carousel
-				form#uploadCaroussel.mt-3.mb-3(method='POST', enctype='multipart/form-data', action='/admin/api/caroussel' name='uploadCaroussel')
+				form#uploadCaroussel.text-center(method='POST', enctype='multipart/form-data', action='/admin/api/caroussel' name='uploadCaroussel')
 					label Type de fichier accepté jpg | 1mo max.
 					br
 					input(id='inputCarousselImage1' type='file', name='imageCaroussel', value='', accept='.jpg' multiple)
 					br
-					button.button.button--orange(type='submit') Envoyer <!-- onSubmit=updloadImg() Envoyer -->
+					button.button.button--pink(type='submit') Envoyer <!-- onSubmit=updloadImg() Envoyer -->
 				br
 				#popupCaroussel
 				
