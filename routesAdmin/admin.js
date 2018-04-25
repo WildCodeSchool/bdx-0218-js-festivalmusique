@@ -49,7 +49,6 @@ router.get('/:key', (req, res, next) => {
         		res.render('blockcontentAdmin/adminArtiste', {tableArtistes: rows});
     		});
 		} else if (req.params.key === 'abonnes') {
-      console.log("coucou");
       let selectAbonnes = 'SELECT mail from subscribers';
       con.query(selectAbonnes, function (err, rows) {
             if (err) throw err;
