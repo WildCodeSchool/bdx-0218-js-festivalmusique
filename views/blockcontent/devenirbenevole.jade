@@ -29,8 +29,7 @@ block content
         i.fas.fa-pencil-alt
         header
           h2 Je m'inscris
-        if status
-          p.alert.alert-success #{status}
+        p.status 
         form(action='/devenir-benevole', method='post')
           .row.fields
             .col-xs-12.col-sm-12.col-md-12.col-lg-6
@@ -58,3 +57,5 @@ block content
           button.send.col-12.button.button--purple(type='submit')
             | Envoyer
             i.fas.fa-paper-plane
+            
+  script(type='text/javascript', src='javascript/devenirBenevole.js')

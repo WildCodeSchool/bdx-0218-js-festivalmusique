@@ -15,6 +15,19 @@ router.get('/', function(req, res) {
 });
 
 router.post('/', (req, res, next) => {
+  let vendredi = req.body.vendredi;
+  let samedi = req.body.samedi;
+  let dimanche = req.body.dimanche;
+  if (vendredi == undefined) {
+    vendredi = " ";
+  };
+  if (samedi == undefined) {
+    samedi = " ";
+  };
+  if (dimanche == undefined) {
+    dimanche = " ";
+  };
+
 	// Création de la méthode de transport de l'email
   const smtpTransport = nodemailer.createTransport({
       service: "Gmail",
@@ -30,12 +43,12 @@ router.post('/', (req, res, next) => {
     from: `${req.body.mail}`, // Expediteur
     to: "zikfesti2018@gmail.com", // Destinataires
     subject: `Demande de benevolat`, // Sujet
-    html:   `NOM : ${req.body.nom} <br> PRENOM : ${req.body.prenom} <br> TELEPHONE : ${req.body.telephone} <br> MAIL : ${req.body.mail}`
+    html:   `NOM : ${req.body.nom} <br> PRENOM : ${req.body.prenom} <br> TELEPHONE : ${req.body.telephone} <br> MAIL : ${req.body.mail} <br> Jour(s) de disponibilité : ${vendredi}${samedi}${dimanche}`
     }, (error, response) => {
         if(error){
             res.render(error);
         }else{
-            res.render('blockcontent/devenirbenevole', {status: "DEMANDE DE BENEVOLAT ENVOYEE"});
+            res.render('blockcontent/devenirbenevole');
         }
     });
 });
