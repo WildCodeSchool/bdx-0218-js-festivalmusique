@@ -20,6 +20,7 @@ form#formArtiste
 			option(value='rock', selected=(artiste && artiste.style === 'rock' ? '' : false)) Rock
 			option(value='metal', selected=(artiste && artiste.style === 'metal' ? '' : false)) Métal
 			option(value='pop', selected=(artiste && artiste.style === 'pop' ? '' : false)) Pop
+			option(value='rap', selected=(artiste && artiste.style === 'rap' ? '' : false)) Rap
 	.form-group
 		label(for='artisteDate') Jour de passage de l'artiste
 		select#artisteDate.form-control.form-control-lg(name='artisteDate', style='height: 5rem;')
