@@ -35,7 +35,6 @@ router.post('/', (req, res, next) => {
 });
 
 // garder la session active
-
 router.get('/:key', (req, res, next) => {
 	if (req.session.login != "admin") {
 		res.send('error log session admin');
@@ -60,7 +59,6 @@ router.get('/:key', (req, res, next) => {
 
 // POST
 router.post('/api/banner', upload.single('banner'), function (req, res, next) {
-	// verification du type et de la taille du formulaire
 	if (req.file.mimetype === 'image/png' && req.file.size < 3145728) {
 		fs.rename(req.file.path, 'public/images/homepage.png', function (err) {
 			if (err) {
@@ -104,11 +102,15 @@ router.post('/api/artiste', function(req, res, next) {
 	const videoYoutube = req.body.artisteYoutube;
 	const video = videoYoutube.substr(videoYoutube.length - 11, 11);
 	const description = req.body.artisteDescription;
-	let insertArtiste = `INSERT INTO artistes (nom, jour, heure, style, image, video, description) VALUES ('${nom}', '${jour}', '${heure}', '${style}', '${image}', '${video}', '${description}');`
-	con.query(insertArtiste, function (err, row) {
+	if ((req.body.artisteName === "")||(req.body.artisteDate === "")||(req.body.artisteHeure === "")||(req.body.artisteStyle === "")) {
+		res.redirect('');
+	} else {
+			let insertArtiste = `INSERT INTO artistes (nom, jour, heure, style, image, video, description) VALUES ('${nom}', '${jour}', '${heure}', '${style}', '${image}', '${video}', '${description}');`
+			con.query(insertArtiste, function (err, row) {
         if (err) throw err;
         res.render('includesAdmin/_formArtiste');
-    });
+    	});
+	}
 });
 
 // modification artiste
