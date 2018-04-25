@@ -1,70 +1,59 @@
 extends ../layout.jade
 
 block content
-	main
-		.container.benevole
-			header
-				h1 Devenir bénévole
-			// Présentation
-			section.row
-				.col-lg-12.benevole-presentation(<div='')
-						.benevole-image
-							img.img-fluid(src='https://raw.githubusercontent.com/cyrilBlondeau/wild-project/master/benevole.jpg')
-						header
-							h4.copy--orange Conditions requises
-						p
-							| Avoir 18 ans révolus au moment du festival et être disponible du 5 au 8 juillet 2018 (voire avant et au-delà pour certains postes).
-							br
-							| Être bénévole, c’est soutenir et vivre le festival autrement, entouré du public, des artistes, des techniciens et bien sûr des autres bénévoles. C’est participer activement à l’organisation du festival, au bon fonctionnement d’un projet collectif. Motivation, implication et bonne humeur sont les qualités du bénévole.
-							br
-							| En rejoignant l’équipe des bénévoles, vous serez le visage de ce festival et de ses valeurs. Vous vivrez de l’intérieur le festival en nous aidant de manière variée sur des missions allant de la valorisation de l’événement à la billetterie, à la logistique, à l’accueil du public et des artistes, et bien plus encore… Le festival sera une période intense et riche de rencontres où vous pourrez enrichir votre expérience du milieu culturel et artistique.
-						//i.fas.fa-bed
-						header
-							h4.copy--orange Hébergement
-						p
-							| En tant que bénévole, vous serez hébergés gratuitement sur le camping du festival, vous disposerez d'un espace qui vous sera spécialement dédié. Des douches et des sanitaires dédiés seront également mis à disposition.
-						//i.fas.fa-utensils
-						header
-							h4.copy--orange Restauration
-						p
-							| Les repas, à savoir un petit déjeuner, un déjeuner et un dîner vous seront fournis par les organisateurs. Deux bouteilles d'eau 1,5 litres vous seront également distribuées quotidiennement.
-			// Formulaire
-			section.benevole-form
-				// Picto crayon
-				i.fas.fa-pencil-alt
-				header
-					h2 Je m'inscris
-				// Nom et prénom
-				.row.fields
-					.col-xs-12.col-sm-12.col-md-12.col-lg-6
-						.benevole-form-group
-							input.form-control.form-control-lg(type='text', placeholder='Votre prénom')
-						.benevole-form-group
-							input.form-control.form-control-lg(type='text', placeholder='Votre nom')
-					// Email et téléphone
-					.col-xs-12.col-sm-12.col-md-12.col-lg-6
-						.benevole-form-group
-							input#exampleInputEmail1.form-control.form-control-lg(type='email', aria-describedby='emailHelp', placeholder='Votre email')
-						.benevole-form-group
-							input.form-control.form-control-lg(type='text', placeholder='Votre téléphone')
-				div
-					// Choisir jour
-					header
-						h3 Je suis disponible
-					.benevole-day
-						label
-							input(type='checkbox', name='', value='')
-							span Vendredi
-						label
-							input(type='checkbox', name='', value='')
-							span Samedi
-						label
-							input(type='checkbox', name='', value='')
-							span Dimanche
-					// Envoyer
-					.send
-							button.button.button--purple
-								| Envoyer
-								i.fas.fa-paper-plane
-			// fin de formulaire
-			// fin de container
+  main
+    .container.benevole
+      header
+        h1 Devenir bénévole
+      section.row
+        .col-lg-12.benevole-presentation(<div='')
+            .benevole-image
+              img.img-fluid(src='https://raw.githubusercontent.com/cyrilBlondeau/wild-project/master/benevole.jpg')
+            header
+              h4.copy--orange Conditions requises
+            p
+              | Avoir 18 ans révolus au moment du festival et être disponible du 5 au 8 juillet 2018 (voire avant et au-delà pour certains postes).
+              br
+              | Être bénévole, c’est soutenir et vivre le festival autrement, entouré du public, des artistes, des techniciens et bien sûr des autres bénévoles. C’est participer activement à l’organisation du festival, au bon fonctionnement d’un projet collectif. Motivation, implication et bonne humeur sont les qualités du bénévole.
+              br
+              | En rejoignant l’équipe des bénévoles, vous serez le visage de ce festival et de ses valeurs. Vous vivrez de l’intérieur le festival en nous aidant de manière variée sur des missions allant de la valorisation de l’événement à la billetterie, à la logistique, à l’accueil du public et des artistes, et bien plus encore… Le festival sera une période intense et riche de rencontres où vous pourrez enrichir votre expérience du milieu culturel et artistique.
+            header
+              h4.copy--orange Hébergement
+            p
+              | En tant que bénévole, vous serez hébergés gratuitement sur le camping du festival, vous disposerez d'un espace qui vous sera spécialement dédié. Des douches et des sanitaires dédiés seront également mis à disposition.
+            header
+              h4.copy--orange Restauration
+            p
+              | Les repas, à savoir un petit déjeuner, un déjeuner et un dîner vous seront fournis par les organisateurs. Deux bouteilles d'eau 1,5 litres vous seront également distribuées quotidiennement.
+      section.benevole-form
+        i.fas.fa-pencil-alt
+        header
+          h2 Je m'inscris
+        form(action='/devenir-benevole', method='post')
+          .row.fields
+            .col-xs-12.col-sm-12.col-md-12.col-lg-6
+              .benevole-form-group
+                input.form-control.form-control-lg(type='text', placeholder='Votre prénom' name='prenom')
+              .benevole-form-group
+                input.form-control.form-control-lg(type='text', placeholder='Votre nom' name='nom')
+            .col-xs-12.col-sm-12.col-md-12.col-lg-6
+              .benevole-form-group
+                input#exampleInputEmail1.form-control.form-control-lg(type='email', aria-describedby='emailHelp', placeholder='Votre email' name='mail')
+              .benevole-form-group
+                input.form-control.form-control-lg(type='text', placeholder='Votre téléphone' name='telephone')
+          .benevole-day.row
+            header.col-12
+              h3 Je suis disponible
+            label.col-md-4.col-xs-12
+              input(type='checkbox', name='vendredi', value='vendredi')
+              span Vendredi
+            label.col-md-4.col-xs-12
+              input(type='checkbox', name='samedi', value='samedi')
+              span Samedi
+            label.col-md-4.col-xs-12
+              input(type='checkbox', name='dimanche', value='dimanche')
+              span Dimanche
+          button.send.col-12.button.button--purple(type='submit')
+            | Envoyer
+            i.fas.fa-paper-plane
+                
