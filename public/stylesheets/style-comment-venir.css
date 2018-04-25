@@ -2,13 +2,13 @@ main#comment-venir {
 
 }
 .icon.collapsed::after {
-    font-family: 'Font Awesome 5 Free';
-    content: "\f358";
+    font-family: 'Font Awesome 5 Free Solid';
+    content: "\f078";
     float: right;
 
 }
 .icon::after {
     font-family: 'Font Awesome 5 Free';
-    content: "\f35b";
+    content: "\f077";
     float: right;
 }
