@@ -30,13 +30,13 @@ const smtpTransport = nodemailer.createTransport({
 smtpTransport.sendMail({
   from: `${req.body.mail}`, // Expediteur
   to: "zikfesti2018@gmail.com", // Destinataires
-  subject: `${req.body.mail}`, // Sujet
-  html:   `'<b>' nom : ${req.body.name} / prenom : ${req.body.prenom} / telephone : ${req.body.phone} / mail : ${req.body.mail}'</b>'`   // html body
+  subject: `Demande de benevolat : ${req.body.sujet}`, // Sujet
+  html:   `NOM : ${req.body.name} / PRENOM : ${req.body.prenom} / TELEPHONE : ${req.body.phone} / MAIL : ${req.body.mail}`
   }, (error, response) => {
       if(error){
-          console.log(error);
+          res.render(error);
       }else{
-          res.redirect('/nous-contacter');
+          res.render('blockcontent/devenirbenevole', {status: "DEMANDE DE BENEVOLAT ENVOYEE"});
       }
   });
 });

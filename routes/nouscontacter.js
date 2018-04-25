@@ -29,13 +29,13 @@ router.post('/', (req, res, next) => {
   smtpTransport.sendMail({
     from: `${req.body.mail}`, // Expediteur
     to: "zikfesti2018@gmail.com", // Destinataires
-    subject: `${req.body.sujet}`, // Sujet
-    html:   `'<b>' nom : ${req.body.nom} / prenom : ${req.body.prenom} / message : ${req.body.message} / mail : ${req.body.mail}'</b>'`   // html body
+    subject: `Demande de contact : ${req.body.sujet}`, // Sujet
+    html:   `NOM : ${req.body.nom} <br> PRENOM : ${req.body.prenom} <br> MESSAGE : ${req.body.message} <br> MAIL : ${req.body.mail}`   // html body
     }, (error, response) => {
         if(error){
-            console.log(error);
+            res.render(error);
         }else{
-            res.redirect('/nous-contacter');
+            res.render('blockcontent/nouscontacter', {status: "DEMANDE DE CONTACT ENVOYEE"});
         }
     });
 });

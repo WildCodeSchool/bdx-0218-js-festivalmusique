@@ -35,6 +35,8 @@ block content
 				header
 					h2 Je m'inscris
 				// Nom et prénom
+				if status
+					p.alert.alert-success #{status}
 				form(action='/nous-contacter', method='post').row.fields
 					.col-xs-12.col-sm-12.col-md-12.col-lg-6
 						.benevole-form-group
