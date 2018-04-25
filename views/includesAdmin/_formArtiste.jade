@@ -1,10 +1,10 @@
-p.status #{status}
+p.status
 header
 	if artiste
 		h2 Modifier ou supprimer l'artiste #{artiste.nom}
 	else
 		h2 Ajouter un artiste
-form#formArtiste(method='POST', action='/admin/artiste')
+form#formArtiste
 	.form-group
 		label(for='artisteName') Nom de l'artiste
 		input#artisteName.form-control(type='text', name='artisteName', placeholder='Entrez le nom de l\'artiste', value=(artiste ? artiste.nom : ""))
@@ -40,9 +40,8 @@ form#formArtiste(method='POST', action='/admin/artiste')
 		label(for='artisteImage') Image de l'artiste
 		if artiste
 			img.img-fluid(src=(artiste.image) alt=(artiste.nom))
-		input#artisteImage.form-control(type='file', name='artisteImage')
+		input#artisteImage.form-control(type='text', name='artisteImage', placeholder='Url de l\'image', value=(artiste ? artiste.image : ""))
 	if artiste
-		#modify.button.button--blue-medium(onClick="putArtiste(#{artiste.kartiste})") Modifier
-		#delete.button.button--blue-dark(onClick="deleteArtiste(#{artiste.kartiste})") Supprimer
+		button.button.button--blue-medium.admin-form-update(type="button", data-artiste-id=artiste.kartiste) Modifier
 	else
-		#add.button.button--blue-medium Ajouter	
+		button.button.button--blue-medium.admin-form-add(type="button") Ajouter
