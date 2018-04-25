@@ -87,6 +87,7 @@ router.get('/api/artiste/:id', function(req, res, next) {
 router.get('/add/artiste/', function(req, res, next) {
   res.render('includesAdmin/_formArtiste');
 });
+
 // ajouter un artiste
 router.post('/api/artiste', function(req, res, next) {
 	const nom = req.body.artisteName;
@@ -125,10 +126,12 @@ router.put('/api/artiste/:id', function(req, res, next) {
 // supression artiste
 router.post('/api/artiste/:id', function(req, res, next) {
 	const id = req.params.id;
+	console.log("id : ", id);
 	let deleteArtiste = `DELETE FROM artistes WHERE kartiste = '${id}';`
 	con.query(deleteArtiste, function (err, row) {
+				console.log("row : ", row)
         if (err) throw err;
-        res.render('');
+        res.render('includesAdmin/_formArtiste');
     });
 });
 
