@@ -11,3 +11,11 @@
 		height: 65vw;
 		overflow: hidden;
 	}
+
+.presentation, .video {
+	margin-bottom: 15px;
+}
+
+.description {
+	text-align: justify; 
+}
