@@ -1,0 +1,24 @@
+/****************/
+/* Back to top
+/****************/
+.back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 18px;
+  right: 15px;
+}
+.back-to-top:hover {
+  text-decoration: none;
+}
+.back-to-top  i {
+  display: block;
+  font-size: 2rem;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  color: white;
+  border-radius: 2px;
+  text-align: center;
+  background-color: #444;
+  transition: all 0.2s ease-in-out;
+}
