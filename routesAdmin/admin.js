@@ -46,8 +46,14 @@ router.get('/:key', (req, res, next) => {
 				con.query(selectArtistes, function (err, rows) {
         		if (err) throw err;
         		res.render('blockcontentAdmin/adminArtiste', {tableArtistes: rows});
-    		});			
-		}
+    		});
+		} else if (req.params.key === 'abonnes') {
+      let selectAbonnes = 'SELECT mail from subscribers';
+      con.query(selectAbonnes, function (err, rows) {
+            if (err) throw err;
+            res.render('blockcontentAdmin/adminAbonnes', {tableAbonnes: rows});
+        });
+    }
 	}
 })
 
