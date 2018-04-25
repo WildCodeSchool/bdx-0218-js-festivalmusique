@@ -1,7 +1,5 @@
 aside {
 	padding: 5rem;
-	border-right: 1px solid #333;
-	height: calc(100vh - 60px) ;
 	margin-left: 0;
 }
 .aside {
@@ -14,7 +12,9 @@ aside {
 	width: 200px;
 	display: block;
 }
-
 .btn-nav-admin-in {
+	color: white;
+}
+.btn-nav-admin:hover {
 	color: white;
 }
