@@ -16,7 +16,6 @@ var Billetterie = require('./routes/billetterie');
 var MentionsLegales = require('./routes/mentionsLegales');
 var CGV = require('./routes/cgv');
 var Admin = require('./routesAdmin/admin');
-var news = require('./routes/news');
 
 var app = express();
 
@@ -52,7 +51,6 @@ app.use('/billetterie', Billetterie);
 app.use('/mentions-legales', MentionsLegales);
 app.use('/conditions-generales-de-vente', CGV);
 app.use('/admin', Admin);
-app.use('/news', news);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
