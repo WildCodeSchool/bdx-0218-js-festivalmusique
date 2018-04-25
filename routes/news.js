@@ -11,7 +11,6 @@ let con = mysql.createConnection({
 
 router.post('/apim', function(req, res) {
 	  let mail = `insert into subscribers (mail) values ('${req.query.mail}');`;
-	  console.log("fonction node / mail : ", req.query.mail);
     con.query(mail, function (err, rows) {
       if (err) throw err;
       res.send('');
