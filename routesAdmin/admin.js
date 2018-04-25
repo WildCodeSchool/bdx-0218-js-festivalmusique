@@ -52,12 +52,6 @@ router.get('/:key', (req, res, next) => {
 	}
 })
 
-// UPLOAD DE FICHIER
-// router.get('/homePage', (req, res, next) => {
-// 	res.render('blockcontentAdmin/adminHomePage');
-// 	next();
-// });
-
 // POST
 router.post('/api/banner', upload.single('banner'), function (req, res, next) {
 	// verification du type et de la taille du formulaire
@@ -79,14 +73,6 @@ router.post('/api/banner', upload.single('banner'), function (req, res, next) {
 	}
 });
 
-// affichage de la liste des artistes
-// router.get('/artiste', function(req, res, next) {
-// 	let selectArtistes = 'SELECT kartiste, nom from artistes';
-// 	con.query(selectArtistes, function (err, rows) {
-//         if (err) throw err;
-//         res.render('blockcontentAdmin/adminArtiste', {tableArtistes: rows});
-//     });
-// });
 
 // sélection de l'artiste dans la liste des artistes - les données de l'artiste en question sont envoyées dans le formulaire de modification/suppression
 router.get('/api/artiste/:id', function(req, res, next) {
@@ -95,6 +81,11 @@ router.get('/api/artiste/:id', function(req, res, next) {
         if (err) throw err;
         res.render('includesAdmin/_formArtiste', {artiste: row[0]});
     });
+});
+
+//retour du formulaire 'ajouter un artiste'
+router.get('/add/artiste/', function(req, res, next) {
+  res.render('includesAdmin/_formArtiste');
 });
 
 // ajouter un artiste
@@ -127,16 +118,18 @@ router.put('/api/artiste/:id', function(req, res, next) {
 	const description = req.body.artisteDescription;
 	let updateArtiste = `UPDATE artistes SET nom="${nom}", jour="${jour}", heure="${heure}", style="${style}", image="${image}", video="${video}", description="${description}" WHERE kartiste = "${id}";`
 	con.query(updateArtiste, function (err, row) {
-        if (err) throw err;
-        res.render('includesAdmin/_formArtiste');
-    });
+    if (err) throw err;
+    res.render('includesAdmin/_formArtiste');
+  });
 });
 
 // supression artiste
 router.post('/api/artiste/:id', function(req, res, next) {
 	const id = req.params.id;
+	console.log("id : ", id);
 	let deleteArtiste = `DELETE FROM artistes WHERE kartiste = '${id}';`
 	con.query(deleteArtiste, function (err, row) {
+				console.log("row : ", row)
         if (err) throw err;
         res.render('includesAdmin/_formArtiste');
     });

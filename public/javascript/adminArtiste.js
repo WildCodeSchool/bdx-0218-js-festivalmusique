@@ -1,5 +1,11 @@
 $(document).ready(function() {
 
+		$(".admin-add-artiste").on("click", function() {
+		$.get( "/admin/add/artiste/", function( data ) {
+			 $( ".form" ).html(data);
+		});
+	});
+		
 	// sélection de l'artiste dans la liste des artistes - les données de l'artiste en question sont envoyées dans le formulaire de modification/suppression
 	$(".admin-upd-artiste").on("click", function() {
 		const id = $(this).parents(".artiste").data("artisteId");

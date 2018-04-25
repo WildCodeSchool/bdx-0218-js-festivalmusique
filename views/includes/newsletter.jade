@@ -3,8 +3,11 @@ section#newsletter.background--blue-medium
 		i.align-self-center.fas.fa-envelope.fa-3x.m-3
 		header
 			h2 Abonnez-vous à la newsletter
-		form.text-center(action='/api', method='post')
+			p.alert-news
+		form.text-center(method="post")
 			.form-group.d-flex.flex-column.text-center
 				label(for="email") Votre adresse e-mail
-				input(type="email", name="email", placeholder="Votre adresse e-mail")
-			button#button-newsletter.button.button--white(type="submit") Je m'inscris
+				input(type="email", name="email-newsletter-input", placeholder="Votre adresse e-mail" id="input-newsletter")
+		button#button-newsletter.button.button--white Je m'inscris
+
+	script(type='text/javascript', src='javascript/newsletterPost.js')

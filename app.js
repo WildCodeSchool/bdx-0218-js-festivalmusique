@@ -52,7 +52,6 @@ app.use('/mentions-legales', MentionsLegales);
 app.use('/conditions-generales-de-vente', CGV);
 app.use('/admin', Admin);
 
-
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
