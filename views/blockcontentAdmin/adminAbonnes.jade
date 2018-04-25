@@ -1,0 +1,13 @@
+extends ../layoutAdmin.jade
+
+block content
+  main#admin
+    .row
+      .col
+        h2 Liste des abonnés à la newsletter
+        br
+        table
+          each abonne in tableAbonnes
+            tr.artiste.d-flex.justify-content-start.align-items-center
+              td
+                p #{abonne.mail}

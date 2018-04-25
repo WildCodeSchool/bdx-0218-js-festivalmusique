@@ -5,3 +5,7 @@ section#newsletter label {
 section#newsletter button {
 	color: #05676e;
 }
+#alert-newsletter {
+	margin-top: 15px;
+	display: none;
+}

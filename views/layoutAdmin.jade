@@ -8,8 +8,6 @@ html( lang="fr" )
 		meta( name='description', content='Baking Bootstrap Snippets with Jade' )
 		//- Bootswatch Theme
 		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm', crossorigin='anonymous')
-
-		//script(src='https://code.jquery.com/jquery-3.2.1.min.js', integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN', crossorigin='anonymous')
 		
 		script(src="http://code.jquery.com/jquery-3.3.1.js"  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="  crossorigin="anonymous")
 
@@ -29,15 +27,15 @@ html( lang="fr" )
 		link(rel='stylesheet', href='/stylesheets/components/button.css')
 
 		link(rel='stylesheet', href='/stylesheets/style-navbar.css')
-		link(rel='stylesheet', href='/stylesheets/style-admin.css')
-		link(rel='stylesheet', href='/stylesheets/style-aside.css')
-		link(rel='stylesheet', href='/stylesheets/style-adminHomePage.css')
+		link(rel='stylesheet', href='/stylesheets/admin/style-admin.css')
+		link(rel='stylesheet', href='/stylesheets/admin/style-aside.css')
+		link(rel='stylesheet', href='/stylesheets/admin/style-adminHomePage.css')
 			
 	body
 		include includesAdmin/navbarAdmin.jade
 		.container-fluid
 			.row
-				.col-md-3
+				.col-md-3.aside
 					include includesAdmin/aside.jade
 				.col-md-9
 					block content
