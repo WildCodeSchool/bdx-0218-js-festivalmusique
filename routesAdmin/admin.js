@@ -35,19 +35,28 @@ router.post('/', (req, res, next) => {
 });
 
 // garder la session active
-// router.get('/:key', (req, res, next) => {
-// 	if (req.session.login != "admin") {
-// 		res.send('error log session admin');
-// 	} else {
-// 		res.render(`blockcontentAdmin/${req.params.key}`);
-// 	}
-// })
+
+router.get('/:key', (req, res, next) => {
+	if (req.session.login != "admin") {
+		res.send('error log session admin');
+	} else {
+		if (req.params.key === 'homePage') {
+			res.render('blockcontentAdmin/adminHomePage');
+		} else if (req.params.key === 'artiste') {
+				let selectArtistes = 'SELECT kartiste, nom from artistes';
+				con.query(selectArtistes, function (err, rows) {
+        		if (err) throw err;
+        		res.render('blockcontentAdmin/adminArtiste', {tableArtistes: rows});
+    		});			
+		}
+	}
+})
 
 // UPLOAD DE FICHIER
-router.get('/homePage', (req, res, next) => {
-	res.render('blockcontentAdmin/adminHomePage');
-	next();
-});
+// router.get('/homePage', (req, res, next) => {
+// 	res.render('blockcontentAdmin/adminHomePage');
+// 	next();
+// });
 
 // POST
 router.post('/api/banner', upload.single('banner'), function (req, res, next) {
@@ -71,13 +80,13 @@ router.post('/api/banner', upload.single('banner'), function (req, res, next) {
 });
 
 // affichage de la liste des artistes
-router.get('/artiste', function(req, res, next) {
-	let selectArtistes = 'SELECT kartiste, nom from artistes';
-	con.query(selectArtistes, function (err, rows) {
-        if (err) throw err;
-        res.render('blockcontentAdmin/adminArtiste', {tableArtistes: rows});
-    });
-});
+// router.get('/artiste', function(req, res, next) {
+// 	let selectArtistes = 'SELECT kartiste, nom from artistes';
+// 	con.query(selectArtistes, function (err, rows) {
+//         if (err) throw err;
+//         res.render('blockcontentAdmin/adminArtiste', {tableArtistes: rows});
+//     });
+// });
 
 // sélection de l'artiste dans la liste des artistes - les données de l'artiste en question sont envoyées dans le formulaire de modification/suppression
 router.get('/api/artiste/:id', function(req, res, next) {
@@ -116,7 +125,7 @@ router.put('/api/artiste/:id', function(req, res, next) {
 	const videoYoutube = req.body.artisteYoutube;
 	const video = videoYoutube.substr(videoYoutube.length - 11, 11);
 	const description = req.body.artisteDescription;
-	let updateArtiste = `UPDATE artistes SET nom='${nom}', jour='${jour}', heure='${heure}', style='${style}', image='${image}', video='${video}', description='${description}' WHERE kartiste = '${id}';`
+	let updateArtiste = `UPDATE artistes SET nom="${nom}", jour="${jour}", heure="${heure}", style="${style}", image="${image}", video="${video}", description="${description}" WHERE kartiste = "${id}";`
 	con.query(updateArtiste, function (err, row) {
         if (err) throw err;
         res.render('includesAdmin/_formArtiste');

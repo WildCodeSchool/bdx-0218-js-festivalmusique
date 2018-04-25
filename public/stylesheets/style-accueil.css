@@ -1,3 +1,6 @@
+main#home .button:hover {
+	color: white;
+}
 /* CONTAINER */
 
 .all {
@@ -7,7 +10,10 @@
 
 /* COVER PAGE */
 .background {
-	background-image: url('../images/homepage.png');
+	background: linear-gradient(
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.25)
+    ), url('../images/homepage.png');
 	background-position: center center;
 	background-size: cover;
 	height: 100vh;
@@ -26,6 +32,9 @@
 .sizeImage{
 	max-width: 50vw;
 }
+.sizeImage img {
+	width: 100%;
+}
 
 
 /* PREPARATION */
@@ -39,13 +48,24 @@
 }
 
 /* CARTE-SECTION */
-
+main#home .carte-section .card-footer {
+	border: none;
+	background-color: rgba(255,255,255,1);
+}
+main#home .carte-section .button {
+	padding: 1rem;
+}
 
 /* CAROUSSEL */
-
-.carousel-festizik {
-	/* 		max-height: 40vh;
- */
+@media (min-width: 992px) {
+	main#home .carousel-inner {
+		max-height: 990px;
+	}
+}
+@media (min-width: 1200px) {
+	main#home .carousel-inner {
+		max-height: 750px;
+	}
 }
 
 /* SPOTIFY */
@@ -109,7 +129,7 @@
 	.affiche-programmation{
 		margin-top: -10rem;
 		border: 1rem solid white;
-		
+
 	}
 
 	.card {
