@@ -2,17 +2,17 @@ extends ../layoutAdmin.jade
 
 block content
 	main
-		section.pt-3.pb-3.text-center
-			.container.pl-0.pr-0
+		section.text-center
+			.container
 				header
 					h1 Modifier la page d'accueil
 					h2 Modifier la bannière de la page d'accueil:
-				form#uploadBanner.mt-3.mb-3(method='POST', enctype='multipart/form-data', action='/admin/api/banner' name='uploadBanner')
+				form#uploadBanner.text-center(method='POST', enctype='multipart/form-data', action='/admin/api/banner' name='uploadBanner')
 					label Type de fichier accepté png | 3mo max.
 					br
 					input(id='inputBanner' type='file', name='banner', value='', accept='.png')
 					br
-					button.button.button--orange(type='submit') Envoyer <!-- onSubmit=updloadImg() Envoyer -->
+					button.button.button--pink(type='submit') Envoyer <!-- onSubmit=updloadImg() Envoyer -->
 				br
 				#popup
 				header

@@ -4,12 +4,19 @@ block content
 	main#admin
 		.row
 			.col
-				each artiste in tableArtistes
-					.artiste.d-flex.justify-content-start.align-items-center(data-artiste-id=artiste.kartiste)
-						header
-							h3 #{artiste.nom}
-						button.btn.btn-primary.admin-upd-artiste Modifier
-						button.btn.btn-primary.admin-del-artiste Supprimer
+				table
+					tr
+						td
+							button.btn-nav-admin-in.btn.button--orange.admin-add-artiste Ajouter un artiste
+							br
+							br
+					each artiste in tableArtistes
+						tr.artiste(data-artiste-id=artiste.kartiste)
+							td #{artiste.nom}
+							td
+								button.btn-nav-admin-in.btn.button--orange.admin-upd-artiste Modifier
+							td
+								button.btn-nav-admin-in.btn.button--orange.admin-del-artiste Supprimer
 			.col-8
 				section.form
 					include ../includesAdmin/_formArtiste.jade

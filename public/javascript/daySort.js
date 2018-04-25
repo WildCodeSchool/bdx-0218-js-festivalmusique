@@ -84,3 +84,11 @@ butAll.addEventListener("click", function(e) {
 });
 
 
+
+
+
+
+
+
+
+

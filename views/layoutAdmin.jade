@@ -27,15 +27,15 @@ html( lang="fr" )
 		link(rel='stylesheet', href='/stylesheets/components/button.css')
 
 		link(rel='stylesheet', href='/stylesheets/style-navbar.css')
-		link(rel='stylesheet', href='/stylesheets/style-admin.css')
-		link(rel='stylesheet', href='/stylesheets/style-aside.css')
+		link(rel='stylesheet', href='/stylesheets/admin/style-admin.css')
+		link(rel='stylesheet', href='/stylesheets/admin/style-aside.css')
 		link(rel='stylesheet', href='/stylesheets/admin/style-adminHomePage.css')
 			
 	body
 		include includesAdmin/navbarAdmin.jade
 		.container-fluid
 			.row
-				.col-md-3
+				.col-md-3.aside
 					include includesAdmin/aside.jade
 				.col-md-9
 					block content

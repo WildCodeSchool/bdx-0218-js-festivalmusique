@@ -15,18 +15,6 @@ router.get('/', function(req, res) {
 });
 
 router.post('/', (req, res, next) => {
-
-	  /*let insert = `INSERT INTO contact (nom, prenom, mail, sujet, message) VALUES ('${req.body.nom}', '${req.body.prenom}', '${req.body.mail}', '${req.body.sujet}', '${req.body.message}');`;
-
-	  if ((req.body.nom === "")||(req.body.prenom === "")||(req.body.mail === "")||(req.body.sujet === "")||(req.body.message === "")) {
-	  	res.redirect('');
-	  } else {
-	  	  con.query(insert, function (err, result) {
-	        if (err) throw err;
-    		});
-	  	res.redirect('');
-	  }*/
-
   // Création de la méthode de transport de l'email
   const smtpTransport = nodemailer.createTransport({
       service: "Gmail",
@@ -39,16 +27,15 @@ router.post('/', (req, res, next) => {
   });
 
   smtpTransport.sendMail({
-    from: req.body.nom, // Expediteur
+    from: `${req.body.mail}`, // Expediteur
     to: "zikfesti2018@gmail.com", // Destinataires
-    subject: req.body.sujet, // Sujet
-    text: req.body.message + req.body.prenom, // plaintext body
-    html: '<b>' + req.body.message + '</b>' // html body
+    subject: `Demande de contact : ${req.body.sujet}`, // Sujet
+    html:   `NOM : ${req.body.nom} <br> PRENOM : ${req.body.prenom} <br> MESSAGE : ${req.body.message} <br> MAIL : ${req.body.mail}`   // html body
     }, (error, response) => {
         if(error){
-            console.log(error);
+            res.render(error);
         }else{
-            console.log("Message envoyé: " + response.message);
+            res.render('blockcontent/nouscontacter', {status: "DEMANDE DE CONTACT ENVOYEE"});
         }
     });
 });

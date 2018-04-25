@@ -20,6 +20,7 @@ form#formArtiste
 			option(value='rock', selected=(artiste && artiste.style === 'rock' ? '' : false)) Rock
 			option(value='metal', selected=(artiste && artiste.style === 'metal' ? '' : false)) Métal
 			option(value='pop', selected=(artiste && artiste.style === 'pop' ? '' : false)) Pop
+			option(value='rap', selected=(artiste && artiste.style === 'rap' ? '' : false)) Rap
 	.form-group
 		label(for='artisteDate') Jour de passage de l'artiste
 		select#artisteDate.form-control.form-control-lg(name='artisteDate', style='height: 5rem;')
@@ -42,6 +43,6 @@ form#formArtiste
 			img.img-fluid(src=(artiste.image) alt=(artiste.nom))
 		input#artisteImage.form-control(type='text', name='artisteImage', placeholder='Url de l\'image', value=(artiste ? artiste.image : ""))
 	if artiste
-		button.button.button--blue-medium.admin-form-update(type="button", data-artiste-id=artiste.kartiste) Modifier
+		button.button.button--orange.admin-form-update(type="button", data-artiste-id=artiste.kartiste) Modifier
 	else
-		button.button.button--blue-medium.admin-form-add(type="button") Ajouter
+		button.button.button--orange.admin-form-add(type="button") Ajouter

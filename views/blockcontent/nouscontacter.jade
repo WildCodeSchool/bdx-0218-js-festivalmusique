@@ -9,6 +9,8 @@ block content
 				p Nous nous ferons un plaisir de vous répondre rapidement.  
 			.row
 				.col-xs-12.col-md-8
+					if status
+						p.alert.alert-success #{status}
 					form(action='/nous-contacter', method='post')
 						.row
 							.form-group.col-md-6
