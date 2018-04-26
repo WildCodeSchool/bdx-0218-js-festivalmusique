@@ -3,13 +3,13 @@ main#home .button:hover {
 }
 /* CONTAINER */
 
-.all {
+main#home .all {
 	background: grey;
 	height: 2000px;
 }
 
 /* COVER PAGE */
-.background {
+main#home .background {
 	background: linear-gradient(
       rgba(0, 0, 0, 0.25),
       rgba(0, 0, 0, 0.25)
@@ -24,11 +24,12 @@ main#home .button:hover {
 
 /* HOME */
 
-.home {
+main#home .home {
 	background-color: lightskyblue;
 }
 
 /* PROGRAMMATION */
+
 
 
 @media (min-width: 992px) {
@@ -36,7 +37,7 @@ main#home .button:hover {
 		max-width: 50vw;
 	}
 }
-.sizeImage img {
+main#home .sizeImage img {
 	width: 100%;
 }
 @media (max-width: 992px) {
@@ -53,7 +54,7 @@ main#home .button:hover {
 	background-color: #19b6e1;
 } */
 
-.PREPARATION__cadre {
+main#home main#home .PREPARATION__cadre {
 	border: 3px solid white;
 }
 
@@ -80,17 +81,17 @@ main#home .carte-section .button {
 
 /* SPOTIFY */
 
-.spotify {
+main#home .spotify {
 	background-color: #181818;
 }
 
 /* TEXT COLOR */
 
-.display-3 {
+main#home .display-3 {
 	color: white;
 }
 
-.lead {
+main#home .lead {
 	color: white;
 }
 
@@ -121,31 +122,33 @@ main#home .carte-section .button {
 	color:white;
 	text-shadow: 1px 1px 1px black;
 	font-weight: 300;
+  
+  
 }
 /* // Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-	.display-3{
+	main#home .display-3{
 		font-size: 6.5rem;
 	}
-	.main-title-home {
+	main#home .main-title-home {
 		margin-bottom: 1rem;
 	}
-	.shadows-title{
+	main#home .shadows-title{
 		text-shadow: 5px 5px 5px black;
 	}
-	.slogan{
+	main#home .slogan{
 		font-size: 3rem;
 	}
-	.date{
+	main#home .date{
 		font-size: 2.5rem;
 	}
-	.affiche-programmation{
+	main#home .affiche-programmation{
 		margin-top: -10rem;
 		border: 1rem solid white;
 
 	}
 
-	.card {
+	main#home .card {
 		border: 1rem solid white;
 	}
 

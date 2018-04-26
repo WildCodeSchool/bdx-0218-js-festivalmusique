@@ -14,3 +14,6 @@ section {
 header h1 {
 	padding-top: 8rem;
 }
+ul {
+	padding-left: 0;
+}
