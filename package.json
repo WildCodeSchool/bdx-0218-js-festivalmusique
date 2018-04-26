@@ -22,5 +22,18 @@
     "pug": "^2.0.1",
     "serve-favicon": "~2.4.5",
     "session-file-store": "^1.2.0"
-  }
+  },
+  "description": "Session Février 2018 - Promo JS - Projet Festival Musique",
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WildCodeSchool/bdx-0218-js-festivalmusique.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WildCodeSchool/bdx-0218-js-festivalmusique/issues"
+  },
+  "homepage": "https://github.com/WildCodeSchool/bdx-0218-js-festivalmusique#readme"
 }
