@@ -3,6 +3,7 @@ extends ../layout.jade
 block content
   main
     .container.benevole
+      p.status #{status}
       header
         h1 Devenir bénévole
       section.row
@@ -29,33 +30,32 @@ block content
         i.fas.fa-pencil-alt
         header
           h2 Je m'inscris
-        p.status 
         form(action='/devenir-benevole', method='post')
           .row.fields
             .col-xs-12.col-sm-12.col-md-12.col-lg-6
               .benevole-form-group
-                input.form-control.form-control-lg(type='text', placeholder='Votre prénom' name='prenom')
+                input.form-control.form-control-lg.prenom-benevole(type='text', placeholder='Votre prénom' name='prenom')
               .benevole-form-group
-                input.form-control.form-control-lg(type='text', placeholder='Votre nom' name='nom')
+                input.form-control.form-control-lg.nom-benevole(type='text', placeholder='Votre nom' name='nom')
             .col-xs-12.col-sm-12.col-md-12.col-lg-6
               .benevole-form-group
-                input#exampleInputEmail1.form-control.form-control-lg(type='email', aria-describedby='emailHelp', placeholder='Votre email' name='mail')
+                input#exampleInputEmail1.form-control.form-control-lg.mail-benevole(type='email', aria-describedby='emailHelp', placeholder='Votre email' name='mail')
               .benevole-form-group
-                input.form-control.form-control-lg(type='text', placeholder='Votre téléphone' name='telephone')
+                input.form-control.form-control-lg.telephone-benevole(type='text', placeholder='Votre téléphone' name='telephone')
           .benevole-day.row
             header.col-12
               h3 Je suis disponible
             label.col-md-4.col-xs-12
-              input(type='checkbox', name='vendredi', value='vendredi')
+              input.vendredi-benevole.jours-benevole(type='checkbox', name='vendredi', value='vendredi')
               span Vendredi
             label.col-md-4.col-xs-12
-              input(type='checkbox', name='samedi', value='samedi')
+              input.samedi-benevole.jours-benevole(type='checkbox', name='samedi', value='samedi')
               span Samedi
             label.col-md-4.col-xs-12
-              input(type='checkbox', name='dimanche', value='dimanche')
+              input.dimanche-benevole.jours-benevole(type='checkbox', name='dimanche', value='dimanche')
               span Dimanche
           button.send.col-12.button.button--purple(type='submit')
             | Envoyer
             i.fas.fa-paper-plane
             
-  script(type='text/javascript', src='javascript/devenirBenevole.js')
+  script(type='text/javascript', src='../javascript/devenirBenevole.js')

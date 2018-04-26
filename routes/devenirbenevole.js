@@ -10,8 +10,11 @@ let con = mysql.createConnection({
  		database: "sql7233133"
 });
 
+let status = "";
+
 router.get('/', function(req, res) {
-  res.render('blockcontent/devenirbenevole');
+	console.log(status)
+  res.render('blockcontent/devenirbenevole', {status});
 });
 
 router.post('/', (req, res, next) => {
@@ -47,8 +50,12 @@ router.post('/', (req, res, next) => {
     }, (error, response) => {
         if(error){
             res.render(error);
-        }else{
-            res.render('blockcontent/devenirbenevole');
+        } else {
+        		status = "DEMANDE DE BENEVOLAT ENVOYEE";
+        		console.log("status avant render", status)
+            res.render('blockcontent/devenirbenevole', {status});
+            status = "" ;
+            console.log("status apres render", status)
         }
     });
 });

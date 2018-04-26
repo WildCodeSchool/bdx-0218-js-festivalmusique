@@ -1,9 +1,8 @@
-window.addEventListener("load", function(e) {
-  const status = document.querySelector(".status");
-    status.style.display = 'none';
-    status.style.display = "block";
-    status.className = "alert alert-succes";
-    status.innerHTML =  "DEMANDE DE BENEVOLAT ENVOYEE";
-    setTimeout(() => {pAlert.style.display = "none"},2000);
-  }
-});
+let p = document.querySelector(".status");
+
+if (p.innerHTML !== "") {
+	console.log("contenu : ", p.innerHTML);
+	p.className = "alert alert-success";
+	p.style.visibility = 'visible';
+	setTimeout(() => {p.style.visibility = "hidden"},2000);
+}
