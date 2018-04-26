@@ -6,17 +6,17 @@
   margin: 0 0 30px 0;
 }
 
-.fa-map-marker-alt {
+.hebergement .fa-map-marker-alt {
   margin: 30px 0 0 0;
   font-size: 5rem;
 }
 
-.card-footer {
+.hebergement .card-footer {
   background: none;
   border: none;
 }
 
-.camping, .restuaration, .commerces {
+.hebergement .camping, .hebergement .restauration, .hebergement .commerces {
   margin: 70px 0 0 0;
 }
 
