@@ -13,7 +13,7 @@
 	margin: 0 0 15px 0;
 }
 
-.benevole p {
+.benevole p:not(.status) {
 	text-align: justify;
 	margin: 0 0 40px 0;
 }
@@ -36,12 +36,6 @@
 }
 
 /* PICTOS FONT AWESOME */
-/* .fa-bed, .fa-utensils {
-	color: #ff5e35;
-	font-size:3rem;
-	margin: 10px 0 10px 0;
-} */
-
 .fa-pencil-alt {
 	font-size:5rem;
 }
@@ -65,11 +59,6 @@
 }
 
 /* CHECKBOX JOURS */
-.benevole-day label {
-	margin: 5px;
-	width: 20%;
-}
-
 .benevole-day input[type=checkbox] {
   display: none;
 }
@@ -104,16 +93,8 @@
 	background-size: 15px 15px;
 }
 
-/* BOUTON ENVOI */
-.send {
+button.send {
 	width: 100%;
-	margin: 5px 0 0 0;
-}
-
-.send button {
-	display: block;
-	width: 62%;
-	margin: auto;
 }
 
 /* MEDIA QUERIES */
@@ -126,15 +107,8 @@
 	.benevole-image img {
 		margin-top: -15%;
 	}
-	.benevole-day label {
-		margin: 5px;
-		width: 30%;
-	}
 	.benevole-day span {
 		width: 100%;
-	}
-	.send button {
-		width: 92%;
 	}
 }
 
@@ -145,14 +119,7 @@
 	.benevole-presentation img {
 		width: 100%;
 	}
-	.benevole-day label {
-		margin: 5px;
-		width: 95%;
-	}
 	.benevole-day span {
 		width: 100%;
-	}
-	.send button {
-		width: 95%;
 	}
 }

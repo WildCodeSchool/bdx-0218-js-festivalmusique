@@ -10,37 +10,51 @@ let con = mysql.createConnection({
  		database: "sql7233133"
 });
 
-/* GET home page. */
+let status = "";
+
 router.get('/', function(req, res) {
-  res.render('blockcontent/devenirbenevole');
+  res.render('blockcontent/devenirbenevole', {status});
 });
 
 router.post('/', (req, res, next) => {
-// Création de la méthode de transport de l'email
-const smtpTransport = nodemailer.createTransport({
-    service: "Gmail",
-    host:'smtp.gmail.com',
-    port: 465,
-    auth: {
-        user: "zikfesti2018@gmail.com",
-        pass: "ZikFesti2018@@@"
-    }
-});
+  let vendredi = req.body.vendredi;
+  let samedi = req.body.samedi;
+  let dimanche = req.body.dimanche;
+  if (vendredi == undefined) {
+    vendredi = " ";
+  };
+  if (samedi == undefined) {
+    samedi = " ";
+  };
+  if (dimanche == undefined) {
+    dimanche = " ";
+  };
 
-smtpTransport.sendMail({
-  from: `${req.body.mail}`, // Expediteur
-  to: "zikfesti2018@gmail.com", // Destinataires
-  subject: `Demande de benevolat : ${req.body.sujet}`, // Sujet
-  html:   `NOM : ${req.body.name} / PRENOM : ${req.body.prenom} / TELEPHONE : ${req.body.phone} / MAIL : ${req.body.mail}`
-  }, (error, response) => {
-      if(error){
-          res.render(error);
-      }else{
-          res.render('blockcontent/devenirbenevole', {status: "DEMANDE DE BENEVOLAT ENVOYEE"});
+	// Création de la méthode de transport de l'email
+  const smtpTransport = nodemailer.createTransport({
+      service: "Gmail",
+      host:'smtp.gmail.com',
+      port: 465,
+      auth: {
+          user: "zikfesti2018@gmail.com",
+          pass: "ZikFesti2018@@@"
       }
   });
+
+  smtpTransport.sendMail({
+    from: `${req.body.mail}`, // Expediteur
+    to: "zikfesti2018@gmail.com", // Destinataires
+    subject: `Demande de benevolat`, // Sujet
+    html:   `NOM : ${req.body.nom} <br> PRENOM : ${req.body.prenom} <br> TELEPHONE : ${req.body.telephone} <br> MAIL : ${req.body.mail} <br> Jour(s) de disponibilité : ${vendredi}${samedi}${dimanche}`
+    }, (error, response) => {
+        if(error){
+            res.render(error);
+        } else {
+        		status = "DEMANDE DE BENEVOLAT ENVOYEE";
+            res.render('blockcontent/devenirbenevole', {status});
+            status = "" ;
+        }
+    });
 });
-
-
 
 module.exports = router;
