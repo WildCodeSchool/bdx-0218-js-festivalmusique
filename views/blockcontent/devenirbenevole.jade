@@ -42,20 +42,20 @@ block content
                 input#exampleInputEmail1.form-control.form-control-lg.mail-benevole(type='email', aria-describedby='emailHelp', placeholder='Votre email' name='mail')
               .benevole-form-group
                 input.form-control.form-control-lg.telephone-benevole(type='text', placeholder='Votre téléphone' name='telephone')
-          .benevole-day.row
+          .benevole-day.row.d-flex.justify-content-center
             header.col-12
               h3 Je suis disponible
-            label.col-md-4.col-xs-12
+            label.col-12.col-md-3
               input.vendredi-benevole.jours-benevole(type='checkbox', name='vendredi', value='vendredi')
               span Vendredi
-            label.col-md-4.col-xs-12
+            label.col-12.col-md-3
               input.samedi-benevole.jours-benevole(type='checkbox', name='samedi', value='samedi')
               span Samedi
-            label.col-md-4.col-xs-12
+            label.col-12.col-md-3
               input.dimanche-benevole.jours-benevole(type='checkbox', name='dimanche', value='dimanche')
               span Dimanche
-          button.send.col-12.button.button--purple(type='submit')
-            | Envoyer
-            i.fas.fa-paper-plane
-            
+            .col-12.col-md-9.d-flex.justify-content-center
+              button.send.d-flex.justify-content-center.button.button--purple(type='submit')
+                | Envoyer
+                i.fas.fa-paper-plane
   script(type='text/javascript', src='../javascript/devenirBenevole.js')
