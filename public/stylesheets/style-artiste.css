@@ -1,21 +1,54 @@
-.artiste p {
-	text-align: left;
+/* lien de retour */
+
+main#artiste .retour:hover {
+	text-decoration: none;
+	color: #ff5e35;
+}
+main#artiste .retour::before {
+	font-family: 'Font Awesome 5 Free';
+	content: '\f053';
+	font-weight: 900;
+	font-size: 1.4rem;
+	margin-right: 0.8rem;
 }
 
-.video iframe, .playlist iframe {
-	width: 100%;
+/* visual */
+main#artiste img {
+	margin-top: 4rem;
 }
-
-@media (max-width: 990px) {
-	.presentation {
-		height: 65vw;
-		overflow: hidden;
+/* text */
+main#artiste .text {
+	text-align: center;
+}
+@media (min-width:768px) {
+	main#artiste .text {
+		text-align: left;
 	}
-
-.presentation, .video {
-	margin-bottom: 15px;
+}
+main#artiste .description {
+	margin: 4rem 0;
 }
 
-.description {
-	text-align: justify; 
+main#artiste h2 {
+	font-size: 3rem;
+	margin-top: 3rem;
+}
+@media (min-width: 992px) {
+	main#artiste h2 {
+		margin-top: 0;
+	}
+}
+
+main#artiste .copy--blue-medium {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+main#artiste .copy--blue-medium ~ p {
+	text-transform: capitalize;
+	font-weight: 500;
+}
+
+main#artiste a.button:hover {
+	color: white;
 }

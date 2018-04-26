@@ -3,19 +3,19 @@
 	margin: 0;
 }
 
-header,
-.coordonnees {
+.contact header,
+.contact .coordonnees {
 	text-align: center;
 }
 
-.input-area {
+.contact .input-area {
 	margin-bottom: 2rem;
 }
 
-.coordonnees {
+.contact .coordonnees {
 	margin-top: 60px;
 }
 
-.icons {
+.contact .icons {
 	margin-bottom: 20%;
 }
