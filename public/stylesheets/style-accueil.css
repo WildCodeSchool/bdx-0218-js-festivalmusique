@@ -29,12 +29,23 @@ main#home .home {
 }
 
 /* PROGRAMMATION */
-main#home .sizeImage{
-	max-width: 50vw;
+
+
+
+@media (min-width: 992px) {
+	.sizeImage{
+		max-width: 50vw;
+	}
 }
 main#home .sizeImage img {
 	width: 100%;
 }
+@media (max-width: 992px) {
+	.sizeImage .button {
+		padding: 1rem;
+	}
+}
+
 
 
 /* PREPARATION */
@@ -102,7 +113,18 @@ main#home .lead {
 @media (min-width: 992px) {
 
 }
-
+.slogan{
+	color:rgb(255, 114, 32);
+	text-shadow: 1px 1px 1px black;
+	font-weight: 300;
+}
+.date{
+	color:white;
+	text-shadow: 1px 1px 1px black;
+	font-weight: 300;
+  
+  
+}
 /* // Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
 	main#home .display-3{
@@ -116,15 +138,9 @@ main#home .lead {
 	}
 	main#home .slogan{
 		font-size: 3rem;
-		color:rgb(255, 114, 32);
-		text-shadow: 1px 1px 1px black;
-		font-weight: 300;
 	}
 	main#home .date{
 		font-size: 2.5rem;
-		color:white;
-		text-shadow: 1px 1px 1px black;
-		font-weight: 300;
 	}
 	main#home .affiche-programmation{
 		margin-top: -10rem;
