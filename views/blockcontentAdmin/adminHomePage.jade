@@ -5,8 +5,8 @@ block content
 		section.text-center
 			.container
 				header
-					h2 Modifier la page d'accueil
-					h3 Modifier la bannière :
+					h1 Modifier la page d'accueil
+					h2 Modifier la bannière de la page d'accueil:
 				form#uploadBanner.text-center(method='POST', enctype='multipart/form-data', action='/admin/api/banner' name='uploadBanner')
 					label Type de fichier accepté png | 3mo max.
 					br
@@ -15,6 +15,25 @@ block content
 					button.button.button--pink(type='submit') Envoyer <!-- onSubmit=updloadImg() Envoyer -->
 				br
 				#popup
-
-
+				header
+					h2 Modifier l'affiche de la programmation du festival
+				form#uploadPoster.text-center(method='POST', enctype='multipart/form-data', action='/admin/api/poster' name='uploadPoster')
+					label Type de fichier accepté jpg | 1mo max.
+					br
+					input(id='inputPoster' type='file', name='poster', value='', accept='.jpg')
+					br
+					button.button.button--pink(type='submit') Envoyer <!-- onSubmit=updloadImg() Envoyer -->
+				br
+				#popupPoster
+				header
+					h2 Modifier les image du carousel
+				form#uploadCaroussel.text-center(method='POST', enctype='multipart/form-data', action='/admin/api/caroussel' name='uploadCaroussel')
+					label Type de fichier accepté jpg | 1mo max.
+					br
+					input(id='inputCarousselImage1' type='file', name='imageCaroussel', value='', accept='.jpg' multiple)
+					br
+					button.button.button--pink(type='submit') Envoyer <!-- onSubmit=updloadImg() Envoyer -->
+				br
+				#popupCaroussel
+				
 	script(type="text/javascript", src="/javascript/adminHomePage.js")
