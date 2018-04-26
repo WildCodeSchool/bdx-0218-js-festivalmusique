@@ -1,0 +1,26 @@
+.hebergement h2 {
+  margin: 20px 0 30px 0;
+}
+
+.hebergement p {
+  margin: 0 0 30px 0;
+}
+
+.fa-map-marker-alt {
+  margin: 30px 0 0 0;
+  font-size: 5rem;
+}
+
+.card-footer {
+  background: none;
+  border: none;
+}
+
+.camping, .restuaration, .commerces {
+  margin: 70px 0 0 0;
+}
+
+.hebergement .button {
+  padding: 10px 20px;
+  font-size: 1.3rem;
+}
