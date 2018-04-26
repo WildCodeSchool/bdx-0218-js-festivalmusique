@@ -29,12 +29,22 @@ main#home .button:hover {
 }
 
 /* PROGRAMMATION */
-.sizeImage{
-	max-width: 50vw;
+
+
+@media (min-width: 992px) {
+	.sizeImage{
+		max-width: 50vw;
+	}
 }
 .sizeImage img {
 	width: 100%;
 }
+@media (max-width: 992px) {
+	.sizeImage .button {
+		padding: 1rem;
+	}
+}
+
 
 
 /* PREPARATION */
@@ -102,7 +112,16 @@ main#home .carte-section .button {
 @media (min-width: 992px) {
 
 }
-
+.slogan{
+	color:rgb(255, 114, 32);
+	text-shadow: 1px 1px 1px black;
+	font-weight: 300;
+}
+.date{
+	color:white;
+	text-shadow: 1px 1px 1px black;
+	font-weight: 300;
+}
 /* // Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
 	.display-3{
@@ -116,15 +135,9 @@ main#home .carte-section .button {
 	}
 	.slogan{
 		font-size: 3rem;
-		color:rgb(255, 114, 32);
-		text-shadow: 1px 1px 1px black;
-		font-weight: 300;
 	}
 	.date{
 		font-size: 2.5rem;
-		color:white;
-		text-shadow: 1px 1px 1px black;
-		font-weight: 300;
 	}
 	.affiche-programmation{
 		margin-top: -10rem;
