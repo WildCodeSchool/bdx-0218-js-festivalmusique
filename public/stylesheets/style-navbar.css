@@ -41,53 +41,25 @@ li.nav-item a.active {
 	color: #ff5e35;
 }
 
-/*Essai */
 
+/* //Dropdown */
 a ,  .navbar > li > a {
     text-transform: capitalize;
     padding: 10px 15px;
 }
-.active a,
-.active a:focus,
-.active a:hover,
-li a:hover,
-li a:focus ,
-.navbar>.show>a,  .navbar>.show>a:focus,  .navbar>.show>a:hover{
-    color: #000;
-    background: transparent;
-    outline: 0;
-}
-
-
-
-/*submenu style start from here*/
-
 
 .dropdown-menu {
-    padding: 0px 0;
-    margin: 0 0 0;
-    border: 0px solid transition !important;
-    border: 0px solid rgba(0,0,0,.15);
-    border-radius: 0px;
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
-
+	background-color: #333;
+	box-shadow: none !important;
+	text-align: left !important;
 }
 
-/*first level*/
-/* .collapse ul > li:hover > a{background: #f5f5f5;}
-.collapse ul ul > li:hover > a, .navbar .show .dropdown-menu > li > a:focus, .navbar .show .dropdown-menu > li > a:hover{background: #fff;}
-/*second level*/
-.collapse ul ul ul > li:hover > a{background: #fff;} */
+.navbar #nav-item-list a {
+	color: white;
+	background: none;
+}
 
-/*third level*/
-/* .collapse ul ul, .collapse ul ul.dropdown-menu{background:#f5f5f5;}
-.collapse ul ul ul, .collapse ul ul ul.dropdown-menu{background:#f5f5f5}
-.collapse ul ul ul ul, .collapse ul ul ul ul.dropdown-menu{background:#f5f5f5} */
-
-/*Drop-down menu work on hover*/
-/* .btco-hover-menu{background: none;margin: 0;padding: 0;min-height:20px} */
-
+/* Mediaqueries Dropdown */
 @media only screen and (max-width: 992px) {
     .show > .dropdown-toggle::after{
         transform: rotate(-90deg);
@@ -106,5 +78,4 @@ li a:focus ,
     .collapse ul ul ul li{position:relative}
 	.collapse ul ul ul li:hover ul{display:block}
     .collapse ul ul ul ul{position:absolute;top:0;left:-100%;min-width:250px;display:none;z-index:1}
-
 }
