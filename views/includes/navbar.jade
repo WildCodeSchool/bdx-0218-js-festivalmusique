@@ -5,14 +5,24 @@ nav.navbar.navbar-expand-lg.navbar-light
 	#navbarSupportedContent.collapse.navbar-collapse
 		ul#nav-item-list.navbar-nav.ml-auto
 			li.nav-item
-				a.nav-link(href='/') Accueil 
+				a.nav-link(href='/') Accueil
 			li.nav-item
 				a.nav-link(href='/programmation') Programmation
-			li.nav-item
-				a.nav-link(href='/infos-pratiques') Infos pratiques
+			li.nav-item.dropdown
+				a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='/infos-pratiques', data-toggle="dropdown", aria-haspopup="true", aria-expanded="true") Infos pratiques
+				ul.dropdown-menu(aria-labelledby="navbarDropdownMenuLink")
+					li.m-0
+						a.dropdown-item(href='/infos-pratiques/accessibilite') Accessibilité
+					li.m-0
+						a.dropdown-item(href='/infos-pratiques/developpement-durable') Développement durable
+					li.m-0
+						a.dropdown-item(href='/infos-pratiques/hebergement-restauration') Hébergement - Restauration
+					li.m-0
+						a.dropdown-item(href='/infos-pratiques/comment-venir') Comment venir 
 			li.nav-item
 				a.nav-link(href='/devenir-benevole') Devenir bénévole
 			li.nav-item
 				a.nav-link(href='/nous-contacter') Contact
 			li.nav-item
-				a.nav-link(href='/billetterie') Billetterie
+				a.billetterie.nav-link(href='/billetterie') Billetterie
+ 
