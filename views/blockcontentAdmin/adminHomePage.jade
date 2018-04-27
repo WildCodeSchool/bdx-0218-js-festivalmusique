@@ -35,5 +35,18 @@ block content
 					button.button.button--pink(type='submit') Envoyer <!-- onSubmit=updloadImg() Envoyer -->
 				br
 				#popupCaroussel
+				header
+					h2 Formulaire d'administration de la bannière d'accueil
+				form#uploadBannerText(method='POST', action='/admin/api/homePage/banner')
+					label Nom du festival
+					input#bannerTitle.form-control(type='text', name='bannerTitle', placeholder='Entrez le nom du festival')
+
+					label Slogan du festival
+					input#bannerSlogan.form-control(type='text', name='bannerSlogan', placeholder='Entrez le Slogan du festival')
+
+					label date
+					input#bannerDate.form-control(type='text', name='bannerDate', placeholder='Entrez la date du festival')
+					button.button.button--pink(type='') Envoyer <!-- onSubmit=updloadImg() Envoyer -->
+				#popupBannerText
 				
 	script(type="text/javascript", src="/javascript/adminHomePage.js")

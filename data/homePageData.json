@@ -1,0 +1,39 @@
+{
+	"banner" : {
+			"festivalName": "Festival Musique",
+			"slogan": "POSITIVE MIND x POSITIVE LIFE x POSITIVE VIBES",
+			"date": "du 03/07 au 06/07"
+	},
+
+	"warmUp" : {
+		"title" : ""
+	},
+
+	"card1": {
+		"title": "PASS & BILLETS",
+		"text1" : "Envie de vivre une expérience festival totale ?",
+		"text2" : "| Cliquez ici pour acheter directement votre billet sur notre billetterie officielle en ligne, qui assure un paiement sécurisé, un service après vente et propose même une assurance annulation."
+	},
+
+	"card2": {
+		"title": "HEBERGEMENT - RESTAURATION",
+		"text1": "Un tour d’horizon de toutes les possibilités d’hébergement durant le festival en fonction de vos envies, votre budget.",
+		"text2": "En solo, à deux ou en communauté, découvrez toutes les possibilités d’hébergement disponibles à proximité du festival."
+	},
+	"card3": {
+		"title": "COMMENT VENIR ?",
+		"text1": "La SNCF, Fil Bleu et Rémi, partenaires de Festizik, facilitent votre venue au festival.",
+		"text2": "Les navettes Bus et TER sont gratuites entre la gare de Saint-Pierre des corps, le site du festival et le camping."
+	},
+	"card4": {
+		"title": "BENEVOLES",
+		"text1": "Depuis la création du festival, les bénévoles de Festizik mettent tout leur cœur dans cette aventure.",
+		"text2": "Être bénévole, c’est rejoindre une équipe de 1000 personnes pour participer à l’organisation du festival et vivre cette aventure collective de l’intérieur."
+	},
+	"card5": {
+		"title": "DEVELOPPEMENT DURABLE",
+		"text1": "Effectuez des éco-gestes pendant le festival, faites tamponner votre carte d’éco-festivalier, gagnez des points et débloquez l’accès à l’une des trois loteries mises en jeu !",
+		"text2": ""
+	}
+}
+

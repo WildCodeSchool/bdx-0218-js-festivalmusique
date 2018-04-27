@@ -3,6 +3,9 @@ let router = express.Router();
 let path = require("path");
 let mysql = require('mysql');
 
+// IMPORT JSON FILE
+let homePageData = require('../data/homePageData');
+
 // UPLOAD DE FICHIER
 const multer = require('multer');
 const upload = multer({ dest: 'tmp/' });
@@ -201,6 +204,30 @@ router.post('/api/caroussel', upload.array('imageCaroussel', 3), function (req, 
 		}
 	}, 300);
 })
+
+// Traitement modification Banner
+router.post('/api/homePage/banner', function (req, res, next) {
+	console.log(req.body);
+	console.log(req.body.bannerTitle);
+	
+	const requestSQL = `UPDATE homepage SET ( title : '${req.body.bannerTitle}', slogan: '${req.body.bannerSlogan}', date: '${req.body.bannerDate}' );`
+	console.log(requestSQL);
+	
+	// con.query(deleteArtiste, function (err, row) {
+	// 	if (err) throw err;
+	// 	res.render('includesAdmin/_formArtiste');
+	// });
+
+	// res.send("")
+	res.render('blockcontentAdmin/adminFeedback', { alertType: `alert-success`, status: `La modification a été pris en compte` })
+
+	// const id = req.params.id;
+	// let deleteArtiste = `DELETE FROM artistes WHERE kartiste = '${id}';`
+	// con.query(deleteArtiste, function (err, row) {
+	// 	if (err) throw err;
+	// 	res.render('includesAdmin/_formArtiste');
+	// });
+});
 
 
 module.exports = router;

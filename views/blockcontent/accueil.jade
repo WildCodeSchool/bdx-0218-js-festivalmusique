@@ -5,9 +5,9 @@ block content
 		section.pt-0.pb-0.home.text-center
 			.background.d-flex.flex-column
 				div.m-auto
-					h1.display-3.main-title.main-title-home.shadows-title Festival Musique
-					p.slogan POSITIVE MIND x POSITIVE LIFE x POSITIVE VIBES
-					p.date du 03/07 au 06/07
+					h1.display-3.main-title.main-title-home.shadows-title #{festivalBanner.title}
+					p.slogan #{festivalBanner.slogan}
+					p.date #{festivalBanner.date}
 					hr.my-4
 		section.programmation.pt-3.pb-3
 			.container.sizeImage
@@ -70,7 +70,8 @@ block content
 									h5.card-title.text-center BENEVOLES
 									br
 									p.card-text Depuis la création du festival, les bénévoles de Festizik mettent tout leur cœur dans cette aventure.
-									| Être bénévole, c’est rejoindre une équipe de 1000 personnes pour participer à l’organisation du festival et vivre cette aventure collective de l’intérieur.
+										br
+										| Être bénévole, c’est rejoindre une équipe de 1000 personnes pour participer à l’organisation du festival et vivre cette aventure collective de l’intérieur.
 								.card-footer
 									a.button.button--pink(href="/devenir-benevole") En savoir plus
 							.card
