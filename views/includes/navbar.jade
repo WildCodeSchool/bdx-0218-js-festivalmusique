@@ -3,13 +3,13 @@ nav.navbar.navbar-expand-lg.navbar-light
 	button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
 		span.navbar-toggler-icon
 	#navbarSupportedContent.collapse.navbar-collapse
-		ul#nav-item-list.navbar-nav.ml-auto
+		ul#nav-item-list.navbar-nav.ml-auto.align-items-center
 			li.nav-item
 				a.nav-link(href='/') Accueil
 			li.nav-item
 				a.nav-link(href='/programmation') Programmation
 			li.nav-item.dropdown
-				a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='/infos-pratiques', data-toggle="dropdown", aria-haspopup="true", aria-expanded="true") Infos pratiques
+				a#navbarDropdownMenuLink.nav-link.dropdown-toggle.text-center(href='/infos-pratiques', data-toggle="dropdown", aria-haspopup="true", aria-expanded="true") Infos pratiques
 				ul.dropdown-menu(aria-labelledby="navbarDropdownMenuLink")
 					li.m-0
 						a.dropdown-item(href='/infos-pratiques/accessibilite') Accessibilité

@@ -54,7 +54,7 @@ main#home .sizeImage img {
 	background-color: #19b6e1;
 } */
 
-main#home main#home .PREPARATION__cadre {
+main#home .PREPARATION__cadre {
 	border: 3px solid white;
 }
 
@@ -122,8 +122,8 @@ main#home .lead {
 	color:white;
 	text-shadow: 1px 1px 1px black;
 	font-weight: 300;
-  
-  
+
+
 }
 /* // Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
