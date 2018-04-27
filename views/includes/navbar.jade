@@ -9,8 +9,8 @@ nav.navbar.navbar-expand-lg.navbar-light
 			li.nav-item
 				a.nav-link(href='/programmation') Programmation
 			li.nav-item.dropdown
-				a.nav-link.dropdown-toggle(data-toggle="dropdown", aria-haspopup="true", aria-expanded="false", href='/infos-pratiques') Infos pratiques
-				ul(aria-labelledby="navbarDropdownMenuLink").dropdown-menu
+				a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='/infos-pratiques', data-toggle="dropdown", aria-haspopup="true", aria-expanded="true") Infos pratiques
+				ul.dropdown-menu(aria-labelledby="navbarDropdownMenuLink")
 					li.m-0
 						a.dropdown-item(href='/infos-pratiques/accessibilite') Accessibilité
 					li.m-0
@@ -24,5 +24,5 @@ nav.navbar.navbar-expand-lg.navbar-light
 			li.nav-item
 				a.nav-link(href='/nous-contacter') Contact
 			li.nav-item
-				a.nav-link(href='/billetterie') Billetterie
+				a.billetterie.nav-link(href='/billetterie') Billetterie
  

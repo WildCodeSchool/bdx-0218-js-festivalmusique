@@ -27,6 +27,9 @@ nav.navbar a.navbar-brand {
 	font-size: 2rem;
 	color: white;
 }
+nav.navbar a.navbar-brand:focus, nav.navbar a.navbar-brand:hover {
+	color: white;
+}
 .navbar-light .navbar-toggler {
 	border: none;
 }
@@ -72,18 +75,18 @@ li.nav-item a.active {
 	color: white;
 }
 
-.dropdown-item:hover {
+.dropdown-item:hover, .dropdown-item:focus, .dropdown-item:active {
 	color: #ff5e35;
 	background-color: #333;
 }
-
-
-.dropdown-menu.show {
-	border: none;
-	text-align: center;
-	background-color: #444;
+@media only screen and (max-width: 992px) {
+	.dropdown-menu.show {
+		border: none;
+		text-align: center;
+		background-color: #444;
+	}
 }
-@media only screen and (min: 992px) {
+@media only screen and (min-width: 992px) {
 	.dropdown-menu.show {
 		text-align: left;
 		background-color: #333;

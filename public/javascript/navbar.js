@@ -1,11 +1,17 @@
+/* class active */
 $(function() {
   if (location.pathname !== '/') {
-  	$('#nav-item-list .nav-link[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
+    if (location.pathname.startsWith("/infos-pratiques")) {
+      $('#nav-item-list .nav-link[href="/infos-pratiques"]').addClass('active');
+    } else {
+      $('#nav-item-list .nav-link[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
+    }
   } else {
   	$('#nav-item-list .nav-item:first-child .nav-link').addClass('active');
   }
 });
-/* ESSAI */
+
+/* hover sur desktop et click sur mobile  */
 $( document ).ready( function () {
     $( '.dropdown-menu a.dropdown-toggle' ).on( 'click', function ( e ) {
         var $el = $( this );
