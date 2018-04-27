@@ -1,21 +1,26 @@
 extends ../layout.jade
 
 block content
-  each Artiste in tableArtistes
-    .container
-      div
-        a.button.button--pink(href="/programmation") Retour
-      div
-        h1 #{Artiste.nom}
-        h2 #{Artiste.jour} - #{Artiste.heure}
-        h3 #{Artiste.style}
-      .row
-        .col-xs-12.col-sm-12.col-md-12.col-lg-6.presentation
-          img.img-thumbnail.img-fluid(src=Artiste.image)
-        .col-xs-12.col-sm-12.col-md-12.col-lg-6.video
-          .embed-responsive.embed-responsive-16by9
-            iframe.embed-responsive-item(width='100%', height='100%', src='https://www.youtube.com/embed/#{Artiste.video}', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
-      .row
-        .col-xs-12.col-md-10.offset-md-1.description
-          p #{Artiste.description}
-
+  main#artiste
+    each Artiste in tableArtistes
+      .container
+        .text-left.mt-5
+          a.retour.copy--pink(href="/programmation", title="Revenir à la programmation") Retour
+        section
+          .row
+            .col-12.col-md-6
+              .embed-responsive.embed-responsive-16by9
+                  iframe.embed-responsive-item(width='100%', height='100%', src='https://www.youtube.com/embed/#{Artiste.video}', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
+              img.img-fluid(src=Artiste.image, alt=Artiste.nom)
+            .col-12.col-md-6.text
+              header
+                h2.copy--orange #{Artiste.nom}
+              p.description #{Artiste.description}
+              .pt-4
+                p.copy--blue-medium Voir en live à Festizik
+                p #{Artiste.jour} - #{Artiste.heure}
+              .pt-4
+                p.copy--blue-medium Genre
+                p #{Artiste.style}
+              .pt-4
+                a.button.button--orange(href="/billetterie", title="Aller à la page billetterie") Achetez votre billet

@@ -1,11 +1,6 @@
-body {
+body main#programmation {
   margin: auto;
   text-align: center;
-}
-
-.programmation-filters h1 {
-  font-size: 3rem;
-  margin: 0 0 50px 0;
 }
 
 /* Filtres */
