@@ -1,4 +1,7 @@
 /* billetterie */
+main#billetterie {
+	text-align: center;
+}
 
 /* card css & card effect */
 main#billetterie .card {
