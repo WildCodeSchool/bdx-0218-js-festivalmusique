@@ -1,4 +1,7 @@
 /* newsletter */
+section#newsletter {
+	text-align: center;
+}
 section#newsletter label {
 	display: none;
 }
