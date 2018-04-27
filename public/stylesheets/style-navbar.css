@@ -7,8 +7,7 @@ nav.navbar li:not(:first-child):not(:last-child) {
 	margin: 0 1.4rem;
 }
 nav.navbar a {
-	font-family: 'Reem Kufi', sans-serif;
-
+		font-family: 'Reem Kufi', sans-serif;
     font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
@@ -41,22 +40,9 @@ li.nav-item a.active {
 	color: #ff5e35;
 }
 
-
-/* //Dropdown */
-a ,  .navbar > li > a {
-    text-transform: capitalize;
-    padding: 10px 15px;
-}
-
+/* Dropdown */
 .dropdown-menu {
 	background-color: #333;
-	box-shadow: none !important;
-	text-align: left !important;
-}
-
-.navbar #nav-item-list a {
-	color: white;
-	background: none;
 }
 
 /* Mediaqueries Dropdown */
@@ -78,4 +64,13 @@ a ,  .navbar > li > a {
     .collapse ul ul ul li{position:relative}
 	.collapse ul ul ul li:hover ul{display:block}
     .collapse ul ul ul ul{position:absolute;top:0;left:-100%;min-width:250px;display:none;z-index:1}
+}
+
+.dropdown-item {
+	color: white;
+}
+
+.dropdown-item:hover {
+	color: #ff5e35;
+	background-color: #333;
 }
