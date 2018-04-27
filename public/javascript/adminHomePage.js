@@ -74,12 +74,12 @@ formCaroussel.addEventListener('submit', function (event) {
 	request.send(dataForm);
 	event.preventDefault();
 }, false);
-
+/* 
 formBannerText.addEventListener('submit', function (event) {
 	let $feedback = $("#popupBannerText");
 	let dataForm = new FormData(uploadBannerText);
 	let variable = dataForm.serialize();
- 	console.log(variable);
+ 	console.log(event.target);
 
 	let request = new XMLHttpRequest();
 	request.onreadystatechange = function () {
@@ -99,3 +99,4 @@ formBannerText.addEventListener('submit', function (event) {
 	request.send(dataForm);
 	event.preventDefault();
 }, false);
+ */

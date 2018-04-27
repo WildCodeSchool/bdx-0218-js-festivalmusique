@@ -26,7 +26,7 @@ block content
 				br
 				#popupPoster
 				header
-					h2 Modifier les image du carousel
+					h2 Modifier les images du caroussel
 				form#uploadCaroussel.text-center(method='POST', enctype='multipart/form-data', action='/admin/api/caroussel' name='uploadCaroussel')
 					label Type de fichier accepté jpg | 1mo max.
 					br
@@ -48,5 +48,7 @@ block content
 					input#bannerDate.form-control(type='text', name='bannerDate', placeholder='Entrez la date du festival')
 					button.button.button--pink(type='') Envoyer <!-- onSubmit=updloadImg() Envoyer -->
 				#popupBannerText
+					p(class='#{alertTypeBanner} alert' role='alert')
+						| #{statusBanner}
 				
 	script(type="text/javascript", src="/javascript/adminHomePage.js")
