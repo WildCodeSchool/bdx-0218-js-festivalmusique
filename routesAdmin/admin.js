@@ -210,10 +210,27 @@ router.post('/api/caroussel', upload.array('imageCaroussel', 3), function (req, 
 
 // Traitement modification Banner
 router.post('/api/homePage/banner', upload.fields([]),function (req, res, next) {
+	let formData = req.body;
 
-	let requestSQL = `UPDATE homepage SET title = "${req.body.bannerTitle}", slogan = "${req.body.bannerSlogan}", date ="${req.body.bannerDate}";`
-	con.query(requestSQL, function (err, data) { 
-		if(err) throw err;
+	sqlRequestBuilder = (data) => {
+		let result = []
+		if ( data.bannerTitle !== '' ) {
+			result.push(`title = "${req.body.bannerTitle}"`) 
+		}
+		if ( data.bannerSlogan !== '') {
+			result.push(`slogan = "${req.body.bannerSlogan}"`)
+		}
+		if ( data.bannerDate !== '') {
+			result.push(`date = "${req.body.bannerDate}"`)
+		}
+		return `UPDATE homepage SET ${result.join(" ,")} ;`
+	}
+	
+	con.query(sqlRequestBuilder(formData), function (err, data) { 
+		if(err) { 
+			res.render("blockcontentAdmin/adminFeedback", { alertType: `alert-danger`, status: `Les modifications n'ont pas pu être effectué suite à une erreur interne.`});
+			throw err
+		}
 		res.render("blockcontentAdmin/adminFeedback", { alertType: `alert-success`, status: `La modification a été prise en compte` })
 	})
 });

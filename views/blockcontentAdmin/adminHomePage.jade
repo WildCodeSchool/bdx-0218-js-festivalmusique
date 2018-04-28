@@ -7,6 +7,11 @@ block content
 				header
 					h1 Modifier la page d'accueil
 					h2 Modifier la bannière de la page d'accueil:
+				
+				div.custom-file
+					input(type="file" class="custom-file-input" id="customFile")
+					label(class="custom-file-label" for="customFile") Choose file
+
 				form#uploadBanner.text-center(method='POST', enctype='multipart/form-data', action='/admin/api/banner' name='uploadBanner')
 					label Type de fichier accepté png | 3mo max.
 					br
@@ -38,16 +43,17 @@ block content
 				header
 					h2 Formulaire d'administration de la bannière d'accueil
 				form#uploadBannerText(method='POST', enctype='multipart/form-data', action='/admin/api/homePage/banner' name='uploadBannerText')
-					label Nom du festival
-					input#bannerTitle.form-control(type='text', name='bannerTitle', placeholder='Entrez le nom du festival')
-
-					label Slogan du festival
-					input#bannerSlogan.form-control(type='text', name='bannerSlogan', placeholder='Entrez le Slogan du festival')
-
-					label date
-					input#bannerDate.form-control(type='text', name='bannerDate', placeholder='Entrez la date du festival')
+					.form-group
+						label Nom du festival
+						input.form-control#bannerTitle.form-control(type='text', name='bannerTitle', placeholder='Entrez le nom du festival')
+					.form-group
+						label Slogan du festival
+						input.form-control#bannerSlogan.form-control(type='text', name='bannerSlogan', placeholder='Entrez le Slogan du festival')
+					.form-group
+						label Date
+						input.form-control#bannerDate.form-control(type='text', name='bannerDate', placeholder='Entrez la date du festival')
 					button.button.button--pink(type='submit') Envoyer <!-- onSubmit=updloadImg() Envoyer -->
 				#popupBannerText
 				br
-				
+			
 	script(type="text/javascript", src="/javascript/adminHomePage.js")
