@@ -210,7 +210,7 @@ router.post('/api/homePage/banner', function (req, res, next) {
 	let requestSQL = `UPDATE homepage SET title = "${req.body.bannerTitle}", slogan = "${req.body.bannerSlogan}", date ="${req.body.bannerDate}";`
 	con.query(requestSQL, function (err, data) { 
 		if(err) throw err;
-		res.render("blockcontentAdmin/adminHomePage", { alertTypeBanner: `alert-success`, statusBanner: `La modification a été prise en compte` })
+		res.render("blockcontentAdmin/adminFeedback", { alertType: `alert-success`, status: `La modification a été prise en compte` })
 	})
 });
 

@@ -13,8 +13,8 @@ block content
 					input(id='inputBanner' type='file', name='banner', value='', accept='.png')
 					br
 					button.button.button--pink(type='submit') Envoyer <!-- onSubmit=updloadImg() Envoyer -->
-				br
 				#popup
+				br
 				header
 					h2 Modifier l'affiche de la programmation du festival
 				form#uploadPoster.text-center(method='POST', enctype='multipart/form-data', action='/admin/api/poster' name='uploadPoster')
@@ -23,8 +23,8 @@ block content
 					input(id='inputPoster' type='file', name='poster', value='', accept='.jpg')
 					br
 					button.button.button--pink(type='submit') Envoyer <!-- onSubmit=updloadImg() Envoyer -->
-				br
 				#popupPoster
+				br
 				header
 					h2 Modifier les images du caroussel
 				form#uploadCaroussel.text-center(method='POST', enctype='multipart/form-data', action='/admin/api/caroussel' name='uploadCaroussel')
@@ -33,11 +33,11 @@ block content
 					input(id='inputCarousselImage1' type='file', name='imageCaroussel', value='', accept='.jpg' multiple)
 					br
 					button.button.button--pink(type='submit') Envoyer <!-- onSubmit=updloadImg() Envoyer -->
-				br
 				#popupCaroussel
+				br
 				header
 					h2 Formulaire d'administration de la bannière d'accueil
-				form#uploadBannerText(method='POST', action='/admin/api/homePage/banner')
+				form#uploadBannerText(method='POST', action='/admin/api/homePage/banner' name='uploadBannerText')
 					label Nom du festival
 					input#bannerTitle.form-control(type='text', name='bannerTitle', placeholder='Entrez le nom du festival')
 
@@ -46,9 +46,8 @@ block content
 
 					label date
 					input#bannerDate.form-control(type='text', name='bannerDate', placeholder='Entrez la date du festival')
-					button.button.button--pink(type='') Envoyer <!-- onSubmit=updloadImg() Envoyer -->
+					button.button.button--pink(type='submit') Envoyer <!-- onSubmit=updloadImg() Envoyer -->
 				#popupBannerText
-					p(class='#{alertTypeBanner} alert' role='alert')
-						| #{statusBanner}
+				br
 				
 	script(type="text/javascript", src="/javascript/adminHomePage.js")

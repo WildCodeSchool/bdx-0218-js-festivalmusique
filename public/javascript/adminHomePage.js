@@ -1,7 +1,6 @@
 let form = document.forms.namedItem("uploadBanner");
 let formPoster = document.forms.namedItem("uploadPoster");
 let formCaroussel = document.forms.namedItem("uploadCaroussel");
-let formBannerText = document.forms.namedItem("uploadBannerText");
 
 form.addEventListener('submit', function (event) {
 	let $feedback = $("#popup");
@@ -74,12 +73,17 @@ formCaroussel.addEventListener('submit', function (event) {
 	request.send(dataForm);
 	event.preventDefault();
 }, false);
-/* 
+
+
+let formBannerText = document.forms.namedItem("uploadBannerText");
+
 formBannerText.addEventListener('submit', function (event) {
 	let $feedback = $("#popupBannerText");
-	let dataForm = new FormData(uploadBannerText);
-	let variable = dataForm.serialize();
- 	console.log(event.target);
+	let dataForm = new FormData(formBannerText);
+	console.log("bonjour");
+	
+	console.log("dataForm : " + dataForm);
+	console.log("dataForm : " + event.target);
 
 	let request = new XMLHttpRequest();
 	request.onreadystatechange = function () {
@@ -99,4 +103,3 @@ formBannerText.addEventListener('submit', function (event) {
 	request.send(dataForm);
 	event.preventDefault();
 }, false);
- */
