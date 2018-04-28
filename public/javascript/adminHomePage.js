@@ -80,10 +80,6 @@ let formBannerText = document.forms.namedItem("uploadBannerText");
 formBannerText.addEventListener('submit', function (event) {
 	let $feedback = $("#popupBannerText");
 	let dataForm = new FormData(formBannerText);
-	console.log("bonjour");
-	
-	console.log("dataForm : " + dataForm);
-	console.log("dataForm : " + event.target);
 
 	let request = new XMLHttpRequest();
 	request.onreadystatechange = function () {
