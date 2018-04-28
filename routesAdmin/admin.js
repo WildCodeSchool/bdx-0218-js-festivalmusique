@@ -6,6 +6,9 @@ let mysql = require('mysql');
 // IMPORT JSON FILE
 let homePageData = require('../data/homePageData');
 
+// Submitted form values on req.body
+let bodyParser = require('body-parser');
+
 // UPLOAD DE FICHIER
 const multer = require('multer');
 const upload = multer({ dest: 'tmp/' });
@@ -206,7 +209,8 @@ router.post('/api/caroussel', upload.array('imageCaroussel', 3), function (req, 
 })
 
 // Traitement modification Banner
-router.post('/api/homePage/banner', function (req, res, next) {	
+router.post('/api/homePage/banner', upload.fields([]),function (req, res, next) {
+
 	let requestSQL = `UPDATE homepage SET title = "${req.body.bannerTitle}", slogan = "${req.body.bannerSlogan}", date ="${req.body.bannerDate}";`
 	con.query(requestSQL, function (err, data) { 
 		if(err) throw err;

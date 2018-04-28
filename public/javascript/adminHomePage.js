@@ -76,10 +76,12 @@ formCaroussel.addEventListener('submit', function (event) {
 
 
 let formBannerText = document.forms.namedItem("uploadBannerText");
-
 formBannerText.addEventListener('submit', function (event) {
 	let $feedback = $("#popupBannerText");
 	let dataForm = new FormData(formBannerText);
+
+	// /!\ on ne peut pas faire de console.log de dataForm, pour visualiser les data, utiliser event.target
+	// console.log(event.target);
 
 	let request = new XMLHttpRequest();
 	request.onreadystatechange = function () {

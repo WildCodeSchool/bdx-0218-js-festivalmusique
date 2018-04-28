@@ -37,7 +37,7 @@ block content
 				br
 				header
 					h2 Formulaire d'administration de la bannière d'accueil
-				form#uploadBannerText(method='POST', action='/admin/api/homePage/banner' name='uploadBannerText')
+				form#uploadBannerText(method='POST', enctype='multipart/form-data', action='/admin/api/homePage/banner' name='uploadBannerText')
 					label Nom du festival
 					input#bannerTitle.form-control(type='text', name='bannerTitle', placeholder='Entrez le nom du festival')
 
