@@ -20,6 +20,16 @@ let con = mysql.createConnection({
  		password: "r3AcfGXI7U",
  		database: "sql7233133"
 });
+// affichage de la page adminHomePage
+router.get( "/homePage", (req,res,next) => {
+	console.log("je suis dans le router")
+	let sqlRequest = `SELECT * from homepage;`;
+	con.query(sqlRequest, function (err, results) {
+		if (err) throw err;
+		// results[0] is am objet with title, slogan, date props
+		res.render('blockcontentAdmin/adminHomePage', { data: results[0] });
+	});
+});
 
 // affichage page login
 router.get('/', function(req, res, next) {
