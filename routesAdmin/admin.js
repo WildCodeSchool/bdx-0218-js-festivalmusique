@@ -6,6 +6,9 @@ let mysql = require('mysql');
 // IMPORT JSON FILE
 let homePageData = require('../data/homePageData');
 
+// Submitted form values on req.body
+let bodyParser = require('body-parser');
+
 // UPLOAD DE FICHIER
 const multer = require('multer');
 const upload = multer({ dest: 'tmp/' });
@@ -16,6 +19,15 @@ let con = mysql.createConnection({
  		user: "sql7233133",
  		password: "r3AcfGXI7U",
  		database: "sql7233133"
+});
+// affichage de la page adminHomePage
+router.get( "/homePage", (req,res,next) => {
+	let sqlRequest = `SELECT * from homepage;`;
+	con.query(sqlRequest, function (err, results) {
+		if (err) throw err;
+		// results[0] is am objet with title, slogan, date props
+		res.render('blockcontentAdmin/adminHomePage', { data: results[0] });
+	});
 });
 
 // affichage page login
@@ -208,11 +220,30 @@ router.post('/api/caroussel', upload.array('imageCaroussel', 3), function (req, 
 })
 
 // Traitement modification Banner
-router.post('/api/homePage/banner', function (req, res, next) {
-	let requestSQL = `UPDATE homepage SET title = "${req.body.bannerTitle}", slogan = "${req.body.bannerSlogan}", date ="${req.body.bannerDate}";`
-	con.query(requestSQL, function (err, data) {
-		if(err) throw err;
-		res.render("blockcontentAdmin/adminHomePage", { alertTypeBanner: `alert-success`, statusBanner: `La modification a été prise en compte` })
+
+router.post('/api/homePage/banner', upload.fields([]),function (req, res, next) {
+	let formData = req.body;
+
+	sqlRequestBuilder = (data) => {
+		let result = []
+		if ( data.bannerTitle !== '' ) {
+			result.push(`title = "${req.body.bannerTitle}"`) 
+		}
+		if ( data.bannerSlogan !== '') {
+			result.push(`slogan = "${req.body.bannerSlogan}"`)
+		}
+		if ( data.bannerDate !== '') {
+			result.push(`date = "${req.body.bannerDate}"`)
+		}
+		return `UPDATE homepage SET ${result.join(" ,")} ;`
+	}
+	
+	con.query(sqlRequestBuilder(formData), function (err, data) { 
+		if(err) { 
+			res.render("blockcontentAdmin/adminFeedback", { alertType: `alert-danger`, status: `Les modifications n'ont pas pu être effectué suite à une erreur interne.`});
+			throw err
+		}
+		res.render("blockcontentAdmin/adminFeedback", { alertType: `alert-success`, status: `La modification a été prise en compte` })
 	})
 });
 
