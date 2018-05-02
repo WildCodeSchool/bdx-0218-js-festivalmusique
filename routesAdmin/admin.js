@@ -93,7 +93,7 @@ router.post('/api/banner', upload.single('banner'), function (req, res, next) {
 });
 
 
-// sélection de l'artiste dans la liste des artistes - les données de l'artiste en question sont envoyées dans le formulaire de modification/suppression
+// sélection de l'artiste dans la liste des artistes - les données de l'artiste en question sont envoyées dans le formulaire de modification
 router.get('/api/artiste/:id', function(req, res, next) {
 	let selectArtiste = `SELECT * from artistes where kartiste = '${req.params.id}';`;
 	con.query(selectArtiste, function (err, row) {
@@ -102,7 +102,7 @@ router.get('/api/artiste/:id', function(req, res, next) {
     });
 });
 
-//retour du formulaire 'ajouter un artiste'
+//retour du bouton 'ajouter un artiste'
 router.get('/add/artiste/', function(req, res, next) {
   res.render('includesAdmin/_formArtiste');
 });
@@ -148,7 +148,7 @@ router.put('/api/artiste/:id', function(req, res, next) {
   });
 });
 
-// supression artiste
+// suppression artiste
 router.post('/api/artiste/:id', function(req, res, next) {
 	const id = req.params.id;
 	let deleteArtiste = `DELETE FROM artistes WHERE kartiste = '${id}';`
@@ -227,7 +227,7 @@ router.post('/api/homePage/banner', upload.fields([]),function (req, res, next) 
 	sqlRequestBuilder = (data) => {
 		let result = []
 		if ( data.bannerTitle !== '' ) {
-			result.push(`title = "${req.body.bannerTitle}"`) 
+			result.push(`title = "${req.body.bannerTitle}"`)
 		}
 		if ( data.bannerSlogan !== '') {
 			result.push(`slogan = "${req.body.bannerSlogan}"`)
@@ -237,9 +237,9 @@ router.post('/api/homePage/banner', upload.fields([]),function (req, res, next) 
 		}
 		return `UPDATE homepage SET ${result.join(" ,")} ;`
 	}
-	
-	con.query(sqlRequestBuilder(formData), function (err, data) { 
-		if(err) { 
+
+	con.query(sqlRequestBuilder(formData), function (err, data) {
+		if(err) {
 			res.render("blockcontentAdmin/adminFeedback", { alertType: `alert-danger`, status: `Les modifications n'ont pas pu être effectué suite à une erreur interne.`});
 			throw err
 		}
