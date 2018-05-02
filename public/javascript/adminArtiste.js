@@ -7,7 +7,7 @@ $(document).ready(function() {
 	});
 
 	// sélection de l'artiste dans la liste des artistes - les données de l'artiste en question sont envoyées dans le formulaire de modification/suppression
-	$(".admin-upd-artiste").on("click", function() {
+	$("#admin").on("click",".admin-upd-artiste", function() {
 		const id = $(this).parents(".artiste").data("artisteId");
 		$.get( "/admin/api/artiste/" + id, function( data ) {
 			 $( ".form" ).html(data);
@@ -61,11 +61,14 @@ $(document).ready(function() {
 			url: '/admin/api/artiste/',
 			data: $("#formArtiste").serialize(),
 			success: function (data) {
+				console.log(data)
 				var tmp = $("#formArtiste")[0].artisteName.value;
-				$('#artistesTable').append("<tr class='artiste'><td>" + tmp + "</td><td><button class='btn-nav-admin-in btn button--orange admin-upd-artiste'>Modifier</button></td><td><button class='btn-nav-admin-in btn button--orange admin-del-artiste'>Supprimer</button></td></tr>");
 				$( ".form" ).html(data);
 				$('.status').addClass('alert alert-success');
 				$('.status').text('Artiste ajouté avec succès');
+				// Récupérationb de l'id
+				var artisteId = $("#lastArtiste").data("lastArtisteId");
+				$('#artistesTable').append("<tr class='artiste' data-artiste-id='" + artisteId + "'><td>" + tmp + "</td><td><button class='btn-nav-admin-in btn button--orange admin-upd-artiste' >Modifier</button></td><td><button class='btn-nav-admin-in btn button--orange admin-del-artiste'  >Supprimer</button></td></tr>");
 			},
 			error: function () {
 				$('.status').addClass('alert alert-danger');
