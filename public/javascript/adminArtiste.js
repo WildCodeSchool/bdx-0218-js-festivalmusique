@@ -5,7 +5,7 @@ $(document).ready(function() {
 			 $( ".form" ).html(data);
 		});
 	});
-		
+
 	// sélection de l'artiste dans la liste des artistes - les données de l'artiste en question sont envoyées dans le formulaire de modification/suppression
 	$(".admin-upd-artiste").on("click", function() {
 		const id = $(this).parents(".artiste").data("artisteId");
@@ -22,6 +22,7 @@ $(document).ready(function() {
 				type: "POST",
 				url: '/admin/api/artiste/' + id,
 				success: function (data) {
+					$('#artistesTable tr[data-artiste-id=' + id + ']').remove();
 					$( ".form" ).html(data);
 					$('.status').addClass('alert alert-success');
 					$('.status').text('Artiste supprimé avec succès');
@@ -41,6 +42,8 @@ $(document).ready(function() {
 			url: "/admin/api/artiste/" + id,
 			data: $("#formArtiste").serialize(),
 			success: function (data) {
+				var tmp = $("#formArtiste")[0].artisteName.value;
+				$('#artistesTable tr[data-artiste-id=' + id + '] td:first-child').text(tmp);
 				$( ".form" ).html(data);
 				$('.status').addClass('alert alert-success');
 				$('.status').text('Artiste modifié avec succès');
@@ -58,6 +61,8 @@ $(document).ready(function() {
 			url: '/admin/api/artiste/',
 			data: $("#formArtiste").serialize(),
 			success: function (data) {
+				var tmp = $("#formArtiste")[0].artisteName.value;
+				$('#artistesTable').append("<tr class='artiste'><td>" + tmp + "</td><td><button class='btn-nav-admin-in btn button--orange admin-upd-artiste'>Modifier</button></td><td><button class='btn-nav-admin-in btn button--orange admin-del-artiste'>Supprimer</button></td></tr>");
 				$( ".form" ).html(data);
 				$('.status').addClass('alert alert-success');
 				$('.status').text('Artiste ajouté avec succès');
