@@ -22,7 +22,6 @@ let con = mysql.createConnection({
 });
 // affichage de la page adminHomePage
 router.get( "/homePage", (req,res,next) => {
-	console.log("je suis dans le router")
 	let sqlRequest = `SELECT * from homepage;`;
 	con.query(sqlRequest, function (err, results) {
 		if (err) throw err;
