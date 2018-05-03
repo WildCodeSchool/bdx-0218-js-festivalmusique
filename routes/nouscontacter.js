@@ -35,7 +35,7 @@ router.post('/', (req, res, next) => {
         if(error){
             res.render(error);
         }else{
-            res.render('blockcontent/nouscontacter', {status: "DEMANDE DE CONTACT ENVOYEE"});
+            res.render('blockcontent/nouscontacter', {status: "Demande de contact envoyée avec succès"});
         }
     });
 });

@@ -10,7 +10,7 @@ block content
 			.row
 				.col-xs-12.col-md-8
 					if status
-						p.alert.alert-success #{status}
+						p.status #{status}
 					form(action='/nous-contacter', method='post')
 						.row
 							.form-group.col-md-6
@@ -44,3 +44,4 @@ block content
 						i.fas.fa-envelope.fa-2x.copy--pink
 						p E-mail
 						p contact@festizik.fr
+	script(type='text/javascript', src='../javascript/nousContacter.js')

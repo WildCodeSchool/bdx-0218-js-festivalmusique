@@ -3,7 +3,8 @@ extends ../layout.jade
 block content
   main
     .container.benevole
-      p.status #{status}
+      if status
+        p.status #{status}
       header
         h1 Devenir bénévole
       section.row

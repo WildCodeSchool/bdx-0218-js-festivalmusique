@@ -1,17 +1,15 @@
 extends ../layoutAdmin.jade
 
 block content
-	main
+	main#adminHomePage
 		section.text-center
 			.container
 				header
 					h1 Modifier la page d'accueil
 					h2 Modifier la bannière de la page d'accueil:
-				
 				div.custom-file
-					input(type="file" class="custom-file-input" id="customFile")
-					label(class="custom-file-label" for="customFile") Choose file
-
+						input(type="file" class="custom-file-input" id="customFile")
+						label(class="custom-file-label" for="customFile") Choose file
 				form#uploadBanner.text-center(method='POST', enctype='multipart/form-data', action='/admin/api/banner' name='uploadBanner')
 					label Type de fichier accepté png | 3mo max.
 					br

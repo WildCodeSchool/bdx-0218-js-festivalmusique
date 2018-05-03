@@ -14,7 +14,9 @@ footer #Copyright a {
 footer #Copyright a:hover {
 	color: white;
 }
-
+footer h5 {
+	margin-bottom: 1.8rem;
+}
 /* social networks */
 ul#Networks {
 	display: flex;

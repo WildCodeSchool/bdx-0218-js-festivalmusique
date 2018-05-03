@@ -170,8 +170,6 @@ router.post('/api/poster', upload.single('poster'), function (req, res, next) {
 		});
 	}
 	else if (req.file.mimetype != 'image/jpeg') {
-		console.log(req.file.minetype);
-
 		res.render('blockcontentAdmin/adminFeedback', { alertType: `alert-danger`, status: "Erreur ! Ce fichier n'est pas un png." })
 	}
 	else {
