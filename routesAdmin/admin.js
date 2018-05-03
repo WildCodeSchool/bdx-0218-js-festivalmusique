@@ -93,7 +93,7 @@ router.post('/api/banner', upload.single('banner'), function (req, res, next) {
 });
 
 
-// sélection de l'artiste dans la liste des artistes - les données de l'artiste en question sont envoyées dans le formulaire de modification/suppression
+// sélection de l'artiste dans la liste des artistes - les données de l'artiste en question sont envoyées dans le formulaire de modification
 router.get('/api/artiste/:id', function(req, res, next) {
 	let selectArtiste = `SELECT * from artistes where kartiste = '${req.params.id}';`;
 	con.query(selectArtiste, function (err, row) {
@@ -102,7 +102,7 @@ router.get('/api/artiste/:id', function(req, res, next) {
     });
 });
 
-//retour du formulaire 'ajouter un artiste'
+//retour du bouton 'ajouter un artiste'
 router.get('/add/artiste/', function(req, res, next) {
   res.render('includesAdmin/_formArtiste');
 });
@@ -121,9 +121,11 @@ router.post('/api/artiste', function(req, res, next) {
 		res.redirect('');
 	} else {
 			let insertArtiste = `INSERT INTO artistes (nom, jour, heure, style, image, video, description) VALUES ('${nom}', '${jour}', '${heure}', '${style}', '${image}', '${video}', '${description}');`
-			con.query(insertArtiste, function (err, row) {
+			con.query(insertArtiste, function (err, results) {
         if (err) throw err;
-        res.render('includesAdmin/_formArtiste');
+        res.render('includesAdmin/_formArtiste', {
+          insertedId: results.insertId
+        });
     	});
 	}
 });
@@ -146,7 +148,7 @@ router.put('/api/artiste/:id', function(req, res, next) {
   });
 });
 
-// supression artiste
+// suppression artiste
 router.post('/api/artiste/:id', function(req, res, next) {
 	const id = req.params.id;
 	let deleteArtiste = `DELETE FROM artistes WHERE kartiste = '${id}';`
@@ -169,7 +171,7 @@ router.post('/api/poster', upload.single('poster'), function (req, res, next) {
 	}
 	else if (req.file.mimetype != 'image/jpeg') {
 		console.log(req.file.minetype);
-		
+
 		res.render('blockcontentAdmin/adminFeedback', { alertType: `alert-danger`, status: "Erreur ! Ce fichier n'est pas un png." })
 	}
 	else {
@@ -180,12 +182,12 @@ router.post('/api/poster', upload.single('poster'), function (req, res, next) {
 router.post('/api/caroussel', upload.array('imageCaroussel', 3), function (req, res, next) {
 	let feedbackCaroussel = []
 	let success = 0
-	
+
 
 	req.files.map( (picture, index) => {
 		let numberImage = 1
 		numberImage += index
-		if (picture.mimetype === 'image/jpeg' && picture.size < 1048576) {			
+		if (picture.mimetype === 'image/jpeg' && picture.size < 1048576) {
 			fs.rename(picture.path, `public/images/accueil/image${numberImage}.jpg`, function (err) {
 				if (err) {
 					feedbackCaroussel.push(`L'image numéro ${numberImage} n'a pas pu être uploadé suite à une erreur interne.`)
@@ -202,9 +204,9 @@ router.post('/api/caroussel', upload.array('imageCaroussel', 3), function (req, 
 		else {
 			feedbackCaroussel.push(`L'image numéro ${numberImage} n'a pas pu être uploadé car l'image était trop volumineuse.`)
 		}
-	})	
+	})
 
-	setTimeout(() => {		
+	setTimeout(() => {
 		if (success === feedbackCaroussel.length){
 			res.render('blockcontentAdmin/adminMultipleFeedback', { alertType: `alert-success`, status: feedbackCaroussel })
 		}
@@ -218,13 +220,14 @@ router.post('/api/caroussel', upload.array('imageCaroussel', 3), function (req, 
 })
 
 // Traitement modification Banner
+
 router.post('/api/homePage/banner', upload.fields([]),function (req, res, next) {
 	let formData = req.body;
 
 	sqlRequestBuilder = (data) => {
 		let result = []
 		if ( data.bannerTitle !== '' ) {
-			result.push(`title = "${req.body.bannerTitle}"`) 
+			result.push(`title = "${req.body.bannerTitle}"`)
 		}
 		if ( data.bannerSlogan !== '') {
 			result.push(`slogan = "${req.body.bannerSlogan}"`)
@@ -234,9 +237,9 @@ router.post('/api/homePage/banner', upload.fields([]),function (req, res, next) 
 		}
 		return `UPDATE homepage SET ${result.join(" ,")} ;`
 	}
-	
-	con.query(sqlRequestBuilder(formData), function (err, data) { 
-		if(err) { 
+
+	con.query(sqlRequestBuilder(formData), function (err, data) {
+		if(err) {
 			res.render("blockcontentAdmin/adminFeedback", { alertType: `alert-danger`, status: `Les modifications n'ont pas pu être effectué suite à une erreur interne.`});
 			throw err
 		}

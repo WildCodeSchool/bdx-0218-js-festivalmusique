@@ -1,4 +1,6 @@
 p.status
+if insertedId
+	div#lastArtiste(data-last-artiste-id=insertedId)
 header
 	if artiste
 		h2 Modifier ou supprimer l'artiste #{artiste.nom}
