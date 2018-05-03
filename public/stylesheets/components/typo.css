@@ -10,8 +10,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: 'Reem Kufi', sans-serif;
 }
 h1 {
-	font-size: 3.5em;
-
+	font-size: 165%;
 }
 h1.main-title {
 	font-family: 'Permanent Marker', cursive;
@@ -53,4 +52,3 @@ p {
 .copy--orange {
 	color: #ff5e35;
 }
-

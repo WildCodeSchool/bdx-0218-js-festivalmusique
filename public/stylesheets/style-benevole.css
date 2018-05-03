@@ -1,33 +1,26 @@
-.benevole-form {
-	margin: auto;
-	text-align: center;
-	margin: 50px 0 100px 0;
-}
-
 .benevole h1 {
 	text-align: center;
-	margin: 30px 0 50px 0;
 }
 
 .benevole h2 {
 	font-size: 3rem;
+	text-align: center;
 	margin: 30px 0 30px 0;
 }
 
 .benevole h3 {
 	font-size: 2rem;
+	text-align: center;
 	margin: 30px 0 30px 0;
 }
 
 .benevole h4 {
 	font-size: 2rem;
-	color: #ff5e35;
 	margin: 0 0 15px 0;
 }
 
-.benevole p {
+.benevole p:not(.status) {
 	text-align: justify;
-	margin: 0 0 40px 0;
 }
 
 .benevole-presentation {
@@ -48,14 +41,12 @@
 }
 
 /* PICTOS FONT AWESOME */
-.fa-bed, .fa-utensils {
-	color: #ff5e35;
-	font-size:3rem;
-	margin: 10px 0 10px 0;
+.benevole .fa-pencil-alt {
+	font-size:5rem;
 }
 
-.fa-pencil-alt {
-	font-size:5rem;
+.benevole-form {
+	text-align: center;
 }
 
 .fa-paper-plane {
@@ -69,7 +60,7 @@
 }
 
 .benevole-form-group {
-	margin: 20px 0 20px 0;
+	margin: 0 0 20px 0;
 }
 
 .benevole-form .fields {
@@ -77,10 +68,8 @@
 }
 
 /* CHECKBOX JOURS */
-.benevole-day label {
-	margin: 5px;
-	width: 20%;
-}
+
+
 
 .benevole-day input[type=checkbox] {
   display: none;
@@ -101,35 +90,30 @@
 	transition: background-color 150ms ease-in;
 }
 
-.benevole-day span:hover {
-	background-color: #ff5e35;
-}
-
 .benevole-day input[type=checkbox]:checked + span {
 	background: #ff5e35 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAaCAYAAACgoey0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAX9JREFUeNpi+P//PwMNsS4QbwBiLnQ5WlqqAsRP/0PARiBmoYfFkkB8+z8qWALEjLS0mB+IL/3HDibSymJQXB7/jx/UgNSCvU4lwAbEG4DYkwi1WUxUspQZiOcRaSkIWOAKMk0Sg3jaf+IBOIVjMyQWiH8DsR+RljaTYOkBWJ5GNwRk2R+ooh9A7ETA0jwSLL0ATfEYqRpkyVc0xR+A2AyHpdFA/I9IS0F5WhRbAWIEtQQbeAXE6lhC5jeRlj4GYgVsRaYK1HBCmmWgmuyxhAwu8BpaXjNgs/gYkYbcAGIXPCGDDkCOM8eVPkCEFhE+JhX8BGJnfAkTxgC57BOVLAXlihBC2RA9Vf+k0FJQKk8nJv+jCwQi5WNyQAWxpR02wRQS8icy6CKlmMUlUUGipfOQK3lKLAbhdhIKfWZS6258kiAfzCZg6V4gZiOn0UBIAcgn63BYehK50Ke2xQxQH+3FUoqJUtJMIlYhLxAfxVJu09xiWENuMxCrUaNhCBBgAOAVfjALa5TLAAAAAElFTkSuQmCC) no-repeat 7% center;
 	background-size: 15px 13px;
 }
-
-.benevole-day input[type=checkbox]:checked:hover + span {
-	color: rgba(255,255,255,0.5);
-	background: #dd5244 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAS5JREFUeNq8110OgjAMAGBGvIY3VESjt9jPg95PT+LccBIZ7dYOWJPGB+g+Ymg3hLW2QeLkcu/y2pSFdvl0eQevehjI3uXbfkMh96TShFq/xhG6J4faAtxEtSBOQTm4QWpnOBWl4CZT69fuYpiCpnBDrB1xLhrjgoFO8F1oGcFslUv4bV32zFoxmOHJta0XMn65dC0UaiddA8UGiN4axeC1cUkdmWviEls/NwL1FqjPNtNvoimPdC3yRCUTiTXbt0R/oSnw2iiK10BBvBY6w2uiE3xJr8oFtcrvxy/fVcyeVdGx98yotcOxN/znHeMUIhdMOG8c4reagssF43VEoT5O4ZJwvNUUFJtcEE5BMXyGpnanf5yDxjiI+hSJj7YunEBvhbuTCh9tD+jiR4ABAJ0SrJgNr1UAAAAAAElFTkSuQmCC) no-repeat 7% center;
-	background-size: 15px 15px;
+@media (min-width: 1200px) {
+	.benevole-day span:hover {
+		background-color: #ff5e35;
+	}
+	.benevole-day input[type=checkbox]:checked:hover + span {
+		color: rgba(255,255,255,0.5);
+		background: #dd5244 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAS5JREFUeNq8110OgjAMAGBGvIY3VESjt9jPg95PT+LccBIZ7dYOWJPGB+g+Ymg3hLW2QeLkcu/y2pSFdvl0eQevehjI3uXbfkMh96TShFq/xhG6J4faAtxEtSBOQTm4QWpnOBWl4CZT69fuYpiCpnBDrB1xLhrjgoFO8F1oGcFslUv4bV32zFoxmOHJta0XMn65dC0UaiddA8UGiN4axeC1cUkdmWviEls/NwL1FqjPNtNvoimPdC3yRCUTiTXbt0R/oSnw2iiK10BBvBY6w2uiE3xJr8oFtcrvxy/fVcyeVdGx98yotcOxN/znHeMUIhdMOG8c4reagssF43VEoT5O4ZJwvNUUFJtcEE5BMXyGpnanf5yDxjiI+hSJj7YunEBvhbuTCh9tD+jiR4ABAJ0SrJgNr1UAAAAAAElFTkSuQmCC) no-repeat 7% center;
+		background-size: 15px 15px;
+	}
 }
 
-/* BOUTON ENVOI */
-.send {
+button.send {
 	width: 100%;
-	margin: 5px 0 0 0;
-}
-
-.send button {
-	display: block;
-	width: 62%;
-	margin: auto;
 }
 
 /* MEDIA QUERIES */
 @media (max-width: 990px) {
+	.benevole h4 {
+		text-align: center;
+	}
 	.benevole-image {
 		width: 100%;
 		height: 50vw;
@@ -138,15 +122,8 @@
 	.benevole-image img {
 		margin-top: -15%;
 	}
-	.benevole-day label {
-		margin: 5px;
-		width: 30%;
-	}
 	.benevole-day span {
 		width: 100%;
-	}
-	.send button {
-		width: 92%;
 	}
 }
 
@@ -157,14 +134,7 @@
 	.benevole-presentation img {
 		width: 100%;
 	}
-	.benevole-day label {
-		margin: 5px;
-		width: 95%;
-	}
 	.benevole-day span {
 		width: 100%;
-	}
-	.send button {
-		width: 95%;
 	}
 }

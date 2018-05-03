@@ -7,8 +7,7 @@ nav.navbar li:not(:first-child):not(:last-child) {
 	margin: 0 1.4rem;
 }
 nav.navbar a {
-	font-family: 'Reem Kufi', sans-serif;
-
+		font-family: 'Reem Kufi', sans-serif;
     font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
@@ -28,9 +27,14 @@ nav.navbar a.navbar-brand {
 	font-size: 2rem;
 	color: white;
 }
-
-nav.navbar span.navbar-toggler-icon {
+nav.navbar a.navbar-brand:focus, nav.navbar a.navbar-brand:hover {
 	color: white;
+}
+.navbar-light .navbar-toggler {
+	border: none;
+}
+nav.navbar span.navbar-toggler-icon {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
 li.nav-item a.active {
@@ -41,7 +45,50 @@ li.nav-item a.active {
 	color: #ff5e35;
 }
 
-#nav-link-billetterie {
-	background-color: #ff5e35;
-	border-radius: 2px;
+
+
+/* Mediaqueries Dropdown */
+@media only screen and (max-width: 992px) {
+    .show > .dropdown-toggle::after{
+        transform: rotate(-90deg);
+    }
+}
+@media only screen and (min-width: 992px) {
+
+    .collapse ul li{position:relative;}
+    .collapse ul li:hover> ul{display:block}
+    .collapse ul ul{position:absolute;top:100%;left:0;min-width:250px;display:none}
+    /*******/
+    .collapse ul ul li{position:relative}
+    .collapse ul ul li:hover> ul{display:block}
+    .collapse ul ul ul{position:absolute;top:0;left:100%;min-width:250px;display:none}
+    /*******/
+    .collapse ul ul ul li{position:relative}
+		.collapse ul ul ul li:hover ul{display:block}
+    .collapse ul ul ul ul{position:absolute;top:0;left:-100%;min-width:250px;display:none;z-index:1}
+}
+/* Dropdown */
+.dropdown-menu {
+	background-color: #333;
+}
+.dropdown-item {
+	color: white;
+}
+
+.dropdown-item:hover, .dropdown-item:focus, .dropdown-item:active {
+	color: #ff5e35;
+	background-color: #333;
+}
+@media only screen and (max-width: 992px) {
+	.dropdown-menu.show {
+		border: none;
+		text-align: center;
+		background-color: #444;
+	}
+}
+@media only screen and (min-width: 992px) {
+	.dropdown-menu.show {
+		text-align: left;
+		background-color: #333;
+	}
 }

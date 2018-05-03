@@ -1,20 +1,11 @@
-body {
+body main#programmation {
   margin: auto;
   text-align: center;
-}
-
-.programmation-filters h1 {
-  font-size: 3rem;
-  margin: 0 0 50px 0;
 }
 
 /* Filtres */
 #button-filter-all {
   margin-top: 0;
-}
-
-.programmation-filters, .main-title {
-  margin: 0 0 50px 0;
 }
 
 .programmation-filter-all, .programmation-filter-day, .programmation-filter-day button, .programmation-filter-style {
@@ -160,7 +151,7 @@ body {
     font-size: 6rem;
   }
   .filters {
-    padding: 0 10%;
+    padding: 0 2%;
   }
   .programmation-filter-all {
     width: 25%;

@@ -1,12 +1,13 @@
 let express = require('express');
 let router = express.Router();
 let mysql = require('mysql');
+const nodemailer = require("nodemailer");
 
 let con = mysql.createConnection({
- 		host: "127.0.0.1",
- 		user: "root",
- 		password: "root",
- 		database: "projet2"
+ 		host: "sql7.freesqldatabase.com",
+ 		user: "sql7233133",
+ 		password: "r3AcfGXI7U",
+ 		database: "sql7233133"
 });
 
 router.get('/', function(req, res) {
@@ -14,20 +15,29 @@ router.get('/', function(req, res) {
 });
 
 router.post('/', (req, res, next) => {
+  // Création de la méthode de transport de l'email
+  const smtpTransport = nodemailer.createTransport({
+      service: "Gmail",
+      host:'smtp.gmail.com',
+      port: 465,
+      auth: {
+          user: "zikfesti2018@gmail.com",
+          pass: "ZikFesti2018@@@"
+      }
+  });
 
-	  let insert = `INSERT INTO contact (nom, prenom, mail, sujet, message) VALUES ('${req.body.nom}', '${req.body.prenom}', '${req.body.mail}', '${req.body.sujet}', '${req.body.message}');`;
-
-	  if ((req.body.nom === "")||(req.body.prenom === "")||(req.body.mail === "")||(req.body.sujet === "")||(req.body.message === "")) {	
-	  	console.log("empty fields");
-	  	res.redirect('');
-	  } else {
-	  	  con.query(insert, function (err, result) {
-	        if (err) throw err;
-	        console.log("insert done");
-    		});
-
-	  	res.redirect('');
-	  }
+  smtpTransport.sendMail({
+    from: `${req.body.mail}`, // Expediteur
+    to: "zikfesti2018@gmail.com", // Destinataires
+    subject: `Demande de contact : ${req.body.sujet}`, // Sujet
+    html:   `NOM : ${req.body.nom} <br> PRENOM : ${req.body.prenom} <br> MESSAGE : ${req.body.message} <br> MAIL : ${req.body.mail}`   // html body
+    }, (error, response) => {
+        if(error){
+            res.render(error);
+        }else{
+            res.render('blockcontent/nouscontacter', {status: "Demande de contact envoyée avec succès"});
+        }
+    });
 });
 
 module.exports = router;

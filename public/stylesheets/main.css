@@ -10,3 +10,14 @@ body {
 section {
 	padding: 5rem 0;
 }
+
+header h1 {
+	padding-top: 8rem;
+}
+
+ul {
+	padding-left: 0;
+}
+li {
+	list-style: none;
+}

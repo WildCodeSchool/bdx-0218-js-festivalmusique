@@ -1,7 +1,14 @@
 /* newsletter */
+section#newsletter {
+	text-align: center;
+}
 section#newsletter label {
 	display: none;
 }
 section#newsletter button {
 	color: #05676e;
+}
+#alert-newsletter {
+	margin-top: 15px;
+	display: none;
 }

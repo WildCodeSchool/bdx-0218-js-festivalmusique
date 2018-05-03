@@ -1,21 +1,21 @@
 extends ../layout.jade
 
 block content
-	main
+	main#comment-venir
 		.container
 			header.text-center
 				h1 Comment venir ?
 				p 20 rue des Grands Mortiers, Saint-Pierre-des-Corps
-				p Nous pensons à demain. Privilégiez le covoiturage et les transports en commun.
+				p
+					i Nous pensons à demain. Privilégiez le covoiturage et les transports en commun.
 			section#Go_festival
-				header
+				header.text-center
 					h2 Aller au festival
-				img(src='http://via.placeholder.com/1110x250', alt='')
+				img.img-fluid(src='../images/comment-venir/banner-quais.jpg', alt='Quais de Tours')
 				.card
-					#headingGare.card-header
+					#headingGare.card-header.background--blue-light
 						h5.mb-0
-							a.collapsed(href='', title='Depuis la gare de Saint-Pierre-des-Corps', data-toggle='collapse', data-target='#Gare', aria-expanded='false', aria-controls='Gare') Depuis la gare de Saint-Pierre-des-Corps
-								i.fa.fa-plus
+							a.title.collapsed(href='', title='Depuis la gare de Saint-Pierre-des-Corps', data-toggle='collapse', data-target='#Gare', aria-expanded='false', aria-controls='Gare') Depuis la gare de Saint-Pierre-des-Corps
 					#Gare.collapse(aria-labelledby='headingGare', data-parent='#accordion')
 						.card-body
 							p La gare TGV de Saint-Pierre-des-Corps se situe à seulement 15min à pieds du festival.
@@ -24,13 +24,12 @@ block content
 								br
 								| Dernières navettes directes depuis la gare de Tours à 21h11, 21h31, 21h51, 22h14 et 22h52 (trajet de 7min).
 								br
-								| Pour plus de renseignements consultez le site de la
-								a(href='https://oui.sncf', title='site oui.sncf', target='_BLANK')  SNCF.
+								| Pour plus de renseignements consultez le site de la 
+								a(href='https://oui.sncf', title='site oui.sncf', target='_BLANK') SNCF.
 				.card
-					#headingVoiture.card-header
+					#headingVoiture.card-header.background--blue-medium
 						h5.mb-0
-							a.collapsed(href='', title='En voiture / À moto', data-toggle='collapse', data-target='#Voiture', aria-expanded='false', aria-controls='Voiture') En voiture / À moto
-								i.fa.fa-plus
+							a.title.collapsed(href='', title='En voiture / À moto', data-toggle='collapse', data-target='#Voiture', aria-expanded='false', aria-controls='Voiture') En voiture / À moto
 					#Voiture.collapse(aria-labelledby='headingVoiture', data-parent='#accordion')
 						.card-body
 							p Parking vivement conseillé au centre 
@@ -41,10 +40,9 @@ block content
 								br
 								| Ne vous garez pas devant les entreprises ou les magasins des environs. Enlèvement à vos frais en cas de stationnement gênant.
 				.card
-					#headingVelo.card-header
+					#headingVelo.card-header.background--blue-dark
 						h5.mb-0
-							a.collapsed(href='', title='À vélo', data-toggle='collapse', data-target='#Velo', aria-expanded='false', aria-controls='Velo') À vélo
-								i.fa.fa-plus
+							a.title.collapsed(href='', title='À vélo', data-toggle='collapse', data-target='#Velo', aria-expanded='false', aria-controls='Velo') À vélo
 					#Velo.collapse(aria-labelledby='headingVelo', data-parent='#accordion')
 						.card-body
 							p Un grand parking pour les vélos se situera devant la salle. Seulement 10min depuis la gare de Tours. 
@@ -55,10 +53,9 @@ block content
 								| Pour le trajet sur Google Maps, 
 								a(href='https://goo.gl/maps/FmTQaQXAj1C2', title='Trajet pour vélo sur google map', target='_BLANK') cliquez-ici.
 				.card
-					#headingBus.card-header
+					#headingBus.card-header.background--purple
 						h5.mb-0
-							a.collapsed(href='', title='En transport en commun', data-toggle='collapse', data-target='#Bus', aria-expanded='false', aria-controls='Bus') En transport en commun
-								i.fa.fa-plus
+							a.title.collapsed(href='', title='En transport en commun', data-toggle='collapse', data-target='#Bus', aria-expanded='false', aria-controls='Bus') En transport en commun
 					#Bus.collapse(aria-labelledby='headingBus', data-parent='#accordion')
 						.card-body
 							p 
@@ -68,10 +65,9 @@ block content
 								| Pour plus de renseignements consultez le site de 
 								a(href='https://www.filbleu.fr/', title='Site filbleu.fr', target='_BLANK') Fil Bleu.
 				.card
-					#headingAutres.card-header
+					#headingAutres.card-header.background--pink
 						h5.mb-0
-							a.collapsed(href='', title='Autres transports', data-toggle='collapse', data-target='#Autres', aria-expanded='false', aria-controls='Autres') Autres transports
-								i.fa.fa-plus
+							a.title.collapsed(href='', title='Autres transports', data-toggle='collapse', data-target='#Autres', aria-expanded='false', aria-controls='Autres') Autres transports
 					#Autres.collapse(aria-labelledby='headingAutres', data-parent='#accordion')
 						.card-body
 							p 
@@ -92,14 +88,13 @@ block content
 								a(href='https://www.flixbus.fr/', title='Site flixbus.fr', target='_BLANK') Flixbus
 								|  pour plus d'informations.
 			section#Go_reduced_mobility
-				header
+				header.text-center
 					h2 Personnes à mobilité réduite
-				img(src='http://via.placeholder.com/1110x250', alt='')
+				img.img-fluid(src='../images/comment-venir/banner-pmr.jpg', alt='Transports personnes à mobilité réduite')
 				.card
-					#headingThree.card-header
+					#headingThree.card-header.background--orange
 						h5.mb-0
-							a.collapsed(href='', title='Un parking réservé pour les personnes à mobilité réduite', data-toggle='collapse', data-target='#collapseThree', aria-expanded='false', aria-controls='collapseThree') Un parking réservé pour les personnes à mobilité réduite
-								i.fa.fa-plus
+							a.title.collapsed(href='', title='Un parking réservé pour les personnes à mobilité réduite', data-toggle='collapse', data-target='#collapseThree', aria-expanded='false', aria-controls='collapseThree') Un parking réservé pour les personnes à mobilité réduite
 					#collapseThree.collapse(aria-labelledby='headingThree', data-parent='#accordion')
 						.card-body
 							p 
@@ -117,5 +112,5 @@ block content
 									li Vendredi : de 16h à 3h
 									li Samedi: de 15h à 3h
 									li Dimanche : de 15h à 1h30
-			.map
-				iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10806.61096094167!2d0.7126913269883615!3d47.37969573581246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47fcd41193ebe765%3A0xb6e6ef343ddb7376!2sPoint+HAUT%2C+lieu+de+cr%C3%A9ation+urbaine!5e0!3m2!1sfr!2sfr!4v1522588356601', width='1110', height='450', frameborder='0', style='border:0', allowfullscreen='')
+		.map
+			iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10806.61096094167!2d0.7126913269883615!3d47.37969573581246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47fcd41193ebe765%3A0xb6e6ef343ddb7376!2sPoint+HAUT%2C+lieu+de+cr%C3%A9ation+urbaine!5e0!3m2!1sfr!2sfr!4v1522588356601', width='100%', height='400', frameborder='0', style='border:0', allowfullscreen='')

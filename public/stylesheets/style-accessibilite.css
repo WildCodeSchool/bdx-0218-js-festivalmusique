@@ -1,0 +1,31 @@
+main#accessibilite {
+	text-align: center;
+}
+main#accessibilite ul {
+	margin: 8rem 0;
+}
+main#accessibilite ul li {
+	list-style: none;
+	margin-bottom: 5rem;
+}
+
+main#accessibilite article {
+	text-align: left;
+}
+
+
+main#accessibilite article i {
+	float: left;
+    margin: 0 1.5rem 0 0;
+}
+main#accessibilite article header {
+	text-align: left;
+}
+
+main#accessibilite img {
+	margin-bottom: 5rem;
+}
+
+main#accessibilite a.button:hover {
+	color: white;
+}
