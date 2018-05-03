@@ -50,9 +50,7 @@ router.post('/', (req, res, next) => {
         if(error){
             res.render(error);
         } else {
-        		status = "DEMANDE DE BENEVOLAT ENVOYEE";
-            res.render('blockcontent/devenirbenevole', {status});
-            status = "" ;
+            res.render('blockcontent/devenirbenevole', {status: "Demande de bénévolat envoyée avec succès"});
         }
     });
 });

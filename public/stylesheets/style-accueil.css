@@ -97,22 +97,6 @@ main#home .lead {
 
 
 /* MEDIA QUERIES */
-/* // Extra small devices (portrait phones, less than 576px)
-// No media query since this is the default in Bootstrap
-// Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
-
-}
-
-/* // Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-
-}
-
-/* // Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-
-}
 .slogan{
 	color:rgb(255, 114, 32);
 	text-shadow: 1px 1px 1px black;
@@ -122,8 +106,6 @@ main#home .lead {
 	color:white;
 	text-shadow: 1px 1px 1px black;
 	font-weight: 300;
-
-
 }
 /* // Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
@@ -145,11 +127,35 @@ main#home .lead {
 	main#home .affiche-programmation{
 		margin-top: -10rem;
 		border: 1rem solid white;
-
 	}
-
 	main#home .card {
 		border: 1rem solid white;
 	}
+}
 
+/* surcharge BS */
+
+main#home .card-deck.responsive {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+
+main#home .card-deck.responsive .card {
+	margin-bottom: 2rem;
+}
+
+@media (min-width: 991px) {
+	main#home .card-deck.responsive {
+	    -webkit-box-orient: horizontal;
+	    -webkit-box-direction: normal;
+	    -ms-flex-flow: row wrap;
+	    flex-flow: row wrap;
+	    margin-right: -15px;
+	    margin-left: -15px;
+	}
 }

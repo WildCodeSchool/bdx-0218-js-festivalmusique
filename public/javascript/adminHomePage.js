@@ -6,7 +6,7 @@ form.addEventListener('submit', function (event) {
 	let $feedback = $("#popup");
 	let	dataForm = new FormData(form);
 	let request = new XMLHttpRequest();
-	// response du serveur 
+	// response du serveur
 	request.onreadystatechange = function () {
 		if (request.readyState == 4 && (request.status == 200 || request.status == 0)) {
 			$feedback.html(request.response);
